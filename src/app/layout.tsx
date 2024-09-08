@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Ateev art',
+  title: 'Ateev Art',
   description: 'Kirill Ateev art pieces',
 };
 

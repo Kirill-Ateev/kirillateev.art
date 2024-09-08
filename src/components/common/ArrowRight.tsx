@@ -1,8 +1,17 @@
-import styles from '../styles.module.css';
+import styles from '../collections/styles.module.css';
 
-export default function ArrowRight() {
+type ArrowRightProps = {
+  href: string;
+};
+
+export default function ArrowRight({ href }: ArrowRightProps) {
   return (
-    <a className={styles.arrowRight}>
+    <a
+      className={styles.arrowRight}
+      target="_blank"
+      rel="noreferrer"
+      href={href}
+    >
       <svg
         viewBox="0 0 32 32"
         version="1.1"
