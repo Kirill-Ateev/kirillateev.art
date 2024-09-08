@@ -19,7 +19,7 @@ export default function CollectionNights() {
         video.volume = 0.015;
       }
     });
-  }, [videoRefs.current]);
+  });
 
   return (
     <section>
