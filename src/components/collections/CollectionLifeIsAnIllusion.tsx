@@ -1,4 +1,5 @@
 'use client';
+import { basePath } from '@/constants';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
 import Image from 'next/image';
 import 'swiper/css';
@@ -47,7 +48,7 @@ export default function CollectionLifeIsAnIllusion() {
         {[7, 9, 18, 13, 5, 17].map((imageId) => (
           <SwiperSlide key={imageId} className={styles.cardLIAL}>
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/lifeIsAnIllusion/${imageId}.webp`}
+              src={`${basePath}/images/lifeIsAnIllusion/${imageId}.webp`}
               alt={`Illusion %${imageId}`}
               width={isXs || isSm ? '277' : '555'}
               height={isXs || isSm ? '392' : '784'}

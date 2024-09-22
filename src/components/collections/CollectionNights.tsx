@@ -1,4 +1,5 @@
 'use client';
+import { basePath } from '@/constants';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { useEffect, useRef } from 'react';
 import 'swiper/css';
@@ -65,7 +66,7 @@ export default function CollectionNights() {
               onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
             >
               <source
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/videos/nights/${videoId}.mp4`}
+                src={`${basePath}/videos/nights/${videoId}.mp4`}
                 type="video/mp4"
               />
               Your browser does not support the video tag.

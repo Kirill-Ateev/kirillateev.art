@@ -1,4 +1,5 @@
 'use client';
+import { basePath } from '@/constants';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
 import Image from 'next/image';
 import 'swiper/css';
@@ -45,7 +46,7 @@ export default function CollectionKindWords() {
         {[284, 89, 200, 91, 259, 278].map((imageId) => (
           <SwiperSlide key={imageId} className={styles.cardKindWords}>
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kindWords/${imageId}.png`}
+              src={`${basePath}/images/kindWords/${imageId}.png`}
               alt={`Kind Words №${imageId}`}
               width={isXs || isSm ? '256' : '512'}
               height={isXs || isSm ? '256' : '512'}
