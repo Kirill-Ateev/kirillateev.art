@@ -47,7 +47,7 @@ export default function CollectionLifeIsAnIllusion() {
         {[7, 9, 18, 13, 5, 17].map((imageId) => (
           <SwiperSlide key={imageId} className={styles.cardLIAL}>
             <Image
-              src={`/images/lifeIsAnIllusion/${imageId}.webp`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/lifeIsAnIllusion/${imageId}.webp`}
               alt={`Illusion %${imageId}`}
               width={isXs || isSm ? '277' : '555'}
               height={isXs || isSm ? '392' : '784'}

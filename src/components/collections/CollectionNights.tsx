@@ -64,7 +64,10 @@ export default function CollectionNights() {
               onMouseOver={(event) => (event.target as HTMLVideoElement).play()}
               onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
             >
-              <source src={`/videos/nights/${videoId}.mp4`} type="video/mp4" />
+              <source
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/videos/nights/${videoId}.mp4`}
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
           </SwiperSlide>

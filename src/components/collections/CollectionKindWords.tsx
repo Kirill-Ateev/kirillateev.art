@@ -45,7 +45,7 @@ export default function CollectionKindWords() {
         {[284, 89, 200, 91, 259, 278].map((imageId) => (
           <SwiperSlide key={imageId} className={styles.cardKindWords}>
             <Image
-              src={`/images/kindWords/${imageId}.png`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kindWords/${imageId}.png`}
               alt={`Kind Words №${imageId}`}
               width={isXs || isSm ? '256' : '512'}
               height={isXs || isSm ? '256' : '512'}
