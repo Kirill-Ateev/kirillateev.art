@@ -1,17 +1,23 @@
 import CollectionKindWords from '@/components/collections/CollectionKindWords';
 import CollectionNights from '@/components/collections/CollectionNights';
 import Header from '@/components/header/Header';
+import { withLinguiPage } from '@/withLingui';
+import { Trans } from '@lingui/macro';
 import styles from './page.module.css';
 
-export default function Home() {
+export default withLinguiPage(function Home() {
   return (
     <div>
       <Header />
       <main className={styles.main}>
         <section className={styles.container}>
-          <div className={styles.subTitle}>Recent Work</div>
+          <div className={styles.subTitle}>
+            <Trans>Recent Work</Trans>
+          </div>
           <div className={styles.secondaryText}>
-            Hi, I&apos;m Kirill. A generative artist working with code.
+            <Trans>
+              Hi, I&apos;m Kirill. A generative artist working with code.
+            </Trans>
           </div>
         </section>
 
@@ -20,4 +26,4 @@ export default function Home() {
       </main>
     </div>
   );
-}
+});

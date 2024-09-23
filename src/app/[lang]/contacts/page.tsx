@@ -1,13 +1,17 @@
 import Header from '@/components/header/Header';
+import { withLinguiPage } from '@/withLingui';
+import { Trans } from '@lingui/macro';
 import styles from '../page.module.css';
 
-export default function Contacts() {
+export default withLinguiPage(function Contacts() {
   return (
     <div>
       <Header />
       <main className={styles.main}>
         <section className={styles.container}>
-          <div className={styles.subTitle}>Get in Touch</div>
+          <div className={styles.subTitle}>
+            <Trans>Get in Touch</Trans>
+          </div>
           <div className={styles.secondaryText}>
             Telegram{' '}
             <a
@@ -20,7 +24,7 @@ export default function Contacts() {
             </a>
           </div>
           <div className={styles.secondaryText}>
-            Ask me a question in the community{' '}
+            <Trans>Ask me a question in the community</Trans>{' '}
             <a
               className={`${styles.menuItem} ${styles.secondaryText}`}
               target="_blank"
@@ -34,4 +38,4 @@ export default function Contacts() {
       </main>
     </div>
   );
-}
+});

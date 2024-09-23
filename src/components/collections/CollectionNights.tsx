@@ -1,6 +1,7 @@
 'use client';
 import { basePath } from '@/constants';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
+import { Trans } from '@lingui/macro';
 import { useEffect, useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/a11y';
@@ -37,13 +38,17 @@ export default function CollectionNights() {
           <span className="swiper-no-swiping">
             <div className={styles.title}>8 Nights</div>
           </span>
-          <div className={styles.secondaryText}>TON - Dec. 2023</div>
           <div className={styles.secondaryText}>
-            Compression-based generative multimedia collection. To play a melody
-            - hover your mouse over the piece.
+            <Trans>TON - Dec. 2023</Trans>
           </div>
           <div className={styles.secondaryText}>
-            Metadata and files stored on IPFS.
+            <Trans>
+              Compression-based generative multimedia collection. To play a
+              melody - hover your mouse over the piece.
+            </Trans>
+          </div>
+          <div className={styles.secondaryText}>
+            <Trans>Metadata and files stored on IPFS.</Trans>
           </div>
           <a
             className={`${styles.link} ${styles.secondaryText}`}
@@ -51,7 +56,7 @@ export default function CollectionNights() {
             rel="noreferrer"
             href="https://getgems.io/nights"
           >
-            View collection &gt;
+            <Trans>View collection &gt;</Trans>
           </a>
         </SwiperSlide>
         {[65, 5, 79, 21, 1, 30].map((videoId, index) => (
@@ -69,7 +74,7 @@ export default function CollectionNights() {
                 src={`${basePath}/videos/nights/${videoId}.mp4`}
                 type="video/mp4"
               />
-              Your browser does not support the video tag.
+              <Trans>Your browser does not support the video tag.</Trans>
             </video>
           </SwiperSlide>
         ))}

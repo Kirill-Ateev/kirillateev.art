@@ -1,6 +1,7 @@
 'use client';
 import { basePath } from '@/constants';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
+import { Trans } from '@lingui/macro';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/a11y';
@@ -26,15 +27,21 @@ export default function CollectionLifeIsAnIllusion() {
           <span className="swiper-no-swiping">
             <div className={styles.title}>Life is an illusion</div>
           </span>
-          <div className={styles.secondaryText}>Ethereum - Jun. 2023</div>
           <div className={styles.secondaryText}>
-            A unique collection of 42 impressionist photos from different parts
-            of the world dedicated to Anna`s father. Each work contains 42
-            copies.
+            <Trans>Ethereum - Jun. 2023</Trans>
           </div>
           <div className={styles.secondaryText}>
-            Metadata and compressed images stored on-chain, additionally the
-            original photos stored on IPFS.
+            <Trans>
+              A unique collection of 42 impressionist photos from different
+              parts of the world dedicated to Anna`s father. Each work contains
+              42 copies.
+            </Trans>
+          </div>
+          <div className={styles.secondaryText}>
+            <Trans>
+              Metadata and compressed images stored on-chain, additionally the
+              original photos stored on IPFS.
+            </Trans>
           </div>
           <a
             className={`${styles.link} ${styles.secondaryText}`}
@@ -42,7 +49,7 @@ export default function CollectionLifeIsAnIllusion() {
             rel="noreferrer"
             href="https://rarible.com/life-is-an-illusion"
           >
-            View collection &gt;
+            <Trans>View collection &gt;</Trans>
           </a>
         </SwiperSlide>
         {[7, 9, 18, 13, 5, 17].map((imageId) => (

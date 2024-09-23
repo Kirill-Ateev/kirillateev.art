@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2024-09-23 20:23+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ru\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:34
+msgid "A unique collection of 42 impressionist photos from different parts of the world dedicated to Anna`s father. Each work contains 42 copies."
+msgstr "Уникальная коллекция из 42 импрессионистских фотографий из разных уголков мира, посвященная отцу Анны. Каждая работа содержит 42 экземпляра."
+
+#: src/components/collections/CollectionKindWords.tsx:34
+msgid "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
+msgstr "Коллекция словообразования, уникальный узор состояний символов из доброшрифта, нарисованного особенными детьми."
+
+#: src/app/[lang]/contacts/page.tsx:28
+msgid "Ask me a question in the community"
+msgstr "Задайте мне вопрос в сообществе"
+
+#: src/components/header/Header.tsx:17
+msgid "Community"
+msgstr "Сообщество"
+
+#: src/components/collections/CollectionNights.tsx:45
+msgid "Compression-based generative multimedia collection. To play a melody - hover your mouse over the piece."
+msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, наведите курсор мыши на фрагмент."
+
+#: src/components/header/Header.tsx:20
+msgid "Contacts"
+msgstr "Контакты"
+
+#: src/components/lingui/Switcher.tsx:12
+msgid "English"
+msgstr "English"
+
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:31
+msgid "Ethereum - Jun. 2023"
+msgstr "Ethereum - Июнь 2023"
+
+#: src/app/[lang]/contacts/page.tsx:14
+msgid "Get in Touch"
+msgstr "Свяжитесь с нами"
+
+#: src/app/[lang]/page.tsx:23
+msgid "Hi, I'm Kirill. A generative artist working with code."
+msgstr "Привет, я Кирилл. Создаю генеративное искусство с помощью кода."
+
+#: src/app/[lang]/layout.tsx:52
+#: src/app/[lang]/layout.tsx:74
+#: src/components/header/Header.tsx:12
+msgid "Kirill Ateev"
+msgstr "Кирилл Атеев"
+
+#: src/app/[lang]/layout.tsx:38
+#: src/app/[lang]/layout.tsx:39
+#: src/app/[lang]/layout.tsx:59
+#: src/app/[lang]/layout.tsx:81
+msgid "Kirill Ateev - Artist"
+msgstr "Кирилл Атеев - Artist"
+
+#: src/app/[lang]/layout.tsx:48
+msgid "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
+msgstr "Кирилл Атеев, художник, современное искусство, генеративное, сообщество, выставки, портфолио"
+
+#: src/app/[lang]/layout.tsx:72
+#: src/app/[lang]/layout.tsx:95
+msgid "Kirill Ateev's artwork"
+msgstr "работы Кирилла Атеева"
+
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:41
+msgid "Metadata and compressed images stored on-chain, additionally the original photos stored on IPFS."
+msgstr "Метаданные и сжатые файлы хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS"
+
+#: src/components/collections/CollectionKindWords.tsx:40
+#: src/components/collections/CollectionNights.tsx:51
+msgid "Metadata and files stored on IPFS."
+msgstr "Метаданные и файлы хранятся в IPFS"
+
+#: src/components/collections/CollectionKindWords.tsx:31
+msgid "Polygon - Feb. 2023"
+msgstr "Polygon - Фев. 2023"
+
+#: src/app/[lang]/community/page.tsx:14
+msgid "Recent Community Work"
+msgstr "Недавние работы в сообществе"
+
+#: src/app/[lang]/page.tsx:20
+msgid "Recent Work"
+msgstr "Недавние работы"
+
+#: src/components/collections/CollectionNights.tsx:42
+msgid "TON - Dec. 2023"
+msgstr "TON - Дек. 2023"
+
+#: src/components/collections/CollectionKindWords.tsx:48
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:52
+#: src/components/collections/CollectionNights.tsx:59
+msgid "View collection >"
+msgstr "Посмотреть коллекцию >"
+
+#: src/app/[lang]/layout.tsx:42
+#: src/app/[lang]/layout.tsx:62
+#: src/app/[lang]/layout.tsx:85
+msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more."
+msgstr "Добро пожаловать на официальный сайт Кирилла Атеева, современного художника, известного своими уникальными и захватывающими работами. Ознакомьтесь с его портфолио, выставками, сообществом и многим другим."
+
+#: src/components/collections/CollectionNights.tsx:77
+msgid "Your browser does not support the video tag."
+msgstr "Ваш браузер не поддерживает видео тэг."
+
+#: src/components/lingui/Switcher.tsx:13
+msgid "Русский"
+msgstr "Русский"

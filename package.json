@@ -6,15 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "extract": "lingui extract",
+    "compile": "lingui compile"
   },
   "dependencies": {
+    "@lingui/macro": "^4.11.4",
+    "@lingui/react": "^4.11.4",
+    "negotiator": "^0.6.3",
     "next": "14.2.8",
     "react": "^18",
     "react-dom": "^18",
     "swiper": "^11.1.12"
   },
   "devDependencies": {
+    "@lingui/cli": "^4.11.4",
+    "@lingui/loader": "^4.11.4",
+    "@lingui/swc-plugin": "4.0.9",
+    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
