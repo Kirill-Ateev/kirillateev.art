@@ -16,7 +16,7 @@ export default withLinguiPage(function Home() {
           </div>
           <div className={styles.secondaryText}>
             <Trans>
-              Hi, I&apos;m Kirill. A generative artist working with code.
+              Hi, I&apos;m Kirill Ateev. A generative artist working with code.
             </Trans>
           </div>
         </section>

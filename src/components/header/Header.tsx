@@ -1,5 +1,7 @@
+import { basePath } from '@/constants';
 import { Trans } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../app/[lang]/page.module.css';
 
@@ -8,9 +10,12 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link href={`/${i18n.locale}`}>
-        <div className={styles.title}>
-          <Trans>Kirill Ateev</Trans>
-        </div>
+        <Image
+          src={`${basePath}/images/icons/initials.webp`}
+          alt={`KA`}
+          width="30"
+          height="30"
+        />
       </Link>
       <div className={styles.menuContainer}>
         <Link className={styles.menuItem} href={`/${i18n.locale}/community`}>

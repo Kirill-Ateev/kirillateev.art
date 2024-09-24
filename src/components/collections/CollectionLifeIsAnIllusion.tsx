@@ -24,11 +24,13 @@ export default function CollectionLifeIsAnIllusion() {
         modules={[A11y, FreeMode]}
       >
         <SwiperSlide className={styles.firstCard}>
-          <span className="swiper-no-swiping">
-            <div className={styles.title}>Life is an illusion</div>
-          </span>
-          <div className={styles.secondaryText}>
-            <Trans>Ethereum - Jun. 2023</Trans>
+          <div>
+            <span className="swiper-no-swiping">
+              <div className={styles.title}>Life is an illusion</div>
+            </span>
+            <div className={styles.secondaryText}>
+              <Trans>Ethereum - Jun. 2023</Trans>
+            </div>
           </div>
           <div className={styles.secondaryText}>
             <Trans>

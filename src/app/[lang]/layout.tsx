@@ -11,7 +11,7 @@ import './globals.css';
 export const nunito = localFont({
   src: './fonts/Nunito.ttf',
   variable: '--font-nunito',
-  weight: '100 400 900',
+  weight: '100 900',
 });
 
 export async function generateStaticParams() {

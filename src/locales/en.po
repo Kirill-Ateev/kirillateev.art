@@ -13,27 +13,31 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:34
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:36
 msgid "A unique collection of 42 impressionist photos from different parts of the world dedicated to Anna`s father. Each work contains 42 copies."
 msgstr "A unique collection of 42 impressionist photos from different parts of the world dedicated to Anna`s father. Each work contains 42 copies."
 
+#: src/components/collections/CollectionKindWords.tsx:36
+msgid "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
+msgstr "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
+
 #: src/components/collections/CollectionKindWords.tsx:34
-msgid "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
-msgstr "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
+#~ msgid "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
+#~ msgstr "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
 
 #: src/app/[lang]/contacts/page.tsx:27
 msgid "Ask me a question in the community"
 msgstr "Ask me a question in the community"
 
-#: src/components/header/Header.tsx:17
+#: src/components/header/Header.tsx:22
 msgid "Community"
 msgstr "Community"
 
-#: src/components/collections/CollectionNights.tsx:45
+#: src/components/collections/CollectionNights.tsx:47
 msgid "Compression-based generative multimedia collection. To play a melody - hover your mouse over the piece."
 msgstr "Compression-based generative multimedia collection. To play a melody - hover your mouse over the piece."
 
-#: src/components/header/Header.tsx:20
+#: src/components/header/Header.tsx:25
 msgid "Contacts"
 msgstr "Contacts"
 
@@ -41,7 +45,7 @@ msgstr "Contacts"
 msgid "English"
 msgstr "English"
 
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:31
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:32
 msgid "Ethereum - Jun. 2023"
 msgstr "Ethereum - Jun. 2023"
 
@@ -50,50 +54,40 @@ msgid "Get in Touch"
 msgstr "Get in Touch"
 
 #: src/app/[lang]/page.tsx:18
-msgid "Hi, I'm Kirill. A generative artist working with code."
-msgstr "Hi, I'm Kirill. A generative artist working with code."
+msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
+msgstr "Hi, I'm Kirill Ateev. A generative artist working with code."
 
-#: src/app/[lang]/layout.tsx:52
-#: src/app/[lang]/layout.tsx:74
-#: src/app/layout.tsx:39
-#: src/app/layout.tsx:61
-#: src/components/header/Header.tsx:12
+#: src/app/[lang]/layout.tsx:48
+#: src/app/[lang]/layout.tsx:70
 msgid "Kirill Ateev"
 msgstr "Kirill Ateev"
 
-#: src/app/[lang]/layout.tsx:38
-#: src/app/[lang]/layout.tsx:39
-#: src/app/[lang]/layout.tsx:59
-#: src/app/[lang]/layout.tsx:81
-#: src/app/layout.tsx:25
-#: src/app/layout.tsx:26
-#: src/app/layout.tsx:46
-#: src/app/layout.tsx:68
+#: src/app/[lang]/layout.tsx:34
+#: src/app/[lang]/layout.tsx:35
+#: src/app/[lang]/layout.tsx:55
+#: src/app/[lang]/layout.tsx:77
 msgid "Kirill Ateev - Artist"
 msgstr "Kirill Ateev - Artist"
 
-#: src/app/[lang]/layout.tsx:48
-#: src/app/layout.tsx:35
+#: src/app/[lang]/layout.tsx:44
 msgid "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
 msgstr "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
 
-#: src/app/[lang]/layout.tsx:72
-#: src/app/[lang]/layout.tsx:95
-#: src/app/layout.tsx:59
-#: src/app/layout.tsx:82
+#: src/app/[lang]/layout.tsx:68
+#: src/app/[lang]/layout.tsx:91
 msgid "Kirill Ateev's artwork"
 msgstr "Kirill Ateev's artwork"
 
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:41
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:43
 msgid "Metadata and compressed images stored on-chain, additionally the original photos stored on IPFS."
 msgstr "Metadata and compressed images stored on-chain, additionally the original photos stored on IPFS."
 
-#: src/components/collections/CollectionKindWords.tsx:40
-#: src/components/collections/CollectionNights.tsx:51
+#: src/components/collections/CollectionKindWords.tsx:51
+#: src/components/collections/CollectionNights.tsx:53
 msgid "Metadata and files stored on IPFS."
 msgstr "Metadata and files stored on IPFS."
 
-#: src/components/collections/CollectionKindWords.tsx:31
+#: src/components/collections/CollectionKindWords.tsx:32
 msgid "Polygon - Feb. 2023"
 msgstr "Polygon - Feb. 2023"
 
@@ -105,26 +99,23 @@ msgstr "Recent Community Work"
 msgid "Recent Work"
 msgstr "Recent Work"
 
-#: src/components/collections/CollectionNights.tsx:42
+#: src/components/collections/CollectionNights.tsx:43
 msgid "TON - Dec. 2023"
 msgstr "TON - Dec. 2023"
 
-#: src/components/collections/CollectionKindWords.tsx:48
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:52
-#: src/components/collections/CollectionNights.tsx:59
+#: src/components/collections/CollectionKindWords.tsx:59
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:54
+#: src/components/collections/CollectionNights.tsx:61
 msgid "View collection >"
 msgstr "View collection >"
 
-#: src/app/[lang]/layout.tsx:42
-#: src/app/[lang]/layout.tsx:62
-#: src/app/[lang]/layout.tsx:85
-#: src/app/layout.tsx:29
-#: src/app/layout.tsx:49
-#: src/app/layout.tsx:72
+#: src/app/[lang]/layout.tsx:38
+#: src/app/[lang]/layout.tsx:58
+#: src/app/[lang]/layout.tsx:81
 msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more."
 msgstr "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more."
 
-#: src/components/collections/CollectionNights.tsx:77
+#: src/components/collections/CollectionNights.tsx:79
 msgid "Your browser does not support the video tag."
 msgstr "Your browser does not support the video tag."
 

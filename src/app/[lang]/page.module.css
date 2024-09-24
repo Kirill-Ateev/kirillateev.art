@@ -1,5 +1,5 @@
 .header {
-  padding: var(--big-padding);
+  padding: var(--medium-padding) var(--big-padding);
   gap: var(--big-padding);
   display: flex;
   flex-direction: row;
@@ -11,7 +11,7 @@
 .title,
 .subTitle {
   font-size: var(--big-font-size);
-  font-weight: bold;
+  font-weight: var(--title-font-weight);
   color: var(--primary-color);
 }
 
@@ -23,8 +23,9 @@
 }
 
 .menuItem {
-  font-size: var(--medium-font-size);
+  font-size: var(--small-font-size);
   cursor: pointer;
+  font-weight: var(--text-font-weight);
 }
 
 .menuItem:hover {
@@ -32,13 +33,14 @@
 }
 
 .container {
-  padding: var(--big-padding);
+  padding: var(--greater-padding) var(--big-padding);
   display: flex;
   flex-direction: column;
   gap: var(--small-padding);
 }
 
 .secondaryText {
-  font-size: var(--medium-font-size);
+  font-size: var(--small-font-size);
   color: var(--secondary-color);
+  font-weight: var(--text-font-weight);
 }

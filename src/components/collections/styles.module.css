@@ -1,6 +1,6 @@
 .title {
-  font-size: var(--big-font-size);
-  font-weight: bold;
+  font-size: var(--medium-font-size);
+  font-weight: var(--title-font-weight);
   color: var(--primary-color);
 }
 .container {
@@ -8,8 +8,9 @@
   padding-bottom: var(--big-padding);
 }
 .secondaryText {
-  font-size: var(--medium-font-size);
+  font-size: var(--extra-font-size);
   color: var(--secondary-color);
+  font-weight: var(--text-font-weight);
 }
 
 .firstCard {

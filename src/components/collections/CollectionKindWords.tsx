@@ -24,16 +24,27 @@ export default function CollectionKindWords() {
         modules={[A11y, FreeMode]}
       >
         <SwiperSlide className={styles.firstCard}>
-          <span className="swiper-no-swiping">
-            <div className={styles.title}>Kind Words</div>
-          </span>
-          <div className={styles.secondaryText}>
-            <Trans>Polygon - Feb. 2023</Trans>
+          <div>
+            <span className="swiper-no-swiping">
+              <div className={styles.title}>Kind Words</div>
+            </span>
+            <div className={styles.secondaryText}>
+              <Trans>Polygon - Feb. 2023</Trans>
+            </div>
           </div>
           <div className={styles.secondaryText}>
             <Trans>
               A word-generative collection, a unique pattern of character states
-              from dobrofont, a font drawn by special children.
+              from{' '}
+              <a
+                className={`${styles.link} ${styles.secondaryText}`}
+                target="_blank"
+                rel="noreferrer"
+                href="https://dobroshrift.ru/"
+              >
+                dobrofont
+              </a>
+              , a font drawn by special children.
             </Trans>
           </div>
           <div className={styles.secondaryText}>

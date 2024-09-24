@@ -35,11 +35,13 @@ export default function CollectionNights() {
         modules={[A11y, FreeMode]}
       >
         <SwiperSlide className={styles.firstCard}>
-          <span className="swiper-no-swiping">
-            <div className={styles.title}>8 Nights</div>
-          </span>
-          <div className={styles.secondaryText}>
-            <Trans>TON - Dec. 2023</Trans>
+          <div>
+            <span className="swiper-no-swiping">
+              <div className={styles.title}>8 Nights</div>
+            </span>
+            <div className={styles.secondaryText}>
+              <Trans>TON - Dec. 2023</Trans>
+            </div>
           </div>
           <div className={styles.secondaryText}>
             <Trans>
