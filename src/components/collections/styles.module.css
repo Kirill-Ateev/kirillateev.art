@@ -5,7 +5,7 @@
 }
 .container {
   padding-top: var(--big-padding);
-  padding-bottom: var(--big-padding);
+  padding-bottom: var(--biggest-padding);
 }
 .secondaryText {
   font-size: var(--extra-font-size);

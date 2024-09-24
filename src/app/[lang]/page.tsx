@@ -9,7 +9,7 @@ export default withLinguiPage(function Home() {
   return (
     <div>
       <Header />
-      <main className={styles.main}>
+      <main>
         <section className={styles.container}>
           <div className={styles.subTitle}>
             <Trans>Recent Work</Trans>
@@ -24,6 +24,7 @@ export default withLinguiPage(function Home() {
         <CollectionNights />
         <CollectionKindWords />
       </main>
+      <footer className={styles.footer} />
     </div>
   );
 });

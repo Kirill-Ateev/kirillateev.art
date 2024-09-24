@@ -44,3 +44,15 @@
   color: var(--secondary-color);
   font-weight: var(--text-font-weight);
 }
+
+@media (max-width: 768px) {
+  .footer {
+    height: 12rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .footer {
+    height: 8rem;
+  }
+}
