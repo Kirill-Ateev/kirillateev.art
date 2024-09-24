@@ -14,8 +14,8 @@ const nextConfig = {
       },
     ];
   },
-  // basePath: '/personal-landing',
-  // assetPrefix: '/personal-landing/',
+  basePath: '/personal-landing',
+  assetPrefix: '/personal-landing/',
   webpack: (config) => {
     config.module.rules.push({
       test: /\.po$/,
