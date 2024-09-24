@@ -6,7 +6,7 @@ import { useLingui } from '@lingui/react';
 import localFont from 'next/font/local';
 import React from 'react';
 import linguiConfig from '../../../lingui.config';
-import './globals.css';
+import '../globals.css';
 
 const nunito = localFont({
   src: './fonts/Nunito.ttf',
@@ -94,7 +94,7 @@ export default withLinguiLayout(function RootLayout({
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={`${nunito.variable}`}>
+      <body className={nunito.variable}>
         <LinguiClientProvider
           initialLocale={lang}
           initialMessages={allMessages[lang]!}

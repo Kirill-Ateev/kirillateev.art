@@ -8,6 +8,11 @@
   flex-wrap: wrap;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .title,
 .subTitle {
   font-size: var(--big-font-size);

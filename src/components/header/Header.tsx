@@ -9,7 +9,7 @@ export default function Header() {
   const { i18n } = useLingui();
   return (
     <header className={styles.header}>
-      <Link href={`/${i18n.locale}`}>
+      <Link className={styles.logo} href={`/${i18n.locale}`}>
         <Image
           src={`${basePath}/images/icons/initials.webp`}
           alt={`KA`}

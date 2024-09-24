@@ -39,6 +39,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-nunito), Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 * {
@@ -61,4 +63,13 @@ a {
 .swiper-slide {
   width: fit-content !important;
   margin-right: 80px;
+}
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  height: 100vh;
 }

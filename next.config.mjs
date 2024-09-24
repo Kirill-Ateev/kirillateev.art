@@ -4,16 +4,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/en',
-        basePath: false,
-        permanent: false,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/en',
+  //       basePath: false,
+  //       permanent: false,
+  //     },
+  //   ];
+  // },
   basePath: '/personal-landing',
   assetPrefix: '/personal-landing/',
   webpack: (config) => {
