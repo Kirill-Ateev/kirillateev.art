@@ -1,5 +1,7 @@
 .title {
   font-size: var(--big-font-size);
+  font-weight: bold;
+  color: var(--primary-color);
 }
 .container {
   padding-top: var(--big-padding);

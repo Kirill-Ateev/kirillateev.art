@@ -1,21 +1,17 @@
-import { allMessages, getI18nInstance } from '@/appRouterI18n';
+import { allMessages } from '@/appRouterI18n';
 import { LinguiClientProvider } from '@/components/lingui/LinguiClientProvider';
 import { withLinguiLayout } from '@/withLingui';
 import { t } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 import localFont from 'next/font/local';
 import React from 'react';
 import linguiConfig from '../../../lingui.config';
 import './globals.css';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+export const nunito = localFont({
+  src: './fonts/Nunito.ttf',
+  variable: '--font-nunito',
+  weight: '100 400 900',
 });
 
 export async function generateStaticParams() {
@@ -29,7 +25,7 @@ export default withLinguiLayout(function RootLayout({
   children: React.ReactNode;
   params: { lang: string };
 }>) {
-  const i18n = getI18nInstance(lang);
+  const { i18n } = useLingui();
 
   return (
     <html lang={lang}>
@@ -98,7 +94,7 @@ export default withLinguiLayout(function RootLayout({
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${nunito.variable}`}>
         <LinguiClientProvider
           initialLocale={lang}
           initialMessages={allMessages[lang]!}

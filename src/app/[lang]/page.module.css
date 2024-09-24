@@ -11,6 +11,8 @@
 .title,
 .subTitle {
   font-size: var(--big-font-size);
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 .menuContainer {
