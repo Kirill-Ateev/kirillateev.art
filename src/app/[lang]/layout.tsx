@@ -3,10 +3,16 @@ import { LinguiClientProvider } from '@/components/lingui/LinguiClientProvider';
 import { withLinguiLayout } from '@/withLingui';
 import { t } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
+import localFont from 'next/font/local';
 import React from 'react';
 import linguiConfig from '../../../lingui.config';
 import './globals.css';
-import { nunito } from './page';
+
+const nunito = localFont({
+  src: './fonts/Nunito.ttf',
+  variable: '--font-nunito',
+  weight: '100 900',
+});
 
 export async function generateStaticParams() {
   return linguiConfig.locales.map((lang) => ({ lang }));

@@ -3,14 +3,7 @@ import CollectionNights from '@/components/collections/CollectionNights';
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/macro';
-import localFont from 'next/font/local';
 import styles from './page.module.css';
-
-export const nunito = localFont({
-  src: './fonts/Nunito.ttf',
-  variable: '--font-nunito',
-  weight: '100 900',
-});
 
 export default withLinguiPage(function Home() {
   return (
