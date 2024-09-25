@@ -19,6 +19,7 @@
   gap: 1rem;
   width: fit-content;
   width: 350px !important;
+  max-width: 350px !important;
   margin-right: 40px !important;
   padding-left: var(--big-padding);
   height: 512px;
