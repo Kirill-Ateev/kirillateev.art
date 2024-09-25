@@ -30,6 +30,19 @@ export default withLinguiLayout(function RootLayout({
   return (
     <html lang={lang}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z42GJN0HP7"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z42GJN0HP7');`}
+        </script>
+
         {/* Primary Meta Tags */}
         <title>{t(i18n)`Kirill Ateev - Artist`}</title>
         <meta name="title" content={t(i18n)`Kirill Ateev - Artist`} />
@@ -93,6 +106,8 @@ export default withLinguiLayout(function RootLayout({
 
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#ffffff" />
+
+        {/* <!-- Google tag (gtag.js) --> */}
       </head>
       <body className={nunito.variable}>
         <LinguiClientProvider
