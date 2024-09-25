@@ -1,0 +1,5 @@
+# Allow all search engines to crawl the site
+Allow: /
+
+# Sitemap location
+Sitemap: https://ateev.art/sitemap.xml

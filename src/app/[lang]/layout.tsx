@@ -39,9 +39,12 @@ export default withLinguiLayout(function RootLayout({
           {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-Z42GJN0HP7');`}
         </script>
+
+        <link rel="canonical" href="https://ateev.art/en" />
+        <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
+        <link rel="alternate" href="https://ateev.art/ru" hrefLang="ru" />
 
         {/* Primary Meta Tags */}
         <title>{t(i18n)`Kirill Ateev - Artist`}</title>
