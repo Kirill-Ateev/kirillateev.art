@@ -14,26 +14,26 @@
 }
 
 .title,
-.subTitle {
+.subtitle {
   font-size: var(--big-font-size);
   font-weight: var(--title-font-weight);
   color: var(--primary-color);
 }
 
-.menuContainer {
+.menu_container {
   display: flex;
   gap: var(--medium-padding);
   color: var(--secondary-color);
   flex-wrap: wrap;
 }
 
-.menuItem {
+.menu_item {
   font-size: var(--small-font-size);
   cursor: pointer;
   font-weight: var(--text-font-weight);
 }
 
-.menuItem:hover {
+.menu_item:hover {
   text-decoration: underline;
 }
 
@@ -44,7 +44,7 @@
   gap: var(--small-padding);
 }
 
-.secondaryText {
+.text_secondary {
   font-size: var(--small-font-size);
   color: var(--secondary-color);
   font-weight: var(--text-font-weight);

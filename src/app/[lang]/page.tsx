@@ -11,10 +11,10 @@ export default withLinguiPage(function Home() {
       <Header />
       <main>
         <section className={styles.container}>
-          <div className={styles.subTitle}>
+          <div className={styles.subtitle}>
             <Trans>Recent Work</Trans>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             <Trans>
               Hi, I&apos;m Kirill Ateev. A generative artist working with code.
             </Trans>

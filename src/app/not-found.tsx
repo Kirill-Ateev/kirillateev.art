@@ -52,10 +52,7 @@ export default function NotFound() {
           property="og:description"
           content={`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
-        <meta
-          property="og:image"
-          content="https://www.ateev.art/images/icon.png"
-        />
+        <meta property="og:image" content="https://www.ateev.art/favicon.ico" />
         <meta property="og:image:alt" content={`Kirill Ateev's artwork`} />
         <meta property="og:site_name" content={`Kirill Ateev`} />
 
@@ -69,7 +66,7 @@ export default function NotFound() {
         />
         <meta
           property="twitter:image"
-          content="https://www.ateev.art/images/icon.png"
+          content="https://www.ateev.art/favicon.ico"
         />
         <meta property="twitter:image:alt" content={`Kirill Ateev's artwork`} />
 
@@ -77,13 +74,13 @@ export default function NotFound() {
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={nunito.variable}>
-        <div className="errorContainer">
+        <div className="container_error">
           <img
             src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg"
             alt="404"
           />
           <div className={styles.title}>Not found – 404</div>
-          <div className={styles.menuItem}>
+          <div className={styles.menu_item}>
             <Link href="/en">Go back</Link>
           </div>
         </div>

@@ -34,26 +34,26 @@ export default function CollectionNights() {
         slidesPerView="auto"
         modules={[A11y, FreeMode]}
       >
-        <SwiperSlide className={styles.firstCard}>
+        <SwiperSlide className={styles.card_first}>
           <div>
             <span className="swiper-no-swiping">
               <div className={styles.title}>8 Nights</div>
             </span>
-            <div className={styles.secondaryText}>
+            <div className={styles.text_secondary}>
               <Trans>TON - Dec. 2023</Trans>
             </div>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             <Trans>
               Compression-based generative multimedia collection. To play a
               melody - hover your mouse over the piece.
             </Trans>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             <Trans>Metadata and files stored on IPFS.</Trans>
           </div>
           <a
-            className={`${styles.link} ${styles.secondaryText}`}
+            className={`${styles.link} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
             href="https://getgems.io/nights"
@@ -62,7 +62,7 @@ export default function CollectionNights() {
           </a>
         </SwiperSlide>
         {[65, 5, 79, 21, 1, 30].map((videoId, index) => (
-          <SwiperSlide key={videoId} className={styles.cardNights}>
+          <SwiperSlide key={videoId} className={styles.card_nights}>
             <video
               ref={(el) => {
                 videoRefs.current[index] = el;
@@ -81,7 +81,7 @@ export default function CollectionNights() {
           </SwiperSlide>
         ))}
         <SwiperSlide
-          className={styles.arrowRightContainer}
+          className={styles.container_arrow}
           style={{ height: isXs || isSm ? '256px' : '512px' }}
         >
           <ArrowRight href="https://getgems.io/nights" />

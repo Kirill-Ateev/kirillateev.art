@@ -9,13 +9,13 @@ export default withLinguiPage(function Contacts() {
       <Header />
       <main className={styles.main}>
         <section className={styles.container}>
-          <div className={styles.subTitle}>
+          <div className={styles.subtitle}>
             <Trans>Get in Touch</Trans>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             Telegram{' '}
             <a
-              className={`${styles.menuItem} ${styles.secondaryText}`}
+              className={`${styles.menu_item} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://t.me/ateev_kirill"
@@ -23,10 +23,10 @@ export default withLinguiPage(function Contacts() {
               @ateev_kirill
             </a>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             <Trans>Ask me a question in the community</Trans>{' '}
             <a
-              className={`${styles.menuItem} ${styles.secondaryText}`}
+              className={`${styles.menu_item} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://t.me/selfcashflowgang"

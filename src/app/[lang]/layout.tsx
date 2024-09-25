@@ -75,10 +75,7 @@ export default withLinguiLayout(function RootLayout({
             i18n
           )`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
-        <meta
-          property="og:image"
-          content="https://www.ateev.art/images/icon.png"
-        />
+        <meta property="og:image" content="https://www.ateev.art/favicon.ico" />
         <meta
           property="og:image:alt"
           content={t(i18n)`Kirill Ateev's artwork`}
@@ -100,7 +97,7 @@ export default withLinguiLayout(function RootLayout({
         />
         <meta
           property="twitter:image"
-          content="https://www.ateev.art/images/icon.png"
+          content="https://www.ateev.art/images/favicon.ico"
         />
         <meta
           property="twitter:image:alt"

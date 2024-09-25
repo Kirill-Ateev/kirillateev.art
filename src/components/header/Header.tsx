@@ -17,11 +17,11 @@ export default function Header() {
           height="30"
         />
       </Link>
-      <div className={styles.menuContainer}>
-        <Link className={styles.menuItem} href={`/${i18n.locale}/community`}>
+      <div className={styles.menu_container}>
+        <Link className={styles.menu_item} href={`/${i18n.locale}/community`}>
           <Trans>Community</Trans>
         </Link>
-        <Link className={styles.menuItem} href={`/${i18n.locale}/contacts`}>
+        <Link className={styles.menu_item} href={`/${i18n.locale}/contacts`}>
           <Trans>Contacts</Trans>
         </Link>
       </div>

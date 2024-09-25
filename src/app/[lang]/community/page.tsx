@@ -10,11 +10,11 @@ export default withLinguiPage(function Community() {
       <Header />
       <main className={styles.main}>
         <section className={styles.container}>
-          <div className={styles.subTitle}>
+          <div className={styles.subtitle}>
             <Trans>Recent Community Work</Trans>
           </div>
           <a
-            className={`${styles.menuItem} ${styles.secondaryText}`}
+            className={`${styles.menu_item} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
             href="https://t.me/selfcashflowgang"

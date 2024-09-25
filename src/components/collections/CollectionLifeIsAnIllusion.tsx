@@ -23,30 +23,30 @@ export default function CollectionLifeIsAnIllusion() {
         slidesPerView="auto"
         modules={[A11y, FreeMode]}
       >
-        <SwiperSlide className={styles.firstCard}>
+        <SwiperSlide className={styles.card_first}>
           <div>
             <span className="swiper-no-swiping">
               <div className={styles.title}>Life is an illusion</div>
             </span>
-            <div className={styles.secondaryText}>
+            <div className={styles.text_secondary}>
               <Trans>Ethereum - Jun. 2023</Trans>
             </div>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             <Trans>
               A unique collection of 42 impressionist photos from different
               parts of the world dedicated to Anna`s father. Each work contains
               42 copies.
             </Trans>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             <Trans>
               Metadata and compressed images stored on-chain, additionally the
               original photos stored on IPFS.
             </Trans>
           </div>
           <a
-            className={`${styles.link} ${styles.secondaryText}`}
+            className={`${styles.link} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
             href="https://rarible.com/life-is-an-illusion"
@@ -55,7 +55,7 @@ export default function CollectionLifeIsAnIllusion() {
           </a>
         </SwiperSlide>
         {[7, 9, 18, 13, 5, 17].map((imageId) => (
-          <SwiperSlide key={imageId} className={styles.cardLIAL}>
+          <SwiperSlide key={imageId} className={styles.card_liai}>
             <Image
               src={`${basePath}/images/lifeIsAnIllusion/${imageId}.webp`}
               alt={`Illusion %${imageId}`}
@@ -65,7 +65,7 @@ export default function CollectionLifeIsAnIllusion() {
           </SwiperSlide>
         ))}
         <SwiperSlide
-          className={styles.arrowRightContainer}
+          className={styles.container_arrow}
           style={{ height: isXs || isSm ? '392px' : '784px' }}
         >
           <ArrowRight href="https://rarible.com/life-is-an-illusion" />

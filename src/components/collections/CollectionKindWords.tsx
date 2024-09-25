@@ -23,21 +23,21 @@ export default function CollectionKindWords() {
         slidesPerView="auto"
         modules={[A11y, FreeMode]}
       >
-        <SwiperSlide className={styles.firstCard}>
+        <SwiperSlide className={styles.card_first}>
           <div>
             <span className="swiper-no-swiping">
               <div className={styles.title}>Kind Words</div>
             </span>
-            <div className={styles.secondaryText}>
+            <div className={styles.text_secondary}>
               <Trans>Polygon - Feb. 2023</Trans>
             </div>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             <Trans>
               A word-generative collection, a unique pattern of character states
               from{' '}
               <a
-                className={`${styles.link} ${styles.secondaryText}`}
+                className={`${styles.link} ${styles.text_secondary}`}
                 target="_blank"
                 rel="noreferrer"
                 href="https://dobroshrift.ru/"
@@ -47,11 +47,11 @@ export default function CollectionKindWords() {
               , a font drawn by special children.
             </Trans>
           </div>
-          <div className={styles.secondaryText}>
+          <div className={styles.text_secondary}>
             <Trans>Metadata and files stored on IPFS.</Trans>
           </div>
           <a
-            className={`${styles.link} ${styles.secondaryText}`}
+            className={`${styles.link} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
             href="https://rarible.com/kindwords"
@@ -60,7 +60,7 @@ export default function CollectionKindWords() {
           </a>
         </SwiperSlide>
         {[284, 89, 200, 91, 259, 278].map((imageId) => (
-          <SwiperSlide key={imageId} className={styles.cardKindWords}>
+          <SwiperSlide key={imageId} className={styles.card_kindwords}>
             <Image
               src={`${basePath}/images/kindWords/${imageId}.png`}
               alt={`Kind Words №${imageId}`}
@@ -70,7 +70,7 @@ export default function CollectionKindWords() {
           </SwiperSlide>
         ))}
         <SwiperSlide
-          className={styles.arrowRightContainer}
+          className={styles.container_arrow}
           style={{ height: isXs || isSm ? '256px' : '512px' }}
         >
           <ArrowRight href="https://rarible.com/kindwords" />

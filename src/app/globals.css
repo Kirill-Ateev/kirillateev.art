@@ -65,7 +65,7 @@ a {
   margin-right: 80px;
 }
 
-.errorContainer {
+.container_error {
   display: flex;
   justify-content: center;
   align-items: center;

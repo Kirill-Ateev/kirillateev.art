@@ -1,6 +1,6 @@
 {
-  "name": "personal-landing",
-  "version": "0.1.0",
+  "name": "ateev.art",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
