@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  min-height: 30px;
 }
 
 .logo {
