@@ -1,3 +1,4 @@
+import { GoogleTagManager } from '@next/third-parties/google';
 import localFont from 'next/font/local';
 import Link from 'next/link';
 import styles from './[lang]/page.module.css';
@@ -13,17 +14,7 @@ export default function NotFound() {
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-Z42GJN0HP7"
-        ></script>
-        <script>
-          {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Z42GJN0HP7');`}
-        </script>
+        <GoogleTagManager gtmId="G-Z42GJN0HP7" />
 
         <link rel="canonical" href="https://ateev.art/en" />
         <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
