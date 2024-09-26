@@ -60,9 +60,12 @@ export default function CollectionKindWords() {
           </a>
         </SwiperSlide>
         {[284, 89, 200, 91, 259, 278].map((imageId) => (
-          <SwiperSlide key={imageId} className={styles.card_kindwords}>
+          <SwiperSlide
+            key={imageId}
+            className={`${styles.card} ${styles.card_kindwords}`}
+          >
             <Image
-              src={`${basePath}/images/kindWords/${imageId}.png`}
+              src={`${basePath}/images/kindWords/${imageId}.webp`}
               alt={`Kind Words №${imageId}`}
               width={isXs || isSm ? '256' : '512'}
               height={isXs || isSm ? '256' : '512'}

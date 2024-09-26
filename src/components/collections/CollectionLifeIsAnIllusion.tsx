@@ -55,7 +55,10 @@ export default function CollectionLifeIsAnIllusion() {
           </a>
         </SwiperSlide>
         {[7, 9, 18, 13, 5, 17].map((imageId) => (
-          <SwiperSlide key={imageId} className={styles.card_liai}>
+          <SwiperSlide
+            key={imageId}
+            className={`${styles.card} ${styles.card_liai}`}
+          >
             <Image
               src={`${basePath}/images/lifeIsAnIllusion/${imageId}.webp`}
               alt={`Illusion %${imageId}`}

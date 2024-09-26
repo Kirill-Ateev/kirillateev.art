@@ -62,7 +62,10 @@ export default function CollectionNights() {
           </a>
         </SwiperSlide>
         {[65, 5, 79, 21, 1, 30].map((videoId, index) => (
-          <SwiperSlide key={videoId} className={styles.card_nights}>
+          <SwiperSlide
+            key={videoId}
+            className={`${styles.card} ${styles.card_nights}`}
+          >
             <video
               ref={(el) => {
                 videoRefs.current[index] = el;

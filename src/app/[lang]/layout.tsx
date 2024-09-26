@@ -1,10 +1,11 @@
 import { allMessages } from '@/appRouterI18n';
+import { GTM } from '@/components/GTM/GTM';
 import { LinguiClientProvider } from '@/components/lingui/LinguiClientProvider';
 import { withLinguiLayout } from '@/withLingui';
 import { t } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
-import { GoogleTagManager } from '@next/third-parties/google';
 import localFont from 'next/font/local';
+import Head from 'next/head';
 import React from 'react';
 import linguiConfig from '../../../lingui.config';
 import '../globals.css';
@@ -30,8 +31,8 @@ export default withLinguiLayout(function RootLayout({
 
   return (
     <html lang={lang}>
-      <head>
-        <GoogleTagManager gtmId="GTM-TWZXMCQQ" />
+      <Head>
+        <GTM />
 
         <link rel="canonical" href="https://ateev.art/en" />
         <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
@@ -99,7 +100,7 @@ export default withLinguiLayout(function RootLayout({
         <meta name="theme-color" content="#ffffff" />
 
         {/* <!-- Google tag (gtag.js) --> */}
-      </head>
+      </Head>
       <body className={nunito.variable}>
         <LinguiClientProvider
           initialLocale={lang}
