@@ -34,8 +34,8 @@ export default withLinguiLayout(function RootLayout({
         <GTM />
 
         <link rel="canonical" href="https://ateev.art/en" />
-        <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
         <link rel="alternate" href="https://ateev.art/ru" hrefLang="ru" />
+        <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
 
         {/* Primary Meta Tags */}
         <title>{t(i18n)`Kirill Ateev - Artist`}</title>
