@@ -32,7 +32,6 @@ export default withLinguiLayout(function RootLayout({
     <html lang={lang}>
       <head>
         <GTM />
-
         <link rel="canonical" href="https://ateev.art/en" />
         <link rel="alternate" href="https://ateev.art/ru" hrefLang="ru" />
         <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
@@ -97,8 +96,6 @@ export default withLinguiLayout(function RootLayout({
 
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#ffffff" />
-
-        {/* <!-- Google tag (gtag.js) --> */}
       </head>
       <body className={nunito.variable}>
         <LinguiClientProvider

@@ -1,6 +1,5 @@
 import { GTM } from '@/components/GTM/GTM';
 import localFont from 'next/font/local';
-import Head from 'next/head';
 import Link from 'next/link';
 import styles from './[lang]/page.module.css';
 import './globals.css';
@@ -14,9 +13,8 @@ const nunito = localFont({
 export default function NotFound() {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <GTM />
-
         <link rel="canonical" href="https://ateev.art/en" />
         <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
         <link rel="alternate" href="https://ateev.art/ru" hrefLang="ru" />
@@ -64,7 +62,7 @@ export default function NotFound() {
 
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#ffffff" />
-      </Head>
+      </head>
       <body className={nunito.variable}>
         <div className="container_error">
           <img
