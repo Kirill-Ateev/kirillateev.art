@@ -31,7 +31,7 @@ export default withLinguiLayout(function RootLayout({
   return (
     <html lang={lang}>
       <head>
-        <GoogleTagManager gtmId="G-Z42GJN0HP7" />
+        <GoogleTagManager gtmId="GTM-TWZXMCQQ" />
 
         <link rel="canonical" href="https://ateev.art/en" />
         <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
