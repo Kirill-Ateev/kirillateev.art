@@ -5,7 +5,6 @@ import { withLinguiLayout } from '@/withLingui';
 import { t } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
 import localFont from 'next/font/local';
-import Head from 'next/head';
 import React from 'react';
 import linguiConfig from '../../../lingui.config';
 import '../globals.css';
@@ -31,7 +30,7 @@ export default withLinguiLayout(function RootLayout({
 
   return (
     <html lang={lang}>
-      <Head>
+      <head>
         <GTM />
 
         <link rel="canonical" href="https://ateev.art/en" />
@@ -100,7 +99,7 @@ export default withLinguiLayout(function RootLayout({
         <meta name="theme-color" content="#ffffff" />
 
         {/* <!-- Google tag (gtag.js) --> */}
-      </Head>
+      </head>
       <body className={nunito.variable}>
         <LinguiClientProvider
           initialLocale={lang}
