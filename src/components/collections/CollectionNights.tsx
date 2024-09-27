@@ -76,8 +76,8 @@ export default function CollectionNights() {
               onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
             >
               <source
-                src={`${basePath}/videos/nights/${videoId}.mp4`}
-                type="video/mp4"
+                src={`${basePath}/videos/nights/${videoId}.webm`}
+                type="video/webm"
               />
               <Trans>Your browser does not support the video tag.</Trans>
             </video>
