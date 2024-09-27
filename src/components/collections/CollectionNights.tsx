@@ -32,6 +32,8 @@ export default function CollectionNights() {
         grabCursor={true}
         freeMode={true}
         slidesPerView="auto"
+        // touchEventsTarget="container"
+        // touchMoveStopPropagation={true}
         modules={[A11y, FreeMode]}
       >
         <SwiperSlide className={styles.card_first}>
@@ -72,7 +74,8 @@ export default function CollectionNights() {
               }}
               width={isXs || isSm ? '256' : '512'}
               height={isXs || isSm ? '256' : '512'}
-              onClick={(event) => (event.target as HTMLVideoElement).play()}
+              onMouseDown={(event) => (event.target as HTMLVideoElement).play()}
+              onMouseUp={(event) => (event.target as HTMLVideoElement).pause()}
             >
               <source
                 src={`${basePath}/videos/nights/${videoId}.mp4`}

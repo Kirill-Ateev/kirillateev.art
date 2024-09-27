@@ -21,6 +21,7 @@ export default function CollectionLifeIsAnIllusion() {
         grabCursor={true}
         freeMode={true}
         slidesPerView="auto"
+        touchEventsTarget="container"
         modules={[A11y, FreeMode]}
       >
         <SwiperSlide className={styles.card_first}>

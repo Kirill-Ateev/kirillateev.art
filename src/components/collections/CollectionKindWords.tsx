@@ -21,6 +21,7 @@ export default function CollectionKindWords() {
         grabCursor={true}
         freeMode={true}
         slidesPerView="auto"
+        touchEventsTarget="container"
         modules={[A11y, FreeMode]}
       >
         <SwiperSlide className={styles.card_first}>
