@@ -76,6 +76,8 @@ export default function CollectionNights() {
               onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
             >
               <source
+                width={isXs || isSm ? '256' : '512'}
+                height={isXs || isSm ? '256' : '512'}
                 src={`${basePath}/videos/nights/${videoId}.webm`}
                 type="video/webm"
               />
