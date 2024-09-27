@@ -9,14 +9,16 @@ export default function ArrowRight({ href }: arrowProps) {
     <a className={styles.arrow} target="_blank" rel="noreferrer" href={href}>
       <svg
         viewBox="0 0 32 32"
+        width="38px"
+        height="38px"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         fill="#000000"
       >
-        <g id="SVGRepo_bgCarrier"></g>
-        <g id="SVGRepo_tracerCarrier"></g>
-        <g id="SVGRepo_iconCarrier">
-          <g id="icomoon-ignore"> </g>
+        <g></g>
+        <g></g>
+        <g>
+          <g> </g>
           <path
             d="M2.639 15.992c0 7.366 5.97 13.337 13.337 13.337s13.337-5.97 13.337-13.337-5.97-13.337-13.337-13.337-13.337 5.97-13.337 13.337zM28.245 15.992c0 6.765-5.504 12.27-12.27 12.27s-12.27-5.505-12.27-12.27 5.505-12.27 12.27-12.27c6.765 0 12.27 5.505 12.27 12.27z"
             fill="#000000"

@@ -27,13 +27,10 @@ export default function CollectionNights() {
     <section>
       <Swiper
         className={styles.container}
-        observer={true}
-        observeParents={true}
         grabCursor={true}
         freeMode={true}
         slidesPerView="auto"
-        // touchEventsTarget="container"
-        // touchMoveStopPropagation={true}
+        touchEventsTarget="container"
         modules={[A11y, FreeMode]}
       >
         <SwiperSlide className={styles.card_first}>
@@ -78,8 +75,8 @@ export default function CollectionNights() {
               onMouseUp={(event) => (event.target as HTMLVideoElement).pause()}
             >
               <source
-                src={`${basePath}/videos/nights/${videoId}.mp4`}
-                type="video/mp4"
+                src={`${basePath}/videos/nights/${videoId}.webm`}
+                type="video/webm"
               />
               <Trans>Your browser does not support the video tag.</Trans>
             </video>
