@@ -30,8 +30,8 @@ msgid "Community"
 msgstr "Сообщество"
 
 #: src/components/collections/CollectionNights.tsx:47
-msgid "Compression-based generative multimedia collection. To play a melody - hover your mouse over the piece."
-msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, наведите курсор мыши на фрагмент."
+msgid "Compression-based generative multimedia collection. To play a melody - click over the piece."
+msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, кликните на фрагмент."
 
 #: src/components/header/Header.tsx:25
 msgid "Contacts"
@@ -53,24 +53,24 @@ msgstr "Свяжитесь с нами"
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Привет, я Кирилл Атеев. Создаю генеративное искусство с помощью кода."
 
-#: src/app/[lang]/layout.tsx:48
-#: src/app/[lang]/layout.tsx:70
+#: src/app/[lang]/layout.tsx:54
+#: src/app/[lang]/layout.tsx:73
 msgid "Kirill Ateev"
 msgstr "Кирилл Атеев"
 
-#: src/app/[lang]/layout.tsx:34
-#: src/app/[lang]/layout.tsx:35
-#: src/app/[lang]/layout.tsx:55
-#: src/app/[lang]/layout.tsx:77
+#: src/app/[lang]/layout.tsx:40
+#: src/app/[lang]/layout.tsx:41
+#: src/app/[lang]/layout.tsx:61
+#: src/app/[lang]/layout.tsx:80
 msgid "Kirill Ateev - Artist"
 msgstr "Кирилл Атеев - Artist"
 
-#: src/app/[lang]/layout.tsx:44
+#: src/app/[lang]/layout.tsx:50
 msgid "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
 msgstr "Кирилл Атеев, художник, современное искусство, генеративное, сообщество, выставки, портфолио"
 
-#: src/app/[lang]/layout.tsx:68
-#: src/app/[lang]/layout.tsx:91
+#: src/app/[lang]/layout.tsx:71
+#: src/app/[lang]/layout.tsx:94
 msgid "Kirill Ateev's artwork"
 msgstr "работы Кирилла Атеева"
 
@@ -105,13 +105,13 @@ msgstr "TON - Дек. 2023"
 msgid "View collection >"
 msgstr "Посмотреть коллекцию >"
 
-#: src/app/[lang]/layout.tsx:38
-#: src/app/[lang]/layout.tsx:58
-#: src/app/[lang]/layout.tsx:81
+#: src/app/[lang]/layout.tsx:44
+#: src/app/[lang]/layout.tsx:64
+#: src/app/[lang]/layout.tsx:84
 msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more."
 msgstr "Добро пожаловать на официальный сайт Кирилла Атеева, современного художника, известного своими уникальными и захватывающими работами. Ознакомьтесь с его портфолио, выставками, сообществом и многим другим."
 
-#: src/components/collections/CollectionNights.tsx:79
+#: src/components/collections/CollectionNights.tsx:82
 msgid "Your browser does not support the video tag."
 msgstr "Ваш браузер не поддерживает видео тэг."
 

@@ -70,54 +70,41 @@
 .card_nights {
   width: 512px !important;
   height: 512px !important;
-  max-width: 512px;
-  max-height: 512px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .card_kindwords {
   width: 512px !important;
   height: 512px !important;
-  max-width: 512px;
-  max-height: 512px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .card_liai {
   width: 555px !important;
   height: 784px !important;
-  max-width: 555px;
-  max-height: 5784px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 @media (max-width: 767px) {
   .card_first {
     width: 250px !important;
-    height: 256px;
-    max-width: 250px;
-    max-height: 256px;
+    height: 256px !important;
+    max-width: 250px !important;
   }
 
   .card_nights {
     width: 256px !important;
     height: 256px !important;
-    max-width: 256px;
-    max-height: 256px;
   }
 
   .card_kindwords {
     width: 256px !important;
     height: 256px !important;
-    max-width: 256px;
-    max-height: 256px;
   }
 
   .card_liai {
     width: 277px !important;
     height: 392px !important;
-    max-width: 277px;
-    max-height: 392px;
   }
 }
 

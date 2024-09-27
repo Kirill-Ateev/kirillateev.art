@@ -46,7 +46,7 @@ export default function CollectionNights() {
           <div className={styles.text_secondary}>
             <Trans>
               Compression-based generative multimedia collection. To play a
-              melody - hover your mouse over the piece.
+              melody - click over the piece.
             </Trans>
           </div>
           <div className={styles.text_secondary}>
@@ -72,14 +72,11 @@ export default function CollectionNights() {
               }}
               width={isXs || isSm ? '256' : '512'}
               height={isXs || isSm ? '256' : '512'}
-              onMouseOver={(event) => (event.target as HTMLVideoElement).play()}
-              onMouseOut={(event) => (event.target as HTMLVideoElement).pause()}
+              onClick={(event) => (event.target as HTMLVideoElement).play()}
             >
               <source
-                width={isXs || isSm ? '256' : '512'}
-                height={isXs || isSm ? '256' : '512'}
-                src={`${basePath}/videos/nights/${videoId}.webm`}
-                type="video/webm"
+                src={`${basePath}/videos/nights/${videoId}.mp4`}
+                type="video/mp4"
               />
               <Trans>Your browser does not support the video tag.</Trans>
             </video>
