@@ -8,6 +8,7 @@ import localFont from 'next/font/local';
 import React from 'react';
 import linguiConfig from '../../../lingui.config';
 import '../globals.css';
+import styles from './page.module.css';
 
 const nunito = localFont({
   src: './fonts/Nunito.ttf',
@@ -104,6 +105,7 @@ export default withLinguiLayout(function RootLayout({
         >
           {children}
         </LinguiClientProvider>
+        <footer className={styles.footer} />
       </body>
     </html>
   );

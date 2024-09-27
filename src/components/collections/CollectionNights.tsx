@@ -69,8 +69,8 @@ export default function CollectionNights() {
               ref={(el) => {
                 videoRefs.current[index] = el;
               }}
-              width={isXs || isSm ? '256' : '512'}
-              height={isXs || isSm ? '256' : '512'}
+              width={isXs || isSm ? '300' : '512'}
+              height={isXs || isSm ? '300' : '512'}
               onMouseDown={(event) => (event.target as HTMLVideoElement).play()}
               onMouseUp={(event) => (event.target as HTMLVideoElement).pause()}
             >
@@ -84,7 +84,7 @@ export default function CollectionNights() {
         ))}
         <SwiperSlide
           className={styles.container_arrow}
-          style={{ height: isXs || isSm ? '256px' : '512px' }}
+          style={{ height: isXs || isSm ? '300px' : '512px' }}
         >
           <ArrowRight href="https://getgems.io/nights" />
         </SwiperSlide>

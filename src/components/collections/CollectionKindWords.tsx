@@ -68,14 +68,14 @@ export default function CollectionKindWords() {
             <Image
               src={`${basePath}/images/kindWords/${imageId}.webp`}
               alt={`Kind Words №${imageId}`}
-              width={isXs || isSm ? '256' : '512'}
-              height={isXs || isSm ? '256' : '512'}
+              width={isXs || isSm ? '300' : '512'}
+              height={isXs || isSm ? '300' : '512'}
             />
           </SwiperSlide>
         ))}
         <SwiperSlide
           className={styles.container_arrow}
-          style={{ height: isXs || isSm ? '256px' : '512px' }}
+          style={{ height: isXs || isSm ? '300px' : '512px' }}
         >
           <ArrowRight href="https://rarible.com/kindwords" />
         </SwiperSlide>

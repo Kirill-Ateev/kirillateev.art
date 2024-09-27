@@ -7,7 +7,7 @@ import styles from './page.module.css';
 
 export default withLinguiPage(function Home() {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section className={styles.container}>
@@ -24,7 +24,6 @@ export default withLinguiPage(function Home() {
         <CollectionNights />
         <CollectionKindWords />
       </main>
-      <footer className={styles.footer} />
-    </div>
+    </>
   );
 });
