@@ -63,7 +63,7 @@ export default function CollectionLifeIsAnIllusion() {
             <Trans>View collection &gt;</Trans>
           </a>
         </SwiperSlide>
-        {[33, 7, 13, 5, 34, 35].map((imageId) => (
+        {[33, 7, 13, 5, 32, 35].map((imageId) => (
           <SwiperSlide
             key={imageId}
             className={`${styles.card} ${styles.card_liai}`}
