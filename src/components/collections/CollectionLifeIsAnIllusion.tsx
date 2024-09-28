@@ -37,7 +37,7 @@ export default function CollectionLifeIsAnIllusion() {
             <Trans>
               A unique collection of 42 impressionist photos from different
               parts of the world dedicated to Anna`s father. Each work contains
-              42 copies.
+              42 copies. Now minting.
             </Trans>
           </div>
           <div className={styles.text_secondary}>
@@ -50,12 +50,20 @@ export default function CollectionLifeIsAnIllusion() {
             className={`${styles.link} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
+            href="https://github.com/Kirill-Ateev/life-is-an-illusion"
+          >
+            <Trans>Source code &gt;</Trans>
+          </a>
+          <a
+            className={`${styles.link} ${styles.text_secondary}`}
+            target="_blank"
+            rel="noreferrer"
             href="https://rarible.com/life-is-an-illusion"
           >
             <Trans>View collection &gt;</Trans>
           </a>
         </SwiperSlide>
-        {[7, 9, 18, 13, 5, 17].map((imageId) => (
+        {[33, 7, 13, 5, 34, 35].map((imageId) => (
           <SwiperSlide
             key={imageId}
             className={`${styles.card} ${styles.card_liai}`}

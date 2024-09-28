@@ -55,6 +55,14 @@ export default function CollectionKindWords() {
             className={`${styles.link} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
+            href="https://github.com/Kirill-Ateev/kind-words"
+          >
+            <Trans>Source code &gt;</Trans>
+          </a>
+          <a
+            className={`${styles.link} ${styles.text_secondary}`}
+            target="_blank"
+            rel="noreferrer"
             href="https://rarible.com/kindwords"
           >
             <Trans>View collection &gt;</Trans>
