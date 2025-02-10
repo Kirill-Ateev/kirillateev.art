@@ -18,9 +18,9 @@ export default function Header() {
         />
       </Link>
       <div className={styles.menu_container}>
-        <Link className={styles.menu_item} href={`/${i18n.locale}/community`}>
+        {/* <Link className={styles.menu_item} href={`/${i18n.locale}/community`}>
           <Trans>Community</Trans>
-        </Link>
+        </Link> */}
         <Link className={styles.menu_item} href={`/${i18n.locale}/contacts`}>
           <Trans>Contacts</Trans>
         </Link>

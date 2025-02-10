@@ -1,4 +1,3 @@
-import CollectionLifeIsAnIllusion from '@/components/collections/CollectionLifeIsAnIllusion';
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/macro';
@@ -17,12 +16,12 @@ export default withLinguiPage(function Community() {
             className={`${styles.menu_item} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
-            href="https://t.me/selfcashflowgang"
+            href="https://t.me/ateev_kirill"
           >
-            @selfcashflowgang
+            @ateev_kirill
           </a>
         </section>
-        <CollectionLifeIsAnIllusion />
+        {/* <CollectionLifeIsAnIllusion /> */}
       </main>
     </div>
   );
