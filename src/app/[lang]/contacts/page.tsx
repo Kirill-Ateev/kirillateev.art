@@ -23,7 +23,7 @@ export default withLinguiPage(function Contacts() {
               @ateev_kirill
             </a>
           </div>
-          <div className={styles.text_secondary}>
+          {/* <div className={styles.text_secondary}>
             <Trans>Ask me a question in the community</Trans>{' '}
             <a
               className={`${styles.menu_item} ${styles.text_secondary}`}
@@ -33,7 +33,7 @@ export default withLinguiPage(function Contacts() {
             >
               @selfcashflowgang
             </a>
-          </div>
+          </div> */}
         </section>
       </main>
     </div>
