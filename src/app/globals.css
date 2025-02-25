@@ -62,11 +62,6 @@ a {
   text-decoration: none;
 }
 
-.swiper-slide {
-  width: fit-content !important;
-  margin-right: 80px;
-}
-
 .container_error {
   display: flex;
   justify-content: center;
@@ -74,4 +69,17 @@ a {
   align-content: center;
   flex-direction: column;
   height: 100vh;
+}
+
+.draggable {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.draggable:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
 }

@@ -1,3 +1,20 @@
+/* Embla Carousel базовые стили */
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  gap: 80px;
+  padding-top: var(--big-padding);
+  padding-bottom: var(--biggest-padding);
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+}
+
 .title {
   font-size: var(--medium-font-size);
   font-weight: var(--title-font-weight);
@@ -19,9 +36,10 @@
   gap: 1rem;
   width: 350px !important;
   max-width: 350px !important;
-  margin-right: 40px !important;
+  margin-right: -40px !important;
   padding-left: var(--big-padding);
   height: 512px;
+  cursor: default;
 }
 
 @-webkit-keyframes Animation {
@@ -113,6 +131,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  margin-right: 80px;
 }
 
 .arrow {
