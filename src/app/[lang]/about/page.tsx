@@ -3,14 +3,14 @@ import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/macro';
 import styles from '../page.module.css';
 
-export default withLinguiPage(function Contacts() {
+export default withLinguiPage(function About() {
   return (
     <div>
       <Header />
       <main className={styles.main}>
         <section className={styles.container}>
           <div className={styles.subtitle}>
-            <Trans>Get in Touch</Trans>
+            <Trans>Community</Trans>
           </div>
           <div className={styles.text_secondary}>
             Telegram{' '}

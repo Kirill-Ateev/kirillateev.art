@@ -25,7 +25,7 @@ msgstr "A word-generative collection, a unique pattern of character states from 
 #~ msgid "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
 #~ msgstr "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
 
-#: src/app/[lang]/contacts/page.tsx:27
+#: src/app/[lang]/about/page.tsx:27
 msgid "Ask me a question in the community"
 msgstr "Ask me a question in the community"
 
@@ -38,8 +38,8 @@ msgid "Compression-based generative multimedia collection. To play a melody - cl
 msgstr "Compression-based generative multimedia collection. To play a melody - click over the piece."
 
 #: src/components/header/Header.tsx:25
-msgid "Contacts"
-msgstr "Contacts"
+msgid "About me"
+msgstr "About me"
 
 #: src/components/lingui/Switcher.tsx:12
 msgid "English"
@@ -49,9 +49,9 @@ msgstr "English"
 msgid "Ethereum - Jun. 2023"
 msgstr "Ethereum - Jun. 2023"
 
-#: src/app/[lang]/contacts/page.tsx:13
-msgid "Get in Touch"
-msgstr "Get in Touch"
+#: src/app/[lang]/about/page.tsx:13
+msgid "Community"
+msgstr "Community"
 
 #: src/app/[lang]/page.tsx:18
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."

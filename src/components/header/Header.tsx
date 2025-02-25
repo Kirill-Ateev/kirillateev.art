@@ -15,8 +15,8 @@ export default function Header() {
         {/* <Link className={styles.menu_item} href={`/${i18n.locale}/community`}>
           <Trans>Community</Trans>
         </Link> */}
-        <Link className={styles.menu_item} href={`/${i18n.locale}/contacts`}>
-          <Trans>Contacts</Trans>
+        <Link className={styles.menu_item} href={`/${i18n.locale}/about`}>
+          <Trans>About me</Trans>
         </Link>
       </div>
     </header>

@@ -21,7 +21,7 @@ msgstr "Уникальная коллекция из 42 импрессионис
 msgid "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
 msgstr "Коллекция словообразования, уникальный узор состояний символов из <0>доброшрифта</0>, нарисованного особенными детьми."
 
-#: src/app/[lang]/contacts/page.tsx:27
+#: src/app/[lang]/about/page.tsx:27
 msgid "Ask me a question in the community"
 msgstr "Задайте мне вопрос в сообществе"
 
@@ -34,8 +34,8 @@ msgid "Compression-based generative multimedia collection. To play a melody - cl
 msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, кликните на фрагмент."
 
 #: src/components/header/Header.tsx:25
-msgid "Contacts"
-msgstr "Контакты"
+msgid "About me"
+msgstr "Обо мне"
 
 #: src/components/lingui/Switcher.tsx:12
 msgid "English"
@@ -45,9 +45,9 @@ msgstr "English"
 msgid "Ethereum - Jun. 2023"
 msgstr "Ethereum - Июнь 2023"
 
-#: src/app/[lang]/contacts/page.tsx:13
-msgid "Get in Touch"
-msgstr "Свяжитесь с нами"
+#: src/app/[lang]/about/page.tsx:13
+msgid "Community"
+msgstr "Сообщество"
 
 #: src/app/[lang]/page.tsx:18
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."

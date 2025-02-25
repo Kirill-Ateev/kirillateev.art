@@ -10,7 +10,7 @@
   </url>
 
   <url>
-    <loc>https://ateev.art/en/contacts</loc>
+    <loc>https://ateev.art/en/about</loc>
     <lastmod>2024-09-25</lastmod> <!-- (Optional: Replace with the actual last modified date) -->
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -32,7 +32,7 @@
   </url>
 
   <url>
-    <loc>https://ateev.art/ru/contacts</loc>
+    <loc>https://ateev.art/ru/about</loc>
     <lastmod>2024-09-25</lastmod> <!-- (Optional: Replace with the actual last modified date) -->
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
