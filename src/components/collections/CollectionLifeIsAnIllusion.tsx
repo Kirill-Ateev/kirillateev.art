@@ -33,11 +33,7 @@ export default function CollectionLifeIsAnIllusion() {
               </div>
             </div>
             <div className={styles.text_secondary}>
-              <Trans>
-                A unique collection of 42 impressionist photos from different
-                parts of the world dedicated to Anna`s father. Each work
-                contains 42 copies. Now minting.
-              </Trans>
+              <Trans>A collection of 42 impressionist style photos.</Trans>
             </div>
             <div className={styles.text_secondary}>
               <Trans>

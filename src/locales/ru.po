@@ -13,43 +13,47 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:37
-msgid "A unique collection of 42 impressionist photos from different parts of the world dedicated to Anna`s father. Each work contains 42 copies. Now minting."
-msgstr "Уникальная коллекция из 42 импрессионистских фотографий из разных уголков мира, посвященная отцу Анны. Каждая работа содержит 42 экземпляра. Сейчас выпускается."
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:36
+msgid "A collection of 42 impressionist style photos."
+msgstr "Коллекция из 42 фотографий в стиле импрессионизма."
 
-#: src/components/collections/CollectionKindWords.tsx:37
+#: src/components/collections/CollectionAttentionless.tsx:35
+msgid "A collection of generative collages of CC0 images in an abstractionist style."
+msgstr "Коллекция генеративных коллажей из CC0 изображений в стиле абстракционизма."
+
+#: src/components/collections/CollectionKindWords.tsx:35
 msgid "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
 msgstr "Коллекция словообразования, уникальный узор состояний символов из <0>доброшрифта</0>, нарисованного особенными детьми."
 
-#: src/app/[lang]/about/page.tsx:27
-msgid "Ask me a question in the community"
-msgstr "Задайте мне вопрос в сообществе"
-
-#: src/components/header/Header.tsx:22
-msgid "Community"
-msgstr "Сообщество"
-
-#: src/components/collections/CollectionNights.tsx:46
-msgid "Compression-based generative multimedia collection. To play a melody - click over the piece."
-msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, кликните на фрагмент."
-
-#: src/components/header/Header.tsx:25
+#: src/components/header/Header.tsx:19
 msgid "About me"
 msgstr "Обо мне"
 
-#: src/components/lingui/Switcher.tsx:12
-msgid "English"
-msgstr "English"
-
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:33
-msgid "Ethereum - Jun. 2023"
-msgstr "Ethereum - Июнь 2023"
+#: src/app/[lang]/about/page.tsx:27
+#~ msgid "Ask me a question in the community"
+#~ msgstr "Задайте мне вопрос в сообществе"
 
 #: src/app/[lang]/about/page.tsx:13
 msgid "Community"
 msgstr "Сообщество"
 
-#: src/app/[lang]/page.tsx:18
+#: src/components/collections/CollectionNights.tsx:45
+msgid "Compression-based generative multimedia collection. To play a melody - click over the piece."
+msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, кликните на фрагмент."
+
+#: src/components/lingui/Switcher.tsx:12
+msgid "English"
+msgstr "English"
+
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:32
+msgid "Ethereum - Jun. 2023"
+msgstr "Ethereum - Июнь 2023"
+
+#: src/components/collections/CollectionAttentionless.tsx:31
+msgid "Ethereum - March 2025"
+msgstr "Ethereum - Март 2025"
+
+#: src/app/[lang]/page.tsx:20
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Привет, я Кирилл Атеев. Создаю генеративное искусство с помощью кода."
 
@@ -74,40 +78,43 @@ msgstr "Кирилл Атеев, художник, современное иск
 msgid "Kirill Ateev's artwork"
 msgstr "работы Кирилла Атеева"
 
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:44
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:39
 msgid "Metadata and compressed images stored on-chain, additionally the original photos stored on IPFS."
 msgstr "Метаданные и сжатые файлы хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS"
 
-#: src/components/collections/CollectionKindWords.tsx:52
-#: src/components/collections/CollectionNights.tsx:52
+#: src/components/collections/CollectionAttentionless.tsx:41
+#: src/components/collections/CollectionKindWords.tsx:50
+#: src/components/collections/CollectionNights.tsx:51
 msgid "Metadata and files stored on IPFS."
 msgstr "Метаданные и файлы хранятся в IPFS"
 
-#: src/components/collections/CollectionKindWords.tsx:33
+#: src/components/collections/CollectionKindWords.tsx:31
 msgid "Polygon - Feb. 2023"
 msgstr "Polygon - Фев. 2023"
 
-#: src/app/[lang]/community/page.tsx:14
+#: src/app/[lang]/community/page.tsx:13
 msgid "Recent Community Work"
 msgstr "Недавние работы в сообществе"
 
-#: src/app/[lang]/page.tsx:15
+#: src/app/[lang]/page.tsx:17
 msgid "Recent Work"
 msgstr "Недавние работы"
 
-#: src/components/collections/CollectionKindWords.tsx:60
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:55
-#: src/components/collections/CollectionNights.tsx:60
+#: src/components/collections/CollectionAttentionless.tsx:49
+#: src/components/collections/CollectionKindWords.tsx:58
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:50
+#: src/components/collections/CollectionNights.tsx:59
 msgid "Source code >"
 msgstr "Исходный код >"
 
-#: src/components/collections/CollectionNights.tsx:42
+#: src/components/collections/CollectionNights.tsx:41
 msgid "TON - Dec. 2023"
 msgstr "TON - Дек. 2023"
 
-#: src/components/collections/CollectionKindWords.tsx:68
-#: src/components/collections/CollectionLifeIsAnIllusion.tsx:63
-#: src/components/collections/CollectionNights.tsx:68
+#: src/components/collections/CollectionAttentionless.tsx:57
+#: src/components/collections/CollectionKindWords.tsx:66
+#: src/components/collections/CollectionLifeIsAnIllusion.tsx:58
+#: src/components/collections/CollectionNights.tsx:67
 msgid "View collection >"
 msgstr "Посмотреть коллекцию >"
 
@@ -117,7 +124,7 @@ msgstr "Посмотреть коллекцию >"
 msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more."
 msgstr "Добро пожаловать на официальный сайт Кирилла Атеева, современного художника, известного своими уникальными и захватывающими работами. Ознакомьтесь с его портфолио, выставками, сообществом и многим другим."
 
-#: src/components/collections/CollectionNights.tsx:89
+#: src/components/collections/CollectionNights.tsx:93
 msgid "Your browser does not support the video tag."
 msgstr "Ваш браузер не поддерживает видео тэг."
 

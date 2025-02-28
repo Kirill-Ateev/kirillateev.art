@@ -7,8 +7,8 @@
 .embla__container {
   display: flex;
   gap: 80px;
-  padding-top: var(--big-padding);
-  padding-bottom: var(--biggest-padding);
+  padding-top: var(--collection-padding-top);
+  padding-bottom: var(--collection-padding-bottom);
 }
 
 .embla__slide {
@@ -34,9 +34,9 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 350px !important;
-  max-width: 350px !important;
-  margin-right: -40px !important;
+  width: 350px;
+  max-width: 350px;
+  margin-right: -40px;
   padding-left: var(--big-padding);
   height: 512px;
   cursor: default;
@@ -85,43 +85,56 @@
 }
 
 .card_nights {
-  width: 512px !important;
-  height: 512px !important;
+  width: 512px;
+  height: 512px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .card_kindwords {
-  width: 512px !important;
-  height: 512px !important;
+  width: 512px;
+  height: 512px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .card_liai {
-  width: 555px !important;
-  height: 784px !important;
+  width: 555px;
+  height: 784px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card_attentionless {
+  width: 512px;
+  height: 512px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 @media (max-width: 767px) {
   .card_first {
-    width: 250px !important;
-    height: 300px !important;
-    max-width: 250px !important;
+    width: 250px;
+    height: 300px;
+    max-width: 250px;
   }
 
   .card_nights {
-    width: 300px !important;
-    height: 300px !important;
+    width: 300px;
+    height: 300px;
   }
 
   .card_kindwords {
-    width: 300px !important;
-    height: 300px !important;
+    width: 300px;
+    height: 300px;
   }
 
   .card_liai {
-    width: 277px !important;
-    height: 392px !important;
+    width: 277px;
+    height: 392px;
+  }
+
+  .card_attentionless {
+    width: 300px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
 }
 

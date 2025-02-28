@@ -1,4 +1,6 @@
+import CollectionAttentionless from '@/components/collections/CollectionAttentionless';
 import CollectionKindWords from '@/components/collections/CollectionKindWords';
+import CollectionLifeIsAnIllusion from '@/components/collections/CollectionLifeIsAnIllusion';
 import CollectionNights from '@/components/collections/CollectionNights';
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
@@ -21,7 +23,9 @@ export default withLinguiPage(function Home() {
           </div>
         </section>
 
+        <CollectionAttentionless />
         <CollectionNights />
+        <CollectionLifeIsAnIllusion />
         <CollectionKindWords />
       </main>
     </>
