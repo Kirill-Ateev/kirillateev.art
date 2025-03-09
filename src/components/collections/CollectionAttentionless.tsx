@@ -16,7 +16,7 @@ export default function CollectionAttentionless() {
     containScroll: 'trimSnaps',
   });
 
-  const images = [727, 138, 109, 71, 990, 349, 712];
+  const images = [727, 138, 109, 71, 533, 349, 712];
 
   return (
     <section>
