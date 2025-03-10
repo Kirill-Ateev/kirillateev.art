@@ -65,7 +65,7 @@ export default function CollectionAttentionless() {
             >
               <Image
                 src={`${basePath}/images/attentionless/${imageId}.webp`}
-                alt={`Kind Words №${imageId}`}
+                alt={`Attentionless №${imageId}`}
                 width={isXs || isSm ? 300 : 512}
                 height={isXs || isSm ? 300 : 512}
               />
