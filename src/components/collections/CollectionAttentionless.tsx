@@ -30,6 +30,9 @@ export default function CollectionAttentionless() {
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - March 2025</Trans>
               </div>
+              <div className={styles.text_secondary}>
+                <Trans>1024 works</Trans>
+              </div>
             </div>
             <div className={styles.text_secondary}>
               <Trans>

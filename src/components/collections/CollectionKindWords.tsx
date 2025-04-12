@@ -30,6 +30,9 @@ export default function CollectionKindWords() {
               <div className={styles.text_secondary}>
                 <Trans>Polygon - Feb. 2023</Trans>
               </div>
+              <div className={styles.text_secondary}>
+                <Trans>300 works</Trans>
+              </div>
             </div>
             <div className={styles.text_secondary}>
               <Trans>

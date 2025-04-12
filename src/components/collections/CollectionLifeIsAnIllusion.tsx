@@ -31,6 +31,9 @@ export default function CollectionLifeIsAnIllusion() {
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - Jun. 2023</Trans>
               </div>
+              <div className={styles.text_secondary}>
+                <Trans>20 works</Trans>
+              </div>
             </div>
             <div className={styles.text_secondary}>
               <Trans>A collection of 42 impressionist style photos.</Trans>

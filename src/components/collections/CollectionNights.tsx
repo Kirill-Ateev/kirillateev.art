@@ -40,6 +40,9 @@ export default function CollectionNights() {
               <div className={styles.text_secondary}>
                 <Trans>TON - Dec. 2023</Trans>
               </div>
+              <div className={styles.text_secondary}>
+                <Trans>88 works</Trans>
+              </div>
             </div>
             <div className={styles.text_secondary}>
               <Trans>
