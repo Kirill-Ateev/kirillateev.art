@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/collections/CollectionLanes.tsx:34
+msgid "10000 works"
+msgstr "10000 works"
+
 #: src/components/collections/CollectionAttentionless.tsx:34
 msgid "1024 works"
 msgstr "1024 works"
@@ -32,6 +36,10 @@ msgstr "88 works"
 #: src/components/collections/CollectionLifeIsAnIllusion.tsx:39
 msgid "A collection of 42 impressionist style photos."
 msgstr "A collection of 42 impressionist style photos."
+
+#: src/components/collections/CollectionLanes.tsx:38
+msgid "A collection of generative animated vector images in suprematism style."
+msgstr "A collection of generative animated vector images in suprematism style."
 
 #: src/components/collections/CollectionAttentionless.tsx:38
 msgid "A collection of generative collages of CC0 images in an abstractionist style."
@@ -65,6 +73,10 @@ msgstr "Compression-based generative multimedia collection. To play a melody - c
 msgid "English"
 msgstr "English"
 
+#: src/components/collections/CollectionLanes.tsx:31
+msgid "Ethereum - April 2025"
+msgstr "Ethereum - April 2025"
+
 #: src/components/collections/CollectionLifeIsAnIllusion.tsx:32
 msgid "Ethereum - Jun. 2023"
 msgstr "Ethereum - Jun. 2023"
@@ -73,7 +85,7 @@ msgstr "Ethereum - Jun. 2023"
 msgid "Ethereum - March 2025"
 msgstr "Ethereum - March 2025"
 
-#: src/app/[lang]/page.tsx:18
+#: src/app/[lang]/page.tsx:19
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Hi, I'm Kirill Ateev. A generative artist working with code."
 
@@ -108,6 +120,10 @@ msgstr "Metadata and compressed images stored on-chain, additionally the origina
 msgid "Metadata and files stored on IPFS."
 msgstr "Metadata and files stored on IPFS."
 
+#: src/components/collections/CollectionLanes.tsx:44
+msgid "Metadata and images stored directly on blockchain (on-chain)."
+msgstr "Metadata and images stored directly on blockchain (on-chain)."
+
 #: src/components/collections/CollectionKindWords.tsx:31
 msgid "Polygon - Feb. 2023"
 msgstr "Polygon - Feb. 2023"
@@ -116,7 +132,7 @@ msgstr "Polygon - Feb. 2023"
 msgid "Recent Community Work"
 msgstr "Recent Community Work"
 
-#: src/app/[lang]/page.tsx:15
+#: src/app/[lang]/page.tsx:16
 msgid "Recent Work"
 msgstr "Recent Work"
 
@@ -133,6 +149,7 @@ msgstr "TON - Dec. 2023"
 
 #: src/components/collections/CollectionAttentionless.tsx:60
 #: src/components/collections/CollectionKindWords.tsx:69
+#: src/components/collections/CollectionLanes.tsx:62
 #: src/components/collections/CollectionLifeIsAnIllusion.tsx:61
 #: src/components/collections/CollectionNights.tsx:70
 msgid "View collection >"

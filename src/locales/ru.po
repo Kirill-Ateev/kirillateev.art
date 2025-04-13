@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/collections/CollectionLanes.tsx:34
+msgid "10000 works"
+msgstr "10000 работ"
+
 #: src/components/collections/CollectionAttentionless.tsx:34
 msgid "1024 works"
 msgstr "1024 работы"
@@ -32,6 +36,10 @@ msgstr "88 работ"
 #: src/components/collections/CollectionLifeIsAnIllusion.tsx:39
 msgid "A collection of 42 impressionist style photos."
 msgstr "Коллекция из 42 фотографий в стиле импрессионизма."
+
+#: src/components/collections/CollectionLanes.tsx:38
+msgid "A collection of generative animated vector images in suprematism style."
+msgstr "Коллекция генеративных анимированных векторных изображений в стиле супрематизма."
 
 #: src/components/collections/CollectionAttentionless.tsx:38
 msgid "A collection of generative collages of CC0 images in an abstractionist style."
@@ -61,6 +69,10 @@ msgstr "Генеративная мультимедийная коллекция
 msgid "English"
 msgstr "English"
 
+#: src/components/collections/CollectionLanes.tsx:31
+msgid "Ethereum - April 2025"
+msgstr "Ethereum - Апрель 2025"
+
 #: src/components/collections/CollectionLifeIsAnIllusion.tsx:32
 msgid "Ethereum - Jun. 2023"
 msgstr "Ethereum - Июнь 2023"
@@ -69,7 +81,7 @@ msgstr "Ethereum - Июнь 2023"
 msgid "Ethereum - March 2025"
 msgstr "Ethereum - Март 2025"
 
-#: src/app/[lang]/page.tsx:18
+#: src/app/[lang]/page.tsx:19
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Привет, я Кирилл Атеев. Создаю генеративное искусство с помощью кода."
 
@@ -96,13 +108,17 @@ msgstr "работы Кирилла Атеева"
 
 #: src/components/collections/CollectionLifeIsAnIllusion.tsx:42
 msgid "Metadata and compressed images stored on-chain, additionally the original photos stored on IPFS."
-msgstr "Метаданные и сжатые файлы хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS"
+msgstr "Метаданные и сжатые файлы хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS."
 
 #: src/components/collections/CollectionAttentionless.tsx:44
 #: src/components/collections/CollectionKindWords.tsx:53
 #: src/components/collections/CollectionNights.tsx:54
 msgid "Metadata and files stored on IPFS."
-msgstr "Метаданные и файлы хранятся в IPFS"
+msgstr "Метаданные и файлы хранятся в IPFS."
+
+#: src/components/collections/CollectionLanes.tsx:44
+msgid "Metadata and images stored directly on blockchain (on-chain)."
+msgstr "Метаданные и изображения хранятся напрямую в блокчейне (on-chain)."
 
 #: src/components/collections/CollectionKindWords.tsx:31
 msgid "Polygon - Feb. 2023"
@@ -112,7 +128,7 @@ msgstr "Polygon - Фев. 2023"
 msgid "Recent Community Work"
 msgstr "Недавние работы в сообществе"
 
-#: src/app/[lang]/page.tsx:15
+#: src/app/[lang]/page.tsx:16
 msgid "Recent Work"
 msgstr "Недавние работы"
 
@@ -129,6 +145,7 @@ msgstr "TON - Дек. 2023"
 
 #: src/components/collections/CollectionAttentionless.tsx:60
 #: src/components/collections/CollectionKindWords.tsx:69
+#: src/components/collections/CollectionLanes.tsx:62
 #: src/components/collections/CollectionLifeIsAnIllusion.tsx:61
 #: src/components/collections/CollectionNights.tsx:70
 msgid "View collection >"

@@ -1,4 +1,5 @@
 import CollectionAttentionless from '@/components/collections/CollectionAttentionless';
+import CollectionLanes from '@/components/collections/CollectionLanes';
 import CollectionNights from '@/components/collections/CollectionNights';
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
@@ -20,7 +21,7 @@ export default withLinguiPage(function Home() {
             </Trans>
           </div>
         </section>
-
+        <CollectionLanes />
         <CollectionAttentionless />
         <CollectionNights />
         {/* <CollectionLifeIsAnIllusion /> */}
