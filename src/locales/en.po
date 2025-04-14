@@ -38,8 +38,12 @@ msgid "A collection of 42 impressionist style photos."
 msgstr "A collection of 42 impressionist style photos."
 
 #: src/components/collections/CollectionLanes.tsx:38
-msgid "A collection of generative animated vector images in suprematism style."
-msgstr "A collection of generative animated vector images in suprematism style."
+msgid "A collection of generative animated vector images in kinetic minimalism style."
+msgstr "A collection of generative animated vector images in kinetic minimalism style."
+
+#: src/components/collections/CollectionLanes.tsx:38
+#~ msgid "A collection of generative animated vector images in suprematism style."
+#~ msgstr "A collection of generative animated vector images in suprematism style."
 
 #: src/components/collections/CollectionAttentionless.tsx:38
 msgid "A collection of generative collages of CC0 images in an abstractionist style."

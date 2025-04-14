@@ -36,8 +36,8 @@ export default function CollectionLanes() {
             </div>
             <div className={styles.text_secondary}>
               <Trans>
-                A collection of generative animated vector images in suprematism
-                style.
+                A collection of generative animated vector images in kinetic
+                minimalism style.
               </Trans>
             </div>
             <div className={styles.text_secondary}>
