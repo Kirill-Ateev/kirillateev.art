@@ -16,7 +16,7 @@ export default function CollectionCrosswalk() {
     containScroll: 'trimSnaps',
   });
 
-  const images = [6, 3093, 6195, 4296, 6002, 6545, 1920];
+  const images = [6, 1920, 6195, 4296, 6002, 6545];
 
   return (
     <section>
@@ -57,7 +57,7 @@ export default function CollectionCrosswalk() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://rarible.com/lanes-by-kirill-ateev"
+              href="https://rarible.com/crosswalk-by-kirill-ateev"
             >
               <Trans>View collection &gt;</Trans>
             </a>
@@ -70,7 +70,7 @@ export default function CollectionCrosswalk() {
             >
               <Image
                 src={`${basePath}/images/crosswalk/${imageId}.svg`}
-                alt={`Lanes №${imageId}`}
+                alt={`Crosswalk №${imageId}`}
                 width={isXs || isSm ? 300 : 512}
                 height={isXs || isSm ? 300 : 512}
               />
@@ -81,7 +81,7 @@ export default function CollectionCrosswalk() {
             className={`${styles.embla__slide} ${styles.container_arrow}`}
             style={{ height: isXs || isSm ? '300px' : '512px' }}
           >
-            <ArrowRight href="https://rarible.com/lanes-by-kirill-ateev" />
+            <ArrowRight href="https://rarible.com/crosswalk-by-kirill-ateev" />
           </div>
         </div>
       </div>
