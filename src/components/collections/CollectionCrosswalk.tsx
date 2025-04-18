@@ -69,7 +69,7 @@ export default function CollectionCrosswalk() {
               className={`${styles.embla__slide} ${styles.card} ${styles.card_kindwords}`}
             >
               <Image
-                src={`${basePath}/images/lanes/${imageId}.svg`}
+                src={`${basePath}/images/crosswalk/${imageId}.svg`}
                 alt={`Lanes №${imageId}`}
                 width={isXs || isSm ? 300 : 512}
                 height={isXs || isSm ? 300 : 512}
