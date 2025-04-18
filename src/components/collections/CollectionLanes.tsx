@@ -31,7 +31,7 @@ export default function CollectionLanes() {
                 <Trans>Ethereum - April 2025</Trans>
               </div>
               <div className={styles.text_secondary}>
-                <Trans>10000 works</Trans>
+                <Trans>10 000 works</Trans>
               </div>
             </div>
             <div className={styles.text_secondary}>
@@ -57,7 +57,7 @@ export default function CollectionLanes() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://rarible.com/lanes"
+              href="https://rarible.com/lanes-by-kirill-ateev"
             >
               <Trans>View collection &gt;</Trans>
             </a>
@@ -81,7 +81,7 @@ export default function CollectionLanes() {
             className={`${styles.embla__slide} ${styles.container_arrow}`}
             style={{ height: isXs || isSm ? '300px' : '512px' }}
           >
-            <ArrowRight href="https://rarible.com/lanes" />
+            <ArrowRight href="https://rarible.com/lanes-by-kirill-ateev" />
           </div>
         </div>
       </div>

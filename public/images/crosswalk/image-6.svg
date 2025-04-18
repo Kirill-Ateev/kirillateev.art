@@ -1,0 +1,101 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" author="Kirill Ateev" date="April 2025" license="CC BY-ND 4.0">
+         <rect width="100" height="100" fill="white"/>
+        
+        <line
+        x1="16.746366"
+        y1="10.000000"
+        x2="16.746366"
+        y2="90.000000"
+        stroke="hsl(3.4303792007267475,100%,50%)"
+        stroke-width="13.492732"
+        stroke-dasharray="22.222857 1.263866"
+        stroke-dashoffset="10.734105"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          values="10.734104618235216;34.22082834075894"
+          dur="29s"
+          repeatCount="indefinite"
+        />
+      </line><line
+        x1="29.361787"
+        y1="10.000000"
+        x2="29.361787"
+        y2="90.000000"
+        stroke="black"
+        stroke-width="8.246953"
+        stroke-dasharray="24.531158 12.858730"
+        stroke-dashoffset="33.280228"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          values="33.28022822021656;70.67011641141542"
+          dur="39s"
+          repeatCount="indefinite"
+        />
+      </line><line
+        x1="37.868950"
+        y1="10.000000"
+        x2="37.868950"
+        y2="90.000000"
+        stroke="black"
+        stroke-width="5.135896"
+        stroke-dasharray="2.362302 1.431882"
+        stroke-dashoffset="0.248875"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          values="0.2488749306844935;4.043058499225614"
+          dur="22s"
+          repeatCount="indefinite"
+        />
+      </line><line
+        x1="50.514064"
+        y1="10.000000"
+        x2="50.514064"
+        y2="90.000000"
+        stroke="black"
+        stroke-width="17.455786"
+        stroke-dasharray="49.486877 42.922686"
+        stroke-dashoffset="69.575617"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          values="161.98518039162747;69.57561731318339"
+          dur="8s"
+          repeatCount="indefinite"
+        />
+      </line><line
+        x1="68.834241"
+        y1="10.000000"
+        x2="68.834241"
+        y2="90.000000"
+        stroke="black"
+        stroke-width="18.157389"
+        stroke-dasharray="37.021123 25.983684"
+        stroke-dashoffset="13.585639"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          values="76.59044516669081;13.58563852658868"
+          dur="58s"
+          repeatCount="indefinite"
+        />
+      </line><line
+        x1="84.368816"
+        y1="10.000000"
+        x2="84.368816"
+        y2="90.000000"
+        stroke="black"
+        stroke-width="11.262369"
+        stroke-dasharray="48.057177 22.246539"
+        stroke-dashoffset="66.586338"
+      >
+        <animate
+          attributeName="stroke-dashoffset"
+          values="66.5863378769348;136.89005440192363"
+          dur="43s"
+          repeatCount="indefinite"
+        />
+      </line>
+      </svg>

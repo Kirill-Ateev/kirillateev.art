@@ -7,7 +7,7 @@ import Image from 'next/image';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
-export default function CollectionAttentionless() {
+export default function CollectionCrosswalk() {
   const { isXs, isSm } = useBreakpoints();
 
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
@@ -16,7 +16,7 @@ export default function CollectionAttentionless() {
     containScroll: 'trimSnaps',
   });
 
-  const images = [727, 138, 109, 71, 533, 349, 712];
+  const images = [6, 3093, 6195, 4296, 6002, 6545, 1920];
 
   return (
     <section>
@@ -25,37 +25,39 @@ export default function CollectionAttentionless() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Attentionless</div>
+                <div className={styles.title}>Crosswalk</div>
               </span>
               <div className={styles.text_secondary}>
-                <Trans>Ethereum - March 2025</Trans>
+                <Trans>Ethereum - April 2025</Trans>
               </div>
               <div className={styles.text_secondary}>
-                <Trans>1024 works</Trans>
+                <Trans>10 000 works</Trans>
               </div>
             </div>
             <div className={styles.text_secondary}>
               <Trans>
-                A collection of generative collages of CC0 images in an
-                abstractionist style.
+                A collection of generative animated vector images in kinetic
+                minimalism style.
               </Trans>
             </div>
             <div className={styles.text_secondary}>
-              <Trans>Metadata and files stored on IPFS.</Trans>
+              <Trans>
+                Metadata and images stored directly on blockchain (on-chain).
+              </Trans>
             </div>
-            <a
+            {/* <a
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://github.com/Kirill-Ateev/attentionless"
             >
               <Trans>Source code &gt;</Trans>
-            </a>
+            </a> */}
             <a
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://rarible.com/attentionless-by-kirill-ateev"
+              href="https://rarible.com/lanes-by-kirill-ateev"
             >
               <Trans>View collection &gt;</Trans>
             </a>
@@ -64,11 +66,11 @@ export default function CollectionAttentionless() {
           {images.map((imageId) => (
             <div
               key={imageId}
-              className={`${styles.embla__slide} ${styles.card} ${styles.card_attentionless}`}
+              className={`${styles.embla__slide} ${styles.card} ${styles.card_kindwords}`}
             >
               <Image
-                src={`${basePath}/images/attentionless/${imageId}.webp`}
-                alt={`Attentionless №${imageId}`}
+                src={`${basePath}/images/lanes/${imageId}.svg`}
+                alt={`Lanes №${imageId}`}
                 width={isXs || isSm ? 300 : 512}
                 height={isXs || isSm ? 300 : 512}
               />
@@ -79,7 +81,7 @@ export default function CollectionAttentionless() {
             className={`${styles.embla__slide} ${styles.container_arrow}`}
             style={{ height: isXs || isSm ? '300px' : '512px' }}
           >
-            <ArrowRight href="https://rarible.com/attentionless-by-kirill-ateev" />
+            <ArrowRight href="https://rarible.com/lanes-by-kirill-ateev" />
           </div>
         </div>
       </div>

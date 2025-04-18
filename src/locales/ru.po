@@ -13,9 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/collections/CollectionCrosswalk.tsx:34
 #: src/components/collections/CollectionLanes.tsx:34
-msgid "10000 works"
-msgstr "10000 работ"
+msgid "10 000 works"
+msgstr "10 000 работ"
 
 #: src/components/collections/CollectionAttentionless.tsx:34
 msgid "1024 works"
@@ -37,6 +38,7 @@ msgstr "88 работ"
 msgid "A collection of 42 impressionist style photos."
 msgstr "Коллекция из 42 фотографий в стиле импрессионизма."
 
+#: src/components/collections/CollectionCrosswalk.tsx:38
 #: src/components/collections/CollectionLanes.tsx:38
 msgid "A collection of generative animated vector images in kinetic minimalism style."
 msgstr "Коллекция генеративных анимированных векторных изображений в стиле кинетического минимализма."
@@ -69,6 +71,7 @@ msgstr "Генеративная мультимедийная коллекция
 msgid "English"
 msgstr "English"
 
+#: src/components/collections/CollectionCrosswalk.tsx:31
 #: src/components/collections/CollectionLanes.tsx:31
 msgid "Ethereum - April 2025"
 msgstr "Ethereum - Апрель 2025"
@@ -116,6 +119,7 @@ msgstr "Метаданные и сжатые файлы хранятся в бл
 msgid "Metadata and files stored on IPFS."
 msgstr "Метаданные и файлы хранятся в IPFS."
 
+#: src/components/collections/CollectionCrosswalk.tsx:44
 #: src/components/collections/CollectionLanes.tsx:44
 msgid "Metadata and images stored directly on blockchain (on-chain)."
 msgstr "Метаданные и изображения хранятся напрямую в блокчейне (on-chain)."
@@ -144,6 +148,7 @@ msgid "TON - Dec. 2023"
 msgstr "TON - Дек. 2023"
 
 #: src/components/collections/CollectionAttentionless.tsx:60
+#: src/components/collections/CollectionCrosswalk.tsx:62
 #: src/components/collections/CollectionKindWords.tsx:69
 #: src/components/collections/CollectionLanes.tsx:62
 #: src/components/collections/CollectionLifeIsAnIllusion.tsx:61
