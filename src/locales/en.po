@@ -92,7 +92,7 @@ msgstr "Ethereum - Jun. 2023"
 msgid "Ethereum - March 2025"
 msgstr "Ethereum - March 2025"
 
-#: src/app/[lang]/page.tsx:19
+#: src/app/[lang]/page.tsx:20
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Hi, I'm Kirill Ateev. A generative artist working with code."
 
@@ -140,7 +140,7 @@ msgstr "Polygon - Feb. 2023"
 msgid "Recent Community Work"
 msgstr "Recent Community Work"
 
-#: src/app/[lang]/page.tsx:16
+#: src/app/[lang]/page.tsx:17
 msgid "Recent Work"
 msgstr "Recent Work"
 
@@ -167,8 +167,8 @@ msgstr "View collection >"
 #: src/app/[lang]/layout.tsx:45
 #: src/app/[lang]/layout.tsx:65
 #: src/app/[lang]/layout.tsx:85
-msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more."
-msgstr "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more."
+msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
+msgstr "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
 
 #: src/components/collections/CollectionNights.tsx:96
 msgid "Your browser does not support the video tag."

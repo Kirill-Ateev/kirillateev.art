@@ -44,7 +44,7 @@ export default withLinguiLayout(function RootLayout({
           name="description"
           content={t(
             i18n
-          )`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.`}
+          )`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
         <meta
           name="keywords"
@@ -64,7 +64,7 @@ export default withLinguiLayout(function RootLayout({
           property="og:description"
           content={t(
             i18n
-          )`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.`}
+          )`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
         <meta property="og:image" content="https://www.ateev.art/favicon.ico" />
         <meta
@@ -84,7 +84,7 @@ export default withLinguiLayout(function RootLayout({
           property="twitter:description"
           content={t(
             i18n
-          )`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.`}
+          )`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
         <meta
           property="twitter:image"

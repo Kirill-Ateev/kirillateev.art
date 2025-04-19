@@ -24,7 +24,7 @@ export default function NotFound() {
         <meta name="title" content={`Kirill Ateev - Artist`} />
         <meta
           name="description"
-          content={`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.`}
+          content={`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
         <meta
           name="keywords"
@@ -40,7 +40,7 @@ export default function NotFound() {
         <meta property="og:title" content={`Kirill Ateev - Artist`} />
         <meta
           property="og:description"
-          content={`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.`}
+          content={`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
         <meta property="og:image" content="https://www.ateev.art/favicon.ico" />
         <meta property="og:image:alt" content={`Kirill Ateev's artwork`} />
@@ -52,7 +52,7 @@ export default function NotFound() {
         <meta property="twitter:title" content={`Kirill Ateev - Artist`} />
         <meta
           property="twitter:description"
-          content={`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.`}
+          content={`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
         <meta
           property="twitter:image"

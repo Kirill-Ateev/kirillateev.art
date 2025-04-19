@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Kirill Ateev - Artist',
     short_name: 'Kirill Ateev - Artist',
     description:
-      'Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique and captivating artworks. Explore his portfolio, exhibitions, community, and more.',
+      'Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.',
     start_url: '/en',
     display: 'standalone',
     background_color: '#fff',
