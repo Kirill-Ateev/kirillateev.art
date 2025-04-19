@@ -122,7 +122,7 @@ msgstr "Метаданные и файлы хранятся в IPFS."
 #: src/components/collections/CollectionCrosswalk.tsx:44
 #: src/components/collections/CollectionLanes.tsx:44
 msgid "Metadata and images stored directly on blockchain (on-chain)."
-msgstr "Метаданные и изображения хранятся напрямую в блокчейне (on-chain)."
+msgstr "Метаданные и изображения хранятся полностью в блокчейне (on-chain)."
 
 #: src/components/collections/CollectionKindWords.tsx:31
 msgid "Polygon - Feb. 2023"
