@@ -15,6 +15,7 @@ export default function CollectionNights() {
     videoRefs.current.forEach((video) => {
       if (video) {
         video.volume = 0.015;
+        video.load();
       }
     });
   }, []);
@@ -81,13 +82,25 @@ export default function CollectionNights() {
                 }}
                 width={isXs || isSm ? 300 : 512}
                 height={isXs || isSm ? 300 : 512}
+                playsInline // Обязательно для iOS
+                onTouchStart={(event) =>
+                  (event.target as HTMLVideoElement).play()
+                }
                 onMouseDown={(event) =>
                   (event.target as HTMLVideoElement).play()
+                }
+                onTouchEnd={(event) =>
+                  (event.target as HTMLVideoElement).pause()
                 }
                 onMouseUp={(event) =>
                   (event.target as HTMLVideoElement).pause()
                 }
+                preload="metadata"
               >
+                <source
+                  src={`https://cdn.jsdelivr.net/gh/Kirill-Ateev/8-nights@master/video/${videoId}.mp4`}
+                  type="video/mp4"
+                />
                 <source
                   src={`https://cdn.jsdelivr.net/gh/Kirill-Ateev/ateev.art@main/public/videos/nights/${videoId}.webm`}
                   type="video/webm"
