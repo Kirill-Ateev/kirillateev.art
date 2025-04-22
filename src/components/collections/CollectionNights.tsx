@@ -1,5 +1,4 @@
 'use client';
-import { basePath } from '@/constants';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { Trans } from '@lingui/macro';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -90,7 +89,7 @@ export default function CollectionNights() {
                 }
               >
                 <source
-                  src={`${basePath}/videos/nights/${videoId}.webm`}
+                  src={`https://cdn.jsdelivr.net/gh/Kirill-Ateev/ateev.art@main/public/videos/nights/${videoId}.webm`}
                   type="video/webm"
                 />
                 <Trans>Your browser does not support the video tag.</Trans>
