@@ -37,7 +37,7 @@ export default function CollectionCrosswalk() {
             <div className={styles.text_secondary}>
               <Trans>
                 A collection of generative animated vector images in kinetic
-                minimalism style.
+                minimalism style (kinimalism).
               </Trans>
             </div>
             <div className={styles.text_secondary}>
