@@ -1,0 +1,97 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         viewBox="0 0 100 100"
+         preserveAspectRatio="xMidYMid meet"
+         width="100%"
+         height="100%"
+         style="display: block;"
+         >
+         <!-- Author: Kirill Ateev. Links: www.ateev.art, www.kirillateev.art. Date: August 2025. License: CC BY-ND 4.0. -->
+          <rect width="100" height="100" fill="white"/>
+          <rect x="10" y="10" width="80" height="80" fill="hsl(263, 100%, 66%)"/>
+
+        <rect x="33.60" y="41.41" width="4.00" height="33.00" 
+            fill="hsl(30, 100%, 83%)"/><rect x="13.20" y="33.87" width="15.00" height="26.00" 
+            fill="hsl(160, 100%, 79%)"/><rect x="58.79" y="35.79" width="28.00" height="26.00" 
+            fill="hsl(218, 100%, 64%)"/><rect x="28.70" y="52.31" width="28.00" height="14.00" 
+            fill="hsl(89, 100%, 48%)"/><rect x="44.70" y="26.64" width="31.00" height="30.00" 
+            fill="hsl(27, 100%, 29%)"/><rect x="67.18" y="51.60" width="22.00" height="31.00" 
+            fill="hsl(207, 100%, 4%)"/><rect x="24.03" y="73.88" width="24.00" height="12.00" 
+            fill="hsl(228, 100%, 43%)"/>
+        
+        <line x1="50.00" y1="10" x2="50.00" y2="90"
+              stroke="hsl(307, 100%, 98%)" 
+              stroke-dasharray="6,4"
+              stroke-width="1"
+              >
+          <animate 
+            attributeName="stroke-dashoffset" 
+            from="0" 
+            values="19.06;9.06"
+            dur="12s" 
+            repeatCount="indefinite"
+          />
+        </line>
+      
+        <line x1="10" y1="26.00" x2="90" y2="26.00"
+              stroke="hsl(222, 100%, 41%)" 
+              stroke-dasharray="10,9"
+              stroke-width="1"
+              >
+          <animate 
+            attributeName="stroke-dashoffset" 
+            from="0" 
+            values="13.44;32.44"
+            dur="4s" 
+            repeatCount="indefinite"
+          />
+        </line>
+      
+        <line x1="10" y1="42.00" x2="90" y2="42.00"
+              stroke="black" 
+              stroke-dasharray="5,3"
+              stroke-width="1"
+              >
+          <animate 
+            attributeName="stroke-dashoffset" 
+            from="0" 
+            values="3.51;11.51"
+            dur="38s" 
+            repeatCount="indefinite"
+          />
+        </line>
+      
+        <line x1="10" y1="58.00" x2="90" y2="58.00"
+              stroke="black" 
+              stroke-dasharray="6,3"
+              stroke-width="1"
+              >
+          <animate 
+            attributeName="stroke-dashoffset" 
+            from="0" 
+            values="15.42;6.42"
+            dur="37s" 
+            repeatCount="indefinite"
+          />
+        </line>
+      
+        <line x1="10" y1="74.00" x2="90" y2="74.00"
+              stroke="hsl(229, 100%, 9%)" 
+              stroke-dasharray="2,2"
+              stroke-width="1"
+              >
+          <animate 
+            attributeName="stroke-dashoffset" 
+            from="0" 
+            values="2.72;6.72"
+            dur="33s" 
+            repeatCount="indefinite"
+          />
+        </line>
+      
+        <rect x="28.45" y="42.25" width="29.00" height="27.00" 
+            fill="hsl(3, 100%, 38%)"/><rect x="26.90" y="40.54" width="17.00" height="11.00" 
+            fill="hsl(271, 100%, 6%)"/><rect x="65.11" y="52.17" width="22.00" height="29.00" 
+            fill="hsl(236, 100%, 99%)"/>
+    </svg>
+  

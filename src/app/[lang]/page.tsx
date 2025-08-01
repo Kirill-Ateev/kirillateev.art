@@ -2,6 +2,7 @@ import CollectionAttentionless from '@/components/collections/CollectionAttentio
 import CollectionCrosswalk from '@/components/collections/CollectionCrosswalk';
 import CollectionLanes from '@/components/collections/CollectionLanes';
 import CollectionNights from '@/components/collections/CollectionNights';
+import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/macro';
@@ -22,6 +23,7 @@ export default withLinguiPage(function Home() {
             </Trans>
           </div>
         </section>
+        <CollectionWindow />
         <CollectionCrosswalk />
         <CollectionLanes />
         <CollectionAttentionless />
