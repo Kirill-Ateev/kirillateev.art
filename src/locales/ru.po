@@ -42,7 +42,7 @@ msgstr "Коллекция из 42 фотографий в стиле импре
 #: src/components/collections/CollectionCrosswalk.tsx:38
 #: src/components/collections/CollectionLanes.tsx:38
 #: src/components/collections/CollectionWindow.tsx:38
-msgid "A collection of generative animated vector images in kinetic minimalism style."
+msgid "A collection of generative animated vector images in kinetic minimalism style (kinimalism)."
 msgstr "Коллекция генеративных анимированных векторных изображений в стиле кинетического минимализма (кинимализм)."
 
 #: src/components/collections/CollectionAttentionless.tsx:38

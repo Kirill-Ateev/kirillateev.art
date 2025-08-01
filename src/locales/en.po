@@ -42,8 +42,8 @@ msgstr "A collection of 42 impressionist style photos."
 #: src/components/collections/CollectionCrosswalk.tsx:38
 #: src/components/collections/CollectionLanes.tsx:38
 #: src/components/collections/CollectionWindow.tsx:38
-msgid "A collection of generative animated vector images in kinetic minimalism style."
-msgstr "A collection of generative animated vector images in kinetic minimalism style."
+msgid "A collection of generative animated vector images in kinetic minimalism style (kinimalism)."
+msgstr "A collection of generative animated vector images in kinetic minimalism style (kinimalism)."
 
 #: src/components/collections/CollectionLanes.tsx:38
 #~ msgid "A collection of generative animated vector images in suprematism style."
