@@ -16,7 +16,7 @@ export default function CollectionWindow() {
     containScroll: 'trimSnaps',
   });
 
-  const images = [3024, 3016, 3171, 3182, 3744, 9995];
+  const images = [3024, 3016, 3171, 7514, 3744, 8344];
 
   return (
     <section>
