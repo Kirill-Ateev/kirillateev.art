@@ -16,7 +16,7 @@ export default function CollectionLanes() {
     containScroll: 'trimSnaps',
   });
 
-  const images = [8861, 9181, 1888, 4322, 8750, 9960];
+  const images = [9478, 8861, 9181, 4322, 8750, 9203];
 
   return (
     <section>
