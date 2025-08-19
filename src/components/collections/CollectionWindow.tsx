@@ -1,14 +1,18 @@
 'use client';
 import { basePath } from '@/constants';
+import { collectionsData } from '@/constants/collections';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { Trans } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
 export default function CollectionWindow() {
   const { isXs, isSm } = useBreakpoints();
+  const { i18n } = useLingui();
 
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
   const [emblaRef] = useEmblaCarousel({
@@ -45,22 +49,30 @@ export default function CollectionWindow() {
                 Metadata and images stored directly on blockchain (on-chain).
               </Trans>
             </div>
-            {/* <a
+            {/* <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://github.com/Kirill-Ateev/attentionless"
             >
               <Trans>Source code &gt;</Trans>
-            </a> */}
-            <a
+            </Link> */}
+            <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://rarible.com/window-by-kirill-ateev"
+              href={`${i18n.locale}/view/window`}
             >
               <Trans>View collection &gt;</Trans>
-            </a>
+            </Link>
+            <Link
+              className={`${styles.link} ${styles.text_secondary}`}
+              target="_blank"
+              rel="noreferrer"
+              href={collectionsData.window.marketplaces.rarible.link}
+            >
+              Rarible &gt;
+            </Link>
           </div>
 
           {images.map((imageId) => (

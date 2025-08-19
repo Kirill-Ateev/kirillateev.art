@@ -2,6 +2,7 @@
 import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { Trans } from '@lingui/macro';
 import useEmblaCarousel from 'embla-carousel-react';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
@@ -54,22 +55,22 @@ export default function CollectionNights() {
             <div className={styles.text_secondary}>
               <Trans>Metadata and files stored on IPFS.</Trans>
             </div>
-            <a
+            <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://github.com/Kirill-Ateev/8-nights"
             >
               <Trans>Source code &gt;</Trans>
-            </a>
-            <a
+            </Link>
+            <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://getgems.io/nights"
             >
               <Trans>View collection &gt;</Trans>
-            </a>
+            </Link>
           </div>
 
           {videos.map((videoId, index) => (

@@ -4,6 +4,7 @@ import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { Trans } from '@lingui/macro';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
@@ -45,22 +46,22 @@ export default function CollectionCrosswalk() {
                 Metadata and images stored directly on blockchain (on-chain).
               </Trans>
             </div>
-            {/* <a
+            {/* <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://github.com/Kirill-Ateev/attentionless"
             >
               <Trans>Source code &gt;</Trans>
-            </a> */}
-            <a
+            </Link> */}
+            <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://rarible.com/crosswalk-by-kirill-ateev"
             >
               <Trans>View collection &gt;</Trans>
-            </a>
+            </Link>
           </div>
 
           {images.map((imageId) => (

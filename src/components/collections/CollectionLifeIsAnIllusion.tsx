@@ -4,6 +4,7 @@ import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { Trans } from '@lingui/macro';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
@@ -44,22 +45,22 @@ export default function CollectionLifeIsAnIllusion() {
                 original photos stored on IPFS.
               </Trans>
             </div>
-            <a
+            <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://github.com/Kirill-Ateev/life-is-an-illusion"
             >
               <Trans>Source code &gt;</Trans>
-            </a>
-            <a
+            </Link>
+            <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://rarible.com/life-is-an-illusion"
             >
               <Trans>View collection &gt;</Trans>
-            </a>
+            </Link>
           </div>
 
           {/* Слайды с изображениями */}

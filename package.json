@@ -16,6 +16,7 @@
     "@next/third-parties": "^14.2.13",
     "@svgr/webpack": "^8.1.0",
     "embla-carousel-react": "^8.5.2",
+    "ethers": "^6.15.0",
     "negotiator": "^0.6.3",
     "next": "14.2.8",
     "react": "^18",

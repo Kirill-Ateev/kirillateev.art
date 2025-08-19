@@ -1,6 +1,7 @@
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/macro';
+import Link from 'next/link';
 import styles from '../page.module.css';
 
 export default withLinguiPage(function About() {
@@ -14,25 +15,25 @@ export default withLinguiPage(function About() {
           </div>
           <div className={styles.text_secondary}>
             Telegram{' '}
-            <a
+            <Link
               className={`${styles.menu_item} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://t.me/ateev_kirill"
             >
               @ateev_kirill
-            </a>
+            </Link>
           </div>
           {/* <div className={styles.text_secondary}>
             <Trans>Ask me a question in the community</Trans>{' '}
-            <a
+            <Link
               className={`${styles.menu_item} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://t.me/selfcashflowgang"
             >
               @selfcashflowgang
-            </a>
+            </Link>
           </div> */}
         </section>
       </main>

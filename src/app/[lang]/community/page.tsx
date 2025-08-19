@@ -1,6 +1,7 @@
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/macro';
+import Link from 'next/link';
 import styles from '../page.module.css';
 
 export default withLinguiPage(function Community() {
@@ -12,14 +13,14 @@ export default withLinguiPage(function Community() {
           <div className={styles.subtitle}>
             <Trans>Recent Community Work</Trans>
           </div>
-          <a
+          <Link
             className={`${styles.menu_item} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
             href="https://t.me/ateev_kirill"
           >
             @ateev_kirill
-          </a>
+          </Link>
         </section>
         {/* <CollectionLifeIsAnIllusion /> */}
       </main>

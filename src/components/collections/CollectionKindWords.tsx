@@ -4,6 +4,7 @@ import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { Trans } from '@lingui/macro';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
@@ -38,36 +39,36 @@ export default function CollectionKindWords() {
               <Trans>
                 A word-generative collection, a unique pattern of character
                 states from{' '}
-                <a
+                <Link
                   className={`${styles.link} ${styles.text_secondary}`}
                   target="_blank"
                   rel="noreferrer"
                   href="https://dobroshrift.ru/"
                 >
                   dobrofont
-                </a>
+                </Link>
                 , a font drawn by special children.
               </Trans>
             </div>
             <div className={styles.text_secondary}>
               <Trans>Metadata and files stored on IPFS.</Trans>
             </div>
-            <a
+            <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://github.com/Kirill-Ateev/kind-words"
             >
               <Trans>Source code &gt;</Trans>
-            </a>
-            <a
+            </Link>
+            <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://rarible.com/kindwords"
             >
               <Trans>View collection &gt;</Trans>
-            </a>
+            </Link>
           </div>
 
           {images.map((imageId) => (

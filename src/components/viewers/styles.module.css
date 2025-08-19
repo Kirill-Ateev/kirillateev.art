@@ -1,0 +1,19 @@
+.viewer_container {
+  width: 100%;
+  height: calc(100vh - 115.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewer_error {
+  color: red;
+  text-align: center;
+}
+
+.viewer_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

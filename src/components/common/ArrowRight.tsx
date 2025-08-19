@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../collections/styles.module.css';
 
 type arrowProps = {
@@ -6,7 +7,7 @@ type arrowProps = {
 
 export default function ArrowRight({ href }: arrowProps) {
   return (
-    <a className={styles.arrow} target="_blank" rel="noreferrer" href={href}>
+    <Link className={styles.arrow} target="_blank" rel="noreferrer" href={href}>
       <svg
         viewBox="0 0 32 32"
         width="38px"
@@ -29,6 +30,6 @@ export default function ArrowRight({ href }: arrowProps) {
           ></path>
         </g>
       </svg>
-    </a>
+    </Link>
   );
 }
