@@ -1,6 +1,6 @@
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import Link from 'next/link';
 import styles from '../page.module.css';
 

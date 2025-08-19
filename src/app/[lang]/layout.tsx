@@ -2,7 +2,7 @@ import { allMessages } from '@/appRouterI18n';
 import { GTM } from '@/components/GTM/GTM';
 import { LinguiClientProvider } from '@/components/lingui/LinguiClientProvider';
 import { withLinguiLayout } from '@/withLingui';
-import { t } from '@lingui/macro';
+import { t } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import localFont from 'next/font/local';
 import React from 'react';

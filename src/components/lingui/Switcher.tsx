@@ -1,7 +1,7 @@
 'use client';
 // this is a client component because it uses the `useState` hook
 
-import { msg } from '@lingui/macro';
+import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';

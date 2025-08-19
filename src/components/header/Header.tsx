@@ -1,5 +1,5 @@
-import { Trans } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
+import { Trans } from '@lingui/react/macro';
 import Link from 'next/link';
 import styles from '../../app/[lang]/page.module.css';
 import Logo from './Logo';
@@ -12,12 +12,12 @@ export default function Header() {
         <Logo />
       </Link>
       <div className={styles.menu_container}>
+        <Link className={styles.menu_item} href={`/${i18n.locale}/messages`}>
+          <Trans>Messages</Trans>
+        </Link>
         <Link className={styles.menu_item} href={`https://t.me/ateev_kirill`}>
           <Trans>Community</Trans>
         </Link>
-        {/* <Link className={styles.menu_item} href={`/${i18n.locale}/about`}>
-          <Trans>About me</Trans>
-        </Link> */}
       </div>
     </header>
   );

@@ -1,6 +1,6 @@
 'use client';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import useEmblaCarousel from 'embla-carousel-react';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';

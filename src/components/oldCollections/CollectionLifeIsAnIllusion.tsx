@@ -1,7 +1,7 @@
 'use client';
 import { basePath } from '@/constants';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import Link from 'next/link';

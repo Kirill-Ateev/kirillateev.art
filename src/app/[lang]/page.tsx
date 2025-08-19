@@ -5,7 +5,7 @@ import CollectionNights from '@/components/collections/CollectionNights';
 import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
 import { withLinguiPage } from '@/withLingui';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react/macro';
 import styles from './page.module.css';
 
 export default withLinguiPage(function Home() {

@@ -11,21 +11,21 @@
     "compile": "lingui compile"
   },
   "dependencies": {
-    "@lingui/macro": "^4.11.4",
-    "@lingui/react": "^4.11.4",
-    "@next/third-parties": "^14.2.13",
+    "@lingui/macro": "^5.4.1",
+    "@lingui/react": "^5.4.1",
+    "@next/third-parties": "^15.4.7",
     "@svgr/webpack": "^8.1.0",
     "embla-carousel-react": "^8.5.2",
     "ethers": "^6.15.0",
     "negotiator": "^0.6.3",
-    "next": "14.2.8",
+    "next": "15.4.7",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@lingui/cli": "^4.11.4",
-    "@lingui/loader": "^4.11.4",
-    "@lingui/swc-plugin": "4.0.9",
+    "@lingui/cli": "^5.4.1",
+    "@lingui/loader": "^5.4.1",
+    "@lingui/swc-plugin": "^5.6.1",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",

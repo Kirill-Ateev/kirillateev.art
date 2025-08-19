@@ -49,6 +49,7 @@
   font-size: var(--small-font-size);
   color: var(--secondary-color);
   font-weight: var(--text-font-weight);
+  white-space: pre-wrap;
 }
 
 @media (max-width: 768px) {
