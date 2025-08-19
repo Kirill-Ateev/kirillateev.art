@@ -19,13 +19,14 @@ export async function generateStaticParams() {
   return linguiConfig.locales.map((lang) => ({ lang }));
 }
 
-export default withLinguiLayout(function RootLayout({
+export default withLinguiLayout(async function RootLayout({
   children,
-  params: { lang },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
   const { i18n } = useLingui();
 
   return (

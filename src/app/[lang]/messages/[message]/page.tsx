@@ -19,21 +19,22 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export default withLinguiPage(function Message({
+export default withLinguiPage(async function Message({
   params,
 }: {
-  params: { lang: string; message: keyof typeof messagesList };
+  params: Promise<{ lang: string; message: keyof typeof messagesList }>;
 }) {
+  const { message } = await params;
   return (
     <div>
       <Header />
       <main className={styles.main}>
         <section className={styles.container}>
           <div className={styles.subtitle}>
-            <Trans>{messagesList[params.message].title}</Trans>
+            <Trans>{messagesList[message].title}</Trans>
           </div>
           <div className={styles.text_secondary}>
-            {messagesList[params.message].text}
+            {messagesList[message].text}
           </div>
         </section>
       </main>
