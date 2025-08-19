@@ -21,17 +21,24 @@ export default withLinguiPage(function Messages() {
         </section>
         {Object.values(messagesList).map((message) => {
           return (
-            <section key={message.key} className={styles.container}>
+            <section
+              key={message?.[i18n.locale].key}
+              className={styles.container}
+            >
               <Link
                 className={styles.menu_item}
-                href={`/${i18n.locale}/messages/${message.key}`}
+                href={`/${i18n.locale}/messages/${message?.[i18n.locale].key}`}
               >
                 <div className={styles.subtitle}>
-                  <Trans>{message.title}</Trans>
+                  <Trans id={message?.[i18n.locale].title}>
+                    {message?.[i18n.locale].title}
+                  </Trans>
                 </div>
               </Link>
               <div className={styles.text_secondary}>
-                <Trans>{message.text}</Trans>
+                <Trans id={message?.[i18n.locale].text}>
+                  {message?.[i18n.locale].text}
+                </Trans>
               </div>
             </section>
           );

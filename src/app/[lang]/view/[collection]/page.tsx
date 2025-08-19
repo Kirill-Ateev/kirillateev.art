@@ -1,5 +1,5 @@
 import Header from '@/components/header/Header';
-import { ERC721Viewer } from '@/components/viewers/ERC721Viewer';
+import { ERC721Viewer } from '@/components/viewer/ERC721Viewer';
 import { collectionsData } from '@/constants/collections';
 import { withLinguiPage } from '@/withLingui';
 import { Suspense } from 'react';

@@ -1,7 +1,7 @@
 import Header from '@/components/header/Header';
 import { messagesList } from '@/constants/text';
 import { withLinguiPage } from '@/withLingui';
-import { Trans } from '@lingui/react/macro';
+import { Trans, useLingui } from '@lingui/react/macro';
 import { locales } from '../../../../../lingui.config';
 import styles from '../../page.module.css';
 
@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   Object.values(messagesList).forEach((message) => {
     locales.forEach((lang) => {
       paths.push({
-        message: message.key,
+        message: message[lang].key,
         lang,
       });
     });
@@ -24,6 +24,7 @@ export default withLinguiPage(async function Message({
 }: {
   params: Promise<{ lang: string; message: keyof typeof messagesList }>;
 }) {
+  const { i18n } = useLingui();
   const { message } = await params;
   return (
     <div>
@@ -31,10 +32,10 @@ export default withLinguiPage(async function Message({
       <main className={styles.main}>
         <section className={styles.container}>
           <div className={styles.subtitle}>
-            <Trans>{messagesList[message].title}</Trans>
+            <Trans>{messagesList[message]?.[i18n.locale].title}</Trans>
           </div>
           <div className={styles.text_secondary}>
-            {messagesList[message].text}
+            {messagesList[message]?.[i18n.locale].text}
           </div>
         </section>
       </main>
