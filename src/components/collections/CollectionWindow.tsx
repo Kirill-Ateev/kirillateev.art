@@ -2,6 +2,7 @@
 import { basePath } from '@/constants';
 import { collectionsData } from '@/constants/collections';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
+import { getRandomFromRange } from '@/utils/numbers';
 import { Trans } from '@lingui/macro';
 import { useLingui } from '@lingui/react';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -49,19 +50,14 @@ export default function CollectionWindow() {
                 Metadata and images stored directly on blockchain (on-chain).
               </Trans>
             </div>
-            {/* <Link
-              className={`${styles.link} ${styles.text_secondary}`}
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/Kirill-Ateev/attentionless"
-            >
-              <Trans>Source code &gt;</Trans>
-            </Link> */}
             <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`${i18n.locale}/view/window`}
+              href={`${i18n.locale}/view/window?item=${getRandomFromRange(
+                collectionsData.window.minIndex,
+                collectionsData.window.maxIndex
+              )}`}
             >
               <Trans>View collection &gt;</Trans>
             </Link>
@@ -93,7 +89,9 @@ export default function CollectionWindow() {
             className={`${styles.embla__slide} ${styles.container_arrow}`}
             style={{ height: isXs || isSm ? '300px' : '512px' }}
           >
-            <ArrowRight href="https://rarible.com/window-by-kirill-ateev" />
+            <ArrowRight
+              href={collectionsData.window.marketplaces.rarible.link}
+            />
           </div>
         </div>
       </div>

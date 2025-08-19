@@ -1,7 +1,10 @@
 'use client';
 import { basePath } from '@/constants';
+import { collectionsData } from '@/constants/collections';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
+import { getRandomFromRange } from '@/utils/numbers';
 import { Trans } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,7 +13,7 @@ import styles from './styles.module.css';
 
 export default function CollectionAttentionless() {
   const { isXs, isSm } = useBreakpoints();
-
+  const { i18n } = useLingui();
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
   const [emblaRef] = useEmblaCarousel({
     dragFree: true,
@@ -56,9 +59,22 @@ export default function CollectionAttentionless() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://rarible.com/attentionless-by-kirill-ateev"
+              href={`${
+                i18n.locale
+              }/view/attentionless?item=${getRandomFromRange(
+                collectionsData.attentionless.minIndex,
+                collectionsData.attentionless.maxIndex
+              )}`}
             >
               <Trans>View collection &gt;</Trans>
+            </Link>
+            <Link
+              className={`${styles.link} ${styles.text_secondary}`}
+              target="_blank"
+              rel="noreferrer"
+              href={collectionsData.attentionless.marketplaces.rarible.link}
+            >
+              Rarible &gt;
             </Link>
           </div>
 
@@ -80,7 +96,9 @@ export default function CollectionAttentionless() {
             className={`${styles.embla__slide} ${styles.container_arrow}`}
             style={{ height: isXs || isSm ? '300px' : '512px' }}
           >
-            <ArrowRight href="https://rarible.com/attentionless-by-kirill-ateev" />
+            <ArrowRight
+              href={collectionsData.attentionless.marketplaces.rarible.link}
+            />
           </div>
         </div>
       </div>

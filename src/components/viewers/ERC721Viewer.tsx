@@ -1,7 +1,9 @@
 'use client';
+import { getRandomFromRange, isNumeric } from '@/utils/numbers';
 import { ethers } from 'ethers';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React, { useCallback, useEffect, useState } from 'react';
 import collectionStyles from './../collections/styles.module.css';
 import styles from './styles.module.css';
@@ -37,7 +39,14 @@ export const ERC721Viewer: React.FC<NFTViewerProps> = ({
   minIndex,
   maxIndex,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState<number>(minIndex);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [currentIndex, setCurrentIndex] = useState<number>(
+    isNumeric(searchParams.get('item'))
+      ? Number(searchParams.get('item'))
+      : minIndex
+  );
   const [metadata, setMetadata] = useState<NFTMetadata | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -95,10 +104,24 @@ export const ERC721Viewer: React.FC<NFTViewerProps> = ({
   // Обработчик клика для смены токена
   const handleClick = useCallback(() => {
     // Генерируем случайный индекс между minIndex и maxIndex включительно
-    const randomIndex =
-      Math.floor(Math.random() * (maxIndex - minIndex + 1)) + minIndex;
+    const randomIndex = getRandomFromRange(minIndex, maxIndex);
+    router.push(
+      pathname + '?' + createQueryString('item', randomIndex.toString())
+    );
     setCurrentIndex(randomIndex);
   }, [minIndex, maxIndex]);
+
+  // Get a new searchParams string by merging the current
+  // searchParams with a provided key/value pair
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+
+      return params.toString();
+    },
+    [searchParams]
+  );
 
   // Загрузка метаданных при изменении индекса
   useEffect(() => {

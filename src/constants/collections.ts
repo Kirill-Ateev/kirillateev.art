@@ -15,4 +15,52 @@ export const collectionsData = {
       },
     },
   },
+  crosswalk: {
+    name: 'Crosswalk',
+    network: 'Ethereum',
+    standard: 'ERC-721',
+    contract: '0x1a8deb6deb554cf80d8202c169d31538d449c99b',
+    minIndex: 1,
+    maxIndex: 10000,
+    marketplaces: {
+      rarible: {
+        name: 'Rarible',
+        link: 'https://rarible.com/crosswalk-by-kirill-ateev',
+        tokenLink:
+          'https://rarible.com/token/0x1a8deb6deb554cf80d8202c169d31538d449c99b:',
+      },
+    },
+  },
+  lanes: {
+    name: 'Lanes',
+    network: 'Ethereum',
+    standard: 'ERC-721',
+    contract: '0x580731911b8d5df910b7ed9b776f1b2e70de6752',
+    minIndex: 1,
+    maxIndex: 10000,
+    marketplaces: {
+      rarible: {
+        name: 'Rarible',
+        link: 'https://rarible.com/lanes-by-kirill-ateev',
+        tokenLink:
+          'https://rarible.com/token/0x580731911b8d5df910b7ed9b776f1b2e70de6752:',
+      },
+    },
+  },
+  attentionless: {
+    name: 'Attentionless',
+    network: 'Ethereum',
+    standard: 'ERC-721',
+    contract: '0xa3754152a10a3bbad4c4e0586dbf4a2b8e391f71',
+    minIndex: 1,
+    maxIndex: 1024,
+    marketplaces: {
+      rarible: {
+        name: 'Rarible',
+        link: 'https://rarible.com/attentionless-by-kirill-ateev',
+        tokenLink:
+          'https://rarible.com/token/0xa3754152a10a3bbad4c4e0586dbf4a2b8e391f71:',
+      },
+    },
+  },
 };

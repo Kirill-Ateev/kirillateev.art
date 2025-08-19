@@ -1,7 +1,10 @@
 'use client';
 import { basePath } from '@/constants';
+import { collectionsData } from '@/constants/collections';
 import { useBreakpoints } from '@/hooks/useBreakpoints';
+import { getRandomFromRange } from '@/utils/numbers';
 import { Trans } from '@lingui/macro';
+import { useLingui } from '@lingui/react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,7 +13,7 @@ import styles from './styles.module.css';
 
 export default function CollectionCrosswalk() {
   const { isXs, isSm } = useBreakpoints();
-
+  const { i18n } = useLingui();
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
   const [emblaRef] = useEmblaCarousel({
     dragFree: true,
@@ -58,9 +61,20 @@ export default function CollectionCrosswalk() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://rarible.com/crosswalk-by-kirill-ateev"
+              href={`${i18n.locale}/view/crosswalk?item=${getRandomFromRange(
+                collectionsData.crosswalk.minIndex,
+                collectionsData.crosswalk.maxIndex
+              )}`}
             >
               <Trans>View collection &gt;</Trans>
+            </Link>
+            <Link
+              className={`${styles.link} ${styles.text_secondary}`}
+              target="_blank"
+              rel="noreferrer"
+              href={collectionsData.crosswalk.marketplaces.rarible.link}
+            >
+              Rarible &gt;
             </Link>
           </div>
 
@@ -82,7 +96,9 @@ export default function CollectionCrosswalk() {
             className={`${styles.embla__slide} ${styles.container_arrow}`}
             style={{ height: isXs || isSm ? '300px' : '512px' }}
           >
-            <ArrowRight href="https://rarible.com/crosswalk-by-kirill-ateev" />
+            <ArrowRight
+              href={collectionsData.crosswalk.marketplaces.rarible.link}
+            />
           </div>
         </div>
       </div>
