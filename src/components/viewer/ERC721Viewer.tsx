@@ -138,7 +138,6 @@ export const ERC721Viewer: React.FC<{
         onClick={!isLoading ? handleClick : undefined}
       >
         {error && <div className={styles.viewer_error}>Error: {error}</div>}
-
         {isLoading && <div>Loading...</div>}
 
         {metadata && !isLoading && (
