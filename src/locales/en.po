@@ -13,6 +13,15 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: message?.[i18n.locale].text
+#. placeholder {0}: message?.[i18n.locale].title
+#. placeholder {0}: messagesList[message]?.[i18n.locale].title
+#: src/app/[lang]/messages/[message]/page.tsx:35
+#: src/app/[lang]/messages/page.tsx:33
+#: src/app/[lang]/messages/page.tsx:39
+msgid "{0}"
+msgstr "{0}"
+
 #: src/components/collections/CollectionCrosswalk.tsx:38
 #: src/components/collections/CollectionLanes.tsx:38
 #: src/components/collections/CollectionWindow.tsx:39
