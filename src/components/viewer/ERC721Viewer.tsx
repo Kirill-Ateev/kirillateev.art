@@ -8,21 +8,22 @@ import React, { useCallback, useEffect, useState } from 'react';
 import collectionStyles from './../collections/styles.module.css';
 import styles from './styles.module.css';
 
-interface NFTViewerProps {
+type CollectionMetadata = {
   name: string;
   marketplaces: {
     [service: string]: { name: string; link: string; tokenLink: string };
   };
-  contractAddress: string;
+  contract: string;
   minIndex: number;
   maxIndex: number;
-}
+  padded: boolean;
+};
 
-interface NFTMetadata {
+type NFTMetadata = {
   image: string;
   name?: string;
   description?: string;
-}
+};
 
 const ERC721_ABI = [
   'function tokenURI(uint256 tokenId) external view returns (string memory)',
@@ -32,20 +33,16 @@ const RPC_PROVIDER = new ethers.JsonRpcProvider(
   'https://ethereum.publicnode.com'
 );
 
-export const ERC721Viewer: React.FC<NFTViewerProps> = ({
-  name,
-  marketplaces,
-  contractAddress,
-  minIndex,
-  maxIndex,
-}) => {
+export const ERC721Viewer: React.FC<{
+  collectionMetadata: CollectionMetadata;
+}> = ({ collectionMetadata }) => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [currentIndex, setCurrentIndex] = useState<number>(
     isNumeric(searchParams.get('item'))
       ? Number(searchParams.get('item'))
-      : minIndex
+      : collectionMetadata.minIndex
   );
   const [metadata, setMetadata] = useState<NFTMetadata | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -54,7 +51,7 @@ export const ERC721Viewer: React.FC<NFTViewerProps> = ({
   // Функция для получения метаданных
   const fetchNFTMetadata = useCallback(
     async (tokenId: number) => {
-      if (!ethers.isAddress(contractAddress)) {
+      if (!ethers.isAddress(collectionMetadata.contract)) {
         setError('Invalid contract address');
         return;
       }
@@ -64,7 +61,7 @@ export const ERC721Viewer: React.FC<NFTViewerProps> = ({
 
       try {
         const contract = new ethers.Contract(
-          contractAddress,
+          collectionMetadata.contract,
           ERC721_ABI,
           RPC_PROVIDER
         );
@@ -98,18 +95,21 @@ export const ERC721Viewer: React.FC<NFTViewerProps> = ({
         setIsLoading(false);
       }
     },
-    [contractAddress]
+    [collectionMetadata.contract]
   );
 
   // Обработчик клика для смены токена
   const handleClick = useCallback(() => {
     // Генерируем случайный индекс между minIndex и maxIndex включительно
-    const randomIndex = getRandomFromRange(minIndex, maxIndex);
+    const randomIndex = getRandomFromRange(
+      collectionMetadata.minIndex,
+      collectionMetadata.maxIndex
+    );
     router.push(
       pathname + '?' + createQueryString('item', randomIndex.toString())
     );
     setCurrentIndex(randomIndex);
-  }, [minIndex, maxIndex]);
+  }, [collectionMetadata.minIndex, collectionMetadata.maxIndex]);
 
   // Get a new searchParams string by merging the current
   // searchParams with a provided key/value pair
@@ -130,26 +130,6 @@ export const ERC721Viewer: React.FC<NFTViewerProps> = ({
 
   return (
     <>
-      {metadata && !isLoading && (
-        <div className={styles.viewer_title}>
-          <div>
-            {name} №{currentIndex}
-          </div>
-          {Object.values(marketplaces).map((place) => {
-            return (
-              <Link
-                key={place.link}
-                className={`${collectionStyles.link} ${collectionStyles.text_secondary}`}
-                target="_blank"
-                rel="noreferrer"
-                href={`${place.tokenLink}${currentIndex}`}
-              >
-                {place.name}
-              </Link>
-            );
-          })}
-        </div>
-      )}
       <div
         className={styles.viewer_container}
         style={{
@@ -162,19 +142,47 @@ export const ERC721Viewer: React.FC<NFTViewerProps> = ({
         {isLoading && <div>Loading...</div>}
 
         {metadata && !isLoading && (
-          <Image
-            src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
-            alt={metadata.name || `NFT #${currentIndex}`}
-            width={100}
-            height={100}
-            style={{
-              width: '100%',
-              height: '100%',
-              maxWidth: '100%',
-              maxHeight: '100%',
-              objectFit: 'contain',
-            }}
-          />
+          <>
+            <div
+              className={
+                collectionMetadata.padded
+                  ? styles.viewer_title
+                  : styles.viewer_title_padded
+              }
+            >
+              <div>
+                {collectionMetadata.name} №{currentIndex}
+              </div>
+              {Object.values(collectionMetadata.marketplaces).map((place) => {
+                return (
+                  <Link
+                    key={place.link}
+                    className={`${collectionStyles.link} ${collectionStyles.text_secondary}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    href={`${place.tokenLink}${currentIndex}`}
+                  >
+                    {place.name}
+                  </Link>
+                );
+              })}
+            </div>
+            <Image
+              src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
+              alt={`${metadata.name} ${currentIndex}` || `NFT #${currentIndex}`}
+              width={100}
+              height={100}
+              style={{
+                minWidth: '100%',
+                height: 'fit-content',
+                maxWidth: '100%',
+                maxHeight: collectionMetadata.padded
+                  ? 'calc(100% - 21.5px)'
+                  : 'calc(100% - 37.5px)',
+                objectFit: 'contain',
+              }}
+            />
+          </>
         )}
       </div>
     </>

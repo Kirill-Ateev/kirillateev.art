@@ -1,9 +1,10 @@
 .viewer_container {
   width: 100%;
-  height: calc(100vh - 115.5px);
+  height: calc(100vh - 94px);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .viewer_error {
@@ -16,4 +17,12 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+.viewer_title_padded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: var(--small-padding);
 }

@@ -32,13 +32,7 @@ export default withLinguiPage(async function CollectionViewer({
       <Header />
       <main className={styles.main}>
         <Suspense>
-          <ERC721Viewer
-            name={collectionMetadata.name}
-            marketplaces={collectionMetadata.marketplaces}
-            contractAddress={collectionMetadata.contract}
-            minIndex={collectionMetadata.minIndex}
-            maxIndex={collectionMetadata.maxIndex}
-          />
+          <ERC721Viewer collectionMetadata={collectionMetadata} />
         </Suspense>
       </main>
     </div>

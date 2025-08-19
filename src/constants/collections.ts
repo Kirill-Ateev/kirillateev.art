@@ -6,6 +6,7 @@ export const collectionsData = {
     contract: '0x4aA41C7C9eCF9cdE5Aa1CC215AAe5d9bB91D0952',
     minIndex: 1,
     maxIndex: 10000,
+    padded: true,
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -22,6 +23,7 @@ export const collectionsData = {
     contract: '0x1a8deb6deb554cf80d8202c169d31538d449c99b',
     minIndex: 1,
     maxIndex: 10000,
+    padded: true,
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -38,6 +40,7 @@ export const collectionsData = {
     contract: '0x580731911b8d5df910b7ed9b776f1b2e70de6752',
     minIndex: 1,
     maxIndex: 10000,
+    padded: true,
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -54,6 +57,7 @@ export const collectionsData = {
     contract: '0xa3754152a10a3bbad4c4e0586dbf4a2b8e391f71',
     minIndex: 1,
     maxIndex: 1024,
+    padded: true,
     marketplaces: {
       rarible: {
         name: 'Rarible',
