@@ -29,8 +29,9 @@ const ERC721_ABI = [
   'function tokenURI(uint256 tokenId) external view returns (string memory)',
 ];
 
+// https://ethereum.publicnode.com
 const RPC_PROVIDER = new ethers.JsonRpcProvider(
-  'https://ethereum.publicnode.com'
+  'https://eth-mainnet.public.blastapi.io'
 );
 
 export const ERC721Viewer: React.FC<{
