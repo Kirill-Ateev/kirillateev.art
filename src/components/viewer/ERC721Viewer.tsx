@@ -129,61 +129,63 @@ export const ERC721Viewer: React.FC<{
   }, [currentIndex, fetchNFTMetadata]);
 
   return (
-    <>
-      <div
-        className={styles.viewer_container}
-        style={{
-          cursor: isLoading ? 'wait' : 'pointer',
-        }}
-        onClick={!isLoading ? handleClick : undefined}
-      >
-        {error && <div className={styles.viewer_error}>Error: {error}</div>}
-        {isLoading && <div>Loading...</div>}
+    <div
+      className={styles.viewer_container}
+      style={{
+        cursor: isLoading ? 'wait' : 'pointer',
+      }}
+    >
+      {error && (
+        <div className={styles.viewer_error} onClick={handleClick}>
+          Error: {error}
+        </div>
+      )}
+      {isLoading && <div>Loading...</div>}
 
-        {metadata && !isLoading && (
-          <>
-            <div
-              className={
-                collectionMetadata.padded
-                  ? styles.viewer_title
-                  : styles.viewer_title_padded
-              }
-            >
-              <div>
-                {collectionMetadata.name} №{currentIndex}
-              </div>
-              {Object.values(collectionMetadata.marketplaces).map((place) => {
-                return (
-                  <Link
-                    key={place.link}
-                    className={`${collectionStyles.link} ${collectionStyles.text_secondary}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    href={`${place.tokenLink}${currentIndex}`}
-                  >
-                    {place.name}
-                  </Link>
-                );
-              })}
+      {metadata && !isLoading && (
+        <>
+          <div
+            className={
+              collectionMetadata.padded
+                ? styles.viewer_title
+                : styles.viewer_title_padded
+            }
+          >
+            <div>
+              {collectionMetadata.name} №{currentIndex}
             </div>
-            <Image
-              src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
-              alt={`${metadata.name} ${currentIndex}` || `NFT #${currentIndex}`}
-              width={100}
-              height={100}
-              style={{
-                minWidth: '100%',
-                height: 'fit-content',
-                maxWidth: '100%',
-                maxHeight: collectionMetadata.padded
-                  ? 'calc(100% - 21.5px)'
-                  : 'calc(100% - 37.5px)',
-                objectFit: 'contain',
-              }}
-            />
-          </>
-        )}
-      </div>
-    </>
+            {Object.values(collectionMetadata.marketplaces).map((place) => {
+              return (
+                <Link
+                  key={place.link}
+                  className={`${collectionStyles.link} ${collectionStyles.text_secondary}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  href={`${place.tokenLink}${currentIndex}`}
+                >
+                  {place.name}
+                </Link>
+              );
+            })}
+          </div>
+          <Image
+            src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
+            alt={`${metadata.name} ${currentIndex}` || `NFT #${currentIndex}`}
+            width={100}
+            height={100}
+            style={{
+              minWidth: '100%',
+              height: 'fit-content',
+              maxWidth: '100%',
+              maxHeight: collectionMetadata.padded
+                ? 'calc(100% - 21.5px)'
+                : 'calc(100% - 37.5px)',
+              objectFit: 'contain',
+            }}
+            onClick={handleClick}
+          />
+        </>
+      )}
+    </div>
   );
 };
