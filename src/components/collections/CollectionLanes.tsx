@@ -49,14 +49,6 @@ export default function CollectionLanes() {
                 Metadata and images stored directly on blockchain (on-chain).
               </Trans>
             </div>
-            {/* <Link
-              className={`${styles.link} ${styles.text_secondary}`}
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/Kirill-Ateev/attentionless"
-            >
-              <Trans>Source code &gt;</Trans>
-            </Link> */}
             <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"

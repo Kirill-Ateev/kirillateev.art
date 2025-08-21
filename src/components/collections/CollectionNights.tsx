@@ -59,14 +59,6 @@ export default function CollectionNights() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/Kirill-Ateev/8-nights"
-            >
-              <Trans>Source code &gt;</Trans>
-            </Link>
-            <Link
-              className={`${styles.link} ${styles.text_secondary}`}
-              target="_blank"
-              rel="noreferrer"
               href="https://getgems.io/nights"
             >
               <Trans>View collection &gt;</Trans>

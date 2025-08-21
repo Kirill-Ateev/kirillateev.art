@@ -47,14 +47,14 @@ export default function CollectionAttentionless() {
             <div className={styles.text_secondary}>
               <Trans>Metadata and files stored on IPFS.</Trans>
             </div>
-            <Link
+            {/* <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://github.com/Kirill-Ateev/attentionless"
             >
               <Trans>Source code &gt;</Trans>
-            </Link>
+            </Link> */}
             <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"

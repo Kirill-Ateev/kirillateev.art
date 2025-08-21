@@ -45,14 +45,14 @@ export default function CollectionLifeIsAnIllusion() {
                 original photos stored on IPFS.
               </Trans>
             </div>
-            <Link
+            {/* <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
               href="https://github.com/Kirill-Ateev/life-is-an-illusion"
             >
               <Trans>Source code &gt;</Trans>
-            </Link>
+            </Link> */}
             <Link
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
