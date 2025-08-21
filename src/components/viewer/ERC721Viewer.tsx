@@ -30,8 +30,11 @@ const ERC721_ABI = [
 ];
 
 // https://ethereum.publicnode.com
-const RPC_PROVIDER = new ethers.WebSocketProvider(
-  'wss://eth-mainnet.g.alchemy.com/v2/gHHmSHb98l1e1Eo3VhnIR'
+// const RPC_PROVIDER = new ethers.WebSocketProvider(
+//   'wss://eth-mainnet.g.alchemy.com/v2/gHHmSHb98l1e1Eo3VhnIR'
+// );
+const RPC_PROVIDER = new ethers.JsonRpcProvider(
+  'https://vercel-view.vercel.app/api/view'
 );
 
 export const ERC721Viewer: React.FC<{
