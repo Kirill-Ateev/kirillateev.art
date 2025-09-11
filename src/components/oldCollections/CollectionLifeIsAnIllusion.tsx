@@ -57,7 +57,7 @@ export default function CollectionLifeIsAnIllusion() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://rarible.com/life-is-an-illusion"
+              href="https://og.rarible.com/life-is-an-illusion"
             >
               <Trans>View collection &gt;</Trans>
             </Link>
@@ -83,7 +83,7 @@ export default function CollectionLifeIsAnIllusion() {
             className={`${styles.embla__slide} ${styles.container_arrow}`}
             style={{ height: isXs || isSm ? '392px' : '784px' }}
           >
-            <ArrowRight href="https://rarible.com/life-is-an-illusion" />
+            <ArrowRight href="https://og.rarible.com/life-is-an-illusion" />
           </div>
         </div>
       </div>

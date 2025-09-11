@@ -12,9 +12,9 @@ export const collectionsData = {
     marketplaces: {
       rarible: {
         name: 'Rarible',
-        link: 'https://rarible.com/window-by-kirill-ateev',
+        link: 'https://og.rarible.com/window-by-kirill-ateev',
         tokenLink:
-          'https://rarible.com/token/0x4aa41c7c9ecf9cde5aa1cc215aae5d9bb91d0952:',
+          'https://og.rarible.com/token/0x4aa41c7c9ecf9cde5aa1cc215aae5d9bb91d0952:',
       },
     },
   },
@@ -29,9 +29,9 @@ export const collectionsData = {
     marketplaces: {
       rarible: {
         name: 'Rarible',
-        link: 'https://rarible.com/crosswalk-by-kirill-ateev',
+        link: 'https://og.rarible.com/crosswalk-by-kirill-ateev',
         tokenLink:
-          'https://rarible.com/token/0x1a8deb6deb554cf80d8202c169d31538d449c99b:',
+          'https://og.rarible.com/token/0x1a8deb6deb554cf80d8202c169d31538d449c99b:',
       },
     },
   },
@@ -46,9 +46,9 @@ export const collectionsData = {
     marketplaces: {
       rarible: {
         name: 'Rarible',
-        link: 'https://rarible.com/lanes-by-kirill-ateev',
+        link: 'https://og.rarible.com/lanes-by-kirill-ateev',
         tokenLink:
-          'https://rarible.com/token/0x580731911b8d5df910b7ed9b776f1b2e70de6752:',
+          'https://og.rarible.com/token/0x580731911b8d5df910b7ed9b776f1b2e70de6752:',
       },
     },
   },
@@ -63,9 +63,9 @@ export const collectionsData = {
     marketplaces: {
       rarible: {
         name: 'Rarible',
-        link: 'https://rarible.com/attentionless-by-kirill-ateev',
+        link: 'https://og.rarible.com/attentionless-by-kirill-ateev',
         tokenLink:
-          'https://rarible.com/token/0xa3754152a10a3bbad4c4e0586dbf4a2b8e391f71:',
+          'https://og.rarible.com/token/0xa3754152a10a3bbad4c4e0586dbf4a2b8e391f71:',
       },
     },
   },

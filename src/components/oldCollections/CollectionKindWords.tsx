@@ -65,7 +65,7 @@ export default function CollectionKindWords() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href="https://rarible.com/kindwords"
+              href="https://og.rarible.com/kindwords"
             >
               <Trans>View collection &gt;</Trans>
             </Link>
@@ -89,7 +89,7 @@ export default function CollectionKindWords() {
             className={`${styles.embla__slide} ${styles.container_arrow}`}
             style={{ height: isXs || isSm ? '300px' : '512px' }}
           >
-            <ArrowRight href="https://rarible.com/kindwords" />
+            <ArrowRight href="https://og.rarible.com/kindwords" />
           </div>
         </div>
       </div>
