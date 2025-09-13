@@ -54,9 +54,11 @@ export default function CollectionCocktailStraws() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`${i18n.locale}/view/window?item=${getRandomFromRange(
-                collectionsData.cocktailStraws.minIndex,
-                collectionsData.cocktailStraws.maxIndex
+              href={`${
+                i18n.locale
+              }/view/cocktail-straws?item=${getRandomFromRange(
+                collectionsData['cocktail-straws'].minIndex,
+                collectionsData['cocktail-straws'].maxIndex
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -65,7 +67,9 @@ export default function CollectionCocktailStraws() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={collectionsData.cocktailStraws.marketplaces.rarible.link}
+              href={
+                collectionsData['cocktail-straws'].marketplaces.rarible.link
+              }
             >
               Rarible &gt;
             </Link>
@@ -90,7 +94,9 @@ export default function CollectionCocktailStraws() {
             style={{ height: isXs || isSm ? '300px' : '512px' }}
           >
             <ArrowRight
-              href={collectionsData.cocktailStraws.marketplaces.rarible.link}
+              href={
+                collectionsData['cocktail-straws'].marketplaces.rarible.link
+              }
             />
           </div>
         </div>

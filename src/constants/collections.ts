@@ -1,5 +1,5 @@
 export const collectionsData = {
-  cocktailStraws: {
+  'cocktail-straws': {
     name: 'Cocktail straws',
     network: 'Ethereum',
     standard: 'ERC-721',
