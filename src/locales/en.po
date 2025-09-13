@@ -32,6 +32,10 @@ msgstr "10 000 works"
 msgid "1024 works"
 msgstr "1024 works"
 
+#: src/components/collections/CollectionCocktailStraws.tsx:39
+msgid "111 works"
+msgstr "111 works"
+
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:36
 msgid "20 works"
 msgstr "20 works"
@@ -48,6 +52,7 @@ msgstr "88 works"
 msgid "A collection of 42 impressionist style photos."
 msgstr "A collection of 42 impressionist style photos."
 
+#: src/components/collections/CollectionCocktailStraws.tsx:43
 #: src/components/collections/CollectionCrosswalk.tsx:42
 #: src/components/collections/CollectionLanes.tsx:42
 #: src/components/collections/CollectionWindow.tsx:43
@@ -107,7 +112,11 @@ msgstr "Ethereum - Jun. 2023"
 msgid "Ethereum - March 2025"
 msgstr "Ethereum - March 2025"
 
-#: src/app/[lang]/page.tsx:21
+#: src/components/collections/CollectionCocktailStraws.tsx:36
+msgid "Ethereum - September 2025"
+msgstr "Ethereum - September 2025"
+
+#: src/app/[lang]/page.tsx:22
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Hi, I'm Kirill Ateev. A generative artist working with code."
 
@@ -147,6 +156,7 @@ msgstr "Metadata and compressed images stored on-chain, additionally the origina
 msgid "Metadata and files stored on IPFS."
 msgstr "Metadata and files stored on IPFS."
 
+#: src/components/collections/CollectionCocktailStraws.tsx:49
 #: src/components/collections/CollectionCrosswalk.tsx:48
 #: src/components/collections/CollectionLanes.tsx:48
 #: src/components/collections/CollectionWindow.tsx:49
@@ -161,7 +171,7 @@ msgstr "Polygon - Feb. 2023"
 msgid "Recent Community Work"
 msgstr "Recent Community Work"
 
-#: src/app/[lang]/page.tsx:18
+#: src/app/[lang]/page.tsx:19
 msgid "Recent Work"
 msgstr "Recent Work"
 
@@ -173,17 +183,18 @@ msgstr "Some messages for you"
 #: src/components/collections/CollectionNights.tsx:64
 #: src/components/oldCollections/CollectionKindWords.tsx:62
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:54
-msgid "Source code >"
-msgstr "Source code >"
+#~ msgid "Source code >"
+#~ msgstr "Source code >"
 
 #: src/components/collections/CollectionNights.tsx:43
 msgid "TON - Dec. 2023"
 msgstr "TON - Dec. 2023"
 
 #: src/components/collections/CollectionAttentionless.tsx:69
-#: src/components/collections/CollectionCrosswalk.tsx:69
-#: src/components/collections/CollectionLanes.tsx:69
-#: src/components/collections/CollectionNights.tsx:72
+#: src/components/collections/CollectionCocktailStraws.tsx:62
+#: src/components/collections/CollectionCrosswalk.tsx:61
+#: src/components/collections/CollectionLanes.tsx:61
+#: src/components/collections/CollectionNights.tsx:64
 #: src/components/collections/CollectionWindow.tsx:62
 #: src/components/oldCollections/CollectionKindWords.tsx:70
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:62
@@ -196,7 +207,7 @@ msgstr "View collection >"
 msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
 msgstr "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
 
-#: src/components/collections/CollectionNights.tsx:111
+#: src/components/collections/CollectionNights.tsx:103
 msgid "Your browser does not support the video tag."
 msgstr "Your browser does not support the video tag."
 

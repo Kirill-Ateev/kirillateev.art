@@ -1,4 +1,22 @@
 export const collectionsData = {
+  cocktailStraws: {
+    name: 'Cocktail straws',
+    network: 'Ethereum',
+    standard: 'ERC-721',
+    generationContractBytecode: '',
+    contract: '0x871B5048D20505D5e2acc3f9487C674441d297D4',
+    minIndex: 1,
+    maxIndex: 111,
+    padded: false,
+    marketplaces: {
+      rarible: {
+        name: 'Rarible',
+        link: 'https://og.rarible.com/cocktail-straws-by-kirill-ateev',
+        tokenLink:
+          'https://og.rarible.com/token/0x871b5048d20505d5e2acc3f9487c674441d297d4:',
+      },
+    },
+  },
   window: {
     name: 'Window',
     network: 'Ethereum',
