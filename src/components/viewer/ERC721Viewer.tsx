@@ -184,7 +184,7 @@ export const ERC721Viewer: React.FC<{
               maxHeight: collectionMetadata.padded
                 ? 'calc(100% - 21.5px)'
                 : 'calc(100% - 37.5px)',
-              paddingBottom: collectionMetadata.padded ? '0px' : '30px',
+              padding: collectionMetadata.padded ? '0px' : '0px 30px 30px 30px',
               objectFit: 'contain',
             }}
             onClick={handleClick}
