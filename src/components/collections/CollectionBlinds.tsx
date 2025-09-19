@@ -24,8 +24,8 @@ export default function CollectionBlinds() {
   const images = [
     'image-492',
     'image-93',
-    'image-145',
     'image-259',
+    'image-145',
     'image-332',
     'image-348',
   ];

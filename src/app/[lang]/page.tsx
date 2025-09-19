@@ -6,6 +6,8 @@ import CollectionLanes from '@/components/collections/CollectionLanes';
 import CollectionNights from '@/components/collections/CollectionNights';
 import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
+import CollectionKindWords from '@/components/oldCollections/CollectionKindWords';
+import CollectionLifeIsAnIllusion from '@/components/oldCollections/CollectionLifeIsAnIllusion';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import styles from './page.module.css';
@@ -32,8 +34,8 @@ export default withLinguiPage(function Home() {
         <CollectionLanes />
         <CollectionAttentionless />
         <CollectionNights />
-        {/* <CollectionLifeIsAnIllusion /> */}
-        {/* <CollectionKindWords /> */}
+        <CollectionLifeIsAnIllusion />
+        <CollectionKindWords />
       </main>
     </>
   );
