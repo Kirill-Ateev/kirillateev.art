@@ -44,6 +44,10 @@ msgstr "20 работ"
 msgid "300 works"
 msgstr "300 работ"
 
+#: src/components/collections/CollectionBlinds.tsx:46
+msgid "555 works"
+msgstr "555 работ"
+
 #: src/components/collections/CollectionNights.tsx:46
 msgid "88 works"
 msgstr "88 работ"
@@ -52,6 +56,7 @@ msgstr "88 работ"
 msgid "A collection of 42 impressionist style photos."
 msgstr "Коллекция из 42 фотографий в стиле импрессионизма."
 
+#: src/components/collections/CollectionBlinds.tsx:50
 #: src/components/collections/CollectionCocktailStraws.tsx:43
 #: src/components/collections/CollectionCrosswalk.tsx:42
 #: src/components/collections/CollectionLanes.tsx:42
@@ -104,11 +109,12 @@ msgstr "Ethereum - Июнь 2023"
 msgid "Ethereum - March 2025"
 msgstr "Ethereum - Март 2025"
 
+#: src/components/collections/CollectionBlinds.tsx:43
 #: src/components/collections/CollectionCocktailStraws.tsx:36
 msgid "Ethereum - September 2025"
 msgstr "Ethereum - Сентябрь 2025"
 
-#: src/app/[lang]/page.tsx:22
+#: src/app/[lang]/page.tsx:23
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Привет, я Кирилл Атеев. Создаю генеративное искусство с помощью кода."
 
@@ -152,6 +158,7 @@ msgstr "Метаданные и сжатые файлы хранятся в бл
 msgid "Metadata and files stored on IPFS."
 msgstr "Метаданные и файлы хранятся в IPFS."
 
+#: src/components/collections/CollectionBlinds.tsx:56
 #: src/components/collections/CollectionCocktailStraws.tsx:49
 #: src/components/collections/CollectionCrosswalk.tsx:48
 #: src/components/collections/CollectionLanes.tsx:48
@@ -167,7 +174,7 @@ msgstr "Polygon - Фев. 2023"
 msgid "Recent Community Work"
 msgstr "Недавние работы в сообществе"
 
-#: src/app/[lang]/page.tsx:19
+#: src/app/[lang]/page.tsx:20
 msgid "Recent Work"
 msgstr "Недавние работы"
 
@@ -187,7 +194,8 @@ msgid "TON - Dec. 2023"
 msgstr "TON - Дек. 2023"
 
 #: src/components/collections/CollectionAttentionless.tsx:69
-#: src/components/collections/CollectionCocktailStraws.tsx:62
+#: src/components/collections/CollectionBlinds.tsx:69
+#: src/components/collections/CollectionCocktailStraws.tsx:64
 #: src/components/collections/CollectionCrosswalk.tsx:61
 #: src/components/collections/CollectionLanes.tsx:61
 #: src/components/collections/CollectionNights.tsx:64

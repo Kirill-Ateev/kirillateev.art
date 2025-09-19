@@ -1,4 +1,5 @@
 import CollectionAttentionless from '@/components/collections/CollectionAttentionless';
+import CollectionBlinds from '@/components/collections/CollectionBlinds';
 import CollectionCocktailStraws from '@/components/collections/CollectionCocktailStraws';
 import CollectionCrosswalk from '@/components/collections/CollectionCrosswalk';
 import CollectionLanes from '@/components/collections/CollectionLanes';
@@ -24,6 +25,7 @@ export default withLinguiPage(function Home() {
             </Trans>
           </div>
         </section>
+        <CollectionBlinds />
         <CollectionCocktailStraws />
         <CollectionWindow />
         <CollectionCrosswalk />
