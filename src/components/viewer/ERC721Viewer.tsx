@@ -1,5 +1,6 @@
 'use client';
 import { getRandomFromRange, isNumeric } from '@/utils/numbers';
+import { Trans } from '@lingui/react/macro';
 import { ethers } from 'ethers';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -155,8 +156,14 @@ export const ERC721Viewer: React.FC<{
                 : styles.viewer_title_padded
             }
           >
-            <div>
+            <div onClick={handleClick}>
               {collectionMetadata.name} №{currentIndex}
+            </div>
+            <div
+              className={`${styles.absolute_subtext} ${collectionStyles.text_secondary}`}
+              onClick={handleClick}
+            >
+              <Trans>(click for next)</Trans>
             </div>
             {Object.values(collectionMetadata.marketplaces).map((place) => {
               return (

@@ -13,16 +13,25 @@
 }
 
 .viewer_title {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  width: 200px;
 }
 
 .viewer_title_padded {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding-bottom: var(--small-padding);
+  width: 200px;
+}
+
+.absolute_subtext {
+  position: absolute;
+  top: 17px;
 }

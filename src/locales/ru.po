@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/viewer/ERC721Viewer.tsx:166
+msgid "(click for next)"
+msgstr "(кликни для следующей)"
+
 #. placeholder {0}: message?.[i18n.locale].text
 #. placeholder {0}: message?.[i18n.locale].title
 #. placeholder {0}: messagesList[message]?.[i18n.locale].title
@@ -114,7 +118,7 @@ msgstr "Ethereum - Март 2025"
 msgid "Ethereum - September 2025"
 msgstr "Ethereum - Сентябрь 2025"
 
-#: src/app/[lang]/page.tsx:23
+#: src/app/[lang]/page.tsx:25
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Привет, я Кирилл Атеев. Создаю генеративное искусство с помощью кода."
 
@@ -174,7 +178,7 @@ msgstr "Polygon - Фев. 2023"
 msgid "Recent Community Work"
 msgstr "Недавние работы в сообществе"
 
-#: src/app/[lang]/page.tsx:20
+#: src/app/[lang]/page.tsx:22
 msgid "Recent Work"
 msgstr "Недавние работы"
 
