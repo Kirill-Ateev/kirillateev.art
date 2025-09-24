@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://kirillkirillateev.art/sitemap.xml
+Sitemap: https://kirillateev.art/sitemap.xml
