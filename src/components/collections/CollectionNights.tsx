@@ -93,7 +93,7 @@ export default function CollectionNights() {
                 preload="auto"
               >
                 <source
-                  src={`https://cdn.jsdelivr.net/gh/Kirill-Ateev/ateev.art@main/public/videos/nights/${videoId}.webm`}
+                  src={`https://cdn.jsdelivr.net/gh/Kirill-Ateev/kirillateev.art@main/public/videos/nights/${videoId}.webm`}
                   type="video/webm"
                 />
                 <source
