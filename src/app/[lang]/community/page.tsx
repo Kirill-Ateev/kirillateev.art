@@ -17,9 +17,9 @@ export default withLinguiPage(function Community() {
             className={`${styles.menu_item} ${styles.text_secondary}`}
             target="_blank"
             rel="noreferrer"
-            href="https://t.me/ateev_kirill"
+            href="https://t.me/kirill_ateev_art"
           >
-            @ateev_kirill
+            @kirill_ateev_art
           </Link>
         </section>
         {/* <CollectionLifeIsAnIllusion /> */}

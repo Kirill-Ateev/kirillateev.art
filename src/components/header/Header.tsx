@@ -15,7 +15,10 @@ export default function Header() {
         <Link className={styles.menu_item} href={`/${i18n.locale}/messages`}>
           <Trans>Messages</Trans>
         </Link>
-        <Link className={styles.menu_item} href={`https://t.me/ateev_kirill`}>
+        <Link
+          className={styles.menu_item}
+          href={`https://t.me/kirill_ateev_art`}
+        >
           <Trans>Community</Trans>
         </Link>
       </div>
