@@ -33,9 +33,9 @@ export default withLinguiLayout(async function RootLayout({
     <html lang={lang}>
       <head>
         <GTM />
-        <link rel="canonical" href="https://ateev.art/en" />
-        <link rel="alternate" href="https://ateev.art/ru" hrefLang="ru" />
-        <link rel="alternate" href="https://ateev.art/en" hrefLang="en" />
+        <link rel="canonical" href="https://kirillateev.art/en" />
+        <link rel="alternate" href="https://kirillateev.art/ru" hrefLang="ru" />
+        <link rel="alternate" href="https://kirillateev.art/en" hrefLang="en" />
 
         {/* Primary Meta Tags */}
         <title>{t(i18n)`Kirill Ateev - Artist`}</title>
@@ -58,7 +58,7 @@ export default withLinguiLayout(async function RootLayout({
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ateev.art/" />
+        <meta property="og:url" content="https://www.kirillateev.art/" />
         <meta property="og:title" content={t(i18n)`Kirill Ateev - Artist`} />
         <meta
           property="og:description"
@@ -66,7 +66,10 @@ export default withLinguiLayout(async function RootLayout({
             i18n
           )`Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.`}
         />
-        <meta property="og:image" content="https://www.ateev.art/favicon.ico" />
+        <meta
+          property="og:image"
+          content="https://www.kirillateev.art/favicon.ico"
+        />
         <meta
           property="og:image:alt"
           content={t(i18n)`Kirill Ateev's artwork`}
@@ -75,7 +78,7 @@ export default withLinguiLayout(async function RootLayout({
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.ateev.art/" />
+        <meta property="twitter:url" content="https://www.kirillateev.art/" />
         <meta
           property="twitter:title"
           content={t(i18n)`Kirill Ateev - Artist`}
@@ -88,7 +91,7 @@ export default withLinguiLayout(async function RootLayout({
         />
         <meta
           property="twitter:image"
-          content="https://www.ateev.art/images/favicon.ico"
+          content="https://www.kirillateev.art/images/favicon.ico"
         />
         <meta
           property="twitter:image:alt"
