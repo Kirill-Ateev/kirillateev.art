@@ -6,7 +6,6 @@ import styles from './styles.module.css';
 
 interface LazyHydrateProps {
   children: ReactNode;
-  // Высота теперь ОБЯЗАТЕЛЬНА. Это контракт, который мы заключаем с браузером.
   placeholderHeight: string | number;
 }
 
@@ -31,7 +30,7 @@ export default function LazyHydrate({
           observer.disconnect();
         }
       },
-      { rootMargin: '200px 0px' }
+      { rootMargin: '50px 0px' }
     );
 
     if (wrapperRef.current) {
