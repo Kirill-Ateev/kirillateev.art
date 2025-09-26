@@ -6,6 +6,7 @@ import CollectionLanes from '@/components/collections/CollectionLanes';
 import CollectionNights from '@/components/collections/CollectionNights';
 import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
+import LazyHydrate from '@/components/layout/HydrateOnScroll';
 import CollectionKindWords from '@/components/oldCollections/CollectionKindWords';
 import CollectionLifeIsAnIllusion from '@/components/oldCollections/CollectionLifeIsAnIllusion';
 import { withLinguiPage } from '@/withLingui';
@@ -29,13 +30,27 @@ export default withLinguiPage(function Home() {
         </section>
         <CollectionBlinds />
         <CollectionCocktailStraws />
-        <CollectionWindow />
-        <CollectionCrosswalk />
-        <CollectionLanes />
-        <CollectionAttentionless />
-        <CollectionNights />
-        <CollectionLifeIsAnIllusion />
-        <CollectionKindWords />
+        <LazyHydrate placeholderHeight="720px">
+          <CollectionWindow />
+        </LazyHydrate>
+        <LazyHydrate placeholderHeight="720px">
+          <CollectionCrosswalk />
+        </LazyHydrate>
+        <LazyHydrate placeholderHeight="720px">
+          <CollectionLanes />
+        </LazyHydrate>
+        <LazyHydrate placeholderHeight="720px">
+          <CollectionAttentionless />
+        </LazyHydrate>
+        <LazyHydrate placeholderHeight="720px">
+          <CollectionNights />
+        </LazyHydrate>
+        <LazyHydrate placeholderHeight="720px">
+          <CollectionLifeIsAnIllusion />
+        </LazyHydrate>
+        <LazyHydrate placeholderHeight="720px">
+          <CollectionKindWords />
+        </LazyHydrate>
       </main>
     </>
   );
