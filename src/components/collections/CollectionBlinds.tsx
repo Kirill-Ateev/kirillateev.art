@@ -58,6 +58,7 @@ export default function CollectionBlinds() {
               </Trans>
             </div>
             <Link
+              suppressHydrationWarning
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"

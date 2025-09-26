@@ -56,6 +56,7 @@ export default function CollectionAttentionless() {
               <Trans>Source code &gt;</Trans>
             </Link> */}
             <Link
+              suppressHydrationWarning
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
