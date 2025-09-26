@@ -88,24 +88,55 @@
   width: 512px;
   height: 512px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  img,
+  video {
+    width: 512px;
+    height: 512px;
+  }
 }
 
 .card_kindwords {
   width: 512px;
   height: 512px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  img {
+    width: 512px;
+    height: 512px;
+  }
 }
 
 .card_liai {
   width: 555px;
   height: 784px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  img {
+    width: 555px;
+    height: 784px;
+  }
 }
 
 .card_attentionless {
   width: 512px;
   height: 512px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  img {
+    width: 512px;
+    height: 512px;
+  }
+}
+
+.container_arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-right: 80px;
+  height: 512px;
 }
 
 @media (max-width: 767px) {
@@ -118,16 +149,32 @@
   .card_nights {
     width: 300px;
     height: 300px;
+
+    img,
+    video {
+      width: 300px;
+      height: 300px;
+    }
   }
 
   .card_kindwords {
     width: 300px;
     height: 300px;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
   }
 
   .card_liai {
     width: 277px;
     height: 392px;
+
+    img {
+      width: 277px;
+      height: 392px;
+    }
   }
 
   .card_attentionless {
@@ -135,16 +182,22 @@
     height: 300px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  }
-}
 
-.container_arrow {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  margin-right: 80px;
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .container_arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-right: 80px;
+    height: 300x;
+  }
 }
 
 .arrow {

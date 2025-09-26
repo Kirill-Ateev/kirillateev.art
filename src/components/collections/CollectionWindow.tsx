@@ -1,7 +1,6 @@
 'use client';
 import { basePath } from '@/constants';
 import { collectionsData } from '@/constants/collections';
-import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { getRandomFromRange } from '@/utils/numbers';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
@@ -12,7 +11,6 @@ import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
 export default function CollectionWindow() {
-  const { isXs, isSm } = useBreakpoints();
   const { i18n } = useLingui();
 
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
@@ -80,16 +78,13 @@ export default function CollectionWindow() {
               <Image
                 src={`${basePath}/images/window/${imageId}.svg`}
                 alt={`window №${imageId}`}
-                width={isXs || isSm ? 300 : 512}
-                height={isXs || isSm ? 300 : 512}
+                width={512}
+                height={512}
               />
             </div>
           ))}
 
-          <div
-            className={`${styles.embla__slide} ${styles.container_arrow}`}
-            style={{ height: isXs || isSm ? '300px' : '512px' }}
-          >
+          <div className={`${styles.embla__slide} ${styles.container_arrow}`}>
             <ArrowRight
               href={collectionsData.window.marketplaces.rarible.link}
             />

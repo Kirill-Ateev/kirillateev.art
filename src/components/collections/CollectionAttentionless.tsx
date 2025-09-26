@@ -1,7 +1,6 @@
 'use client';
 import { basePath } from '@/constants';
 import { collectionsData } from '@/constants/collections';
-import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { getRandomFromRange } from '@/utils/numbers';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
@@ -12,7 +11,6 @@ import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
 export default function CollectionAttentionless() {
-  const { isXs, isSm } = useBreakpoints();
   const { i18n } = useLingui();
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
   const [emblaRef] = useEmblaCarousel({
@@ -87,16 +85,13 @@ export default function CollectionAttentionless() {
               <Image
                 src={`${basePath}/images/attentionless/${imageId}.webp`}
                 alt={`Attentionless №${imageId}`}
-                width={isXs || isSm ? 300 : 512}
-                height={isXs || isSm ? 300 : 512}
+                width={512}
+                height={512}
               />
             </div>
           ))}
 
-          <div
-            className={`${styles.embla__slide} ${styles.container_arrow}`}
-            style={{ height: isXs || isSm ? '300px' : '512px' }}
-          >
+          <div className={`${styles.embla__slide} ${styles.container_arrow}`}>
             <ArrowRight
               href={collectionsData.attentionless.marketplaces.rarible.link}
             />

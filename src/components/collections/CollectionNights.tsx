@@ -1,5 +1,4 @@
 'use client';
-import { useBreakpoints } from '@/hooks/useBreakpoints';
 import { Trans } from '@lingui/react/macro';
 import useEmblaCarousel from 'embla-carousel-react';
 import Link from 'next/link';
@@ -9,7 +8,6 @@ import styles from './styles.module.css';
 
 export default function CollectionNights() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const { isXs, isSm } = useBreakpoints();
 
   // Устанавливаем громкость для всех видео при маунте
   useEffect(() => {
@@ -75,8 +73,8 @@ export default function CollectionNights() {
                   videoRefs.current[index] = el;
                 }}
                 poster={`https://cdn.jsdelivr.net/gh/Kirill-Ateev/8-nights@master/videoScreens/${videoId}.png`}
-                width={isXs || isSm ? 300 : 512}
-                height={isXs || isSm ? 300 : 512}
+                width={512}
+                height={512}
                 playsInline
                 onTouchStart={(event) =>
                   (event.target as HTMLVideoElement).play()
@@ -105,10 +103,7 @@ export default function CollectionNights() {
             </div>
           ))}
 
-          <div
-            className={`${styles.embla__slide} ${styles.container_arrow}`}
-            style={{ height: isXs || isSm ? '300px' : '512px' }}
-          >
+          <div className={`${styles.embla__slide} ${styles.container_arrow}`}>
             <ArrowRight href="https://getgems.io/nights" />
           </div>
         </div>
