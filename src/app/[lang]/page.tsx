@@ -30,9 +30,7 @@ export default withLinguiPage(function Home() {
         </section>
         <CollectionBlinds />
         <CollectionCocktailStraws />
-        <LazyHydrate placeholderHeight="720px">
-          <CollectionWindow />
-        </LazyHydrate>
+        <CollectionWindow />
         <LazyHydrate placeholderHeight="720px">
           <CollectionCrosswalk />
         </LazyHydrate>
