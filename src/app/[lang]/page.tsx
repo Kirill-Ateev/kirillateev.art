@@ -2,7 +2,6 @@ import CollectionAttentionless from '@/components/collections/CollectionAttentio
 import CollectionBlinds from '@/components/collections/CollectionBlinds';
 import CollectionCocktailStraws from '@/components/collections/CollectionCocktailStraws';
 import CollectionCrosswalk from '@/components/collections/CollectionCrosswalk';
-import CollectionLanes from '@/components/collections/CollectionLanes';
 import CollectionNights from '@/components/collections/CollectionNights';
 import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
@@ -34,9 +33,9 @@ export default withLinguiPage(function Home() {
         <LazyHydrate placeholderHeight="508px">
           <CollectionCrosswalk />
         </LazyHydrate>
-        <LazyHydrate placeholderHeight="508px">
+        {/* <LazyHydrate placeholderHeight="508px">
           <CollectionLanes />
-        </LazyHydrate>
+        </LazyHydrate> */}
         <LazyHydrate placeholderHeight="508px">
           <CollectionAttentionless />
         </LazyHydrate>
