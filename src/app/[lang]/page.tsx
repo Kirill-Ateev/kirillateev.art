@@ -2,9 +2,12 @@ import CollectionAttentionless from '@/components/collections/CollectionAttentio
 import CollectionBlinds from '@/components/collections/CollectionBlinds';
 import CollectionCocktailStraws from '@/components/collections/CollectionCocktailStraws';
 import CollectionCrosswalk from '@/components/collections/CollectionCrosswalk';
+import CollectionNights from '@/components/collections/CollectionNights';
 import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
 import LazyHydrate from '@/components/layout/LazyHydrate';
+import CollectionKindWords from '@/components/oldCollections/CollectionKindWords';
+import CollectionLifeIsAnIllusion from '@/components/oldCollections/CollectionLifeIsAnIllusion';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import styles from './page.module.css';
@@ -36,15 +39,15 @@ export default withLinguiPage(function Home() {
         <LazyHydrate placeholderHeight="508px">
           <CollectionAttentionless />
         </LazyHydrate>
-        {/* <LazyHydrate placeholderHeight="508px">
+        <LazyHydrate placeholderHeight="508px">
           <CollectionNights />
-        </LazyHydrate> */}
-        {/* <LazyHydrate placeholderHeight="508px">
+        </LazyHydrate>
+        <LazyHydrate placeholderHeight="508px">
           <CollectionLifeIsAnIllusion />
         </LazyHydrate>
         <LazyHydrate placeholderHeight="508px">
           <CollectionKindWords />
-        </LazyHydrate> */}
+        </LazyHydrate>
       </main>
     </>
   );
