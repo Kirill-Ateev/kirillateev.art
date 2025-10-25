@@ -37,9 +37,6 @@ export default withLinguiPage(function Home() {
           <CollectionAttentionless />
         </LazyHydrate>
         {/* <LazyHydrate placeholderHeight="508px">
-          <CollectionNights />
-        </LazyHydrate>
-        <LazyHydrate placeholderHeight="508px">
           <CollectionLifeIsAnIllusion />
         </LazyHydrate>
         <LazyHydrate placeholderHeight="508px">
