@@ -11,7 +11,7 @@ export const messagesList: {
 
 Материальные супрематические работы вынуждены существовать внутри формы: холста, красок, размеров, что фактически делает их вписанными в ограничения материальной формы, от того наследуя ее предметность и хрупкость. Материальные формы, в силу своего краткосрочного существования, также не имеют возможности изображать постоянное движение. Однако движение можно выразить математически, в качестве самой работы и интерпретировать его таким образом в любой момент. Описание движения векторов не требует динамичности самой основы работы как таковой, поэтому, несмотря на статичность математического описания работы, ее интерпретация пребывает в бесконечном движении.
 
-Благодаря информационной природе, кинималистические работы могут быть полностью извлечены из интерпретации материального мира и существовать как чистые и точные идеи. Достаточно выучить математическое описание работы как стихотворение, чтобы оно оставалось в памяти: это может быть небольшой текст.`,
+Благодаря информационной природе, кинималистические работы могут быть полностью извлечены из интерпретации материального мира и существовать как чистые и точные идеи. Достаточно выучить математическое описание работы как стихотворение, чтобы оно оставалось в памяти: это может быть небольшой текст, который полностью идентичен оригинальной работе.`,
     },
     en: {
       key: `from-suprematism-to-kinimalism`,
@@ -20,7 +20,7 @@ export const messagesList: {
       
 Material suprematist works are forced to exist within a form: canvas, paints, dimensions, which effectively makes them inscribed within the limitations of material form, thereby inheriting its objectivity and fragility. Material forms, due to their short-lived existence, are also unable to depict constant movement. However, movement can be expressed mathematically, as the work itself, and interpreted in this way at any moment. The description of the movement of vectors does not require the dynamism of the basis of the work itself, so despite the static nature of the mathematical description of the work, its interpretation remains in perpetual motion. 
 
-Thanks to their informational nature, kinimalistic works can be completely extracted from the interpretation of the material world and exist as pure and precise ideas. It is enough to learn the mathematical description of the work as a poem so that it remains in memory: it can be a short text.`,
+Thanks to their informational nature, kinimalistic works can be completely extracted from the interpretation of the material world and exist as pure and precise ideas. It is enough to learn the mathematical description of the work as a poem so that it remains in memory: it may be a short text that is completely identical to the original work.`,
     },
   },
   kinimalism: {
