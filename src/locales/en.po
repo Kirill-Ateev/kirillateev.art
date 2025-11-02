@@ -64,8 +64,11 @@ msgstr "555 works"
 msgid "A collection of 42 impressionist style photos."
 msgstr "A collection of 42 impressionist style photos."
 
-#: src/components/collections/CollectionBlinds.tsx:48
 #: src/components/collections/CollectionCity.tsx:48
+msgid "A collection of generative animated vector images in abstractionist style."
+msgstr "A collection of generative animated vector images in abstractionist style."
+
+#: src/components/collections/CollectionBlinds.tsx:48
 #: src/components/collections/CollectionCocktailStraws.tsx:41
 #: src/components/collections/CollectionCrosswalk.tsx:40
 #: src/components/collections/CollectionLanes.tsx:40

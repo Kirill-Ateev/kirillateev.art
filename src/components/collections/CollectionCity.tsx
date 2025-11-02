@@ -46,8 +46,8 @@ export default function CollectionCity() {
             </div>
             <div className={styles.text_secondary}>
               <Trans>
-                A collection of generative animated vector images in kinetic
-                minimalism style (kinimalism).
+                A collection of generative animated vector images in
+                abstractionist style.
               </Trans>
             </div>
             <div className={styles.text_secondary}>
