@@ -11,7 +11,7 @@ export const collectionsData = {
     marketplaces: {
       rarible: {
         name: 'Rarible',
-        link: 'https://og.rarible.com/0x7cdb18d151b672f5532f97ba33feab2cc05cddcb',
+        link: 'https://og.rarible.com/collection/0x7cdb18d151b672f5532f97ba33feab2cc05cddcb',
         tokenLink:
           'https://og.rarible.com/token/0x7cdb18d151b672f5532f97ba33feab2cc05cddcb:',
       },
