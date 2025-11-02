@@ -26,17 +26,17 @@ msgstr "(кликни для следующей)"
 msgid "{0}"
 msgstr ""
 
-#: src/components/collections/CollectionCrosswalk.tsx:38
-#: src/components/collections/CollectionLanes.tsx:38
-#: src/components/collections/CollectionWindow.tsx:39
+#: src/components/collections/CollectionCrosswalk.tsx:36
+#: src/components/collections/CollectionLanes.tsx:36
+#: src/components/collections/CollectionWindow.tsx:37
 msgid "10 000 works"
 msgstr "10 000 работ"
 
-#: src/components/collections/CollectionAttentionless.tsx:38
+#: src/components/collections/CollectionAttentionless.tsx:36
 msgid "1024 works"
 msgstr "1024 работы"
 
-#: src/components/collections/CollectionCocktailStraws.tsx:39
+#: src/components/collections/CollectionCocktailStraws.tsx:37
 msgid "111 works"
 msgstr "111 работ"
 
@@ -48,27 +48,32 @@ msgstr "20 работ"
 msgid "300 works"
 msgstr "300 работ"
 
-#: src/components/collections/CollectionBlinds.tsx:46
+#: src/components/collections/CollectionCity.tsx:44
+msgid "512 works"
+msgstr "512 работ"
+
+#: src/components/collections/CollectionBlinds.tsx:44
 msgid "555 works"
 msgstr "555 работ"
 
 #: src/components/collections/CollectionNights.tsx:46
-msgid "88 works"
-msgstr "88 работ"
+#~ msgid "88 works"
+#~ msgstr "88 работ"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:40
 msgid "A collection of 42 impressionist style photos."
 msgstr "Коллекция из 42 фотографий в стиле импрессионизма."
 
-#: src/components/collections/CollectionBlinds.tsx:50
-#: src/components/collections/CollectionCocktailStraws.tsx:43
-#: src/components/collections/CollectionCrosswalk.tsx:42
-#: src/components/collections/CollectionLanes.tsx:42
-#: src/components/collections/CollectionWindow.tsx:43
+#: src/components/collections/CollectionBlinds.tsx:48
+#: src/components/collections/CollectionCity.tsx:48
+#: src/components/collections/CollectionCocktailStraws.tsx:41
+#: src/components/collections/CollectionCrosswalk.tsx:40
+#: src/components/collections/CollectionLanes.tsx:40
+#: src/components/collections/CollectionWindow.tsx:41
 msgid "A collection of generative animated vector images in kinetic minimalism style (kinimalism)."
 msgstr "Коллекция генеративных анимированных векторных изображений в стиле кинетического минимализма (кинимализм)."
 
-#: src/components/collections/CollectionAttentionless.tsx:42
+#: src/components/collections/CollectionAttentionless.tsx:40
 msgid "A collection of generative collages of CC0 images in an abstractionist style."
 msgstr "Коллекция генеративных коллажей из CC0 изображений в стиле абстракционизма."
 
@@ -84,24 +89,24 @@ msgstr "Коллекция словообразования, уникальны�
 #~ msgid "Ask me a question in the community"
 #~ msgstr "Задайте мне вопрос в сообществе"
 
-#: src/components/header/Header.tsx:19
+#: src/components/header/Header.tsx:22
 msgid "Community"
 msgstr "Сообщество"
 
 #: src/components/collections/CollectionNights.tsx:50
-msgid "Compression-based generative multimedia collection. To play a melody - click over the piece."
-msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, кликните на фрагмент."
+#~ msgid "Compression-based generative multimedia collection. To play a melody - click over the piece."
+#~ msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, кликните на фрагмент."
 
 #: src/components/lingui/Switcher.tsx:12
 msgid "English"
 msgstr "English"
 
-#: src/components/collections/CollectionCrosswalk.tsx:35
-#: src/components/collections/CollectionLanes.tsx:35
+#: src/components/collections/CollectionCrosswalk.tsx:33
+#: src/components/collections/CollectionLanes.tsx:33
 msgid "Ethereum - April 2025"
 msgstr "Ethereum - Апрель 2025"
 
-#: src/components/collections/CollectionWindow.tsx:36
+#: src/components/collections/CollectionWindow.tsx:34
 msgid "Ethereum - August 2025"
 msgstr "Ethereum - Август 2025"
 
@@ -109,16 +114,20 @@ msgstr "Ethereum - Август 2025"
 msgid "Ethereum - Jun. 2023"
 msgstr "Ethereum - Июнь 2023"
 
-#: src/components/collections/CollectionAttentionless.tsx:35
+#: src/components/collections/CollectionAttentionless.tsx:33
 msgid "Ethereum - March 2025"
 msgstr "Ethereum - Март 2025"
 
-#: src/components/collections/CollectionBlinds.tsx:43
-#: src/components/collections/CollectionCocktailStraws.tsx:36
+#: src/components/collections/CollectionCity.tsx:41
+msgid "Ethereum - November 2025"
+msgstr "Ethereum - Ноябрь 2025"
+
+#: src/components/collections/CollectionBlinds.tsx:41
+#: src/components/collections/CollectionCocktailStraws.tsx:34
 msgid "Ethereum - September 2025"
 msgstr "Ethereum - Сентябрь 2025"
 
-#: src/app/[lang]/page.tsx:25
+#: src/app/[lang]/page.tsx:23
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Привет, я Кирилл Атеев. Создаю генеративное искусство с помощью кода."
 
@@ -127,14 +136,14 @@ msgstr "Привет, я Кирилл Атеев. Создаю генерати�
 #~ msgstr "Кинимализм"
 
 #: src/app/[lang]/layout.tsx:55
-#: src/app/[lang]/layout.tsx:74
+#: src/app/[lang]/layout.tsx:77
 msgid "Kirill Ateev"
 msgstr "Кирилл Атеев"
 
 #: src/app/[lang]/layout.tsx:41
 #: src/app/[lang]/layout.tsx:42
 #: src/app/[lang]/layout.tsx:62
-#: src/app/[lang]/layout.tsx:81
+#: src/app/[lang]/layout.tsx:84
 msgid "Kirill Ateev - Artist"
 msgstr "Кирилл Атеев - Artist"
 
@@ -142,8 +151,8 @@ msgstr "Кирилл Атеев - Artist"
 msgid "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
 msgstr "Кирилл Атеев, художник, современное искусство, генеративное, сообщество, выставки, портфолио"
 
-#: src/app/[lang]/layout.tsx:72
-#: src/app/[lang]/layout.tsx:95
+#: src/app/[lang]/layout.tsx:75
+#: src/app/[lang]/layout.tsx:98
 msgid "Kirill Ateev's artwork"
 msgstr "работы Кирилла Атеева"
 
@@ -156,17 +165,17 @@ msgstr "Сообщения"
 msgid "Metadata and compressed images stored on-chain, additionally the original photos stored on IPFS."
 msgstr "Метаданные и сжатые файлы хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS."
 
-#: src/components/collections/CollectionAttentionless.tsx:48
-#: src/components/collections/CollectionNights.tsx:56
+#: src/components/collections/CollectionAttentionless.tsx:46
 #: src/components/oldCollections/CollectionKindWords.tsx:54
 msgid "Metadata and files stored on IPFS."
 msgstr "Метаданные и файлы хранятся в IPFS."
 
-#: src/components/collections/CollectionBlinds.tsx:56
-#: src/components/collections/CollectionCocktailStraws.tsx:49
-#: src/components/collections/CollectionCrosswalk.tsx:48
-#: src/components/collections/CollectionLanes.tsx:48
-#: src/components/collections/CollectionWindow.tsx:49
+#: src/components/collections/CollectionBlinds.tsx:54
+#: src/components/collections/CollectionCity.tsx:54
+#: src/components/collections/CollectionCocktailStraws.tsx:47
+#: src/components/collections/CollectionCrosswalk.tsx:46
+#: src/components/collections/CollectionLanes.tsx:46
+#: src/components/collections/CollectionWindow.tsx:47
 msgid "Metadata and images stored directly on blockchain (on-chain)."
 msgstr "Метаданные и изображения хранятся полностью в блокчейне (on-chain)."
 
@@ -178,7 +187,7 @@ msgstr "Polygon - Фев. 2023"
 msgid "Recent Community Work"
 msgstr "Недавние работы в сообществе"
 
-#: src/app/[lang]/page.tsx:22
+#: src/app/[lang]/page.tsx:20
 msgid "Recent Work"
 msgstr "Недавние работы"
 
@@ -194,16 +203,16 @@ msgstr "Некоторые сообщения для тебя"
 #~ msgstr "Исходный код >"
 
 #: src/components/collections/CollectionNights.tsx:43
-msgid "TON - Dec. 2023"
-msgstr "TON - Дек. 2023"
+#~ msgid "TON - Dec. 2023"
+#~ msgstr "TON - Дек. 2023"
 
-#: src/components/collections/CollectionAttentionless.tsx:69
-#: src/components/collections/CollectionBlinds.tsx:69
-#: src/components/collections/CollectionCocktailStraws.tsx:64
-#: src/components/collections/CollectionCrosswalk.tsx:61
-#: src/components/collections/CollectionLanes.tsx:61
-#: src/components/collections/CollectionNights.tsx:64
-#: src/components/collections/CollectionWindow.tsx:62
+#: src/components/collections/CollectionAttentionless.tsx:68
+#: src/components/collections/CollectionBlinds.tsx:68
+#: src/components/collections/CollectionCity.tsx:68
+#: src/components/collections/CollectionCocktailStraws.tsx:63
+#: src/components/collections/CollectionCrosswalk.tsx:60
+#: src/components/collections/CollectionLanes.tsx:60
+#: src/components/collections/CollectionWindow.tsx:61
 #: src/components/oldCollections/CollectionKindWords.tsx:70
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:62
 msgid "View collection >"
@@ -211,13 +220,13 @@ msgstr "Посмотреть коллекцию >"
 
 #: src/app/[lang]/layout.tsx:45
 #: src/app/[lang]/layout.tsx:65
-#: src/app/[lang]/layout.tsx:85
+#: src/app/[lang]/layout.tsx:88
 msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
 msgstr "Добро пожаловать на официальный сайт Кирилла Атеева, современного художника, известного своими уникальными генеративными работами. Ознакомьтесь с его портфолио, выставками, сообществом и многим другим."
 
 #: src/components/collections/CollectionNights.tsx:103
-msgid "Your browser does not support the video tag."
-msgstr "Ваш браузер не поддерживает видео тэг."
+#~ msgid "Your browser does not support the video tag."
+#~ msgstr "Ваш браузер не поддерживает видео тэг."
 
 #: src/components/lingui/Switcher.tsx:13
 msgid "Русский"

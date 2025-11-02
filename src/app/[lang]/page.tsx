@@ -1,5 +1,6 @@
 import CollectionAttentionless from '@/components/collections/CollectionAttentionless';
 import CollectionBlinds from '@/components/collections/CollectionBlinds';
+import CollectionCity from '@/components/collections/CollectionCity';
 import CollectionCocktailStraws from '@/components/collections/CollectionCocktailStraws';
 import CollectionCrosswalk from '@/components/collections/CollectionCrosswalk';
 import CollectionWindow from '@/components/collections/CollectionWindow';
@@ -24,9 +25,12 @@ export default withLinguiPage(function Home() {
             </Trans>
           </div>
         </section>
+        <CollectionCity />
         <CollectionBlinds />
         <CollectionCocktailStraws />
-        <CollectionWindow />
+        <LazyHydrate placeholderHeight="508px">
+          <CollectionWindow />
+        </LazyHydrate>
         <LazyHydrate placeholderHeight="508px">
           <CollectionCrosswalk />
         </LazyHydrate>

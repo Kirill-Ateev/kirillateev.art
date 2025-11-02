@@ -10,7 +10,7 @@ import Link from 'next/link';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
-export default function CollectionBlinds() {
+export default function CollectionCity() {
   const { i18n } = useLingui();
 
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
@@ -20,12 +20,12 @@ export default function CollectionBlinds() {
   });
 
   const images = [
-    'image-492',
-    'image-93',
-    'image-259',
-    'image-145',
-    'image-332',
-    'image-348',
+    'image-485',
+    'image-16',
+    'image-306',
+    'image-396',
+    'image-511',
+    'image-413',
   ];
 
   return (
@@ -35,13 +35,13 @@ export default function CollectionBlinds() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Blinds</div>
+                <div className={styles.title}>City</div>
               </span>
               <div className={styles.text_secondary}>
-                <Trans>Ethereum - September 2025</Trans>
+                <Trans>Ethereum - November 2025</Trans>
               </div>
               <div className={styles.text_secondary}>
-                <Trans>555 works</Trans>
+                <Trans>512 works</Trans>
               </div>
             </div>
             <div className={styles.text_secondary}>
@@ -60,9 +60,9 @@ export default function CollectionBlinds() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`${i18n.locale}/view/blinds?item=${getRandomFromRange(
-                collectionsData['blinds'].minIndex,
-                collectionsData['blinds'].maxIndex
+              href={`${i18n.locale}/view/city?item=${getRandomFromRange(
+                collectionsData['city'].minIndex,
+                collectionsData['city'].maxIndex
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -71,7 +71,7 @@ export default function CollectionBlinds() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={collectionsData['blinds'].marketplaces.rarible.link}
+              href={collectionsData['city'].marketplaces.rarible.link}
             >
               Rarible &gt;
             </Link>
@@ -83,8 +83,8 @@ export default function CollectionBlinds() {
               className={`${styles.embla__slide} ${styles.card} ${styles.card_nights}`}
             >
               <Image
-                src={`${basePath}/images/blinds/${imageId}.svg`}
-                alt={`Blinds №${imageId}`}
+                src={`${basePath}/images/city/${imageId}.svg`}
+                alt={`City №${imageId}`}
                 width={512}
                 height={512}
               />
@@ -93,7 +93,7 @@ export default function CollectionBlinds() {
 
           <div className={`${styles.embla__slide} ${styles.container_arrow}`}>
             <ArrowRight
-              href={collectionsData['blinds'].marketplaces.rarible.link}
+              href={collectionsData['city'].marketplaces.rarible.link}
             />
           </div>
         </div>
