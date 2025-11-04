@@ -43,7 +43,7 @@ export default function CollectionAttentionless() {
               </Trans>
             </div>
             <div className={styles.text_secondary}>
-              <Trans>Metadata and files stored on IPFS.</Trans>
+              <Trans>Images and metadata stored on IPFS.</Trans>
             </div>
             {/* <Link
               className={`${styles.link} ${styles.text_secondary}`}

@@ -52,7 +52,7 @@ export default function CollectionBlinds() {
             </div>
             <div className={styles.text_secondary}>
               <Trans>
-                Metadata and images stored directly on blockchain (on-chain).
+                Images and metadata stored directly on blockchain (on-chain).
               </Trans>
             </div>
             <Link

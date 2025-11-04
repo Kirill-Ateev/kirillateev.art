@@ -41,7 +41,7 @@ export default function CollectionLifeIsAnIllusion() {
             </div>
             <div className={styles.text_secondary}>
               <Trans>
-                Metadata and compressed images stored on-chain, additionally the
+                Compressed images and metadata stored on-chain, additionally the
                 original photos stored on IPFS.
               </Trans>
             </div>

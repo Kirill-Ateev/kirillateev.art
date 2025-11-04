@@ -162,13 +162,13 @@ msgid "Messages"
 msgstr "Сообщения"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:43
-msgid "Metadata and compressed images stored on-chain, additionally the original photos stored on IPFS."
-msgstr "Метаданные и сжатые файлы хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS."
+msgid "Compressed images and metadata stored on-chain, additionally the original photos stored on IPFS."
+msgstr "Сжатые изображения и хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS."
 
 #: src/components/collections/CollectionAttentionless.tsx:46
 #: src/components/oldCollections/CollectionKindWords.tsx:54
-msgid "Metadata and files stored on IPFS."
-msgstr "Метаданные и файлы хранятся в IPFS."
+msgid "Images and metadata stored on IPFS."
+msgstr "Изображения и метаданные хранятся в IPFS."
 
 #: src/components/collections/CollectionBlinds.tsx:54
 #: src/components/collections/CollectionCity.tsx:54
@@ -176,8 +176,8 @@ msgstr "Метаданные и файлы хранятся в IPFS."
 #: src/components/collections/CollectionCrosswalk.tsx:46
 #: src/components/collections/CollectionLanes.tsx:46
 #: src/components/collections/CollectionWindow.tsx:47
-msgid "Metadata and images stored directly on blockchain (on-chain)."
-msgstr "Метаданные и изображения хранятся полностью в блокчейне (on-chain)."
+msgid "Images and metadata stored directly on blockchain (on-chain)."
+msgstr "Изображения и метаданные хранятся полностью в блокчейне (on-chain)."
 
 #: src/components/oldCollections/CollectionKindWords.tsx:32
 msgid "Polygon - Feb. 2023"
