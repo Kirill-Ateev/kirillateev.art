@@ -113,7 +113,7 @@ export const collectionsData = {
     contract: '0xa3754152a10a3bbad4c4e0586dbf4a2b8e391f71',
     minIndex: 1,
     maxIndex: 1024,
-    padded: true,
+    padded: false,
     marketplaces: {
       rarible: {
         name: 'Rarible',
