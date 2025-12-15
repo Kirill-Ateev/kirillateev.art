@@ -3,6 +3,30 @@ export const messagesList: {
     [lang: string]: { key: string; title: string; text: string };
   };
 } = {
+  durability: {
+    ru: {
+      key: 'durability',
+      title: 'Долговечность',
+      text: `Долговечность обладает особой ценностью в искусстве, поскольку художник создает свои работы для их пребывания в вечности. Произведение обретает подлинную значимость для большинства зрителей в процессе длительного существования. При этом чем дольше работа сохраняется, тем выше вероятность, что она продолжит существование и в будущем, что напрямую соответствует эффекту Линди. 
+
+История искусства многократно это подтверждает: работы художников и фотографов, которым только более ста лет, воспринимаются сегодня не просто как изображения или формы, они стали носителями новых смыслов и отпечатком эпохи. Время нанизывает на них слои смысла, добавляя ценность пропорционально времени их существования. Время действует как фильтр качества, отсекая случайное и усиливая значимое.
+
+Поэтому художник неизбежно сталкивается с вопросами долговечности, ведь это напрямую влияет на дальнейшую вероятностную судьбу работы. В этом контексте Ethereum является одной из наиболее устойчивых и надежных сред для наиболее долговременного хранения информации. Когда работа хранится полностью в блокчейне или другими словами on-chain, она перестаёт зависеть от внешних факторов: серверов, платформ или посредников. Такое произведение зафиксировано в самой структуре сети. Его форма и содержание остаются неизменными во времени и не может быть изменено, подменено или переписано ни автором, ни владельцем, ни третьей стороной.
+
+Использование on-chain хранения в Ethereum является выбором в пользу неизменности работы в будущем, в котором она сохранит свою идентичность без искажений.`,
+    },
+    en: {
+      key: 'durability',
+      title: 'Durability',
+      text: `Durability is particularly valuable in art, as artists create their works to last forever. A work of art acquires true significance for most viewers over the course of its long existence. The longer a work is preserved, the more likely it is to continue to exist in the future, which directly corresponds to the Lindy effect. 
+
+The history of art confirms this many times over: works by artists and photographers that are only over a hundred years old are perceived today not simply as images or forms, but have become carriers of new meanings and imprints of an era. Time layers meaning onto them, adding value in proportion to their existence. Time acts as a quality filter, cutting out the random and amplifying the significant.
+
+Therefore, artists inevitably face questions of longevity, as this directly affects the future probability of a work's fate. In this context, Ethereum is one of the most stable and reliable environments for the most long-term storage of information. When a work is stored entirely on the blockchain, or in other words, on-chain, it ceases to depend on external factors: servers, platforms, or intermediaries. Such a work is fixed in the very structure of the network. Its form and content remain unchanged over time and cannot be altered, replaced, or rewritten by the author, owner, or third party.
+
+The use of on-chain storage in Ethereum is a choice in favor of immutability in the future, in which it will retain its identity without loss.`,
+    },
+  },
   [`from-suprematism-to-kinimalism`]: {
     ru: {
       key: `from-suprematism-to-kinimalism`,

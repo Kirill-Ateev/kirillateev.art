@@ -38,11 +38,26 @@
   text-decoration: underline;
 }
 
+.message {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--small-padding);
+}
+
 .container {
   padding: var(--greater-padding) var(--big-padding);
   display: flex;
   flex-direction: column;
   gap: var(--small-padding);
+}
+
+.container_message {
+  padding: var(--greater-padding) var(--big-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-padding);
+  align-items: center;
 }
 
 .text_secondary {
@@ -62,6 +77,10 @@
     gap: var(--small-padding);
     color: var(--secondary-color);
     flex-wrap: wrap;
+  }
+
+  .message {
+    width: 100%;
   }
 }
 

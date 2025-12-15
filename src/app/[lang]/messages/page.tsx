@@ -23,22 +23,26 @@ export default withLinguiPage(function Messages() {
           return (
             <section
               key={message?.[i18n.locale].key}
-              className={styles.container}
+              className={styles.container_message}
             >
-              <Link
-                className={styles.menu_item}
-                href={`/${i18n.locale}/messages/${message?.[i18n.locale].key}`}
-              >
-                <div className={styles.subtitle}>
-                  <Trans id={message?.[i18n.locale].title}>
-                    {message?.[i18n.locale].title}
+              <div className={styles.message}>
+                <Link
+                  className={styles.menu_item}
+                  href={`/${i18n.locale}/messages/${
+                    message?.[i18n.locale].key
+                  }`}
+                >
+                  <div className={styles.subtitle}>
+                    <Trans id={message?.[i18n.locale].title}>
+                      {message?.[i18n.locale].title}
+                    </Trans>
+                  </div>
+                </Link>
+                <div className={styles.text_secondary}>
+                  <Trans id={message?.[i18n.locale].text}>
+                    {message?.[i18n.locale].text}
                   </Trans>
                 </div>
-              </Link>
-              <div className={styles.text_secondary}>
-                <Trans id={message?.[i18n.locale].text}>
-                  {message?.[i18n.locale].text}
-                </Trans>
               </div>
             </section>
           );
