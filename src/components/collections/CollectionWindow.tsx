@@ -77,7 +77,7 @@ export default function CollectionWindow() {
             >
               <Image
                 src={`${basePath}/images/window/${imageId}.svg`}
-                alt={`window №${imageId}`}
+                alt={`window #${imageId}`}
                 width={512}
                 height={512}
               />

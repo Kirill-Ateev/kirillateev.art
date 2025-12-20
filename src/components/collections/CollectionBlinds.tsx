@@ -84,7 +84,7 @@ export default function CollectionBlinds() {
             >
               <Image
                 src={`${basePath}/images/blinds/${imageId}.svg`}
-                alt={`Blinds №${imageId}`}
+                alt={`Blinds #${imageId}`}
                 width={512}
                 height={512}
               />

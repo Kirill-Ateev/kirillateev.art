@@ -81,7 +81,7 @@ export default function CollectionCocktailStraws() {
             >
               <Image
                 src={`${basePath}/images/cocktailStraws/${imageId}.svg`}
-                alt={`Cocktail straws №${imageId}`}
+                alt={`Cocktail straws #${imageId}`}
                 width={512}
                 height={512}
               />

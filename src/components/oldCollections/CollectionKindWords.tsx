@@ -78,7 +78,7 @@ export default function CollectionKindWords() {
             >
               <Image
                 src={`${basePath}/images/kindWords/${imageId}.webp`}
-                alt={`Kind Words №${imageId}`}
+                alt={`Kind Words #${imageId}`}
                 width={isXs || isSm ? 300 : 512}
                 height={isXs || isSm ? 300 : 512}
               />

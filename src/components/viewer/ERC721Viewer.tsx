@@ -157,7 +157,7 @@ export const ERC721Viewer: React.FC<{
             }
           >
             <div onClick={handleClick}>
-              {collectionMetadata.name} №{currentIndex}
+              {collectionMetadata.name} #{currentIndex}
             </div>
             <div
               className={`${styles.absolute_subtext} ${collectionStyles.text_secondary}`}

@@ -76,7 +76,7 @@ export default function CollectionCrosswalk() {
             >
               <Image
                 src={`${basePath}/images/crosswalk/${imageId}.svg`}
-                alt={`Crosswalk №${imageId}`}
+                alt={`Crosswalk #${imageId}`}
                 width={512}
                 height={512}
               />

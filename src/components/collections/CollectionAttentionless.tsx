@@ -84,7 +84,7 @@ export default function CollectionAttentionless() {
             >
               <Image
                 src={`${basePath}/images/attentionless/${imageId}.webp`}
-                alt={`Attentionless №${imageId}`}
+                alt={`Attentionless #${imageId}`}
                 width={512}
                 height={512}
               />

@@ -76,7 +76,7 @@ export default function CollectionLanes() {
             >
               <Image
                 src={`${basePath}/images/lanes/${imageId}.svg`}
-                alt={`Lanes №${imageId}`}
+                alt={`Lanes #${imageId}`}
                 width={512}
                 height={512}
               />

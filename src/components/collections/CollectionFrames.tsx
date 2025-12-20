@@ -77,7 +77,7 @@ export default function CollectionFrames() {
             >
               <Image
                 src={`${basePath}/images/frames/${imageId}.svg`}
-                alt={`frames №${imageId}`}
+                alt={`frames #${imageId}`}
                 width={512}
                 height={512}
               />

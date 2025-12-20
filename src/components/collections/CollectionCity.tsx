@@ -84,7 +84,7 @@ export default function CollectionCity() {
             >
               <Image
                 src={`${basePath}/images/city/${imageId}.svg`}
-                alt={`City №${imageId}`}
+                alt={`City #${imageId}`}
                 width={512}
                 height={512}
               />

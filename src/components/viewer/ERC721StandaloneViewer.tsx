@@ -180,7 +180,7 @@
 //             }
 //           >
 //             <div>
-//               {collectionMetadata.name} №{currentIndex}
+//               {collectionMetadata.name} #{currentIndex}
 //             </div>
 //             {Object.values(collectionMetadata.marketplaces).map((place) => {
 //               return (
