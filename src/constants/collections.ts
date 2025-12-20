@@ -1,4 +1,22 @@
 export const collectionsData = {
+  frames: {
+    name: 'Frames',
+    network: 'Ethereum',
+    standard: 'ERC-721',
+    generationContractBytecode: '',
+    contract: '0x99014b9511494088e0ba380fd2aaaeeda8bc5f95',
+    minIndex: 1,
+    maxIndex: 512,
+    padded: false,
+    marketplaces: {
+      rarible: {
+        name: 'Rarible',
+        link: 'https://og.rarible.com/collection/0x99014b9511494088e0ba380fd2aaaeeda8bc5f95',
+        tokenLink:
+          'https://og.rarible.com/token/0x99014b9511494088e0ba380fd2aaaeeda8bc5f95:',
+      },
+    },
+  },
   city: {
     name: 'City',
     network: 'Ethereum',

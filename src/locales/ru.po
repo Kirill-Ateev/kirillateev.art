@@ -21,8 +21,8 @@ msgstr "(кликни для следующей)"
 #. placeholder {0}: message?.[i18n.locale].title
 #. placeholder {0}: messagesList[message]?.[i18n.locale].title
 #: src/app/[lang]/messages/[message]/page.tsx:35
-#: src/app/[lang]/messages/page.tsx:33
-#: src/app/[lang]/messages/page.tsx:39
+#: src/app/[lang]/messages/page.tsx:36
+#: src/app/[lang]/messages/page.tsx:42
 msgid "{0}"
 msgstr ""
 
@@ -49,6 +49,7 @@ msgid "300 works"
 msgstr "300 работ"
 
 #: src/components/collections/CollectionCity.tsx:44
+#: src/components/collections/CollectionFrames.tsx:37
 msgid "512 works"
 msgstr "512 работ"
 
@@ -68,6 +69,7 @@ msgstr "Коллекция из 42 фотографий в стиле импре
 #: src/components/collections/CollectionCity.tsx:48
 #: src/components/collections/CollectionCocktailStraws.tsx:41
 #: src/components/collections/CollectionCrosswalk.tsx:40
+#: src/components/collections/CollectionFrames.tsx:41
 #: src/components/collections/CollectionLanes.tsx:40
 #: src/components/collections/CollectionWindow.tsx:41
 msgid "A collection of generative animated vector images in kinetic minimalism style (kinimalism)."
@@ -93,6 +95,10 @@ msgstr "Коллекция словообразования, уникальны�
 msgid "Community"
 msgstr "Сообщество"
 
+#: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:43
+msgid "Compressed images and metadata stored on-chain, additionally the original photos stored on IPFS."
+msgstr "Сжатые изображения и хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS."
+
 #: src/components/collections/CollectionNights.tsx:50
 #~ msgid "Compression-based generative multimedia collection. To play a melody - click over the piece."
 #~ msgstr "Генеративная мультимедийная коллекция, основанная на сжатии. Чтобы воспроизвести мелодию, кликните на фрагмент."
@@ -109,6 +115,10 @@ msgstr "Ethereum - Апрель 2025"
 #: src/components/collections/CollectionWindow.tsx:34
 msgid "Ethereum - August 2025"
 msgstr "Ethereum - Август 2025"
+
+#: src/components/collections/CollectionFrames.tsx:34
+msgid "Ethereum - December 2025"
+msgstr "Ethereum - Декабрь 2025"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:33
 msgid "Ethereum - Jun. 2023"
@@ -127,9 +137,24 @@ msgstr "Ethereum - Ноябрь 2025"
 msgid "Ethereum - September 2025"
 msgstr "Ethereum - Сентябрь 2025"
 
-#: src/app/[lang]/page.tsx:23
+#: src/app/[lang]/page.tsx:24
 msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
 msgstr "Привет, я Кирилл Атеев. Создаю генеративное искусство с помощью кода."
+
+#: src/components/collections/CollectionBlinds.tsx:54
+#: src/components/collections/CollectionCity.tsx:54
+#: src/components/collections/CollectionCocktailStraws.tsx:47
+#: src/components/collections/CollectionCrosswalk.tsx:46
+#: src/components/collections/CollectionFrames.tsx:47
+#: src/components/collections/CollectionLanes.tsx:46
+#: src/components/collections/CollectionWindow.tsx:47
+msgid "Images and metadata stored directly on blockchain (on-chain)."
+msgstr "Изображения и метаданные хранятся полностью в блокчейне (on-chain)."
+
+#: src/components/collections/CollectionAttentionless.tsx:46
+#: src/components/oldCollections/CollectionKindWords.tsx:54
+msgid "Images and metadata stored on IPFS."
+msgstr "Изображения и метаданные хранятся в IPFS."
 
 #: src/constants/text.ts:6
 #~ msgid "Kinimalism"
@@ -161,24 +186,6 @@ msgstr "работы Кирилла Атеева"
 msgid "Messages"
 msgstr "Сообщения"
 
-#: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:43
-msgid "Compressed images and metadata stored on-chain, additionally the original photos stored on IPFS."
-msgstr "Сжатые изображения и хранятся в блокчейне, дополнительно, оригинальные фото хранятся на IPFS."
-
-#: src/components/collections/CollectionAttentionless.tsx:46
-#: src/components/oldCollections/CollectionKindWords.tsx:54
-msgid "Images and metadata stored on IPFS."
-msgstr "Изображения и метаданные хранятся в IPFS."
-
-#: src/components/collections/CollectionBlinds.tsx:54
-#: src/components/collections/CollectionCity.tsx:54
-#: src/components/collections/CollectionCocktailStraws.tsx:47
-#: src/components/collections/CollectionCrosswalk.tsx:46
-#: src/components/collections/CollectionLanes.tsx:46
-#: src/components/collections/CollectionWindow.tsx:47
-msgid "Images and metadata stored directly on blockchain (on-chain)."
-msgstr "Изображения и метаданные хранятся полностью в блокчейне (on-chain)."
-
 #: src/components/oldCollections/CollectionKindWords.tsx:32
 msgid "Polygon - Feb. 2023"
 msgstr "Polygon - Фев. 2023"
@@ -187,7 +194,7 @@ msgstr "Polygon - Фев. 2023"
 msgid "Recent Community Work"
 msgstr "Недавние работы в сообществе"
 
-#: src/app/[lang]/page.tsx:20
+#: src/app/[lang]/page.tsx:21
 msgid "Recent Work"
 msgstr "Недавние работы"
 
@@ -211,6 +218,7 @@ msgstr "Некоторые сообщения для тебя"
 #: src/components/collections/CollectionCity.tsx:68
 #: src/components/collections/CollectionCocktailStraws.tsx:63
 #: src/components/collections/CollectionCrosswalk.tsx:60
+#: src/components/collections/CollectionFrames.tsx:61
 #: src/components/collections/CollectionLanes.tsx:60
 #: src/components/collections/CollectionWindow.tsx:61
 #: src/components/oldCollections/CollectionKindWords.tsx:70

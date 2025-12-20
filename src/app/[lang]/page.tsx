@@ -3,6 +3,7 @@ import CollectionBlinds from '@/components/collections/CollectionBlinds';
 import CollectionCity from '@/components/collections/CollectionCity';
 import CollectionCocktailStraws from '@/components/collections/CollectionCocktailStraws';
 import CollectionCrosswalk from '@/components/collections/CollectionCrosswalk';
+import CollectionFrames from '@/components/collections/CollectionFrames';
 import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
 import LazyHydrate from '@/components/layout/LazyHydrate';
@@ -25,9 +26,12 @@ export default withLinguiPage(function Home() {
             </Trans>
           </div>
         </section>
+        <CollectionFrames />
         <CollectionCity />
         <CollectionBlinds />
-        <CollectionCocktailStraws />
+        <LazyHydrate placeholderHeight="508px">
+          <CollectionCocktailStraws />
+        </LazyHydrate>
         <LazyHydrate placeholderHeight="508px">
           <CollectionWindow />
         </LazyHydrate>
