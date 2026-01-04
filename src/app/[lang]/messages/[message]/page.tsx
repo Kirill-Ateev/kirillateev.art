@@ -30,12 +30,14 @@ export default withLinguiPage(async function Message({
     <div>
       <Header />
       <main className={styles.main}>
-        <section className={styles.container}>
-          <div className={styles.subtitle}>
-            <Trans>{messagesList[message]?.[i18n.locale].title}</Trans>
-          </div>
-          <div className={styles.text_secondary}>
-            {messagesList[message]?.[i18n.locale].text}
+        <section className={`${styles.container} ${styles.container_message}`}>
+          <div className={styles.message}>
+            <div className={styles.subtitle}>
+              <Trans>{messagesList[message]?.[i18n.locale].title}</Trans>
+            </div>
+            <div className={styles.text_secondary}>
+              {messagesList[message]?.[i18n.locale].text}
+            </div>
           </div>
         </section>
       </main>
