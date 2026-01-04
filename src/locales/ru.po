@@ -72,12 +72,12 @@ msgstr "Коллекция из 42 фотографий в стиле импре
 #: src/components/collections/CollectionFrames.tsx:41
 #: src/components/collections/CollectionLanes.tsx:40
 #: src/components/collections/CollectionWindow.tsx:41
-msgid "A collection of generative animated vector images in kinetic minimalism style (kinimalism)."
-msgstr "Коллекция генеративных анимированных векторных изображений в стиле кинетического минимализма (кинимализм)."
+msgid "A collection of animated vector images in kinetic minimalism style (kinimalism)."
+msgstr "Коллекция анимированных векторных изображений в стиле кинетического минимализма (кинимализм)."
 
 #: src/components/collections/CollectionAttentionless.tsx:40
-msgid "A collection of generative collages of CC0 images in an abstractionist style."
-msgstr "Коллекция генеративных коллажей из CC0 изображений в стиле абстракционизма."
+msgid "A collection of collages of CC0 images in an abstractionist style."
+msgstr "Коллекция коллажей из CC0 изображений в стиле абстракционизма."
 
 #: src/components/oldCollections/CollectionKindWords.tsx:39
 msgid "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
@@ -138,8 +138,8 @@ msgid "Ethereum - September 2025"
 msgstr "Ethereum - Сентябрь 2025"
 
 #: src/app/[lang]/page.tsx:24
-msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
-msgstr "Привет, я Кирилл Атеев. Создаю генеративное искусство с помощью кода."
+msgid "Hi, I'm Kirill Ateev, an artist working with code."
+msgstr "Привет, я Кирилл Атеев, создаю искусство с помощью кода."
 
 #: src/components/collections/CollectionBlinds.tsx:54
 #: src/components/collections/CollectionCity.tsx:54

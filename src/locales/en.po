@@ -72,16 +72,16 @@ msgstr "A collection of 42 impressionist style photos."
 #: src/components/collections/CollectionFrames.tsx:41
 #: src/components/collections/CollectionLanes.tsx:40
 #: src/components/collections/CollectionWindow.tsx:41
-msgid "A collection of generative animated vector images in kinetic minimalism style (kinimalism)."
-msgstr "A collection of generative animated vector images in kinetic minimalism style (kinimalism)."
+msgid "A collection of animated vector images in kinetic minimalism style (kinimalism)."
+msgstr "A collection of animated vector images in kinetic minimalism style (kinimalism)."
 
 #: src/components/collections/CollectionLanes.tsx:38
-#~ msgid "A collection of generative animated vector images in suprematism style."
-#~ msgstr "A collection of generative animated vector images in suprematism style."
+#~ msgid "A collection of animated vector images in suprematism style."
+#~ msgstr "A collection of animated vector images in suprematism style."
 
 #: src/components/collections/CollectionAttentionless.tsx:40
-msgid "A collection of generative collages of CC0 images in an abstractionist style."
-msgstr "A collection of generative collages of CC0 images in an abstractionist style."
+msgid "A collection of collages of CC0 images in an abstractionist style."
+msgstr "A collection of collages of CC0 images in an abstractionist style."
 
 #: src/components/oldCollections/CollectionKindWords.tsx:39
 msgid "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
@@ -146,8 +146,8 @@ msgid "Ethereum - September 2025"
 msgstr "Ethereum - September 2025"
 
 #: src/app/[lang]/page.tsx:24
-msgid "Hi, I'm Kirill Ateev. A generative artist working with code."
-msgstr "Hi, I'm Kirill Ateev. A generative artist working with code."
+msgid "Hi, I'm Kirill Ateev, an artist working with code."
+msgstr "Hi, I'm Kirill Ateev, an artist working with code."
 
 #: src/components/collections/CollectionBlinds.tsx:54
 #: src/components/collections/CollectionCity.tsx:54

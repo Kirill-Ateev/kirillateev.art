@@ -38,8 +38,8 @@ export default function CollectionAttentionless() {
             </div>
             <div className={styles.text_secondary}>
               <Trans>
-                A collection of generative collages of CC0 images in an
-                abstractionist style.
+                A collection of collages of CC0 images in an abstractionist
+                style.
               </Trans>
             </div>
             <div className={styles.text_secondary}>

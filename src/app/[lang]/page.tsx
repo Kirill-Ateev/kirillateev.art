@@ -22,7 +22,7 @@ export default withLinguiPage(function Home() {
           </div>
           <div className={styles.text_secondary}>
             <Trans>
-              Hi, I&apos;m Kirill Ateev. A generative artist working with code.
+              Hi, I&apos;m Kirill Ateev, an artist working with code.
             </Trans>
           </div>
         </section>
