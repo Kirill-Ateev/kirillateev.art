@@ -13,14 +13,14 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/viewer/ERC721Viewer.tsx:166
+#: src/components/viewer/ERC721Viewer.tsx:175
 msgid "(click for next)"
 msgstr "(кликни для следующей)"
 
 #. placeholder {0}: message?.[i18n.locale].text
 #. placeholder {0}: message?.[i18n.locale].title
 #. placeholder {0}: messagesList[message]?.[i18n.locale].title
-#: src/app/[lang]/messages/[message]/page.tsx:35
+#: src/app/[lang]/messages/[message]/page.tsx:36
 #: src/app/[lang]/messages/page.tsx:36
 #: src/app/[lang]/messages/page.tsx:42
 msgid "{0}"
@@ -49,6 +49,7 @@ msgid "300 works"
 msgstr "300 работ"
 
 #: src/components/collections/CollectionCity.tsx:44
+#: src/components/collections/CollectionFolds.tsx:44
 #: src/components/collections/CollectionFrames.tsx:37
 msgid "512 works"
 msgstr "512 работ"
@@ -69,6 +70,7 @@ msgstr "Коллекция из 42 фотографий в стиле импре
 #: src/components/collections/CollectionCity.tsx:48
 #: src/components/collections/CollectionCocktailStraws.tsx:41
 #: src/components/collections/CollectionCrosswalk.tsx:40
+#: src/components/collections/CollectionFolds.tsx:48
 #: src/components/collections/CollectionFrames.tsx:41
 #: src/components/collections/CollectionLanes.tsx:40
 #: src/components/collections/CollectionWindow.tsx:41
@@ -120,6 +122,10 @@ msgstr "Ethereum - Август 2025"
 msgid "Ethereum - December 2025"
 msgstr "Ethereum - Декабрь 2025"
 
+#: src/components/collections/CollectionFolds.tsx:41
+msgid "Ethereum - January 2026"
+msgstr "Ethereum - Январь 2026"
+
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:33
 msgid "Ethereum - Jun. 2023"
 msgstr "Ethereum - Июнь 2023"
@@ -137,7 +143,7 @@ msgstr "Ethereum - Ноябрь 2025"
 msgid "Ethereum - September 2025"
 msgstr "Ethereum - Сентябрь 2025"
 
-#: src/app/[lang]/page.tsx:24
+#: src/app/[lang]/page.tsx:25
 msgid "Hi, I'm Kirill Ateev, an artist working with code."
 msgstr "Привет, я Кирилл Атеев, создаю искусство с помощью кода."
 
@@ -145,6 +151,7 @@ msgstr "Привет, я Кирилл Атеев, создаю искусств�
 #: src/components/collections/CollectionCity.tsx:54
 #: src/components/collections/CollectionCocktailStraws.tsx:47
 #: src/components/collections/CollectionCrosswalk.tsx:46
+#: src/components/collections/CollectionFolds.tsx:54
 #: src/components/collections/CollectionFrames.tsx:47
 #: src/components/collections/CollectionLanes.tsx:46
 #: src/components/collections/CollectionWindow.tsx:47
@@ -194,7 +201,7 @@ msgstr "Polygon - Фев. 2023"
 msgid "Recent Community Work"
 msgstr "Недавние работы в сообществе"
 
-#: src/app/[lang]/page.tsx:21
+#: src/app/[lang]/page.tsx:22
 msgid "Recent Work"
 msgstr "Недавние работы"
 
@@ -218,6 +225,7 @@ msgstr "Некоторые сообщения для тебя"
 #: src/components/collections/CollectionCity.tsx:68
 #: src/components/collections/CollectionCocktailStraws.tsx:63
 #: src/components/collections/CollectionCrosswalk.tsx:60
+#: src/components/collections/CollectionFolds.tsx:68
 #: src/components/collections/CollectionFrames.tsx:61
 #: src/components/collections/CollectionLanes.tsx:60
 #: src/components/collections/CollectionWindow.tsx:61

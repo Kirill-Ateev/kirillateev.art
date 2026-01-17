@@ -1,4 +1,22 @@
 export const collectionsData = {
+  folds: {
+    name: 'Folds',
+    network: 'Ethereum',
+    standard: 'ERC-721',
+    generationContractBytecode: '',
+    contract: '0x1332cba03717a9ae8346fa034a9e0bffb0cfba91',
+    minIndex: 1,
+    maxIndex: 512,
+    padded: false,
+    marketplaces: {
+      rarible: {
+        name: 'Rarible',
+        link: 'https://og.rarible.com/collection/0x1332cba03717a9ae8346fa034a9e0bffb0cfba91',
+        tokenLink:
+          'https://og.rarible.com/token/0x1332cba03717a9ae8346fa034a9e0bffb0cfba91:',
+      },
+    },
+  },
   frames: {
     name: 'Frames',
     network: 'Ethereum',

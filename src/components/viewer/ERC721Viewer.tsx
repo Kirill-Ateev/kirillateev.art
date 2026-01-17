@@ -31,12 +31,21 @@ const ERC721_ABI = [
 ];
 
 // https://ethereum.publicnode.com
-// const RPC_PROVIDER = new ethers.WebSocketProvider(
-//   'wss://eth-mainnet.g.alchemy.com/v2/gHHmSHb98l1e1Eo3VhnIR'
-// );
 const RPC_PROVIDER = new ethers.JsonRpcProvider(
-  'https://vercel-view.vercel.app/api/view'
+  'https://vercel-rpc-view.vercel.app/api/view',
 );
+// const RPC_URLS = [
+//   'https://vercel-rpc-view.vercel.app/api/view',
+//   // 'https://vercel-view.vercel.app/api/view',
+//   'https://1rpc.io/eth',
+//   // 'https://eth.llamarpc.com',
+//   'https://eth-mainnet.public.blastapi.io',
+//   'https://ethereum.publicnode.com',
+// ];
+
+// const PROVIDERS = RPC_URLS.map((url) => new ethers.JsonRpcProvider(url));
+
+// const RPC_PROVIDER = new ethers.FallbackProvider(PROVIDERS);
 
 export const ERC721Viewer: React.FC<{
   collectionMetadata: CollectionMetadata;
@@ -47,7 +56,7 @@ export const ERC721Viewer: React.FC<{
   const [currentIndex, setCurrentIndex] = useState<number>(
     isNumeric(searchParams.get('item'))
       ? Number(searchParams.get('item'))
-      : collectionMetadata.minIndex
+      : collectionMetadata.minIndex,
   );
   const [metadata, setMetadata] = useState<NFTMetadata | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -68,7 +77,7 @@ export const ERC721Viewer: React.FC<{
         const contract = new ethers.Contract(
           collectionMetadata.contract,
           ERC721_ABI,
-          RPC_PROVIDER
+          RPC_PROVIDER,
         );
         const tokenURI = await contract.tokenURI(tokenId);
 
@@ -100,7 +109,7 @@ export const ERC721Viewer: React.FC<{
         setIsLoading(false);
       }
     },
-    [collectionMetadata.contract]
+    [collectionMetadata.contract],
   );
 
   // Обработчик клика для смены токена
@@ -108,10 +117,10 @@ export const ERC721Viewer: React.FC<{
     // Генерируем случайный индекс между minIndex и maxIndex включительно
     const randomIndex = getRandomFromRange(
       collectionMetadata.minIndex,
-      collectionMetadata.maxIndex
+      collectionMetadata.maxIndex,
     );
     router.push(
-      pathname + '?' + createQueryString('item', randomIndex.toString())
+      pathname + '?' + createQueryString('item', randomIndex.toString()),
     );
     setCurrentIndex(randomIndex);
   }, [collectionMetadata.minIndex, collectionMetadata.maxIndex]);
@@ -125,7 +134,7 @@ export const ERC721Viewer: React.FC<{
 
       return params.toString();
     },
-    [searchParams]
+    [searchParams],
   );
 
   // Загрузка метаданных при изменении индекса
