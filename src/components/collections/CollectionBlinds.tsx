@@ -19,14 +19,7 @@ export default function CollectionBlinds() {
     containScroll: 'trimSnaps',
   });
 
-  const images = [
-    'image-492',
-    'image-93',
-    'image-259',
-    'image-145',
-    'image-332',
-    'image-348',
-  ];
+  const images = ['492', '93', '259', '145', '332', '348'];
 
   return (
     <section>
@@ -62,7 +55,7 @@ export default function CollectionBlinds() {
               rel="noreferrer"
               href={`${i18n.locale}/view/blinds?item=${getRandomFromRange(
                 collectionsData['blinds'].minIndex,
-                collectionsData['blinds'].maxIndex
+                collectionsData['blinds'].maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -84,7 +77,7 @@ export default function CollectionBlinds() {
             >
               <Image
                 src={`${basePath}/images/blinds/${imageId}.svg`}
-                alt={`Blinds #${imageId}`}
+                alt={`Blinds #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />

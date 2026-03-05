@@ -54,7 +54,7 @@ export default function CollectionCrosswalk() {
               rel="noreferrer"
               href={`${i18n.locale}/view/crosswalk?item=${getRandomFromRange(
                 collectionsData.crosswalk.minIndex,
-                collectionsData.crosswalk.maxIndex
+                collectionsData.crosswalk.maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -76,7 +76,7 @@ export default function CollectionCrosswalk() {
             >
               <Image
                 src={`${basePath}/images/crosswalk/${imageId}.svg`}
-                alt={`Crosswalk #${imageId}`}
+                alt={`Crosswalk #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />

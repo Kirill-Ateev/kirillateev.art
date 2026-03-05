@@ -57,7 +57,7 @@ export default function CollectionCocktailStraws() {
                 i18n.locale
               }/view/cocktail-straws?item=${getRandomFromRange(
                 collectionsData['cocktail-straws'].minIndex,
-                collectionsData['cocktail-straws'].maxIndex
+                collectionsData['cocktail-straws'].maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -81,7 +81,7 @@ export default function CollectionCocktailStraws() {
             >
               <Image
                 src={`${basePath}/images/cocktailStraws/${imageId}.svg`}
-                alt={`Cocktail straws #${imageId}`}
+                alt={`Cocktail straws #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />

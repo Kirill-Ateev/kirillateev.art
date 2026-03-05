@@ -55,7 +55,7 @@ export default function CollectionWindow() {
               rel="noreferrer"
               href={`${i18n.locale}/view/window?item=${getRandomFromRange(
                 collectionsData.window.minIndex,
-                collectionsData.window.maxIndex
+                collectionsData.window.maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -77,7 +77,7 @@ export default function CollectionWindow() {
             >
               <Image
                 src={`${basePath}/images/window/${imageId}.svg`}
-                alt={`window #${imageId}`}
+                alt={`Window #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />

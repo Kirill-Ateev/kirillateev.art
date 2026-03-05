@@ -19,14 +19,7 @@ export default function CollectionCity() {
     containScroll: 'trimSnaps',
   });
 
-  const images = [
-    'image-485',
-    'image-16',
-    'image-306',
-    'image-396',
-    'image-511',
-    'image-413',
-  ];
+  const images = ['485', '16', '306', '396', '511', '413'];
 
   return (
     <section>
@@ -62,7 +55,7 @@ export default function CollectionCity() {
               rel="noreferrer"
               href={`${i18n.locale}/view/city?item=${getRandomFromRange(
                 collectionsData['city'].minIndex,
-                collectionsData['city'].maxIndex
+                collectionsData['city'].maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -84,7 +77,7 @@ export default function CollectionCity() {
             >
               <Image
                 src={`${basePath}/images/city/${imageId}.svg`}
-                alt={`City #${imageId}`}
+                alt={`City #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />

@@ -55,7 +55,7 @@ export default function CollectionFrames() {
               rel="noreferrer"
               href={`${i18n.locale}/view/frames?item=${getRandomFromRange(
                 collectionsData['frames'].minIndex,
-                collectionsData['frames'].maxIndex
+                collectionsData['frames'].maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -77,7 +77,7 @@ export default function CollectionFrames() {
             >
               <Image
                 src={`${basePath}/images/frames/${imageId}.svg`}
-                alt={`frames #${imageId}`}
+                alt={`Frames #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />

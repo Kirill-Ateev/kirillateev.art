@@ -62,7 +62,7 @@ export default function CollectionAttentionless() {
                 i18n.locale
               }/view/attentionless?item=${getRandomFromRange(
                 collectionsData.attentionless.minIndex,
-                collectionsData.attentionless.maxIndex
+                collectionsData.attentionless.maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -84,7 +84,7 @@ export default function CollectionAttentionless() {
             >
               <Image
                 src={`${basePath}/images/attentionless/${imageId}.webp`}
-                alt={`Attentionless #${imageId}`}
+                alt={`Attentionless #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />

@@ -19,14 +19,7 @@ export default function CollectionFolds() {
     containScroll: 'trimSnaps',
   });
 
-  const images = [
-    'image-174',
-    'image-223',
-    'image-416',
-    'image-341',
-    'image-359',
-    'image-407',
-  ];
+  const images = ['174', '223', '416', '341', '359', '407'];
 
   return (
     <section>
@@ -84,7 +77,7 @@ export default function CollectionFolds() {
             >
               <Image
                 src={`${basePath}/images/folds/${imageId}.svg`}
-                alt={`folds #${imageId}`}
+                alt={`Folds #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />

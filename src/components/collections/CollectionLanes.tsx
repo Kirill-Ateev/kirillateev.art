@@ -54,7 +54,7 @@ export default function CollectionLanes() {
               rel="noreferrer"
               href={`/${i18n.locale}/view/lanes?item=${getRandomFromRange(
                 collectionsData.lanes.minIndex,
-                collectionsData.lanes.maxIndex
+                collectionsData.lanes.maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -76,7 +76,7 @@ export default function CollectionLanes() {
             >
               <Image
                 src={`${basePath}/images/lanes/${imageId}.svg`}
-                alt={`Lanes #${imageId}`}
+                alt={`Lanes #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />
