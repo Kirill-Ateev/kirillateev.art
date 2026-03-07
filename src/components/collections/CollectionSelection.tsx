@@ -10,7 +10,7 @@ import Link from 'next/link';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
-export default function CollectionFolds() {
+export default function CollectionSelection() {
   const { i18n } = useLingui();
 
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
@@ -19,7 +19,7 @@ export default function CollectionFolds() {
     containScroll: 'trimSnaps',
   });
 
-  const images = ['174', '223', '416', '341', '359', '407'];
+  const images = ['Egg'];
 
   return (
     <section>
@@ -28,19 +28,19 @@ export default function CollectionFolds() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Folds</div>
+                <div className={styles.title}>Selection</div>
               </span>
               <div className={styles.text_secondary}>
-                <Trans>Ethereum - January 2026</Trans>
+                <Trans>Ethereum - March 2026</Trans>
               </div>
               <div className={styles.text_secondary}>
-                <Trans>512 works</Trans>
+                <Trans>1 works</Trans>
               </div>
             </div>
             <div className={styles.text_secondary}>
               <Trans>
-                A collection of animated vector images in kinetic minimalism
-                style (kinimalism).
+                A special selection. Individual works, triptychs, and small
+                series curated just for you.
               </Trans>
             </div>
             <div className={styles.text_secondary}>
@@ -53,9 +53,9 @@ export default function CollectionFolds() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${i18n.locale}/view/folds?item=${getRandomFromRange(
-                collectionsData['folds'].minIndex,
-                collectionsData['folds'].maxIndex,
+              href={`/${i18n.locale}/view/selection?item=${getRandomFromRange(
+                collectionsData['selection'].minIndex,
+                collectionsData['selection'].maxIndex,
               )}`}
             >
               <Trans>View collection &gt;</Trans>
@@ -64,7 +64,7 @@ export default function CollectionFolds() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={collectionsData['folds'].marketplaces.rarible.link}
+              href={collectionsData['selection'].marketplaces.rarible.link}
             >
               Rarible &gt;
             </Link>
@@ -76,20 +76,20 @@ export default function CollectionFolds() {
               className={`${styles.embla__slide} ${styles.card} ${styles.card_nights}`}
             >
               <Image
-                src={`${basePath}/images/folds/${imageId}.svg`}
-                alt={`Folds #${imageId} by Kirill Ateev`}
+                src={`${basePath}/images/selection/${imageId}.svg`}
+                alt={`Selection #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
               />
               <div className={`${styles.text_secondary} ${styles.item_title}`}>
-                #{imageId}
+                {imageId}
               </div>
             </div>
           ))}
 
           <div className={`${styles.embla__slide} ${styles.container_arrow}`}>
             <ArrowRight
-              href={collectionsData['folds'].marketplaces.rarible.link}
+              href={collectionsData['selection'].marketplaces.rarible.link}
             />
           </div>
         </div>

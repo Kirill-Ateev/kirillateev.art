@@ -53,7 +53,7 @@ export default function CollectionWindow() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`${i18n.locale}/view/window?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/window?item=${getRandomFromRange(
                 collectionsData.window.minIndex,
                 collectionsData.window.maxIndex,
               )}`}
@@ -81,6 +81,9 @@ export default function CollectionWindow() {
                 width={512}
                 height={512}
               />
+              <div className={`${styles.text_secondary} ${styles.item_title}`}>
+                #{imageId}
+              </div>
             </div>
           ))}
 

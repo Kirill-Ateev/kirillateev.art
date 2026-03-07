@@ -80,6 +80,9 @@ export default function CollectionLanes() {
                 width={512}
                 height={512}
               />
+              <div className={`${styles.text_secondary} ${styles.item_title}`}>
+                #{imageId}
+              </div>
             </div>
           ))}
 

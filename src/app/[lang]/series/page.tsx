@@ -11,7 +11,7 @@ import LazyHydrate from '@/components/layout/LazyHydrate';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import Link from 'next/link';
-import styles from './page.module.css';
+import styles from './../page.module.css';
 
 export default withLinguiPage(async function Home(props) {
   const params = await props.params;

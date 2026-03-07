@@ -53,7 +53,7 @@ export default function CollectionCocktailStraws() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`${
+              href={`/${
                 i18n.locale
               }/view/cocktail-straws?item=${getRandomFromRange(
                 collectionsData['cocktail-straws'].minIndex,
@@ -85,6 +85,9 @@ export default function CollectionCocktailStraws() {
                 width={512}
                 height={512}
               />
+              <div className={`${styles.text_secondary} ${styles.item_title}`}>
+                #{imageId}
+              </div>
             </div>
           ))}
 

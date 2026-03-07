@@ -58,7 +58,7 @@ export default function CollectionAttentionless() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`${
+              href={`/${
                 i18n.locale
               }/view/attentionless?item=${getRandomFromRange(
                 collectionsData.attentionless.minIndex,
@@ -88,6 +88,9 @@ export default function CollectionAttentionless() {
                 width={512}
                 height={512}
               />
+              <div className={`${styles.text_secondary} ${styles.item_title}`}>
+                #{imageId}
+              </div>
             </div>
           ))}
 

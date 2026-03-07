@@ -8,7 +8,7 @@ export type PageLangParam = {
 };
 
 type PageProps = PageLangParam & {
-  searchParams?: Promise<ReadonlyURLSearchParams>; // in query
+  searchParams?: Promise<ReadonlyURLSearchParams & { view?: string }>; // in query
 };
 
 type LayoutProps = PageLangParam & {
@@ -18,7 +18,7 @@ type LayoutProps = PageLangParam & {
 type PageExposedToNextJS<Props extends PageProps> = (props: Props) => ReactNode;
 
 export const withLinguiPage = <Props extends PageProps>(
-  AppRouterPage: React.ComponentType<PageLangParam & Props>
+  AppRouterPage: React.ComponentType<PageLangParam & Props>,
 ): PageExposedToNextJS<Props> => {
   return async function WithLingui(props) {
     const { lang } = await props.params;
@@ -30,11 +30,11 @@ export const withLinguiPage = <Props extends PageProps>(
 };
 
 type LayoutExposedToNextJS<Props extends LayoutProps> = (
-  props: Props
+  props: Props,
 ) => ReactNode;
 
 export const withLinguiLayout = <Props extends LayoutProps>(
-  AppRouterPage: React.ComponentType<PageLangParam & Props>
+  AppRouterPage: React.ComponentType<PageLangParam & Props>,
 ): LayoutExposedToNextJS<Props> => {
   return async function WithLingui(props) {
     const { lang } = await props.params;
