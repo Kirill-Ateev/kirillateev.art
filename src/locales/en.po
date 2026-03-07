@@ -26,6 +26,10 @@ msgstr "(click for next)"
 msgid "{0}"
 msgstr "{0}"
 
+#: src/components/collections/CollectionSelection.tsx:37
+msgid "1 works"
+msgstr "1 works"
+
 #: src/components/collections/CollectionCrosswalk.tsx:36
 #: src/components/collections/CollectionLanes.tsx:36
 #: src/components/collections/CollectionWindow.tsx:37
@@ -48,13 +52,13 @@ msgstr "20 works"
 msgid "300 works"
 msgstr "300 works"
 
-#: src/components/collections/CollectionCity.tsx:44
-#: src/components/collections/CollectionFolds.tsx:44
+#: src/components/collections/CollectionCity.tsx:37
+#: src/components/collections/CollectionFolds.tsx:37
 #: src/components/collections/CollectionFrames.tsx:37
 msgid "512 works"
 msgstr "512 works"
 
-#: src/components/collections/CollectionBlinds.tsx:44
+#: src/components/collections/CollectionBlinds.tsx:37
 msgid "555 works"
 msgstr "555 works"
 
@@ -66,11 +70,11 @@ msgstr "555 works"
 msgid "A collection of 42 impressionist style photos."
 msgstr "A collection of 42 impressionist style photos."
 
-#: src/components/collections/CollectionBlinds.tsx:48
-#: src/components/collections/CollectionCity.tsx:48
+#: src/components/collections/CollectionBlinds.tsx:41
+#: src/components/collections/CollectionCity.tsx:41
 #: src/components/collections/CollectionCocktailStraws.tsx:41
 #: src/components/collections/CollectionCrosswalk.tsx:40
-#: src/components/collections/CollectionFolds.tsx:48
+#: src/components/collections/CollectionFolds.tsx:41
 #: src/components/collections/CollectionFrames.tsx:41
 #: src/components/collections/CollectionLanes.tsx:40
 #: src/components/collections/CollectionWindow.tsx:41
@@ -84,6 +88,10 @@ msgstr "A collection of animated vector images in kinetic minimalism style (kini
 #: src/components/collections/CollectionAttentionless.tsx:40
 msgid "A collection of collages of CC0 images in an abstractionist style."
 msgstr "A collection of collages of CC0 images in an abstractionist style."
+
+#: src/components/collections/CollectionSelection.tsx:41
+msgid "A special selection. Individual works, triptychs, and small series curated just for you."
+msgstr "A special selection. Individual works, triptychs, and small series curated just for you."
 
 #: src/components/oldCollections/CollectionKindWords.tsx:39
 msgid "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
@@ -130,7 +138,7 @@ msgstr "Ethereum - August 2025"
 msgid "Ethereum - December 2025"
 msgstr "Ethereum - December 2025"
 
-#: src/components/collections/CollectionFolds.tsx:41
+#: src/components/collections/CollectionFolds.tsx:34
 msgid "Ethereum - January 2026"
 msgstr "Ethereum - January 2026"
 
@@ -142,26 +150,33 @@ msgstr "Ethereum - Jun. 2023"
 msgid "Ethereum - March 2025"
 msgstr "Ethereum - March 2025"
 
-#: src/components/collections/CollectionCity.tsx:41
+#: src/components/collections/CollectionSelection.tsx:34
+msgid "Ethereum - March 2026"
+msgstr "Ethereum - March 2026"
+
+#: src/components/collections/CollectionCity.tsx:34
 msgid "Ethereum - November 2025"
 msgstr "Ethereum - November 2025"
 
-#: src/components/collections/CollectionBlinds.tsx:41
+#: src/components/collections/CollectionBlinds.tsx:34
 #: src/components/collections/CollectionCocktailStraws.tsx:34
 msgid "Ethereum - September 2025"
 msgstr "Ethereum - September 2025"
 
-#: src/app/[lang]/page.tsx:25
+#: src/app/[lang]/page.tsx:28
+#: src/app/[lang]/selection/page.tsx:20
+#: src/app/[lang]/series/page.tsx:28
 msgid "Hi, I'm Kirill Ateev, an artist working with code."
 msgstr "Hi, I'm Kirill Ateev, an artist working with code."
 
-#: src/components/collections/CollectionBlinds.tsx:54
-#: src/components/collections/CollectionCity.tsx:54
+#: src/components/collections/CollectionBlinds.tsx:47
+#: src/components/collections/CollectionCity.tsx:47
 #: src/components/collections/CollectionCocktailStraws.tsx:47
 #: src/components/collections/CollectionCrosswalk.tsx:46
-#: src/components/collections/CollectionFolds.tsx:54
+#: src/components/collections/CollectionFolds.tsx:47
 #: src/components/collections/CollectionFrames.tsx:47
 #: src/components/collections/CollectionLanes.tsx:46
+#: src/components/collections/CollectionSelection.tsx:47
 #: src/components/collections/CollectionWindow.tsx:47
 msgid "Images and metadata stored directly on blockchain (on-chain)."
 msgstr "Images and metadata stored directly on blockchain (on-chain)."
@@ -205,9 +220,23 @@ msgstr "Polygon - Feb. 2023"
 msgid "Recent Community Work"
 msgstr "Recent Community Work"
 
-#: src/app/[lang]/page.tsx:22
+#: src/app/[lang]/page.tsx:25
+#: src/app/[lang]/selection/page.tsx:17
+#: src/app/[lang]/series/page.tsx:25
 msgid "Recent Work"
 msgstr "Recent Work"
+
+#: src/app/[lang]/page.tsx:43
+#: src/app/[lang]/selection/page.tsx:35
+#: src/app/[lang]/series/page.tsx:43
+msgid "Selection"
+msgstr "Selection"
+
+#: src/app/[lang]/page.tsx:37
+#: src/app/[lang]/selection/page.tsx:29
+#: src/app/[lang]/series/page.tsx:37
+msgid "Series"
+msgstr "Series"
 
 #: src/app/[lang]/messages/page.tsx:19
 msgid "Some messages for you"
@@ -225,13 +254,14 @@ msgstr "Some messages for you"
 #~ msgstr "TON - Dec. 2023"
 
 #: src/components/collections/CollectionAttentionless.tsx:68
-#: src/components/collections/CollectionBlinds.tsx:68
-#: src/components/collections/CollectionCity.tsx:68
+#: src/components/collections/CollectionBlinds.tsx:61
+#: src/components/collections/CollectionCity.tsx:61
 #: src/components/collections/CollectionCocktailStraws.tsx:63
 #: src/components/collections/CollectionCrosswalk.tsx:60
-#: src/components/collections/CollectionFolds.tsx:68
+#: src/components/collections/CollectionFolds.tsx:61
 #: src/components/collections/CollectionFrames.tsx:61
 #: src/components/collections/CollectionLanes.tsx:60
+#: src/components/collections/CollectionSelection.tsx:61
 #: src/components/collections/CollectionWindow.tsx:61
 #: src/components/oldCollections/CollectionKindWords.tsx:70
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:62
