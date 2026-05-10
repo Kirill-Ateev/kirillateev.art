@@ -19,7 +19,7 @@ export default function CollectionSelection() {
     containScroll: 'trimSnaps',
   });
 
-  const images = ['Egg'];
+  const images = ['Field', 'Egg'];
 
   return (
     <section>
