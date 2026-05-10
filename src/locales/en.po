@@ -26,10 +26,6 @@ msgstr "(click for next)"
 msgid "{0}"
 msgstr "{0}"
 
-#: src/components/collections/CollectionSelection.tsx:37
-msgid "1 works"
-msgstr "1 works"
-
 #: src/components/collections/CollectionCrosswalk.tsx:36
 #: src/components/collections/CollectionLanes.tsx:36
 #: src/components/collections/CollectionWindow.tsx:37
@@ -43,6 +39,10 @@ msgstr "1024 works"
 #: src/components/collections/CollectionCocktailStraws.tsx:37
 msgid "111 works"
 msgstr "111 works"
+
+#: src/components/collections/CollectionSelection.tsx:37
+msgid "2 works"
+msgstr "2 works"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:36
 msgid "20 works"

@@ -34,7 +34,7 @@ export default function CollectionSelection() {
                 <Trans>Ethereum - March 2026</Trans>
               </div>
               <div className={styles.text_secondary}>
-                <Trans>1 works</Trans>
+                <Trans>2 works</Trans>
               </div>
             </div>
             <div className={styles.text_secondary}>

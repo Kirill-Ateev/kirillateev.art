@@ -26,10 +26,6 @@ msgstr "(кликни для следующей)"
 msgid "{0}"
 msgstr ""
 
-#: src/components/collections/CollectionSelection.tsx:37
-msgid "1 works"
-msgstr "1 работа"
-
 #: src/components/collections/CollectionCrosswalk.tsx:36
 #: src/components/collections/CollectionLanes.tsx:36
 #: src/components/collections/CollectionWindow.tsx:37
@@ -43,6 +39,10 @@ msgstr "1024 работы"
 #: src/components/collections/CollectionCocktailStraws.tsx:37
 msgid "111 works"
 msgstr "111 работ"
+
+#: src/components/collections/CollectionSelection.tsx:37
+msgid "2 works"
+msgstr "2 работы"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:36
 msgid "20 works"
