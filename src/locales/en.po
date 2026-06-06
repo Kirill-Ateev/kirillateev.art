@@ -41,8 +41,8 @@ msgid "111 works"
 msgstr "111 works"
 
 #: src/components/collections/CollectionSelection.tsx:37
-msgid "2 works"
-msgstr "2 works"
+#~ msgid "2 works"
+#~ msgstr "2 works"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:36
 msgid "20 works"
@@ -51,6 +51,10 @@ msgstr "20 works"
 #: src/components/oldCollections/CollectionKindWords.tsx:35
 msgid "300 works"
 msgstr "300 works"
+
+#: src/components/collections/CollectionSelection.tsx:37
+msgid "4 works"
+msgstr "4 works"
 
 #: src/components/collections/CollectionCity.tsx:37
 #: src/components/collections/CollectionFolds.tsx:37
@@ -151,8 +155,12 @@ msgid "Ethereum - March 2025"
 msgstr "Ethereum - March 2025"
 
 #: src/components/collections/CollectionSelection.tsx:34
-msgid "Ethereum - March 2026"
-msgstr "Ethereum - March 2026"
+#~ msgid "Ethereum - March 2026"
+#~ msgstr "Ethereum - March 2026"
+
+#: src/components/collections/CollectionSelection.tsx:34
+msgid "Ethereum - March-June 2026"
+msgstr "Ethereum - March-June 2026"
 
 #: src/components/collections/CollectionCity.tsx:34
 msgid "Ethereum - November 2025"

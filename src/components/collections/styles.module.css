@@ -133,6 +133,20 @@
   }
 }
 
+.card_berry {
+  width: 384px;
+  height: 512px;
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  img,
+  video {
+    width: 384px;
+    height: 512px;
+  }
+}
+
 .container_arrow {
   position: relative;
   display: flex;

@@ -6,7 +6,7 @@ export const collectionsData = {
     generationContractBytecode: '',
     contract: '0xa662f5d0e1ff9e89b972fc44f7b1ba62ba34d055',
     minIndex: 1,
-    maxIndex: 1,
+    maxIndex: 4,
     padded: false,
     marketplaces: {
       rarible: {

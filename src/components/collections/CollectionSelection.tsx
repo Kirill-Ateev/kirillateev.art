@@ -19,7 +19,7 @@ export default function CollectionSelection() {
     containScroll: 'trimSnaps',
   });
 
-  const images = ['Field', 'Egg'];
+  const images = ['Berry1', 'Berry2', 'Field', 'Egg'];
 
   return (
     <section>
@@ -31,10 +31,10 @@ export default function CollectionSelection() {
                 <div className={styles.title}>Selection</div>
               </span>
               <div className={styles.text_secondary}>
-                <Trans>Ethereum - March 2026</Trans>
+                <Trans>Ethereum - March-June 2026</Trans>
               </div>
               <div className={styles.text_secondary}>
-                <Trans>2 works</Trans>
+                <Trans>4 works</Trans>
               </div>
             </div>
             <div className={styles.text_secondary}>
@@ -70,22 +70,33 @@ export default function CollectionSelection() {
             </Link>
           </div>
 
-          {images.map((imageId) => (
-            <div
-              key={imageId}
-              className={`${styles.embla__slide} ${styles.card} ${styles.card_nights}`}
-            >
-              <Image
-                src={`${basePath}/images/selection/${imageId}.svg`}
-                alt={`Selection #${imageId} by Kirill Ateev`}
-                width={512}
-                height={512}
-              />
-              <div className={`${styles.text_secondary} ${styles.item_title}`}>
-                {imageId}
+          {images.map((imageId) => {
+            const isBerry = imageId.startsWith('Berry');
+            const cardClassName = isBerry
+              ? `${styles.card_berry}`
+              : `${styles.card_nights}`;
+
+            return (
+              <div
+                key={imageId}
+                className={`${styles.embla__slide} ${styles.card} ${cardClassName}`}
+              >
+                <Image
+                  src={`${basePath}/images/selection/${imageId}.svg`}
+                  alt={`Selection #${imageId} by Kirill Ateev`}
+                  width={isBerry ? 394 : 512}
+                  height={512}
+                />
+                <div
+                  className={`${styles.text_secondary} ${styles.item_title}`}
+                >
+                  {isBerry
+                    ? { Berry1: 'Berry #1', Berry2: 'Berry #2' }[imageId]
+                    : imageId}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
 
           <div className={`${styles.embla__slide} ${styles.container_arrow}`}>
             <ArrowRight
