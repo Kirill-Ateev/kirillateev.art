@@ -2,6 +2,7 @@ import Header from '@/components/header/Header';
 import { ERC721Viewer } from '@/components/viewer/ERC721Viewer';
 import { collectionsData } from '@/constants/collections';
 import { withLinguiPage } from '@/withLingui';
+import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { locales } from '../../../../../lingui.config';
 import styles from '../../page.module.css';
@@ -18,6 +19,33 @@ export async function generateStaticParams() {
   });
 
   return paths;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; collection: string }>;
+}): Promise<Metadata> {
+  const { lang, collection } = await params;
+  const collectionMeta = collectionsData[collection];
+  if (!collectionMeta) return {};
+
+  const title = `${collectionMeta.name} by Kirill Ateev`;
+  const description = collectionMeta.description;
+  const url = `https://kirillateev.art/${lang}/view/${collection}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+    },
+  };
 }
 
 export default withLinguiPage(async function CollectionViewer({

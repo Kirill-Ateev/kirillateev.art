@@ -8,6 +8,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 4,
     padded: false,
+    description:
+      'A special selection. Individual works, triptychs, and small series curated just for you. Images and metadata stored directly on blockchain (on-chain).',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -26,6 +28,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 512,
     padded: false,
+    description:
+      'A collection of animated vector images in kinetic minimalism style (kinimalism). Images and metadata stored directly on blockchain (on-chain)',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -44,6 +48,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 512,
     padded: false,
+    description:
+      'A collection of animated vector images in kinetic minimalism style (kinimalism). Images and metadata stored directly on blockchain (on-chain)',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -62,6 +68,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 512,
     padded: false,
+    description:
+      'A collection of animated vector images in kinetic minimalism style (kinimalism). Images and metadata stored directly on blockchain (on-chain)',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -80,6 +88,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 555,
     padded: false,
+    description:
+      'A collection of animated vector images in kinetic minimalism style (kinimalism). Images and metadata stored directly on blockchain (on-chain)',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -98,6 +108,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 111,
     padded: false,
+    description:
+      'A collection of animated vector images in kinetic minimalism style (kinimalism). Images and metadata stored directly on blockchain (on-chain)',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -117,6 +129,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 10000,
     padded: true,
+    description:
+      'A collection of animated vector images in kinetic minimalism style (kinimalism). Images and metadata stored directly on blockchain (on-chain)',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -134,6 +148,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 10000,
     padded: true,
+    description:
+      'A collection of animated vector images in kinetic minimalism style (kinimalism). Images and metadata stored directly on blockchain (on-chain)',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -151,6 +167,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 10000,
     padded: true,
+    description:
+      'A collection of animated vector images in kinetic minimalism style (kinimalism). Images and metadata stored directly on blockchain (on-chain)',
     marketplaces: {
       rarible: {
         name: 'Rarible',
@@ -168,6 +186,8 @@ export const collectionsData = {
     minIndex: 1,
     maxIndex: 1024,
     padded: false,
+    description:
+      'A collection of collages of CC0 images in an abstractionist style. Images and metadata stored on IPFS.',
     marketplaces: {
       rarible: {
         name: 'Rarible',

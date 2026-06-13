@@ -53,7 +53,7 @@ export default function CollectionFrames() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${i18n.locale}/view/frames?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/frames/${getRandomFromRange(
                 collectionsData['frames'].minIndex,
                 collectionsData['frames'].maxIndex,
               )}`}

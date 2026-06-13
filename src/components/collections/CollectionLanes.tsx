@@ -52,7 +52,7 @@ export default function CollectionLanes() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${i18n.locale}/view/lanes?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/lanes/${getRandomFromRange(
                 collectionsData.lanes.minIndex,
                 collectionsData.lanes.maxIndex,
               )}`}

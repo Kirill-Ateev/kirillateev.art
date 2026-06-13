@@ -53,7 +53,7 @@ export default function CollectionSelection() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${i18n.locale}/view/selection?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/selection/${getRandomFromRange(
                 collectionsData['selection'].minIndex,
                 collectionsData['selection'].maxIndex,
               )}`}

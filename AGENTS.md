@@ -26,6 +26,7 @@
 | SVG imports     | `@svgr/webpack`                            | ^8.1.0   |
 | Polyfills       | `core-js`                                  | ^3.47.0  |
 | Linting         | ESLint (`next/core-web-vitals`)            | ^8       |
+| Sitemap         | Script-generated (Node.js)                 | —        |
 | Deployment      | GitHub Actions → GitHub Pages              |          |
 
 ### Build output
@@ -41,11 +42,12 @@
 
 ```bash
 yarn dev           # Development server on :3000
-yarn build         # Static export to ./out
+yarn build         # Generate sitemap + static export to ./out
 yarn start         # Serve production build
 yarn lint          # ESLint (next lint)
 yarn extract       # Extract i18n keys from code → .po files
 yarn compile       # Compile .po → .js message catalogs
+yarn sitemap       # Generate public/sitemap.xml from config data
 ```
 
 **Before deploying**, always run:
@@ -81,18 +83,21 @@ yarn extract && yarn compile && yarn build
 │   │       ├── page.tsx        # Home / Series tab
 │   │       ├── series/page.tsx # = Home
 │   │       ├── selection/page.tsx
-│   │       ├── community/page.tsx
-│   │       ├── messages/
-│   │       │   ├── page.tsx            # Article listing
-│   │       │   └── [message]/page.tsx # Article detail
-│   │       └── view/[collection]/page.tsx  # NFT viewer
+│       │       ├── community/page.tsx
+│       │       ├── messages/
+│       │       │   ├── page.tsx            # Article listing
+│       │       │   └── [message]/page.tsx # Article detail
+│       │       └── view/[collection]/
+│       │           ├── page.tsx            # Collection viewer (random NFT)
+│       │           └── [tokenId]/page.tsx  # Per-token SSG page (JSON-LD + metadata)
 │   ├── appRouterI18n.ts        # Server-side i18n catalog preloader
 │   ├── withLingui.tsx          # HOC wrappers: withLinguiPage / withLinguiLayout
 │   ├── components/
 │   │   ├── collections/        # 10 collection cards + styles
 │   │   ├── oldCollections/     # Archived: KindWords, LifeIsAnIllusion
 │   │   ├── viewer/
-│   │   │   └── ERC721Viewer.tsx   # On-chain NFT viewer (client component)
+│   │   │   ├── ERC721Viewer.tsx   # On-chain NFT viewer (client component, ?item= query)
+│   │   │   └── TokenViewer.tsx    # Per-token viewer (client component, tokenId prop)
 │   │   ├── header/             # Header, Logo, lang Switcher
 │   │   ├── layout/             # LazyHydrate (IntersectionObserver)
 │   │   ├── GTM/                # Google Tag Manager
@@ -110,6 +115,8 @@ yarn extract && yarn compile && yarn build
 ├── next.config.mjs
 ├── tsconfig.json
 ├── lingui.config.js
+├── scripts/
+│   └── generate-sitemap.mjs   # Sitemap XML generator (Node.js)
 └── .github/workflows/nextjs.yml  # CI/CD deploy to GitHub Pages
 ```
 
@@ -119,8 +126,8 @@ yarn extract && yarn compile && yarn build
 
 ### SSG with Client Hydration
 
-- **Build time:** `generateStaticParams()` pre-renders all `[lang]` × `[collection]` × `[message]` combinations
-- **Server components:** layouts, pages, meta tags
+- **Build time:** `generateStaticParams()` pre-renders all `[lang]` × `[collection]` × `[message]` × `[tokenId]` combinations
+- **Server components:** layouts, pages, meta tags, JSON-LD structured data
 - **Client components:** all collection cards (Embla carousel requires browser), NFT viewer, lang switcher, Logo (random colors)
 - **`LazyHydrate`:** wraps lower collections on home page with `IntersectionObserver` for deferred render
 
@@ -174,12 +181,19 @@ yarn extract && yarn compile && yarn build
 
 ### NFT Data Flow
 
-1. ERC721Viewer is a `'use client'` component
-2. Reads `?item=` query param or falls back to `minIndex`
-3. Calls `tokenURI(tokenId)` on the Ethereum contract via `ethers.js` + proxy RPC (`https://vercel-rpc-view.vercel.app/api/view`)
+#### ERC721Viewer (collection page)
+1. Reads `?item=` query param or falls back to `minIndex`
+2. Random navigation on click (client-side routing via `?item=`)
+3. Calls `tokenURI(tokenId)` on the Ethereum contract via `ethers.js` + proxy RPC
 4. Resolves `ipfs://` URIs → `https://ipfs.io/ipfs/...`
 5. Handles `data:application/json;base64,...` inline metadata
 6. Renders via `next/image` with `unoptimized: true`
+
+#### TokenViewer (per-token SSG page)
+1. Receives `tokenId` as prop from route params (no `?item=` query)
+2. No random navigation — fixed to the specific token
+3. Same `tokenURI()` fetch + IPFS/base64 resolution
+4. Server-rendered JSON-LD (Schema.org/VisualArtwork) with collection metadata
 
 ---
 
@@ -199,11 +213,17 @@ yarn extract && yarn compile && yarn build
 | GTM `GTM-TWZXMCQQ`                 | `components/GTM/GTM.tsx` | Analytics                          |
 | Custom 404                         | `src/app/not-found.tsx`  | SEO meta on 404 page               |
 
+### Per-Token SEO
+
+| Feature                          | Implementation                |
+| -------------------------------- | ----------------------------- |
+| Per-token SSG pages              | `[tokenId]/page.tsx`          |
+| Per-token meta tags (title/desc) | `generateMetadata()`          |
+| JSON-LD structured data          | `Schema.org/VisualArtwork`    |
+| Canonical URL per token          | `alternates.canonical`        |
+
 ### Gaps & Recommendations for Scaling
 
-- **JSON-LD structured data:** Not yet implemented. Add `Schema.org/VisualArtwork` or `CollectionPage` markup on collection/view pages.
-- **Dynamic sitemap:** Currently a static XML. As collections grow, generate `public/sitemap.xml` at build time via a script or `generateSitemap()` in Next.js.
-- **Per-collection meta tags:** Currently all pages share the same global meta. Add `generateMetadata()` to `view/[collection]/page.tsx` for collection-specific title, description, and og:image.
 - **OpenGraph image per collection:** Generate or select a representative image for each collection's social card.
 - **Alt text audit:** Ensure every `<Image>` has descriptive `alt` attributes (currently partial).
 
@@ -213,6 +233,8 @@ yarn extract && yarn compile && yarn build
 2. If the page has its own layout, add `generateMetadata()` with locale-aware meta
 3. Add hreflang alternates in the page `<head>`
 4. Link from existing pages (internal link graph)
+
+> Note: `sitemap.xml` is auto-generated by `scripts/generate-sitemap.mjs`. After adding new collections or messages, run `yarn sitemap` to regenerate. The script config must be kept in sync with `src/constants/collections.ts` and `src/constants/text.ts`.
 
 ---
 
@@ -240,9 +262,9 @@ yarn extract && yarn compile && yarn build
    ```
 3. **Create collection card component** in `src/components/collections/CollectionDisplayName.tsx` — follow the existing pattern: Embla carousel, first slide = info text, 6 image slides, last slide = marketplace link.
 4. **Add to home page** in `src/app/[lang]/page.tsx` — wrap in `<LazyHydrate>` for collections below the fold.
-5. **Add static params** in `src/app/[lang]/view/[collection]/page.tsx` — include new key in the returned array.
+5. **Add static params** in `src/app/[lang]/view/[collection]/page.tsx` and `src/app/[lang]/view/[collection]/[tokenId]/page.tsx` — include new key in the returned array.
 6. **Add i18n keys** — run `yarn extract`, translate the new entries in `src/locales/ru.po`, then `yarn compile`.
-7. **Update sitemap** — add EN+RU entries to `public/sitemap.xml`.
+7. **Update sitemap** — add collection to `scripts/generate-sitemap.mjs`'s `COLLECTIONS` map, then run `yarn sitemap`.
 8. **Update llm.txt** — add new collection URL.
 9. **Add Rarible links** — ensure marketplace links in constants and collection component.
 
@@ -256,7 +278,7 @@ yarn extract && yarn compile && yarn build
    ```bash
    yarn extract && yarn compile
    ```
-4. **Update sitemap** — add `<url>` entries for both locales.
+4. **Update sitemap** — add the new message key to `scripts/generate-sitemap.mjs`'s `MESSAGES` array, then run `yarn sitemap`.
 5. **Update llm.txt** — add the new article link.
 
 ---
@@ -324,8 +346,8 @@ yarn build     # Next.js build picks up compiled catalogs
 
 1. **Headless CMS integration** — if content volume grows, consider a git-based CMS (e.g., TinaCMS) or structured content in separate JSON/MDX files instead of inline constants.
 2. **Image pipeline** — currently images are static files in `public/`. For 10,000+ collections, consider a CDN or on-demand generation.
-3. **Automated sitemap generation** — generate `sitemap.xml` at build time from `collectionsData` and `messagesList`.
-4. **Structured data (JSON-LD)** — implement `Schema.org` types for better rich results in Google.
+3. ~~**Automated sitemap generation** — generate `sitemap.xml` at build time from `collectionsData` and `messagesList`.~~ ✅ Done
+4. ~~**Structured data (JSON-LD)** — implement `Schema.org` types for better rich results in Google.~~ ✅ Done
 5. **Performance** — add Lighthouse CI to the CI pipeline; monitor Core Web Vitals.
 6. **i18n expansion** — the current pattern supports more locales by adding to `lingui.config.js` locales array and creating new `.po` files.
 7. **Unit/E2E tests** — currently no test framework. Consider Vitest + Playwright for critical paths (viewer, i18n switching, navigation).

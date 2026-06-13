@@ -53,7 +53,7 @@ export default function CollectionCity() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${i18n.locale}/view/city?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/city/${getRandomFromRange(
                 collectionsData['city'].minIndex,
                 collectionsData['city'].maxIndex,
               )}`}

@@ -53,7 +53,7 @@ export default function CollectionFolds() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${i18n.locale}/view/folds?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/folds/${getRandomFromRange(
                 collectionsData['folds'].minIndex,
                 collectionsData['folds'].maxIndex,
               )}`}

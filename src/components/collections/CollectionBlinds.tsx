@@ -53,7 +53,7 @@ export default function CollectionBlinds() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${i18n.locale}/view/blinds?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/blinds/${getRandomFromRange(
                 collectionsData['blinds'].minIndex,
                 collectionsData['blinds'].maxIndex,
               )}`}

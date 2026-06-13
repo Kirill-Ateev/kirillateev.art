@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn sitemap && next build",
     "start": "next start",
     "lint": "next lint",
     "extract": "lingui extract",
-    "compile": "lingui compile"
+    "compile": "lingui compile",
+    "sitemap": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@lingui/macro": "^5.4.1",

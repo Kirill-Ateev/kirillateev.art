@@ -53,9 +53,7 @@ export default function CollectionCocktailStraws() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${
-                i18n.locale
-              }/view/cocktail-straws?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/cocktail-straws/${getRandomFromRange(
                 collectionsData['cocktail-straws'].minIndex,
                 collectionsData['cocktail-straws'].maxIndex,
               )}`}

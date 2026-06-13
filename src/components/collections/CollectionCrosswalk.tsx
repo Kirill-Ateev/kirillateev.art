@@ -52,7 +52,7 @@ export default function CollectionCrosswalk() {
               className={`${styles.link} ${styles.text_secondary}`}
               target="_blank"
               rel="noreferrer"
-              href={`/${i18n.locale}/view/crosswalk?item=${getRandomFromRange(
+              href={`/${i18n.locale}/view/crosswalk/${getRandomFromRange(
                 collectionsData.crosswalk.minIndex,
                 collectionsData.crosswalk.maxIndex,
               )}`}
