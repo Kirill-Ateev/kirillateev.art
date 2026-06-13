@@ -1,5 +1,5 @@
-import { writeFileSync, mkdirSync } from 'fs';
-import { resolve, dirname } from 'path';
+import { mkdirSync, writeFileSync } from 'fs';
+import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -105,7 +105,9 @@ ${indexEntries.join('\n')}
 
   writeFileSync(resolve(PUBLIC, 'sitemap.xml'), indexXml, 'utf-8');
 
-  console.log(`\n✓ Sitemap index: ${indexEntries.length} sub-sitemaps, ${totalUrls} total URLs → ${PUBLIC}/sitemap.xml`);
+  console.log(
+    `\n✓ Sitemap index: ${indexEntries.length} sub-sitemaps, ${totalUrls} total URLs → ${PUBLIC}/sitemap.xml`,
+  );
 }
 
 generate();

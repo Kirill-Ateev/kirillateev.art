@@ -28,7 +28,7 @@ Contains a brief welcome and links to the latest collections.
 - Lanes: https://kirillateev.art/en/view/lanes
 - Attentionless: https://kirillateev.art/en/view/attentionless
 
-Each collection contains unique animated SVG images. Individual works can be viewed on collection pages using the `?item=ID` parameter (e.g., `/en/view/blinds?item=321`).
+Each collection contains unique animated SVG images. Individual works can be viewed on collection pages using the route (e.g., `/en/view/blinds/321`).
 
 ## Technical Features for LLM
 1. **Images:** All NFTs are in SVG format. Each image uses the `<img>` tag with a populated `alt` attribute containing the work's title and artist's name.
