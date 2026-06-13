@@ -1,7 +1,10 @@
 'use client';
+import { getRandomFromRange } from '@/utils/numbers';
+import { Trans } from '@lingui/react/macro';
 import { ethers } from 'ethers';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useState } from 'react';
 import collectionStyles from './../collections/styles.module.css';
 import styles from './styles.module.css';
@@ -35,6 +38,8 @@ export const TokenViewer: React.FC<{
   collectionMetadata: CollectionMetadata;
   tokenId: number;
 }> = ({ collectionMetadata, tokenId }) => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [metadata, setMetadata] = useState<NFTMetadata | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
@@ -75,9 +80,7 @@ export const TokenViewer: React.FC<{
 
         setMetadata(await response.json());
       } catch (err) {
-        setError(
-          err instanceof Error ? err.message : 'Unknown error occurred',
-        );
+        setError(err instanceof Error ? err.message : 'Unknown error occurred');
         setMetadata(null);
       } finally {
         setIsLoading(false);
@@ -90,9 +93,29 @@ export const TokenViewer: React.FC<{
     fetchNFTMetadata(tokenId);
   }, [tokenId, fetchNFTMetadata]);
 
+  const handleClick = useCallback(() => {
+    const randomIndex = getRandomFromRange(
+      collectionMetadata.minIndex,
+      collectionMetadata.maxIndex,
+    );
+
+    router.push(
+      `${pathname.substring(0, pathname.lastIndexOf('/'))}/${randomIndex.toString()}`,
+    );
+  }, [collectionMetadata.minIndex, collectionMetadata.maxIndex]);
+
   return (
-    <div className={styles.viewer_container}>
-      {error && <div className={styles.viewer_error}>Error: {error}</div>}
+    <div
+      className={styles.viewer_container}
+      style={{
+        cursor: isLoading ? 'wait' : 'pointer',
+      }}
+    >
+      {error && (
+        <div className={styles.viewer_error} onClick={handleClick}>
+          Error: {error}
+        </div>
+      )}
       {isLoading && <div>Loading...</div>}
 
       {metadata && !isLoading && (
@@ -106,6 +129,12 @@ export const TokenViewer: React.FC<{
           >
             <div>
               {collectionMetadata.name} #{tokenId}
+            </div>
+            <div
+              className={`${styles.absolute_subtext} ${collectionStyles.text_secondary}`}
+              onClick={handleClick}
+            >
+              <Trans>(click for next)</Trans>
             </div>
             {Object.values(collectionMetadata.marketplaces).map((place) => (
               <Link
@@ -131,11 +160,10 @@ export const TokenViewer: React.FC<{
               maxHeight: collectionMetadata.padded
                 ? 'calc(100% - 21.5px)'
                 : 'calc(100% - 37.5px)',
-              padding: collectionMetadata.padded
-                ? '0px'
-                : '0px 30px 30px 30px',
+              padding: collectionMetadata.padded ? '0px' : '0px 30px 30px 30px',
               objectFit: 'contain',
             }}
+            onClick={handleClick}
           />
         </>
       )}

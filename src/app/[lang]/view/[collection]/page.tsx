@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string; collection: string }>;
+  params: Promise<{ lang: string; collection: keyof typeof collectionsData }>;
 }): Promise<Metadata> {
   const { lang, collection } = await params;
   const collectionMeta = collectionsData[collection];

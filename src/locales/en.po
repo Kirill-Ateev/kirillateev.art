@@ -14,6 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/viewer/ERC721Viewer.tsx:175
+#: src/components/viewer/TokenViewer.tsx:137
 msgid "(click for next)"
 msgstr "(click for next)"
 
@@ -261,10 +262,10 @@ msgstr "Some messages for you"
 #~ msgid "TON - Dec. 2023"
 #~ msgstr "TON - Dec. 2023"
 
-#: src/components/collections/CollectionAttentionless.tsx:68
+#: src/components/collections/CollectionAttentionless.tsx:66
 #: src/components/collections/CollectionBlinds.tsx:61
 #: src/components/collections/CollectionCity.tsx:61
-#: src/components/collections/CollectionCocktailStraws.tsx:63
+#: src/components/collections/CollectionCocktailStraws.tsx:61
 #: src/components/collections/CollectionCrosswalk.tsx:60
 #: src/components/collections/CollectionFolds.tsx:61
 #: src/components/collections/CollectionFrames.tsx:61

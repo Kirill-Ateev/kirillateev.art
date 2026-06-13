@@ -30,7 +30,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string; collection: string; tokenId: string }>;
+  params: Promise<{
+    lang: string;
+    collection: keyof typeof collectionsData;
+    tokenId: string;
+  }>;
 }): Promise<Metadata> {
   const { lang, collection, tokenId } = await params;
   const collectionMeta = collectionsData[collection];
