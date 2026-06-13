@@ -10,8 +10,25 @@ import Header from '@/components/header/Header';
 import LazyHydrate from '@/components/layout/LazyHydrate';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    alternates: {
+      canonical: `https://kirillateev.art/${lang}`,
+    },
+    openGraph: {
+      url: `https://kirillateev.art/${lang}`,
+    },
+  };
+}
 
 export default withLinguiPage(async function Home(props) {
   const params = await props.params;

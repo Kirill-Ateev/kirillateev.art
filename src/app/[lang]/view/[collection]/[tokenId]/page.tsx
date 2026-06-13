@@ -83,7 +83,7 @@ export default withLinguiPage(async function TokenPage({
     '@context': 'https://schema.org',
     '@type': 'VisualArtwork',
     name: `${collectionMeta.name} #${tokenId}`,
-    description: `On-chain generative NFT artwork by Kirill Ateev. Part of the ${collectionMeta.name} collection.`,
+    description: `${collectionMeta.name} #${tokenId} — On-chain generative NFT artwork by Kirill Ateev.`,
     artMedium: 'Generative algorithm (on-chain SVG)',
     artform: 'Rarible',
     artist: {

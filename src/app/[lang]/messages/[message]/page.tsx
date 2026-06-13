@@ -2,6 +2,7 @@ import Header from '@/components/header/Header';
 import { messagesList } from '@/constants/text';
 import { withLinguiPage } from '@/withLingui';
 import { Trans, useLingui } from '@lingui/react/macro';
+import type { Metadata } from 'next';
 import { locales } from '../../../../../lingui.config';
 import styles from '../../page.module.css';
 
@@ -17,6 +18,27 @@ export async function generateStaticParams() {
   });
 
   return paths;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; message: string }>;
+}): Promise<Metadata> {
+  const { lang, message } = await params;
+  const msg = messagesList[message]?.[lang];
+  const title = msg ? `${msg.title} — Kirill Ateev` : 'Messages — Kirill Ateev';
+
+  return {
+    title,
+    alternates: {
+      canonical: `https://kirillateev.art/${lang}/messages/${message}`,
+    },
+    openGraph: {
+      title,
+      url: `https://kirillateev.art/${lang}/messages/${message}`,
+    },
+  };
 }
 
 export default withLinguiPage(async function Message({

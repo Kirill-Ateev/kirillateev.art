@@ -2,8 +2,32 @@ import Header from '@/components/header/Header';
 import { messagesList } from '@/constants/text';
 import { withLinguiPage } from '@/withLingui';
 import { Trans, useLingui } from '@lingui/react/macro';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from '../page.module.css';
+
+const titles: Record<string, string> = {
+  en: 'Messages — Kirill Ateev',
+  ru: 'Сообщения — Кирилл Атеев',
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: titles[lang] || titles.en,
+    alternates: {
+      canonical: `https://kirillateev.art/${lang}/messages`,
+    },
+    openGraph: {
+      title: titles[lang] || titles.en,
+      url: `https://kirillateev.art/${lang}/messages`,
+    },
+  };
+}
 
 export default withLinguiPage(function Messages() {
   const { i18n } = useLingui();
