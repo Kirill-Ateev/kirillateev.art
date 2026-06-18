@@ -112,9 +112,9 @@ export const TokenViewer: React.FC<{
           }
           return; // success – exit retry loop
         } catch (err) {
-          // Silently ignore the error and retry after a 3‑second delay
+          // Silently ignore the error and retry after a 100 mssecond delay
           if (!cancelled) {
-            await delay(3000);
+            await delay(100);
           }
         }
       }
