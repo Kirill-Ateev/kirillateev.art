@@ -42,56 +42,93 @@ export const TokenViewer: React.FC<{
   const pathname = usePathname();
   const [metadata, setMetadata] = useState<NFTMetadata | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [loadingDots, setLoadingDots] = useState<string>('');
 
-  const fetchNFTMetadata = useCallback(
-    async (id: number) => {
-      if (!ethers.isAddress(collectionMetadata.contract)) {
-        setError('Invalid contract address');
-        return;
-      }
-
-      setIsLoading(true);
-      setError(null);
-
-      try {
-        const contract = new ethers.Contract(
-          collectionMetadata.contract,
-          ERC721_ABI,
-          RPC_PROVIDER,
-        );
-        const tokenURI = await contract.tokenURI(id);
-
-        let resolvedUri = tokenURI;
-
-        if (tokenURI.startsWith('ipfs://')) {
-          resolvedUri = `https://ipfs.io/ipfs/${tokenURI.split('ipfs://')[1]}`;
-        }
-
-        if (tokenURI.startsWith('data:application/json;base64,')) {
-          const base64 = tokenURI.split(',')[1];
-          const rawData = atob(base64);
-          setMetadata(JSON.parse(rawData));
-          return;
-        }
-
-        const response = await fetch(resolvedUri);
-        if (!response.ok) throw new Error('Failed to fetch metadata');
-
-        setMetadata(await response.json());
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Unknown error occurred');
-        setMetadata(null);
-      } finally {
-        setIsLoading(false);
-      }
-    },
-    [collectionMetadata.contract],
-  );
-
+  // Animated dots for the loading text
   useEffect(() => {
-    fetchNFTMetadata(tokenId);
-  }, [tokenId, fetchNFTMetadata]);
+    if (!isLoading) {
+      setLoadingDots('');
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setLoadingDots((prev) => (prev.length >= 3 ? '' : prev + '.'));
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, [isLoading]);
+
+  // Retry loop: never shows errors, only "Loading…" until success
+  useEffect(() => {
+    let cancelled = false;
+    const timeouts: NodeJS.Timeout[] = [];
+
+    const delay = (ms: number) =>
+      new Promise<void>((resolve) => {
+        const timeout = setTimeout(resolve, ms);
+        timeouts.push(timeout);
+      });
+
+    const fetchData = async () => {
+      while (!cancelled) {
+        setIsLoading(true);
+        try {
+          // Validate contract address – throws to trigger retry if invalid
+          if (!ethers.isAddress(collectionMetadata.contract)) {
+            throw new Error('Invalid contract address');
+          }
+
+          const contract = new ethers.Contract(
+            collectionMetadata.contract,
+            ERC721_ABI,
+            RPC_PROVIDER,
+          );
+          const tokenURI = await contract.tokenURI(tokenId);
+
+          let resolvedUri = tokenURI;
+
+          if (tokenURI.startsWith('ipfs://')) {
+            resolvedUri = `https://ipfs.io/ipfs/${tokenURI.split('ipfs://')[1]}`;
+          }
+
+          // Handle on-chain base64 JSON metadata
+          if (tokenURI.startsWith('data:application/json;base64,')) {
+            const base64 = tokenURI.split(',')[1];
+            const rawData = atob(base64);
+            if (!cancelled) {
+              setMetadata(JSON.parse(rawData));
+              setIsLoading(false);
+            }
+            return;
+          }
+
+          const response = await fetch(resolvedUri);
+          if (!response.ok) throw new Error('Failed to fetch metadata');
+
+          const data = await response.json();
+          if (!cancelled) {
+            setMetadata(data);
+            setIsLoading(false);
+          }
+          return; // success – exit retry loop
+        } catch (err) {
+          // Silently ignore the error and retry after a 3‑second delay
+          if (!cancelled) {
+            await delay(3000);
+          }
+        }
+      }
+    };
+
+    // Reset metadata and start fetching
+    setMetadata(null);
+    fetchData();
+
+    return () => {
+      cancelled = true;
+      timeouts.forEach(clearTimeout);
+    };
+  }, [tokenId, collectionMetadata.contract]);
 
   const handleClick = useCallback(() => {
     const randomIndex = getRandomFromRange(
@@ -111,12 +148,7 @@ export const TokenViewer: React.FC<{
         cursor: isLoading ? 'wait' : 'pointer',
       }}
     >
-      {error && (
-        <div className={styles.viewer_error} onClick={handleClick}>
-          Error: {error}
-        </div>
-      )}
-      {isLoading && <div>Loading...</div>}
+      {isLoading && <div>Loading{loadingDots}</div>}
 
       {metadata && !isLoading && (
         <>
