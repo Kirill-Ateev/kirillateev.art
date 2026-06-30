@@ -18,11 +18,11 @@
     "@svgr/webpack": "^8.1.0",
     "core-js": "^3.47.0",
     "embla-carousel-react": "^8.5.2",
-    "ethers": "^6.15.0",
     "negotiator": "^0.6.3",
     "next": "15.4.10",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "viem": "^2.54.0"
   },
   "devDependencies": {
     "@lingui/cli": "^5.4.1",

@@ -1,6 +1,7 @@
 import Header from '@/components/header/Header';
-import { ERC721Viewer } from '@/components/viewer/ERC721Viewer';
+import { TokenViewer } from '@/components/viewer/TokenViewer';
 import { collectionsData } from '@/constants/collections';
+import { getRandomFromRange } from '@/utils/numbers';
 import { withLinguiPage } from '@/withLingui';
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
@@ -60,7 +61,14 @@ export default withLinguiPage(async function CollectionViewer({
       <Header />
       <main className={styles.main}>
         <Suspense>
-          <ERC721Viewer collectionMetadata={collectionMetadata} />
+          <TokenViewer
+            collectionMetadata={collectionMetadata}
+            baseRoute={`/${collection}`}
+            tokenId={getRandomFromRange(
+              collectionMetadata.minIndex,
+              collectionMetadata.maxIndex,
+            )}
+          />
         </Suspense>
       </main>
     </div>

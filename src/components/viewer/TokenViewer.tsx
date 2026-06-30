@@ -1,11 +1,11 @@
 'use client';
 import { getRandomFromRange } from '@/utils/numbers';
 import { Trans } from '@lingui/react/macro';
-import { ethers } from 'ethers';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useState } from 'react';
+import { createPublicClient, http, isAddress, parseAbi } from 'viem';
 import collectionStyles from './../collections/styles.module.css';
 import styles from './styles.module.css';
 
@@ -26,18 +26,18 @@ type NFTMetadata = {
   description?: string;
 };
 
-const ERC721_ABI = [
+const ERC721_ABI = parseAbi([
   'function tokenURI(uint256 tokenId) external view returns (string memory)',
-];
-
-const RPC_PROVIDER = new ethers.JsonRpcProvider(
-  'https://vercel-rpc-view.vercel.app/api/view',
-);
+]);
+const publicClient = createPublicClient({
+  transport: http('https://vercel-rpc-view.vercel.app/api/view'),
+});
 
 export const TokenViewer: React.FC<{
   collectionMetadata: CollectionMetadata;
   tokenId: number;
-}> = ({ collectionMetadata, tokenId }) => {
+  baseRoute?: string;
+}> = ({ collectionMetadata, tokenId, baseRoute = '' }) => {
   const router = useRouter();
   const pathname = usePathname();
   const [metadata, setMetadata] = useState<NFTMetadata | null>(null);
@@ -74,16 +74,16 @@ export const TokenViewer: React.FC<{
         setIsLoading(true);
         try {
           // Validate contract address – throws to trigger retry if invalid
-          if (!ethers.isAddress(collectionMetadata.contract)) {
+          if (!isAddress(collectionMetadata.contract)) {
             throw new Error('Invalid contract address');
           }
 
-          const contract = new ethers.Contract(
-            collectionMetadata.contract,
-            ERC721_ABI,
-            RPC_PROVIDER,
-          );
-          const tokenURI = await contract.tokenURI(tokenId);
+          const tokenURI = (await publicClient.readContract({
+            address: collectionMetadata.contract as `0x${string}`,
+            abi: ERC721_ABI,
+            functionName: 'tokenURI',
+            args: [BigInt(tokenId)],
+          })) as string;
 
           let resolvedUri = tokenURI;
 
@@ -112,7 +112,7 @@ export const TokenViewer: React.FC<{
           }
           return; // success – exit retry loop
         } catch (err) {
-          // Silently ignore the error and retry after a 100 mssecond delay
+          // Silently ignore the error and retry after a 100 ms delay
           if (!cancelled) {
             await delay(100);
           }
@@ -137,7 +137,7 @@ export const TokenViewer: React.FC<{
     );
 
     router.push(
-      `${pathname.substring(0, pathname.lastIndexOf('/'))}/${randomIndex.toString()}`,
+      `${pathname.substring(0, pathname.lastIndexOf('/'))}${baseRoute}/${randomIndex.toString()}`,
     );
   }, [collectionMetadata.minIndex, collectionMetadata.maxIndex]);
 
