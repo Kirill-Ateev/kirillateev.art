@@ -12,6 +12,7 @@ const nunito = localFont({
   src: './fonts/Nunito.ttf',
   variable: '--font-nunito',
   weight: '100 900',
+  preload: true,
 });
 
 export async function generateStaticParams() {
@@ -78,6 +79,10 @@ export default withLinguiLayout(async function RootLayout({
   return (
     <html lang={lang}>
       <head>
+        <link rel="preconnect" href="https://ipfs.io" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://vercel-rpc-view.vercel.app" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://og.rarible.com" />
         <GTM />
         <meta name="theme-color" content="#ffffff" />
       </head>

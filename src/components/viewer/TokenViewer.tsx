@@ -1,11 +1,12 @@
 'use client';
+import { ERC721_ABI, PUBLIC_CLIENT } from '@/utils/data';
 import { getRandomFromRange } from '@/utils/numbers';
 import { Trans } from '@lingui/react/macro';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useState } from 'react';
-import { createPublicClient, http, isAddress, parseAbi } from 'viem';
+import { isAddress } from 'viem';
 import collectionStyles from './../collections/styles.module.css';
 import styles from './styles.module.css';
 
@@ -25,13 +26,6 @@ type NFTMetadata = {
   name?: string;
   description?: string;
 };
-
-const ERC721_ABI = parseAbi([
-  'function tokenURI(uint256 tokenId) external view returns (string memory)',
-]);
-const publicClient = createPublicClient({
-  transport: http('https://vercel-rpc-view.vercel.app/api/view'),
-});
 
 export const TokenViewer: React.FC<{
   collectionMetadata: CollectionMetadata;
@@ -78,7 +72,7 @@ export const TokenViewer: React.FC<{
             throw new Error('Invalid contract address');
           }
 
-          const tokenURI = (await publicClient.readContract({
+          const tokenURI = (await PUBLIC_CLIENT.readContract({
             address: collectionMetadata.contract as `0x${string}`,
             abi: ERC721_ABI,
             functionName: 'tokenURI',

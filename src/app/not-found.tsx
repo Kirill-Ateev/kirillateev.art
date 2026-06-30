@@ -20,6 +20,10 @@ export default function NotFound() {
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://ipfs.io" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://vercel-rpc-view.vercel.app" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://og.rarible.com" />
         <GTM />
         <meta name="theme-color" content="#ffffff" />
       </head>
