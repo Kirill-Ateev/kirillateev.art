@@ -1,7 +1,7 @@
 import { GTM } from '@/components/GTM/GTM';
+import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Link from 'next/link';
-import type { Metadata } from 'next';
 import styles from './[lang]/page.module.css';
 import './globals.css';
 
