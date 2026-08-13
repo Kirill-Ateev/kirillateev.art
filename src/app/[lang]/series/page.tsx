@@ -9,21 +9,30 @@ import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
 import LazyHydrate from '@/components/layout/LazyHydrate';
 import { LangAlternates } from '@/components/seo/LangAlternates';
+import { langUrl, SITE, siteName } from '@/constants/site';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './../page.module.css';
 
-const titles: Record<string, string> = {
-  en: 'Series — Kirill Ateev',
-  ru: 'Серии — Кирилл Атеев',
+const pageTitles: Record<string, string> = {
+  en: 'Series',
+  ru: 'Серии',
 };
 
-const descriptions: Record<string, string> = {
+const pageDescriptions: Record<string, string> = {
   en: 'All series and collections of generative art by Kirill Ateev: Folds, Frames, City, Blinds, Window, Crosswalk, Lanes and more. Kinetic minimalism (kinimalism) on Ethereum.',
   ru: 'Все серии и коллекции генеративного искусства Кирилла Атеева: Folds, Frames, City, Blinds, Window, Crosswalk, Lanes и другие. Кинетический минимализм (кинимализм) на Ethereum.',
 };
+
+function pageTitle(lang: string) {
+  return `${pageTitles[lang] || pageTitles.en} — ${siteName(lang)}`;
+}
+
+function pageDescription(lang: string) {
+  return pageDescriptions[lang] || pageDescriptions.en;
+}
 
 export async function generateMetadata({
   params,
@@ -32,15 +41,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: titles[lang] || titles.en,
-    description: descriptions[lang] || descriptions.en,
+    title: pageTitle(lang),
+    description: pageDescription(lang),
     alternates: {
-      canonical: `https://kirillateev.art/${lang}/series`,
+      canonical: langUrl(lang, '/series'),
     },
     openGraph: {
-      title: titles[lang] || titles.en,
-      description: descriptions[lang] || descriptions.en,
-      url: `https://kirillateev.art/${lang}/series`,
+      title: pageTitle(lang),
+      description: pageDescription(lang),
+      url: langUrl(lang, '/series'),
       images: [
         {
           url: '/og/home.png',
@@ -52,8 +61,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: titles[lang] || titles.en,
-      description: descriptions[lang] || descriptions.en,
+      title: pageTitle(lang),
+      description: pageDescription(lang),
       images: ['/og/home.png'],
     },
   };
@@ -64,16 +73,16 @@ const seriesJsonLd = {
   '@type': 'ItemList',
   name: 'Series',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Selection', url: 'https://kirillateev.art/en/view/selection' },
-    { '@type': 'ListItem', position: 2, name: 'Folds', url: 'https://kirillateev.art/en/view/folds' },
-    { '@type': 'ListItem', position: 3, name: 'Frames', url: 'https://kirillateev.art/en/view/frames' },
-    { '@type': 'ListItem', position: 4, name: 'City', url: 'https://kirillateev.art/en/view/city' },
-    { '@type': 'ListItem', position: 5, name: 'Blinds', url: 'https://kirillateev.art/en/view/blinds' },
-    { '@type': 'ListItem', position: 6, name: 'Cocktail straws', url: 'https://kirillateev.art/en/view/cocktail-straws' },
-    { '@type': 'ListItem', position: 7, name: 'Window', url: 'https://kirillateev.art/en/view/window' },
-    { '@type': 'ListItem', position: 8, name: 'Crosswalk', url: 'https://kirillateev.art/en/view/crosswalk' },
-    { '@type': 'ListItem', position: 9, name: 'Lanes', url: 'https://kirillateev.art/en/view/lanes' },
-    { '@type': 'ListItem', position: 10, name: 'Attentionless', url: 'https://kirillateev.art/en/view/attentionless' },
+    { '@type': 'ListItem', position: 1, name: 'Selection', url: `${SITE}/en/view/selection` },
+    { '@type': 'ListItem', position: 2, name: 'Folds', url: `${SITE}/en/view/folds` },
+    { '@type': 'ListItem', position: 3, name: 'Frames', url: `${SITE}/en/view/frames` },
+    { '@type': 'ListItem', position: 4, name: 'City', url: `${SITE}/en/view/city` },
+    { '@type': 'ListItem', position: 5, name: 'Blinds', url: `${SITE}/en/view/blinds` },
+    { '@type': 'ListItem', position: 6, name: 'Cocktail straws', url: `${SITE}/en/view/cocktail-straws` },
+    { '@type': 'ListItem', position: 7, name: 'Window', url: `${SITE}/en/view/window` },
+    { '@type': 'ListItem', position: 8, name: 'Crosswalk', url: `${SITE}/en/view/crosswalk` },
+    { '@type': 'ListItem', position: 9, name: 'Lanes', url: `${SITE}/en/view/lanes` },
+    { '@type': 'ListItem', position: 10, name: 'Attentionless', url: `${SITE}/en/view/attentionless` },
   ],
 };
 

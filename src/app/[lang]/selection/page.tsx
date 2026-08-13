@@ -1,21 +1,25 @@
 import CollectionSelection from '@/components/collections/CollectionSelection';
 import Header from '@/components/header/Header';
 import { LangAlternates } from '@/components/seo/LangAlternates';
+import { langUrl, SITE, siteName } from '@/constants/site';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './../page.module.css';
 
-const titles: Record<string, string> = {
-  en: 'Selection — Kirill Ateev',
-  ru: 'Selection — Кирилл Атеев',
-};
-
-const descriptions: Record<string, string> = {
+const pageDescriptions: Record<string, string> = {
   en: 'A curated selection of individual works, triptychs, and small series by Kirill Ateev.',
   ru: 'Избранные индивидуальные работы, триптихи и малые серии Кирилла Атеева.',
 };
+
+function pageTitle(lang: string) {
+  return `Selection — ${siteName(lang)}`;
+}
+
+function pageDescription(lang: string) {
+  return pageDescriptions[lang] || pageDescriptions.en;
+}
 
 export async function generateMetadata({
   params,
@@ -24,15 +28,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: titles[lang] || titles.en,
-    description: descriptions[lang] || descriptions.en,
+    title: pageTitle(lang),
+    description: pageDescription(lang),
     alternates: {
-      canonical: `https://kirillateev.art/${lang}/selection`,
+      canonical: langUrl(lang, '/selection'),
     },
     openGraph: {
-      title: titles[lang] || titles.en,
-      description: descriptions[lang] || descriptions.en,
-      url: `https://kirillateev.art/${lang}/selection`,
+      title: pageTitle(lang),
+      description: pageDescription(lang),
+      url: langUrl(lang, '/selection'),
       images: [
         {
           url: '/og/selection.png',
@@ -44,8 +48,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: titles[lang] || titles.en,
-      description: descriptions[lang] || descriptions.en,
+      title: pageTitle(lang),
+      description: pageDescription(lang),
       images: ['/og/selection.png'],
     },
   };
@@ -56,10 +60,10 @@ const selectionJsonLd = {
   '@type': 'ItemList',
   name: 'Selection',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Berry #1', url: 'https://kirillateev.art/en/view/selection/1' },
-    { '@type': 'ListItem', position: 2, name: 'Berry #2', url: 'https://kirillateev.art/en/view/selection/2' },
-    { '@type': 'ListItem', position: 3, name: 'Field', url: 'https://kirillateev.art/en/view/selection/3' },
-    { '@type': 'ListItem', position: 4, name: 'Egg', url: 'https://kirillateev.art/en/view/selection/4' },
+    { '@type': 'ListItem', position: 1, name: 'Berry #1', url: `${SITE}/en/view/selection/1` },
+    { '@type': 'ListItem', position: 2, name: 'Berry #2', url: `${SITE}/en/view/selection/2` },
+    { '@type': 'ListItem', position: 3, name: 'Field', url: `${SITE}/en/view/selection/3` },
+    { '@type': 'ListItem', position: 4, name: 'Egg', url: `${SITE}/en/view/selection/4` },
   ],
 };
 

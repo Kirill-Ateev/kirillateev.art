@@ -1,15 +1,11 @@
 import Header from '@/components/header/Header';
 import { LangAlternates } from '@/components/seo/LangAlternates';
+import { langUrl, SITE, siteName } from '@/constants/site';
 import { messagesList } from '@/constants/text';
 import { withLinguiPage } from '@/withLingui';
 import type { Metadata } from 'next';
 import { locales } from '../../../../../lingui.config';
 import styles from '../../page.module.css';
-
-const siteNames: Record<string, string> = {
-  en: 'Kirill Ateev',
-  ru: 'Кирилл Атеев',
-};
 
 function excerpt(text: string): string {
   return text.replace(/\s+/g, ' ').trim().slice(0, 155);
@@ -36,22 +32,22 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, message } = await params;
   const msg = messagesList[message]?.[lang];
-  const siteName = siteNames[lang] || siteNames.en;
+  const name = siteName(lang);
   const title = msg
-    ? `${msg.title} — ${siteName}`
-    : `Messages — ${siteName}`;
+    ? `${msg.title} — ${name}`
+    : `Messages — ${name}`;
   const description = msg ? excerpt(msg.text) : undefined;
 
   return {
     title,
     description,
     alternates: {
-      canonical: `https://kirillateev.art/${lang}/messages/${message}`,
+      canonical: langUrl(lang, `/messages/${message}`),
     },
     openGraph: {
       title,
       description,
-      url: `https://kirillateev.art/${lang}/messages/${message}`,
+      url: langUrl(lang, `/messages/${message}`),
       images: [
         {
           url: '/og/home.png',
@@ -86,10 +82,10 @@ export default withLinguiPage(async function Message({
     inLanguage: lang,
     author: {
       '@type': 'Person',
-      name: siteNames[lang] || siteNames.en,
-      url: 'https://kirillateev.art',
+      name: siteName(lang),
+      url: `${SITE}/`,
     },
-    url: `https://kirillateev.art/${lang}/messages/${message}`,
+    url: langUrl(lang, `/messages/${message}`),
   };
 
   return (

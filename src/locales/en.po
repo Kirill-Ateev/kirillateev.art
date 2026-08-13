@@ -13,17 +13,14 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/viewer/ERC721Viewer.tsx:175
-#: src/components/viewer/TokenViewer.tsx:137
+#: src/components/viewer/TokenViewer.tsx:174
 msgid "(click for next)"
 msgstr "(click for next)"
 
 #. placeholder {0}: message?.[i18n.locale].text
 #. placeholder {0}: message?.[i18n.locale].title
-#. placeholder {0}: messagesList[message]?.[i18n.locale].title
-#: src/app/[lang]/messages/[message]/page.tsx:36
-#: src/app/[lang]/messages/page.tsx:36
-#: src/app/[lang]/messages/page.tsx:42
+#: src/app/[lang]/messages/page.tsx:79
+#: src/app/[lang]/messages/page.tsx:85
 msgid "{0}"
 msgstr "{0}"
 
@@ -114,7 +111,7 @@ msgstr "A word-generative collection, a unique pattern of character states from 
 #~ msgid "Ask me a question in the community"
 #~ msgstr "Ask me a question in the community"
 
-#: src/components/header/Header.tsx:22
+#: src/components/header/Header.tsx:23
 msgid "Community"
 msgstr "Community"
 
@@ -172,9 +169,9 @@ msgstr "Ethereum - November 2025"
 msgid "Ethereum - September 2025"
 msgstr "Ethereum - September 2025"
 
-#: src/app/[lang]/page.tsx:28
-#: src/app/[lang]/selection/page.tsx:20
-#: src/app/[lang]/series/page.tsx:28
+#: src/app/[lang]/page.tsx:82
+#: src/app/[lang]/selection/page.tsx:87
+#: src/app/[lang]/series/page.tsx:106
 msgid "Hi, I'm Kirill Ateev, an artist working with code."
 msgstr "Hi, I'm Kirill Ateev, an artist working with code."
 
@@ -197,27 +194,27 @@ msgstr "Images and metadata stored on IPFS."
 
 #: src/app/[lang]/layout.tsx:55
 #: src/app/[lang]/layout.tsx:77
-msgid "Kirill Ateev"
-msgstr "Kirill Ateev"
+#~ msgid "Kirill Ateev"
+#~ msgstr "Kirill Ateev"
 
 #: src/app/[lang]/layout.tsx:41
 #: src/app/[lang]/layout.tsx:42
 #: src/app/[lang]/layout.tsx:62
 #: src/app/[lang]/layout.tsx:84
-msgid "Kirill Ateev - Artist"
-msgstr "Kirill Ateev - Artist"
+#~ msgid "Kirill Ateev - Artist"
+#~ msgstr "Kirill Ateev - Artist"
 
 #: src/app/[lang]/layout.tsx:51
-msgid "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
-msgstr "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
+#~ msgid "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
+#~ msgstr "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
 
 #: src/app/[lang]/layout.tsx:75
 #: src/app/[lang]/layout.tsx:98
-msgid "Kirill Ateev's artwork"
-msgstr "Kirill Ateev's artwork"
+#~ msgid "Kirill Ateev's artwork"
+#~ msgstr "Kirill Ateev's artwork"
 
-#: src/app/[lang]/messages/page.tsx:16
-#: src/components/header/Header.tsx:16
+#: src/app/[lang]/messages/page.tsx:59
+#: src/components/header/Header.tsx:17
 msgid "Messages"
 msgstr "Messages"
 
@@ -225,29 +222,29 @@ msgstr "Messages"
 msgid "Polygon - Feb. 2023"
 msgstr "Polygon - Feb. 2023"
 
-#: src/app/[lang]/community/page.tsx:14
+#: src/app/[lang]/community/page.tsx:57
 msgid "Recent Community Work"
 msgstr "Recent Community Work"
 
-#: src/app/[lang]/page.tsx:25
-#: src/app/[lang]/selection/page.tsx:17
-#: src/app/[lang]/series/page.tsx:25
+#: src/app/[lang]/page.tsx:79
+#: src/app/[lang]/selection/page.tsx:84
+#: src/app/[lang]/series/page.tsx:103
 msgid "Recent Work"
 msgstr "Recent Work"
 
-#: src/app/[lang]/page.tsx:43
-#: src/app/[lang]/selection/page.tsx:35
-#: src/app/[lang]/series/page.tsx:43
+#: src/app/[lang]/page.tsx:97
+#: src/app/[lang]/selection/page.tsx:102
+#: src/app/[lang]/series/page.tsx:121
 msgid "Selection"
 msgstr "Selection"
 
-#: src/app/[lang]/page.tsx:37
-#: src/app/[lang]/selection/page.tsx:29
-#: src/app/[lang]/series/page.tsx:37
+#: src/app/[lang]/page.tsx:91
+#: src/app/[lang]/selection/page.tsx:96
+#: src/app/[lang]/series/page.tsx:115
 msgid "Series"
 msgstr "Series"
 
-#: src/app/[lang]/messages/page.tsx:19
+#: src/app/[lang]/messages/page.tsx:62
 msgid "Some messages for you"
 msgstr "Some messages for you"
 
@@ -280,8 +277,8 @@ msgstr "View collection >"
 #: src/app/[lang]/layout.tsx:45
 #: src/app/[lang]/layout.tsx:65
 #: src/app/[lang]/layout.tsx:88
-msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
-msgstr "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
+#~ msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
+#~ msgstr "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
 
 #: src/components/collections/CollectionNights.tsx:103
 #~ msgid "Your browser does not support the video tag."

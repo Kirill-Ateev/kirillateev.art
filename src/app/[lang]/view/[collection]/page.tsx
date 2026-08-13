@@ -2,17 +2,13 @@ import Header from '@/components/header/Header';
 import { LangAlternates } from '@/components/seo/LangAlternates';
 import { TokenViewer } from '@/components/viewer/TokenViewer';
 import { collectionsData } from '@/constants/collections';
+import { langUrl, SITE, siteName } from '@/constants/site';
 import { getRandomFromRange } from '@/utils/numbers';
 import { withLinguiPage } from '@/withLingui';
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { locales } from '../../../../../lingui.config';
 import styles from '../../page.module.css';
-
-const siteNames: Record<string, string> = {
-  en: 'Kirill Ateev',
-  ru: 'Кирилл Атеев',
-};
 
 export async function generateStaticParams() {
   const paths: { collection: string; lang: string }[] = [];
@@ -37,11 +33,11 @@ export async function generateMetadata({
   const collectionMeta = collectionsData[collection];
   if (!collectionMeta) return {};
 
-  const siteName = siteNames[lang] || siteNames.en;
+  const name = siteName(lang);
   const description =
     collectionMeta.descriptions?.[lang] || collectionMeta.description;
-  const title = `${collectionMeta.name} by ${siteName}`;
-  const url = `https://kirillateev.art/${lang}/view/${collection}`;
+  const title = `${collectionMeta.name} by ${name}`;
+  const url = langUrl(lang, `/view/${collection}`);
 
   return {
     title,
@@ -54,7 +50,7 @@ export async function generateMetadata({
       description,
       url,
       type: 'website',
-      siteName,
+      siteName: name,
       images: [
         {
           url: `/og/${collection}.png`,
@@ -82,7 +78,7 @@ export default withLinguiPage(async function CollectionViewer({
   const collectionMeta = collectionsData[collection];
   if (!collectionMeta) return null;
 
-  const siteName = siteNames[lang] || siteNames.en;
+  const name = siteName(lang);
   const description =
     collectionMeta.descriptions?.[lang] || collectionMeta.description;
 
@@ -93,14 +89,14 @@ export default withLinguiPage(async function CollectionViewer({
       {
         '@type': 'ListItem',
         position: 1,
-        name: siteName,
-        item: 'https://kirillateev.art/',
+        name,
+        item: `${SITE}/`,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: collectionMeta.name,
-        item: `https://kirillateev.art/${lang}/view/${collection}`,
+        item: langUrl(lang, `/view/${collection}`),
       },
     ],
   };
@@ -108,14 +104,14 @@ export default withLinguiPage(async function CollectionViewer({
   const collectionJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `${collectionMeta.name} by ${siteName}`,
+    name: `${collectionMeta.name} by ${name}`,
     description,
-    url: `https://kirillateev.art/${lang}/view/${collection}`,
+    url: langUrl(lang, `/view/${collection}`),
     inLanguage: lang,
     isPartOf: {
       '@type': 'WebSite',
-      name: siteName,
-      url: 'https://kirillateev.art/',
+      name,
+      url: `${SITE}/`,
     },
   };
 

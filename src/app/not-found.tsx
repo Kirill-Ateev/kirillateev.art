@@ -1,4 +1,5 @@
 import { GTM } from '@/components/GTM/GTM';
+import { siteName } from '@/constants/site';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Link from 'next/link';
@@ -12,7 +13,7 @@ const nunito = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Not Found — Kirill Ateev',
+  title: `Not Found — ${siteName('en')}`,
   robots: 'noindex',
 };
 

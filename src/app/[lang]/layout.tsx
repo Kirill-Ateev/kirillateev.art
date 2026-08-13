@@ -1,6 +1,13 @@
 import { allMessages } from '@/appRouterI18n';
 import { GTM } from '@/components/GTM/GTM';
 import { LinguiClientProvider } from '@/components/lingui/LinguiClientProvider';
+import {
+  homepageDescription,
+  homepageTitle,
+  langUrl,
+  SITE,
+  siteName,
+} from '@/constants/site';
 import { withLinguiLayout } from '@/withLingui';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
@@ -19,50 +26,35 @@ export async function generateStaticParams() {
   return linguiConfig.locales.map((lang) => ({ lang }));
 }
 
-const siteNames: Record<string, string> = {
-  en: 'Kirill Ateev',
-  ru: 'Кирилл Атеев',
-};
-
-const titles: Record<string, string> = {
-  en: 'Kirill Ateev - Artist',
-  ru: 'Кирилл Атеев — Художник',
-};
-
-const descriptions: Record<string, string> = {
-  en: 'Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more.',
-  ru: 'Добро пожаловать на официальный сайт Кирилла Атеева, современного художника, известного своими уникальными генеративными произведениями.',
-};
-
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const title = titles[lang] || titles.en;
-  const description = descriptions[lang] || descriptions.en;
-  const siteName = siteNames[lang] || siteNames.en;
+  const title = homepageTitle(lang);
+  const description = homepageDescription(lang);
+  const name = siteName(lang);
 
   return {
     title,
     description,
-    metadataBase: new URL('https://kirillateev.art'),
+    metadataBase: new URL(SITE),
     alternates: {
-      canonical: `https://kirillateev.art/${lang}`,
+      canonical: langUrl(lang),
     },
     openGraph: {
       title,
       description,
-      url: `https://kirillateev.art/${lang}`,
-      siteName,
+      url: langUrl(lang),
+      siteName: name,
       type: 'website',
       images: [
         {
           url: '/og/home.png',
           width: 1200,
           height: 630,
-          alt: `${siteName} — Artist`,
+          alt: `${name} — Artist`,
         },
       ],
     },

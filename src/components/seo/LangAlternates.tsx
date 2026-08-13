@@ -1,6 +1,5 @@
+import { SITE, langUrl } from '@/constants/site';
 import { locales } from '../../../lingui.config';
-
-const SITE = 'https://kirillateev.art';
 
 export function LangAlternates({ path = '' }: { path?: string }) {
   return (
@@ -10,7 +9,7 @@ export function LangAlternates({ path = '' }: { path?: string }) {
           key={lang}
           rel="alternate"
           hrefLang={lang}
-          href={`${SITE}/${lang}${path}`}
+          href={langUrl(lang, path)}
         />
       ))}
       <link rel="alternate" hrefLang="x-default" href={`${SITE}/`} />

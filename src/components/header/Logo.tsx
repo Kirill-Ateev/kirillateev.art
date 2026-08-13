@@ -1,7 +1,7 @@
 'use client';
 import { isLightColor } from '@/utils/color';
-import { useCallback, useState } from 'react';
-import LogoIcon from '../../../public/images/icons/logo.svg';
+import { useCallback, useEffect, useState } from 'react';
+import LogoIcon from '../../../public/icons/logo.svg';
 import styles from './styles.module.css';
 
 export default function Logo() {
@@ -13,9 +13,14 @@ export default function Logo() {
       .padStart(6, '0')}`;
   }, []);
 
+  // Рандомный цвет применяется только на клиенте после гидрации,
+  // поэтому SSR и первый клиентский рендер совпадают (оба чёрные)
+  useEffect(() => {
+    setColor(generateRandomColor());
+  }, [generateRandomColor]);
+
   const handleHover = () => {
-    const newColor = generateRandomColor();
-    setColor(newColor);
+    setColor(generateRandomColor());
   };
 
   // Если случайный цвет слишком светлый, делаем «белые» области чёрными

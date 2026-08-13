@@ -2,6 +2,7 @@ import Header from '@/components/header/Header';
 import { LangAlternates } from '@/components/seo/LangAlternates';
 import { TokenViewer } from '@/components/viewer/TokenViewer';
 import { collectionsData } from '@/constants/collections';
+import { langUrl, SITE, siteName } from '@/constants/site';
 import { withLinguiPage } from '@/withLingui';
 import type { Metadata } from 'next';
 import { existsSync } from 'node:fs';
@@ -9,11 +10,6 @@ import { resolve } from 'node:path';
 import { Suspense } from 'react';
 import { locales } from '../../../../../../lingui.config';
 import styles from '../../../page.module.css';
-
-const siteNames: Record<string, string> = {
-  en: 'Kirill Ateev',
-  ru: 'Кирилл Атеев',
-};
 
 export async function generateStaticParams() {
   const paths: { collection: string; lang: string; tokenId: string }[] = [];
@@ -48,12 +44,12 @@ export async function generateMetadata({
   const collectionMeta = collectionsData[collection];
   if (!collectionMeta) return {};
 
-  const siteName = siteNames[lang] || siteNames.en;
+  const name = siteName(lang);
   const collectionDescription =
     collectionMeta.descriptions?.[lang] || collectionMeta.description;
-  const title = `${collectionMeta.name} #${tokenId} — ${siteName}`;
+  const title = `${collectionMeta.name} #${tokenId} — ${name}`;
   const description = `${collectionMeta.name} #${tokenId} — ${collectionDescription}`;
-  const url = `${SITE}/${lang}/view/${collection}/${tokenId}`;
+  const url = langUrl(lang, `/view/${collection}/${tokenId}`);
 
   return {
     title,
@@ -66,7 +62,7 @@ export async function generateMetadata({
       description,
       url,
       type: 'website',
-      siteName,
+      siteName: name,
       images: [
         {
           url: `/og/${collection}.png`,
@@ -98,10 +94,10 @@ export default withLinguiPage(async function TokenPage({
   const collectionMeta = collectionsData[collection];
   if (!collectionMeta) return null;
 
-  const siteName = siteNames[lang] || siteNames.en;
+  const name = siteName(lang);
   const collectionDescription =
     collectionMeta.descriptions?.[lang] || collectionMeta.description;
-  const tokenUrl = `${SITE}/${lang}/view/${collection}/${tokenId}`;
+  const tokenUrl = langUrl(lang, `/view/${collection}/${tokenId}`);
 
   const localImagePath =
     collectionMeta.imageExt &&
@@ -124,14 +120,14 @@ export default withLinguiPage(async function TokenPage({
       {
         '@type': 'ListItem',
         position: 1,
-        name: siteName,
+        name,
         item: `${SITE}/`,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: collectionMeta.name,
-        item: `${SITE}/${lang}/view/${collection}`,
+        item: langUrl(lang, `/view/${collection}`),
       },
       {
         '@type': 'ListItem',
@@ -144,7 +140,7 @@ export default withLinguiPage(async function TokenPage({
 
   const artistJsonLd = {
     '@type': 'Person',
-    name: 'Kirill Ateev',
+    name: siteName('en'),
     url: `${SITE}/`,
     sameAs: ['https://t.me/kirill_ateev_art'],
   };
@@ -165,7 +161,7 @@ export default withLinguiPage(async function TokenPage({
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Person',
-        name: 'Kirill Ateev',
+        name: siteName('en'),
       },
     },
   };

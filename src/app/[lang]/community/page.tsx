@@ -1,15 +1,20 @@
 import Header from '@/components/header/Header';
 import { LangAlternates } from '@/components/seo/LangAlternates';
+import { langUrl, siteName } from '@/constants/site';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from '../page.module.css';
 
-const titles: Record<string, string> = {
-  en: 'Community — Kirill Ateev',
-  ru: 'Сообщество — Кирилл Атеев',
+const pageTitles: Record<string, string> = {
+  en: 'Community',
+  ru: 'Сообщество',
 };
+
+function pageTitle(lang: string) {
+  return `${pageTitles[lang] || pageTitles.en} — ${siteName(lang)}`;
+}
 
 export async function generateMetadata({
   params,
@@ -18,13 +23,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: titles[lang] || titles.en,
+    title: pageTitle(lang),
     alternates: {
-      canonical: `https://kirillateev.art/${lang}/community`,
+      canonical: langUrl(lang, '/community'),
     },
     openGraph: {
-      title: titles[lang] || titles.en,
-      url: `https://kirillateev.art/${lang}/community`,
+      title: pageTitle(lang),
+      url: langUrl(lang, '/community'),
       images: [
         {
           url: '/og/home.png',

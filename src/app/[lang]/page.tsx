@@ -9,6 +9,7 @@ import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
 import LazyHydrate from '@/components/layout/LazyHydrate';
 import { LangAlternates } from '@/components/seo/LangAlternates';
+import { langUrl, SITE, siteName } from '@/constants/site';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import type { Metadata } from 'next';
@@ -23,16 +24,16 @@ export async function generateMetadata({
   const { lang } = await params;
   return {
     alternates: {
-      canonical: `https://kirillateev.art/${lang}`,
+      canonical: langUrl(lang),
     },
     openGraph: {
-      url: `https://kirillateev.art/${lang}`,
+      url: langUrl(lang),
       images: [
         {
           url: '/og/home.png',
           width: 1200,
           height: 630,
-          alt: 'Kirill Ateev — Artist',
+          alt: `${siteName(lang)} — Artist`,
         },
       ],
     },
@@ -44,17 +45,17 @@ const siteJsonLd = {
   '@graph': [
     {
       '@type': 'WebSite',
-      '@id': 'https://kirillateev.art/#website',
-      url: 'https://kirillateev.art/',
-      name: 'Kirill Ateev',
+      '@id': `${SITE}/#website`,
+      url: `${SITE}/`,
+      name: siteName('en'),
       inLanguage: ['en', 'ru'],
-      publisher: { '@id': 'https://kirillateev.art/#artist' },
+      publisher: { '@id': `${SITE}/#artist` },
     },
     {
       '@type': 'Person',
-      '@id': 'https://kirillateev.art/#artist',
-      name: 'Kirill Ateev',
-      url: 'https://kirillateev.art/',
+      '@id': `${SITE}/#artist`,
+      name: siteName('en'),
+      url: `${SITE}/`,
       jobTitle: 'Artist',
       sameAs: ['https://t.me/kirill_ateev_art'],
     },
