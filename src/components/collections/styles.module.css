@@ -234,6 +234,7 @@
 
 .link:hover {
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .item_title {

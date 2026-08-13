@@ -36,10 +36,12 @@
 
 .menu_item:hover {
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .menu_item.active {
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .message {
