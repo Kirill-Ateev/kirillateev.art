@@ -1,4 +1,5 @@
 import Header from '@/components/header/Header';
+import { LangAlternates } from '@/components/seo/LangAlternates';
 import { messagesList } from '@/constants/text';
 import { withLinguiPage } from '@/withLingui';
 import { Trans, useLingui } from '@lingui/react/macro';
@@ -25,6 +26,18 @@ export async function generateMetadata({
     openGraph: {
       title: titles[lang] || titles.en,
       url: `https://kirillateev.art/${lang}/messages`,
+      images: [
+        {
+          url: '/og/home.png',
+          width: 1200,
+          height: 630,
+          alt: 'Messages — Kirill Ateev',
+        },
+      ],
+    },
+    robots: {
+      index: false,
+      follow: false,
     },
   };
 }
@@ -33,12 +46,13 @@ export default withLinguiPage(function Messages() {
   const { i18n } = useLingui();
   return (
     <div>
+      <LangAlternates path="/messages" />
       <Header />
       <main className={styles.main}>
         <section className={styles.container}>
-          <div className={styles.subtitle}>
+          <h1 className={styles.subtitle}>
             <Trans>Messages</Trans>
-          </div>
+          </h1>
           <div className={styles.text_secondary}>
             <Trans>Some messages for you</Trans>
           </div>
@@ -56,11 +70,11 @@ export default withLinguiPage(function Messages() {
                     message?.[i18n.locale].key
                   }`}
                 >
-                  <div className={styles.subtitle}>
+                  <h2 className={styles.subtitle}>
                     <Trans id={message?.[i18n.locale].title}>
                       {message?.[i18n.locale].title}
                     </Trans>
-                  </div>
+                  </h2>
                 </Link>
                 <div className={styles.text_secondary}>
                   <Trans id={message?.[i18n.locale].text}>

@@ -8,6 +8,7 @@ import CollectionFrames from '@/components/collections/CollectionFrames';
 import CollectionWindow from '@/components/collections/CollectionWindow';
 import Header from '@/components/header/Header';
 import LazyHydrate from '@/components/layout/LazyHydrate';
+import { LangAlternates } from '@/components/seo/LangAlternates';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import type { Metadata } from 'next';
@@ -26,26 +27,61 @@ export async function generateMetadata({
     },
     openGraph: {
       url: `https://kirillateev.art/${lang}`,
+      images: [
+        {
+          url: '/og/home.png',
+          width: 1200,
+          height: 630,
+          alt: 'Kirill Ateev — Artist',
+        },
+      ],
     },
   };
 }
+
+const siteJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://kirillateev.art/#website',
+      url: 'https://kirillateev.art/',
+      name: 'Kirill Ateev',
+      inLanguage: ['en', 'ru'],
+      publisher: { '@id': 'https://kirillateev.art/#artist' },
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://kirillateev.art/#artist',
+      name: 'Kirill Ateev',
+      url: 'https://kirillateev.art/',
+      jobTitle: 'Artist',
+      sameAs: ['https://t.me/kirill_ateev_art'],
+    },
+  ],
+};
 
 export default withLinguiPage(async function Home(props) {
   const params = await props.params;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+      />
+      <LangAlternates />
       <Header />
       <main>
         <section className={styles.container}>
           <div className={styles.subtitle}>
             <Trans>Recent Work</Trans>
           </div>
-          <div className={styles.text_secondary}>
+          <h1 className={styles.text_secondary}>
             <Trans>
               Hi, I&apos;m Kirill Ateev, an artist working with code.
             </Trans>
-          </div>
+          </h1>
           <div className={styles.tab_container}>
             <Link
               href={`/${params.lang}/series`}

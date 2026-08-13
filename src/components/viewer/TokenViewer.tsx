@@ -31,7 +31,8 @@ export const TokenViewer: React.FC<{
   collectionMetadata: CollectionMetadata;
   tokenId: number;
   baseRoute?: string;
-}> = ({ collectionMetadata, tokenId, baseRoute = '' }) => {
+  showTitle?: boolean;
+}> = ({ collectionMetadata, tokenId, baseRoute = '', showTitle = true }) => {
   const router = useRouter();
   const pathname = usePathname();
   const [metadata, setMetadata] = useState<NFTMetadata | null>(null);
@@ -153,9 +154,19 @@ export const TokenViewer: React.FC<{
                 : styles.viewer_title_padded
             }
           >
-            <div>
-              {collectionMetadata.name} #{tokenId}
-            </div>
+            {showTitle && (
+              <h1
+                style={{
+                  margin: 0,
+                  fontSize: 'inherit',
+                  fontWeight: 'inherit',
+                  width: '100%',
+                  textAlign: 'center',
+                }}
+              >
+                {collectionMetadata.name} #{tokenId}
+              </h1>
+            )}
             <div
               className={`${styles.absolute_subtext} ${collectionStyles.text_secondary}`}
               onClick={handleClick}

@@ -1,4 +1,5 @@
 import Header from '@/components/header/Header';
+import { LangAlternates } from '@/components/seo/LangAlternates';
 import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import type { Metadata } from 'next';
@@ -24,6 +25,18 @@ export async function generateMetadata({
     openGraph: {
       title: titles[lang] || titles.en,
       url: `https://kirillateev.art/${lang}/community`,
+      images: [
+        {
+          url: '/og/home.png',
+          width: 1200,
+          height: 630,
+          alt: 'Community — Kirill Ateev',
+        },
+      ],
+    },
+    robots: {
+      index: false,
+      follow: false,
     },
   };
 }
@@ -31,12 +44,13 @@ export async function generateMetadata({
 export default withLinguiPage(function Community() {
   return (
     <div>
+      <LangAlternates path="/community" />
       <Header />
       <main className={styles.main}>
         <section className={styles.container}>
-          <div className={styles.subtitle}>
+          <h1 className={styles.subtitle}>
             <Trans>Recent Community Work</Trans>
-          </div>
+          </h1>
           <Link
             className={`${styles.menu_item} ${styles.text_secondary}`}
             target="_blank"

@@ -28,7 +28,7 @@ export default function CollectionCity() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>City</div>
+                <h2 className={styles.title}>City</h2>
               </span>
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - November 2025</Trans>

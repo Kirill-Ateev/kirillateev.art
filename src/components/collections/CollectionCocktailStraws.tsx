@@ -28,7 +28,7 @@ export default function CollectionCocktailStraws() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Cocktail straws</div>
+                <h2 className={styles.title}>Cocktail straws</h2>
               </span>
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - September 2025</Trans>
@@ -78,7 +78,7 @@ export default function CollectionCocktailStraws() {
               className={`${styles.embla__slide} ${styles.card} ${styles.card_nights}`}
             >
               <Image
-                src={`${basePath}/images/cocktailStraws/${imageId}.svg`}
+                src={`${basePath}/images/cocktail-straws/${imageId}.svg`}
                 alt={`Cocktail straws #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}

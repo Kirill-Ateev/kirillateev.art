@@ -27,7 +27,7 @@ export default function CollectionLanes() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Lanes</div>
+                <h2 className={styles.title}>Lanes</h2>
               </span>
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - April 2025</Trans>

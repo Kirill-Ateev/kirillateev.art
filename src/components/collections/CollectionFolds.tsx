@@ -28,7 +28,7 @@ export default function CollectionFolds() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Folds</div>
+                <h2 className={styles.title}>Folds</h2>
               </span>
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - January 2026</Trans>

@@ -28,7 +28,7 @@ export default function CollectionSelection() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Selection</div>
+                <h2 className={styles.title}>Selection</h2>
               </span>
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - March-June 2026</Trans>

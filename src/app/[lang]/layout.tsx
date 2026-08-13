@@ -19,7 +19,10 @@ export async function generateStaticParams() {
   return linguiConfig.locales.map((lang) => ({ lang }));
 }
 
-const siteName = 'Kirill Ateev';
+const siteNames: Record<string, string> = {
+  en: 'Kirill Ateev',
+  ru: 'Кирилл Атеев',
+};
 
 const titles: Record<string, string> = {
   en: 'Kirill Ateev - Artist',
@@ -39,6 +42,7 @@ export async function generateMetadata({
   const { lang } = await params;
   const title = titles[lang] || titles.en;
   const description = descriptions[lang] || descriptions.en;
+  const siteName = siteNames[lang] || siteNames.en;
 
   return {
     title,
@@ -46,10 +50,6 @@ export async function generateMetadata({
     metadataBase: new URL('https://kirillateev.art'),
     alternates: {
       canonical: `https://kirillateev.art/${lang}`,
-      languages: {
-        en: 'https://kirillateev.art/en',
-        ru: 'https://kirillateev.art/ru',
-      },
     },
     openGraph: {
       title,
@@ -57,11 +57,20 @@ export async function generateMetadata({
       url: `https://kirillateev.art/${lang}`,
       siteName,
       type: 'website',
+      images: [
+        {
+          url: '/og/home.png',
+          width: 1200,
+          height: 630,
+          alt: `${siteName} — Artist`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: ['/og/home.png'],
     },
     robots: 'index, follow',
   };
@@ -83,6 +92,11 @@ export default withLinguiLayout(async function RootLayout({
         <link rel="preconnect" href="https://vercel-rpc-view.vercel.app" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://og.rarible.com" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/icons/icon-192.png"
+        />
         <GTM />
         <meta name="theme-color" content="#ffffff" />
       </head>

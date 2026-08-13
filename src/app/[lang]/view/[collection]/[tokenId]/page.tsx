@@ -1,11 +1,19 @@
 import Header from '@/components/header/Header';
+import { LangAlternates } from '@/components/seo/LangAlternates';
 import { TokenViewer } from '@/components/viewer/TokenViewer';
 import { collectionsData } from '@/constants/collections';
 import { withLinguiPage } from '@/withLingui';
 import type { Metadata } from 'next';
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { Suspense } from 'react';
 import { locales } from '../../../../../../lingui.config';
 import styles from '../../../page.module.css';
+
+const siteNames: Record<string, string> = {
+  en: 'Kirill Ateev',
+  ru: 'Кирилл Атеев',
+};
 
 export async function generateStaticParams() {
   const paths: { collection: string; lang: string; tokenId: string }[] = [];
@@ -40,9 +48,12 @@ export async function generateMetadata({
   const collectionMeta = collectionsData[collection];
   if (!collectionMeta) return {};
 
-  const title = `${collectionMeta.name} #${tokenId} — Kirill Ateev`;
-  const description = collectionMeta.description;
-  const url = `https://kirillateev.art/${lang}/view/${collection}/${tokenId}`;
+  const siteName = siteNames[lang] || siteNames.en;
+  const collectionDescription =
+    collectionMeta.descriptions?.[lang] || collectionMeta.description;
+  const title = `${collectionMeta.name} #${tokenId} — ${siteName}`;
+  const description = `${collectionMeta.name} #${tokenId} — ${collectionDescription}`;
+  const url = `${SITE}/${lang}/view/${collection}/${tokenId}`;
 
   return {
     title,
@@ -55,12 +66,21 @@ export async function generateMetadata({
       description,
       url,
       type: 'website',
-      siteName: 'Kirill Ateev',
+      siteName,
+      images: [
+        {
+          url: `/og/${collection}.png`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: [`/og/${collection}.png`],
     },
   };
 }
@@ -76,21 +96,69 @@ export default withLinguiPage(async function TokenPage({
 }) {
   const { lang, collection, tokenId } = await params;
   const collectionMeta = collectionsData[collection];
+  if (!collectionMeta) return null;
 
-  const tokenUrl = `https://kirillateev.art/${lang}/view/${collection}/${tokenId}`;
+  const siteName = siteNames[lang] || siteNames.en;
+  const collectionDescription =
+    collectionMeta.descriptions?.[lang] || collectionMeta.description;
+  const tokenUrl = `${SITE}/${lang}/view/${collection}/${tokenId}`;
 
-  const jsonLd = {
+  const localImagePath =
+    collectionMeta.imageExt &&
+    existsSync(
+      resolve(
+        process.cwd(),
+        'public',
+        'images',
+        collection,
+        `${tokenId}.${collectionMeta.imageExt}`,
+      ),
+    )
+      ? `${SITE}/images/${collection}/${tokenId}.${collectionMeta.imageExt}`
+      : undefined;
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: siteName,
+        item: `${SITE}/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: collectionMeta.name,
+        item: `${SITE}/${lang}/view/${collection}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `${collectionMeta.name} #${tokenId}`,
+        item: tokenUrl,
+      },
+    ],
+  };
+
+  const artistJsonLd = {
+    '@type': 'Person',
+    name: 'Kirill Ateev',
+    url: `${SITE}/`,
+    sameAs: ['https://t.me/kirill_ateev_art'],
+  };
+
+  const artworkJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'VisualArtwork',
     name: `${collectionMeta.name} #${tokenId}`,
-    description: `${collectionMeta.name} #${tokenId} — ${collectionMeta.description}`,
+    description: `${collectionMeta.name} #${tokenId} — ${collectionDescription}`,
+    artform: 'SVG',
     artMedium: 'Generative algorithm (on-chain SVG)',
-    artform: 'Rarible',
-    artist: {
-      '@type': 'Person',
-      name: 'Kirill Ateev',
-      url: 'https://kirillateev.art',
-    },
+    ...(localImagePath ? { image: localImagePath } : {}),
+    artist: artistJsonLd,
+    creator: artistJsonLd,
     url: tokenUrl,
     offers: {
       '@type': 'Offer',
@@ -106,8 +174,13 @@ export default withLinguiPage(async function TokenPage({
     <div>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(artworkJsonLd) }}
+      />
+      <LangAlternates path={`/view/${collection}/${tokenId}`} />
       <Header />
       <main className={styles.main}>
         <Suspense>

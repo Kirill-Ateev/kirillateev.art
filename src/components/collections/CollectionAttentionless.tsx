@@ -27,7 +27,7 @@ export default function CollectionAttentionless() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Attentionless</div>
+                <h2 className={styles.title}>Attentionless</h2>
               </span>
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - March 2025</Trans>

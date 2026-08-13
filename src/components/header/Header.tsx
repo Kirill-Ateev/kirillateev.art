@@ -2,6 +2,7 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import Link from 'next/link';
 import styles from '../../app/[lang]/page.module.css';
+import { Switcher } from '../lingui/Switcher';
 import Logo from './Logo';
 
 export default function Header() {
@@ -21,6 +22,7 @@ export default function Header() {
         >
           <Trans>Community</Trans>
         </Link>
+        <Switcher />
       </div>
     </header>
   );

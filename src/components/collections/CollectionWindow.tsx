@@ -28,7 +28,7 @@ export default function CollectionWindow() {
           <div className={`${styles.embla__slide} ${styles.card_first}`}>
             <div>
               <span className="embla-no-drag">
-                <div className={styles.title}>Window</div>
+                <h2 className={styles.title}>Window</h2>
               </span>
               <div className={styles.text_secondary}>
                 <Trans>Ethereum - August 2025</Trans>
