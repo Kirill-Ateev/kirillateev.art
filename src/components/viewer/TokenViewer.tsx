@@ -160,7 +160,6 @@ export const TokenViewer: React.FC<{
                   margin: 0,
                   fontSize: 'inherit',
                   fontWeight: 'inherit',
-                  width: '100%',
                   textAlign: 'center',
                 }}
               >
