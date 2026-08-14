@@ -9,7 +9,11 @@ export default function Header() {
   const { i18n } = useLingui();
   return (
     <header className={styles.header}>
-      <Link className={styles.logo} href={`/${i18n.locale}`}>
+      <Link
+        className={styles.logo}
+        href={`/${i18n.locale}`}
+        aria-label="Kirill Ateev Art Logo"
+      >
         <Logo />
       </Link>
       <div className={styles.menu_container}>

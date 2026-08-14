@@ -10,7 +10,19 @@ import Link from 'next/link';
 import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
-export default function CollectionFolds() {
+type CollectionProps = {
+  loading: 'eager' | 'lazy';
+  decoding: 'auto' | 'sync' | 'async';
+  priority: boolean;
+  fetchPriority: 'high' | 'low' | 'auto' | undefined;
+};
+
+export default function CollectionFolds({
+  loading,
+  decoding,
+  priority,
+  fetchPriority,
+}: CollectionProps) {
   const { i18n } = useLingui();
 
   // Инициализируем embla-carousel с опциями "dragFree" (свободное перетаскивание)
@@ -80,6 +92,10 @@ export default function CollectionFolds() {
                 alt={`Folds #${imageId} by Kirill Ateev`}
                 width={512}
                 height={512}
+                loading={loading}
+                decoding={decoding}
+                priority={priority}
+                fetchPriority={fetchPriority}
               />
               <div className={`${styles.text_secondary} ${styles.item_title}`}>
                 #{imageId}

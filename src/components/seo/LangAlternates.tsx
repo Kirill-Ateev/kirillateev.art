@@ -7,7 +7,7 @@ export function LangAlternates({ path = '' }: { path?: string }) {
       {locales.map((lang) => (
         <link
           key={lang}
-          rel="alternate"
+          rel={lang === 'en' ? 'canonical' : 'alternate'}
           hrefLang={lang}
           href={langUrl(lang, path)}
         />

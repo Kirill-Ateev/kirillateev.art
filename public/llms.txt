@@ -1,36 +1,33 @@
-# LLM.txt — Kirill Ateev Art (kirillateev.art)
+# Kirill Ateev Art — kirillateev.art
 
-## About the Artist
-This is the personal website of artist Kirill Ateev, who works with code in the style of kinetic minimalism. All works presented are animated vector images (SVG) issued as NFTs on the Ethereum blockchain. Images and metadata are stored directly on the blockchain (on-chain).
+> Personal website of artist Kirill Ateev, who works in the style of kinetic minimalism (Kinimalism). All works are animated SVG images issued as NFTs on the Ethereum blockchain; images and metadata are stored on-chain. The site is static and has English (/en) and Russian (/ru) versions.
 
-## Website Structure
-The website is completely static and has two language versions: English (/en) and Russian (/en).
+The website is completely static. English links are used below; replace `/en` with `/ru` for the Russian version. Each collection contains unique animated SVG images. Individual works can be viewed on collection pages using routes like `/en/view/blinds/321`.
 
-## Main Sections
-- **Home Page** — `/en`
-Contains a brief welcome and links to the latest collections.
-- **Community** — `/en/community`
-- **Messages / Blog** — `/en/messages`
-- Article about Kinimalism — `/en/messages/kinimalism`
+Technical notes for LLMs:
+- All NFT images are SVG files. Each image is placed in an `<img>` tag with an `alt` attribute containing the work’s title and the artist’s name.
+- Structured data using JSON-LD Schema.org `VisualArtwork` with full metadata is present on individual work pages or collection cards.
+- External links on collection pages lead to Rarible collection profiles.
 
-## Collections of Works
-- Main page: https://kirillateev.art/en or /en – list of the latest collections.
-- Messages (blog/news): https://kirillateev.art/en/messages
-- Community (Telegram): https://t.me/kirill_ateev_art
-- Collection Pages:
-- Folds: https://kirillateev.art/en/view/folds
-- Frames: https://kirillateev.art/en/view/frames
-- City: https://kirillateev.art/en/view/city
-- Blinds: https://kirillateev.art/en/view/blinds
-- Cocktail Straws: https://kirillateev.art/en/view/cocktail-straws
-- Window: https://kirillateev.art/en/view/window
-- Crosswalk: https://kirillateev.art/en/view/crosswalk
-- Lanes: https://kirillateev.art/en/view/lanes
-- Attentionless: https://kirillateev.art/en/view/attentionless
+## Main Pages
 
-Each collection contains unique animated SVG images. Individual works can be viewed on collection pages using the route (e.g., `/en/view/blinds/321`).
+- [Home Page](https://kirillateev.art/en): Brief welcome and links to the latest collections.
+- [Messages / Blog](https://kirillateev.art/en/messages): Blog and news.
+- [Article about Kinimalism](https://kirillateev.art/en/messages/kinimalism): Explanation of Kinimalism.
+- [Community](https://kirillateev.art/en/community): Community section on the website.
 
-## Technical Features for LLM
-1. **Images:** All NFTs are in SVG format. Each image uses the `<img>` tag with a populated `alt` attribute containing the work's title and artist's name.
-2. **Structured Data:** JSON-LD Schema.org markup of the `VisualArtwork` type with full metadata is implemented on individual work pages (or in collection cards).
-3. **Links:** External links lead to collection profiles in Rarible.
+## Collections
+
+- [Folds](https://kirillateev.art/en/view/folds): Animated SVG collection.
+- [Frames](https://kirillateev.art/en/view/frames): Animated SVG collection.
+- [City](https://kirillateev.art/en/view/city): Animated SVG collection.
+- [Blinds](https://kirillateev.art/en/view/blinds): Animated SVG collection.
+- [Cocktail Straws](https://kirillateev.art/en/view/cocktail-straws): Animated SVG collection.
+- [Window](https://kirillateev.art/en/view/window): Animated SVG collection.
+- [Crosswalk](https://kirillateev.art/en/view/crosswalk): Animated SVG collection.
+- [Lanes](https://kirillateev.art/en/view/lanes): Animated SVG collection.
+- [Attentionless](https://kirillateev.art/en/view/attentionless): Animated SVG collection.
+
+## External
+
+- [Telegram community](https://t.me/kirill_ateev_art): Official Telegram community/channel.
