@@ -15,6 +15,7 @@ export default function Header() {
         aria-label="Kirill Ateev Art Logo"
       >
         <Logo />
+        <span className={styles.hide}>Kirill Ateev Art</span>
       </Link>
       <div className={styles.menu_container}>
         <Link className={styles.menu_item} href={`/${i18n.locale}/messages`}>
