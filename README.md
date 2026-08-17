@@ -18,7 +18,7 @@ Multilingual (EN / RU) static site built with Next.js and deployed to GitHub Pag
 | Package manager | Yarn                          |
 | i18n            | Lingui v5 (macro-based)       |
 | Carousel        | embla-carousel-react          |
-| Blockchain      | ethers.js v6                  |
+| Blockchain      | Viem                          |
 | Analytics       | Google Tag Manager            |
 | SVG imports     | @svgr/webpack                 |
 | Deployment      | GitHub Actions → GitHub Pages |
@@ -103,7 +103,7 @@ yarn extract && yarn compile && yarn build
 ### NFT Viewer
 
 1. Reads `?item=` query param or uses `minIndex` as default
-2. Calls `tokenURI(tokenId)` on Ethereum contract via `ethers.js` + proxy RPC
+2. Calls `tokenURI(tokenId)` on Ethereum contract via `viem` + proxy RPC
 3. Resolves `ipfs://` URIs → `https://ipfs.io/ipfs/...`
 4. Handles `data:application/json;base64,...` inline metadata
 5. Renders via `next/image` with `unoptimized: true`

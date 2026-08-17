@@ -21,7 +21,7 @@
 | Package manager | Yarn                                       | lockfile |
 | i18n            | `@lingui` (macro-based)                    | ^5.4.1   |
 | Carousel        | `embla-carousel-react`                     | ^8.5.2   |
-| Blockchain      | `ethers.js`                                | ^6.15.0  |
+| Blockchain      | `viem`                                     | ^2.54.0  |
 | Analytics       | Google Tag Manager (`@next/third-parties`) | ^15.4.7  |
 | SVG imports     | `@svgr/webpack`                            | ^8.1.0   |
 | Polyfills       | `core-js`                                  | ^3.47.0  |
@@ -183,14 +183,16 @@ yarn extract && yarn compile && yarn build
 ### NFT Data Flow
 
 #### ERC721Viewer (collection page)
+
 1. Reads `?item=` query param or falls back to `minIndex`
 2. Random navigation on click (client-side routing via `?item=`)
-3. Calls `tokenURI(tokenId)` on the Ethereum contract via `ethers.js` + proxy RPC
+3. Calls `tokenURI(tokenId)` on the Ethereum contract via `viem` + proxy RPC
 4. Resolves `ipfs://` URIs → `https://ipfs.io/ipfs/...`
 5. Handles `data:application/json;base64,...` inline metadata
 6. Renders via `next/image` with `unoptimized: true`
 
 #### TokenViewer (per-token SSG page)
+
 1. Receives `tokenId` as prop from route params (no `?item=` query)
 2. No random navigation — fixed to the specific token
 3. Same `tokenURI()` fetch + IPFS/base64 resolution
@@ -202,26 +204,26 @@ yarn extract && yarn compile && yarn build
 
 ### Current Setup
 
-| Asset                              | Location                 | Purpose                            |
-| ---------------------------------- | ------------------------ | ---------------------------------- |
-| `<title>`, `<meta>` tags           | `[lang]/layout.tsx`      | Primary SEO (i18n-aware)           |
-| Open Graph / Twitter Cards         | `[lang]/layout.tsx`      | Social sharing previews            |
-| `canonical` + `alternate` hreflang | `[lang]/layout.tsx`      | Multi-locale indexing              |
-| `robots.txt`                       | `public/robots.txt`      | Crawler directives + sitemap link  |
+| Asset                              | Location                 | Purpose                                     |
+| ---------------------------------- | ------------------------ | ------------------------------------------- |
+| `<title>`, `<meta>` tags           | `[lang]/layout.tsx`      | Primary SEO (i18n-aware)                    |
+| Open Graph / Twitter Cards         | `[lang]/layout.tsx`      | Social sharing previews                     |
+| `canonical` + `alternate` hreflang | `[lang]/layout.tsx`      | Multi-locale indexing                       |
+| `robots.txt`                       | `public/robots.txt`      | Crawler directives + sitemap link           |
 | `sitemap.xml`                      | `public/sitemap.xml`     | Sitemap index → per-collection sub-sitemaps |
-| `llm.txt`                          | `public/llm.txt`         | AI crawler context                 |
-| PWA manifest                       | `src/app/manifest.ts`    | Installable web app                |
-| GTM `GTM-TWZXMCQQ`                 | `components/GTM/GTM.tsx` | Analytics                          |
-| Custom 404                         | `src/app/not-found.tsx`  | SEO meta on 404 page               |
+| `llm.txt`                          | `public/llm.txt`         | AI crawler context                          |
+| PWA manifest                       | `src/app/manifest.ts`    | Installable web app                         |
+| GTM `GTM-TWZXMCQQ`                 | `components/GTM/GTM.tsx` | Analytics                                   |
+| Custom 404                         | `src/app/not-found.tsx`  | SEO meta on 404 page                        |
 
 ### Per-Token SEO
 
-| Feature                          | Implementation                |
-| -------------------------------- | ----------------------------- |
-| Per-token SSG pages              | `[tokenId]/page.tsx`          |
-| Per-token meta tags (title/desc) | `generateMetadata()`          |
-| JSON-LD structured data          | `Schema.org/VisualArtwork`    |
-| Canonical URL per token          | `alternates.canonical`        |
+| Feature                          | Implementation             |
+| -------------------------------- | -------------------------- |
+| Per-token SSG pages              | `[tokenId]/page.tsx`       |
+| Per-token meta tags (title/desc) | `generateMetadata()`       |
+| JSON-LD structured data          | `Schema.org/VisualArtwork` |
+| Canonical URL per token          | `alternates.canonical`     |
 
 ### Gaps & Recommendations for Scaling
 
@@ -352,3 +354,7 @@ yarn build     # Next.js build picks up compiled catalogs
 5. **Performance** — add Lighthouse CI to the CI pipeline; monitor Core Web Vitals.
 6. **i18n expansion** — the current pattern supports more locales by adding to `lingui.config.js` locales array and creating new `.po` files.
 7. **Unit/E2E tests** — currently no test framework. Consider Vitest + Playwright for critical paths (viewer, i18n switching, navigation).
+
+## Tools
+
+1. **context7** — When you need to search docs, use `context7` tools.
