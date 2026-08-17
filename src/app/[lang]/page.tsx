@@ -99,12 +99,7 @@ export default withLinguiPage(async function Home(props) {
           </div>
         </section>
 
-        <CollectionFolds
-          priority
-          fetchPriority="high"
-          loading="eager"
-          decoding="sync"
-        />
+        <CollectionFolds priority fetchPriority="high" />
         <CollectionFrames />
         <CollectionCity />
         <LazyHydrate placeholderHeight="508px">

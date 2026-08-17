@@ -11,10 +11,10 @@ import ArrowRight from '../common/ArrowRight';
 import styles from './styles.module.css';
 
 type CollectionProps = {
-  loading: 'eager' | 'lazy';
-  decoding: 'auto' | 'sync' | 'async';
-  priority: boolean;
-  fetchPriority: 'high' | 'low' | 'auto' | undefined;
+  loading?: 'eager' | 'lazy';
+  decoding?: 'auto' | 'sync' | 'async';
+  priority?: boolean;
+  fetchPriority?: 'high' | 'low' | 'auto' | undefined;
 };
 
 export default function CollectionFolds({
