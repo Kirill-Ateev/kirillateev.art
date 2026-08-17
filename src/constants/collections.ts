@@ -1,4 +1,4 @@
-type CollectionData = {
+export type CollectionData = {
   name: string;
   network: string;
   standard?: string;

@@ -1,4 +1,4 @@
-import type { Abi } from 'viem';
+import type { Abi, Hex } from 'viem';
 import { decodeFunctionResult, encodeFunctionData, parseAbi } from 'viem';
 import { Common, Hardfork, Mainnet } from '@ethereumjs/common';
 import { createEVM } from '@ethereumjs/evm';
@@ -9,7 +9,7 @@ const ERC721_TOKEN_URI_ABI = parseAbi([
 ]) as Abi;
 
 const FUNCTION_NAME = 'tokenURI' as const;
-const GAS_LIMIT = 10_000_000n;
+const GAS_LIMIT = BigInt(10_000_000);
 
 export type RunTokenURIResult =
   | { ok: true; tokenURI: string }
@@ -19,6 +19,10 @@ export async function runTokenURI(
   bytecode: string,
   tokenId: number,
 ): Promise<RunTokenURIResult> {
+  if (!bytecode || !bytecode.startsWith('0x')) {
+    return { ok: false, reason: 'bytecode is empty or not 0x-prefixed' };
+  }
+
   const evm = await createEVM({
     common: new Common({ chain: Mainnet, hardfork: Hardfork.Shanghai }),
   });
@@ -28,11 +32,11 @@ export async function runTokenURI(
       abi: ERC721_TOKEN_URI_ABI,
       functionName: FUNCTION_NAME,
       args: [tokenId],
-    }),
+    }) as Hex,
   );
 
   const result = await evm.runCode({
-    code: hexToBytes(bytecode),
+    code: hexToBytes(bytecode as Hex),
     data,
     gasLimit: GAS_LIMIT,
   });
@@ -46,10 +50,11 @@ export async function runTokenURI(
   }
 
   try {
+    const hex = `0x${Buffer.from(result.returnValue).toString('hex')}` as Hex;
     const tokenURI = decodeFunctionResult({
       abi: ERC721_TOKEN_URI_ABI,
       functionName: FUNCTION_NAME,
-      data: result.returnValue,
+      data: hex,
     });
 
     if (typeof tokenURI !== 'string' || tokenURI.length === 0) {

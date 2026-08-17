@@ -3,68 +3,57 @@
 - [x] 1.1 Add `generatesOnChain: boolean` to the `CollectionData` type in `src/constants/collections.ts`
 - [x] 1.2 Set `generatesOnChain: true` for: `folds`, `frames`, `city`, `blinds`, `cocktail-straws`, `window`, `crosswalk`, `lanes`
 - [x] 1.3 Set `generatesOnChain: false` for: `selection`, `attentionless`
-- [ ] 1.4 Add `@ethereumjs/evm@8.3.1` (v10 line) to `package.json` dependencies and run `yarn install`
-- [ ] 1.5 Add `vitest` + `@testing-library/react` + `jsdom` to devDependencies and add a `test` script
+- [x] 1.4 Add `@ethereumjs/evm@10.1.2` to `package.json` dependencies and run `yarn install`
+- [x] 1.5 Add `vitest` + `happy-dom` to devDependencies and add a `vitest.config.ts`
 
-## 2. Bytecode example template
+## 2. Bytecode storage (lazy, per-collection)
 
-- [x] 2.1 Move the `folds` bytecode out of `collectionsData` (it was inline and would have been bundled)
-- [x] 2.2 Create `src/constants/exampleBytecodes.ts` as a template-only file, never imported by the app
-- [ ] 2.3 Add a lint/build guard so `exampleBytecodes.ts` cannot be accidentally imported (document in the file header)
+- [x] 2.1 Move the `folds` bytecode out of `collectionsData` (it was inline and would have been bundled into every page)
+- [x] 2.2 Create `src/constants/bytecodes/` — one file per collection, each exporting a single default string
+- [x] 2.3 Create `src/constants/bytecodes/index.ts` — maps contract address → dynamic `import()` loader; `getBytecode(address)` returns the bytecode or null
+- [x] 2.4 Bytecode is fetched from the bundle by dynamic import only when the collection is opened; verified the home page bundle contains no bytecode
 
-## 3. Bytecode cache
+## 3. EVM execution helper
 
-- [ ] 3.1 Create `src/components/viewer/bytecodeCache.ts` with a `localStorage`-backed cache
-- [ ] 3.2 Key format: `nft-bytecode:<lowercased-contract-address>`
-- [ ] 3.3 Implement `getCachedBytecode(address)` returning `string | null` (sync, SSR-safe)
-- [ ] 3.4 Implement `setCachedBytecode(address, bytecode: string)` (SSR-safe)
-- [ ] 3.5 Ensure all `window`/`localStorage` access is guarded so the module imports safely during SSR and static build
+- [x] 3.1 Create `src/components/viewer/evmRunner.ts` exporting `runTokenURI(bytecode, tokenId)`
+- [x] 3.2 Use `parseAbi(['function tokenURI(uint256) external view returns (string)'])` from viem
+- [x] 3.3 `createEVM({ common: new Common({ chain: Mainnet, hardfork: Hardfork.Shanghai }) })`
+- [x] 3.4 Call `evm.runCode({ code, data: encodeFunctionData(...), gasLimit })`
+- [x] 3.5 On `exceptionError` set or empty `returnValue`, return `{ ok: false, reason }`
+- [x] 3.6 Decode `returnValue` with `decodeFunctionResult('tokenURI', ...)` and return the string
 
-## 4. EVM execution helper
+## 4. On-chain viewer component
 
-- [ ] 4.1 Create `src/components/viewer/evmRunner.ts` exporting `runTokenURI(bytecode, tokenId)`
-- [ ] 4.2 Use `parseAbi(['function tokenURI(uint256) external view returns (string)'])` from viem
-- [ ] 4.3 `createEVM({ common: new Common({ chain: Mainnet, hardfork: Hardfork.Shanghai }) })` via dynamic import
-- [ ] 4.4 Call `evm.runCode({ code: hexToBytes(bytecode), data: hexToBytes(encodeFunctionData(...)), gasLimit: 10_000_000n })`
-- [ ] 4.5 On `execResult.exceptionError` set or empty `returnValue`, throw
-- [ ] 4.6 Decode `returnValue` with `decodeFunctionResult('tokenURI', ...)` and return the string
+- [x] 4.1 Create `src/components/viewer/OnChainBytecodeViewer.tsx` as a `'use client'` component
+- [x] 4.2 Props: `collectionMetadata: CollectionData`, `tokenId`, plus optional `baseRoute`, `showTitle` mirroring `TokenViewer`
+- [x] 4.3 On mount, calls `getBytecode(contract)`; if null, falls back to `<TokenViewer>` (no network, no broken bundle)
+- [x] 4.4 Runs `runTokenURI` to obtain the `tokenURI` string
+- [x] 4.5 Resolves `ipfs://` → `https://ipfs.io/ipfs/...`, decodes `data:application/json;base64,...`, otherwise `fetch`es the metadata
+- [x] 4.6 Reuses the same UI chrome as `TokenViewer` (title, marketplace links, padding modes, "(click for next)")
+- [x] 4.7 On any EVM failure, renders `<TokenViewer>` for the same collection and token — reuses the existing RPC `tokenURI` flow, per Q-A
 
-## 5. On-chain viewer component
+## 5. Viewer selection
 
-- [ ] 5.1 Create `src/components/viewer/OnChainBytecodeViewer.tsx` as a `'use client'` component
-- [ ] 5.2 Props: `collectionMetadata`, `tokenId`, plus optional `baseRoute`, `showTitle` mirroring `TokenViewer`
-- [ ] 5.3 On mount, read `bytecodeCache.getCachedBytecode(contract)`; if null, call `eth_getCode` via `PUBLIC_CLIENT.getBytecode`, then `setCachedBytecode`
-- [ ] 5.4 Run `runTokenURI` to obtain the `tokenURI` string
-- [ ] 5.5 Resolve `ipfs://` → `https://ipfs.io/ipfs/...`, decode `data:application/json;base64,...`, otherwise `fetch` the metadata
-- [ ] 5.6 Reuse the same UI chrome as `TokenViewer` (title, marketplace links, padding modes, "(click for next)")
-- [ ] 5.7 On any EVM/cache failure, render `<TokenViewer>` for the same collection and token as the fallback — this reuses the existing RPC `tokenURI` flow, per Q-A
+- [x] 5.1 In `src/app/[lang]/view/[collection]/page.tsx`, render `<OnChainBytecodeViewer>` when `generatesOnChain` is true, else `<TokenViewer>`
+- [ ] 5.2 In `src/app/[lang]/view/[collection]/[tokenId]/page.tsx`, apply the same selection
+- [x] 5.3 Wrap the viewer in `<Suspense>` exactly as before
 
-## 6. Viewer selection
+## 6. Headers & CSP
 
-- [ ] 6.1 In `src/app/[lang]/view/[collection]/page.tsx`, render `<OnChainBytecodeViewer>` when `collectionMetadata.generatesOnChain` is true, else `<TokenViewer>`
-- [ ] 6.2 In `src/app/[lang]/view/[collection]/[tokenId]/page.tsx`, apply the same selection
-- [ ] 6.3 Wrap the viewer in `<Suspense>` exactly as before
+- [x] 6.1 No CSP changes required — `@ethereumjs/evm` v10 has no WASM dependencies (uses `@noble/curves` / `@noble/hashes`); Q-B resolved
 
-## 7. Headers & CSP
+## 7. Tests
 
-- [x] 7.1 No CSP changes required — `@ethereumjs/evm` v10 has no WASM dependencies (uses `@noble/curves` / `@noble/hashes`); Q-B resolved
+- [x] 7.1 Add Vitest config (`vitest.config.ts`) with happy-dom environment and `@` alias
+- [x] 7.2 Test `getBytecode`: null for unregistered address, case-insensitive key, null on empty/missing default
+- [x] 7.3 Test `runTokenURI`: empty bytecode, successful decode, revert handling
+- [ ] 7.4 Test the `generatesOnChain` flag selection in both viewer pages
+- [ ] 7.5 Add a `test` script to `package.json` and wire into CI
 
-## 8. Tests
+## 8. Verification
 
-- [ ] 8.1 Add Vitest config (`vitest.config.ts`) with jsdom environment
-- [ ] 8.2 Test `bytecodeCache`: cache key derivation from a mixed-case address, hit returns value, miss returns null, write then read round-trips
-- [ ] 8.3 Test `OnChainBytecodeViewer` with mocked `PUBLIC_CLIENT`: uncached collection triggers exactly one `eth_getCode` call; cached collection triggers zero calls
-- [ ] 8.4 Test fallback: when `runTokenURI` throws, the component renders `TokenViewer` instead
-- [ ] 8.5 Test flag selection: `generatesOnChain: false` renders `TokenViewer` and never loads the EVM
-- [ ] 8.6 Run `yarn test` in CI as part of the deploy pipeline
-
-## 9. Verification
-
-- [ ] 9.1 `yarn build` succeeds with `output: 'export'`
-- [ ] 9.2 Open a generative collection (e.g. `/en/view/folds`): first load issues exactly one `eth_getCode` request and caches the bytecode
-- [ ] 9.3 Reload the same collection: no `eth_getCode` request; bytecode is served from `localStorage`
-- [ ] 9.4 Open a different generative collection: only that collection's bytecode is fetched
-- [ ] 9.5 Open `/en/view/attentionless`: renders `TokenViewer`, no EVM runtime loaded
-- [ ] 9.6 Open `/en/` (home): EVM runtime is not present in the page bundle
-- [ ] 9.7 `yarn lint` passes
-- [ ] 9.8 Confirm `TokenViewer.tsx` is byte-for-byte unchanged from the pre-change state
+- [x] 8.1 `yarn build` succeeds with `output: 'export'`
+- [x] 8.2 Bytecode is lazy-loaded: home/series/messages/selection/community pages contain no bytecode
+- [x] 8.3 Bytecode is viewer-scoped: only `/view/[collection]` pages reference the bytecode chunks
+- [ ] 8.4 `yarn lint` passes
+- [x] 8.5 Confirm `TokenViewer.tsx` is byte-for-byte unchanged from the pre-change state

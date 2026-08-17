@@ -7,6 +7,8 @@
     "build": "yarn sitemap && next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "extract": "lingui extract",
     "compile": "lingui compile",
     "sitemap": "node scripts/generate-sitemap.mjs"

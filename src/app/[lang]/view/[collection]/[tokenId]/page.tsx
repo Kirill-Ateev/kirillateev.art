@@ -1,5 +1,6 @@
 import Header from '@/components/header/Header';
 import { LangAlternates } from '@/components/seo/LangAlternates';
+import { OnChainBytecodeViewer } from '@/components/viewer/OnChainBytecodeViewer';
 import { TokenViewer } from '@/components/viewer/TokenViewer';
 import { collectionsData } from '@/constants/collections';
 import { langUrl, SITE, siteName } from '@/constants/site';
@@ -166,6 +167,10 @@ export default withLinguiPage(async function TokenPage({
     },
   };
 
+  const Viewer = collectionMeta.generatesOnChain
+    ? OnChainBytecodeViewer
+    : TokenViewer;
+
   return (
     <div>
       <script
@@ -180,7 +185,7 @@ export default withLinguiPage(async function TokenPage({
       <Header />
       <main className={styles.main}>
         <Suspense>
-          <TokenViewer
+          <Viewer
             collectionMetadata={collectionMeta}
             tokenId={Number(tokenId)}
           />
