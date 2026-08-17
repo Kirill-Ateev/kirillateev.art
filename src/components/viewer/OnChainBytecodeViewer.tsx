@@ -1,5 +1,6 @@
 'use client';
 
+import { getBytecode } from '@/constants/bytecodes';
 import { CollectionData } from '@/constants/collections';
 import { getRandomFromRange } from '@/utils/numbers';
 import { Trans } from '@lingui/react/macro';
@@ -7,11 +8,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useState } from 'react';
-import { TokenViewer } from './TokenViewer';
-import { getBytecode } from '@/constants/bytecodes';
-import { runTokenURI } from './evmRunner';
 import collectionStyles from './../collections/styles.module.css';
+import { runTokenURI } from './evmRunner';
 import styles from './styles.module.css';
+import { TokenViewer } from './TokenViewer';
 
 type NFTMetadata = {
   image: string;

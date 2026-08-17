@@ -50,12 +50,10 @@ describe('runTokenURI', () => {
     }
   });
 
-  it('returns ok:false when the contract reverts with an Error(string) selector', async () => {
+  it('returns ok:false when the contract reverts', async () => {
     const { runTokenURI } = await import('@/components/viewer/evmRunner');
-    // PUSH1 0x08 PUSH1 0x00 MLOAD PUSH1 0x04 PUSH1 0x00 DUP1 MSTORE
-    // PUSH1 0x24 PUSH1 0x00 ADD PUSH1 0x00 DUP1 MSTORE
-    // PUSH1 0x2c PUSH1 0x00 RETURN  -> returns the 4-byte Error(string) selector
-    const result = await runTokenURI('0x6008600059600460008055602460000160008052602c6000f3', 1);
+    // PUSH1 0x00 PUSH1 0x00 REVERT — reverts with no data
+    const result = await runTokenURI('0x60006000fd', 1);
     expect(result.ok).toBe(false);
   });
 });

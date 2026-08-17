@@ -47,13 +47,15 @@
 - [x] 7.1 Add Vitest config (`vitest.config.ts`) with happy-dom environment and `@` alias
 - [x] 7.2 Test `getBytecode`: null for unregistered address, case-insensitive key, null on empty/missing default
 - [x] 7.3 Test `runTokenURI`: empty bytecode, successful decode, revert handling
-- [ ] 7.4 Test the `generatesOnChain` flag selection in both viewer pages
-- [ ] 7.5 Add a `test` script to `package.json` and wire into CI
+- [x] 7.4 Test the `generatesOnChain` flag selection in both viewer pages
+- [x] 7.5 Add a `test` script to `package.json` and wire into CI
 
 ## 8. Verification
 
 - [x] 8.1 `yarn build` succeeds with `output: 'export'`
 - [x] 8.2 Bytecode is lazy-loaded: home/series/messages/selection/community pages contain no bytecode
 - [x] 8.3 Bytecode is viewer-scoped: only `/view/[collection]` pages reference the bytecode chunks
-- [ ] 8.4 `yarn lint` passes
+- [x] 8.4 `yarn lint` passes (exit 0; the `useCallback` exhaustive-deps warning in
+  `OnChainBytecodeViewer` is identical to the one already present in
+  `TokenViewer`, so it is consistent, not a regression)
 - [x] 8.5 Confirm `TokenViewer.tsx` is byte-for-byte unchanged from the pre-change state
