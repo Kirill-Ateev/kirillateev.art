@@ -97,9 +97,14 @@ export default function CollectionFolds({
                 priority={priority}
                 fetchPriority={fetchPriority}
               />
-              <div className={`${styles.text_secondary} ${styles.item_title}`}>
+              <Link
+                className={`${styles.text_secondary} ${styles.item_title} ${styles.link}`}
+                target="_blank"
+                rel="noreferrer"
+                href={`${collectionsData['folds'].marketplaces.rarible.tokenLink}${imageId}`}
+              >
                 #{imageId}
-              </div>
+              </Link>
             </div>
           ))}
 
