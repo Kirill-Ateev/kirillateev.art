@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './tokenMetadataPanel.module.css';
+import styles from './styles.module.css';
 
 type Attribute = {
   trait_type?: string;
@@ -12,7 +12,6 @@ export const TokenMetadataPanel: React.FC<{
 }> = ({ description, attributes }) => {
   const hasAttributes = Array.isArray(attributes) && attributes.length > 0;
 
-  console.log(attributes);
   return (
     <div className={styles.panel}>
       {description && <p className={styles.description}>{description}</p>}
