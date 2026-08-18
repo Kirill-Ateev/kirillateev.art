@@ -59,7 +59,9 @@ export const OnChainBytecodeViewer: React.FC<{
           return;
         }
 
-        const result = await runTokenURI(bytecode, tokenId);
+        const result = await runTokenURI(bytecode, collectionMetadata, tokenId);
+
+        console.log(result);
 
         if (!result.ok) {
           setFallback(true);
@@ -90,7 +92,8 @@ export const OnChainBytecodeViewer: React.FC<{
           setMetadata(data);
           setIsLoading(false);
         }
-      } catch {
+      } catch (e) {
+        console.log(e);
         if (!cancelled) {
           setFallback(true);
         }

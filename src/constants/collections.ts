@@ -15,7 +15,13 @@ export type CollectionData = {
     { name: string; link: string; tokenLink: string }
   >;
   generatesOnChain: boolean;
+  constructorParams?: {
+    abi: string;
+    arguments: (string | bigint)[];
+  };
 };
+
+export const DEFAULT_ADDRESS = '0x0000000000000000000000000000000000000001';
 
 export const collectionsData: Record<string, CollectionData> = {
   selection: {
@@ -69,6 +75,17 @@ export const collectionsData: Record<string, CollectionData> = {
       },
     },
     generatesOnChain: true,
+    constructorParams: {
+      abi: 'string, string, string, string, address, uint96',
+      arguments: [
+        'FOLDS',
+        'FOLDS',
+        'FOLDS',
+        'FOLDS',
+        DEFAULT_ADDRESS,
+        BigInt(0),
+      ],
+    },
   },
   frames: {
     name: 'Frames',
@@ -95,6 +112,17 @@ export const collectionsData: Record<string, CollectionData> = {
       },
     },
     generatesOnChain: true,
+    constructorParams: {
+      abi: 'string, string, string, string, address, uint96',
+      arguments: [
+        'FRAMES',
+        'FRAMES',
+        'FRAMES',
+        'FRAMES',
+        DEFAULT_ADDRESS,
+        BigInt(0),
+      ],
+    },
   },
   city: {
     name: 'City',
@@ -121,6 +149,10 @@ export const collectionsData: Record<string, CollectionData> = {
       },
     },
     generatesOnChain: true,
+    constructorParams: {
+      abi: 'string, string, string, string, address, uint96',
+      arguments: ['CITY', 'CITY', 'CITY', 'CITY', DEFAULT_ADDRESS, BigInt(0)],
+    },
   },
   blinds: {
     name: 'Blinds',
@@ -147,6 +179,17 @@ export const collectionsData: Record<string, CollectionData> = {
       },
     },
     generatesOnChain: true,
+    constructorParams: {
+      abi: 'string, string, string, string, address, uint96',
+      arguments: [
+        'BLINDS',
+        'BLINDS',
+        'BLINDS',
+        'BLINDS',
+        DEFAULT_ADDRESS,
+        BigInt(0),
+      ],
+    },
   },
   'cocktail-straws': {
     name: 'Cocktail straws',
@@ -173,6 +216,17 @@ export const collectionsData: Record<string, CollectionData> = {
       },
     },
     generatesOnChain: true,
+    constructorParams: {
+      abi: 'string, string, string, string, address, uint96',
+      arguments: [
+        'COCKTAIL STRAWS',
+        'COCKTAIL STRAWS',
+        'COCKTAIL STRAWS',
+        'COCKTAIL STRAWS',
+        DEFAULT_ADDRESS,
+        BigInt(0),
+      ],
+    },
   },
   window: {
     name: 'Window',
@@ -199,6 +253,10 @@ export const collectionsData: Record<string, CollectionData> = {
       },
     },
     generatesOnChain: true,
+    constructorParams: {
+      abi: 'string, string, string, address, uint96',
+      arguments: ['WINDOW', 'WINDOW', 'WINDOW', DEFAULT_ADDRESS, BigInt(0)],
+    },
   },
   crosswalk: {
     name: 'Crosswalk',
@@ -224,6 +282,16 @@ export const collectionsData: Record<string, CollectionData> = {
       },
     },
     generatesOnChain: true,
+    constructorParams: {
+      abi: 'string, string, string, address, uint96',
+      arguments: [
+        'CROSSWALK',
+        'CROSSWALK',
+        'CROSSWALK',
+        DEFAULT_ADDRESS,
+        BigInt(0),
+      ],
+    },
   },
   lanes: {
     name: 'Lanes',
@@ -249,6 +317,10 @@ export const collectionsData: Record<string, CollectionData> = {
       },
     },
     generatesOnChain: true,
+    constructorParams: {
+      abi: 'string, string, string, address, uint96',
+      arguments: ['LANES', 'LANES', 'LANES', DEFAULT_ADDRESS, BigInt(0)],
+    },
   },
   attentionless: {
     name: 'Attentionless',
