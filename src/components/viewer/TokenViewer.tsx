@@ -8,6 +8,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import React, { useCallback, useEffect, useState } from 'react';
 import { isAddress } from 'viem';
 import collectionStyles from './../collections/styles.module.css';
+import { TokenMetadataPanel } from './TokenMetadataPanel';
 import styles from './styles.module.css';
 
 type CollectionMetadata = {
@@ -25,6 +26,11 @@ type NFTMetadata = {
   image: string;
   name?: string;
   description?: string;
+  attributes?: Array<{
+    type?: string;
+    value?: string;
+    description?: string;
+  }>;
 };
 
 export const TokenViewer: React.FC<{
@@ -146,14 +152,8 @@ export const TokenViewer: React.FC<{
       {isLoading && <div>Loading{loadingDots}</div>}
 
       {metadata && !isLoading && (
-        <>
-          <div
-            className={
-              collectionMetadata.padded
-                ? styles.viewer_title
-                : styles.viewer_title_padded
-            }
-          >
+        <div className={styles.artwork_wrap}>
+          <div className={styles.artwork_header}>
             {showTitle && (
               <h1
                 style={{
@@ -184,24 +184,32 @@ export const TokenViewer: React.FC<{
               </Link>
             ))}
           </div>
-          <Image
-            src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
-            alt={`${metadata.name} ${tokenId}` || `NFT #${tokenId}`}
-            width={100}
-            height={100}
-            style={{
-              minWidth: '100%',
-              height: 'fit-content',
-              maxWidth: '100%',
-              maxHeight: collectionMetadata.padded
-                ? 'calc(100% - 21.5px)'
-                : 'calc(100% - 37.5px)',
-              padding: collectionMetadata.padded ? '0px' : '0px 30px 30px 30px',
-              objectFit: 'contain',
-            }}
-            onClick={handleClick}
-          />
-        </>
+          <div className={styles.artwork_body}>
+            <div
+              className={styles.artwork_stage}
+              onClick={handleClick}
+            >
+              <Image
+                src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
+                alt={`${metadata.name} ${tokenId}` || `NFT #${tokenId}`}
+                width={100}
+                height={100}
+                style={{
+                  width: 'auto',
+                  height: 'auto',
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                  objectFit: 'contain',
+                }}
+                onClick={handleClick}
+              />
+            </div>
+            <TokenMetadataPanel
+              description={metadata.description}
+              attributes={metadata.attributes}
+            />
+          </div>
+        </div>
       )}
     </div>
   );
