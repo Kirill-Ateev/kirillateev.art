@@ -149,7 +149,7 @@ export const TokenViewer: React.FC<{
               <SkeletonBox className={styles.skeleton_artwork} />
             </div>
             <div className={styles.skeleton_panel}>
-              <SkeletonText width="100%" height="14px" />
+              <SkeletonText width="100%" height="60px" />
               <SkeletonAttribute />
               <SkeletonAttribute />
               <SkeletonAttribute />

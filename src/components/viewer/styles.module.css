@@ -222,7 +222,6 @@
   gap: var(--small-padding);
   width: 100%;
   max-width: 418px;
-  padding: var(--small-padding);
 }
 
 @media (max-width: 767px) {
