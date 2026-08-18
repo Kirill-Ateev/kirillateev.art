@@ -19,7 +19,12 @@ export default function CollectionSelection() {
     containScroll: 'trimSnaps',
   });
 
-  const images = ['Berry1', 'Berry2', 'Field', 'Egg'];
+  const images: { imageId: string; tokenId: number }[] = [
+    { imageId: 'Berry1', tokenId: 4 },
+    { imageId: 'Berry2', tokenId: 3 },
+    { imageId: 'Field', tokenId: 2 },
+    { imageId: 'Egg', tokenId: 1 },
+  ];
 
   return (
     <section>
@@ -70,20 +75,11 @@ export default function CollectionSelection() {
             </Link>
           </div>
 
-          {images.map((imageId) => {
+          {images.map(({ imageId, tokenId }) => {
             const isBerry = imageId.startsWith('Berry');
             const cardClassName = isBerry
               ? `${styles.card_berry}`
               : `${styles.card_nights}`;
-
-            const tokenId =
-              imageId === 'Berry1'
-                ? 1
-                : imageId === 'Berry2'
-                  ? 2
-                  : imageId === 'Field'
-                    ? 3
-                    : 4;
 
             return (
               <div
