@@ -104,6 +104,8 @@
   .viewer_container {
     height: auto;
     min-height: calc(100vh - 94px);
+    display: flex;
+    justify-content: flex-start;
   }
 
   .artwork_wrap {
@@ -195,5 +197,49 @@
   .panel {
     max-width: none;
     padding: var(--small-padding) var(--small-padding) 0;
+  }
+}
+
+.skeleton_stage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.skeleton_artwork {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 200px;
+}
+
+.skeleton_panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--small-padding);
+  width: 100%;
+  max-width: 418px;
+  padding: var(--small-padding);
+}
+
+@media (max-width: 767px) {
+  .skeleton_stage {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    padding: var(--small-padding);
+  }
+
+  .skeleton_artwork {
+    aspect-ratio: 1 / 1;
+    min-height: 200px;
+  }
+
+  .skeleton_panel {
+    max-width: 100%;
   }
 }

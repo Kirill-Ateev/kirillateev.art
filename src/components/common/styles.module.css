@@ -1,0 +1,40 @@
+.skeleton {
+  background: linear-gradient(130deg, #eee 25%, #fff 50%, #eee 75%);
+  background-size: 200% 200%;
+  animation: Animation 3s ease infinite;
+  border-radius: 4px;
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.skeleton_text {
+  display: inline-block;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.skeleton_attribute_head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+}

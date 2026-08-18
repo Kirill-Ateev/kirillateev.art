@@ -1,4 +1,8 @@
 'use client';
+import { SkeletonAttribute } from '@/components/common/SkeletonAttribute';
+import { SkeletonBox } from '@/components/common/SkeletonBox';
+import { SkeletonHeader } from '@/components/common/SkeletonHeader';
+import { SkeletonText } from '@/components/common/SkeletonText';
 import { ERC721_ABI, PUBLIC_CLIENT } from '@/utils/data';
 import { getRandomFromRange } from '@/utils/numbers';
 import { Trans } from '@lingui/react/macro';
@@ -43,21 +47,6 @@ export const TokenViewer: React.FC<{
   const pathname = usePathname();
   const [metadata, setMetadata] = useState<NFTMetadata | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [loadingDots, setLoadingDots] = useState<string>('');
-
-  // Animated dots for the loading text
-  useEffect(() => {
-    if (!isLoading) {
-      setLoadingDots('');
-      return;
-    }
-
-    const interval = setInterval(() => {
-      setLoadingDots((prev) => (prev.length >= 3 ? '' : prev + '.'));
-    }, 500);
-
-    return () => clearInterval(interval);
-  }, [isLoading]);
 
   // Retry loop: never shows errors, only "Loading…" until success
   useEffect(() => {
@@ -153,9 +142,19 @@ export const TokenViewer: React.FC<{
       }}
     >
       {isLoading && (
-        <div>
-          <Trans>Loading</Trans>
-          {loadingDots}
+        <div className={styles.artwork_wrap}>
+          <SkeletonHeader />
+          <div className={styles.artwork_body}>
+            <div className={styles.skeleton_stage}>
+              <SkeletonBox className={styles.skeleton_artwork} />
+            </div>
+            <div className={styles.skeleton_panel}>
+              <SkeletonText width="100%" height="14px" />
+              <SkeletonAttribute />
+              <SkeletonAttribute />
+              <SkeletonAttribute />
+            </div>
+          </div>
         </div>
       )}
 
