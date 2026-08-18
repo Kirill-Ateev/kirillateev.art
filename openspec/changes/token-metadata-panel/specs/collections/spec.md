@@ -35,12 +35,12 @@ collection via `<TokenViewer>`.
 - THEN `<TokenViewer>` receives a `tokenId` equal to
   `getRandomFromRange(minIndex, maxIndex)` for that collection
 
-#### Scenario: No centered title band
+#### Scenario: Header above the image
 
 - GIVEN a token viewer page for any collection
 - WHEN the page renders
-- THEN the viewer does NOT render a centered "Collection #tokenId" title band
-  above the image; the image is the sole hero element
+- THEN the viewer renders a header above the image containing the
+  collection name, the "(click for next)" caption, and the marketplace links
 
 ### Requirement: Per-Token SSG Pages
 
@@ -88,22 +88,24 @@ The system SHALL pre-render one static page per token at
 - THEN the page navigates to `/{lang}/view/{collection}/{randomTokenId}`
   with a new random token in `[minIndex, maxIndex]`
 
-#### Scenario: Padding mode
+#### Scenario: Image has breathing-room padding
 
 - GIVEN a token viewer page for a `padded: true` collection (e.g. `window`)
 - WHEN the image renders
-- THEN the image uses `padding: 0px` and its height is capped so the whole
-  viewer fits the viewport alongside the metadata panel
+- THEN the image stage carries padding on all sides so the artwork does not
+  touch the viewport corners, and its height is capped so the whole viewer
+  fits alongside the metadata panel
 
 - GIVEN a token viewer page for a `padded: false` collection
 - WHEN the image renders
-- THEN the image uses `padding: 0px 30px 30px 30px` and its height is capped
-  so the whole viewer fits the viewport alongside the metadata panel
+- THEN the image stage carries padding on all sides so the artwork does not
+  touch the viewport corners, and its height is capped so the whole viewer
+  fits alongside the metadata panel
 
 #### Scenario: Marketplace token link
 
 - GIVEN a token viewer page
 - WHEN the marketplace links render
 - THEN each link's `href` is `{tokenLink}{tokenId}` (e.g.
-  `https://og.rarible.com/token/0x...:3024`) and the links are composed
-  inside the metadata panel
+  `https://og.rarible.com/token/0x...:3024`) and the links are composed in the
+  header above the image, not in the metadata panel

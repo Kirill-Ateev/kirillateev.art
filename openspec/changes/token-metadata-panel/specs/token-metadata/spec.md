@@ -29,11 +29,11 @@ The system SHALL render a panel containing the token's `description` and
 - **WHEN** the metadata carries no `attributes` array, or an empty one
 - **THEN** no attribute entries render (the panel shows description only)
 
-#### Scenario: Marketplace links render in the panel
+#### Scenario: Marketplace links are not in the panel
 
 - **WHEN** the panel renders
-- **THEN** each collection marketplace link renders with `href` equal to
-  `{tokenLink}{tokenId}`, opening in a new tab
+- **THEN** the panel does NOT render marketplace links; the marketplace links
+  render in the header above the artwork instead
 
 ### Requirement: Token name is not rendered
 
@@ -43,6 +43,23 @@ The token's `name` property SHALL NOT be rendered anywhere in the viewer.
 
 - **WHEN** `TokenViewer` renders for any token
 - **THEN** the token `name` does not appear in the rendered output
+
+### Requirement: Header above the artwork
+
+The system SHALL render the collection name, the "(click for next)" caption,
+and the marketplace links in a header above the artwork.
+
+#### Scenario: Header renders above the image
+
+- **WHEN** `TokenViewer` renders for any collection
+- **THEN** the header containing the collection name, "(click for next)", and
+  marketplace links renders above the image
+
+#### Scenario: Click for next is absolute above the image
+
+- **WHEN** the "(click for next)" caption renders
+- **THEN** it is positioned absolutely above the image, centered horizontally,
+  and is clickable to navigate to a random token
 
 ### Requirement: Responsive layout
 
@@ -59,6 +76,12 @@ and beneath the artwork on narrow screens.
 - **WHEN** the viewport is narrow
 - **THEN** the artwork and the panel are stacked vertically, panel beneath the
   artwork
+
+#### Scenario: Fluid height on narrow screens
+
+- **WHEN** the viewport is narrow
+- **THEN** the viewer height is fluid (no fixed `100vh` cap), so the page
+  scrolls to reveal the panel rather than cropping the image
 
 ### Requirement: Artwork is dominant
 

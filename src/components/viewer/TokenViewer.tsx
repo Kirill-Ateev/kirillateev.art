@@ -146,7 +146,7 @@ export const TokenViewer: React.FC<{
     <div
       className={styles.viewer_container}
       style={{
-        cursor: isLoading ? 'wait' : 'pointer',
+        cursor: isLoading ? 'wait' : 'auto',
       }}
     >
       {isLoading && <div>Loading{loadingDots}</div>}
@@ -166,12 +166,6 @@ export const TokenViewer: React.FC<{
                 {collectionMetadata.name} #{tokenId}
               </h1>
             )}
-            <div
-              className={`${styles.absolute_subtext} ${collectionStyles.text_secondary}`}
-              onClick={handleClick}
-            >
-              <Trans>(click for next)</Trans>
-            </div>
             {Object.values(collectionMetadata.marketplaces).map((place) => (
               <Link
                 key={place.link}
@@ -185,10 +179,7 @@ export const TokenViewer: React.FC<{
             ))}
           </div>
           <div className={styles.artwork_body}>
-            <div
-              className={styles.artwork_stage}
-              onClick={handleClick}
-            >
+            <div className={styles.artwork_stage} onClick={handleClick}>
               <Image
                 src={metadata.image.replace('ipfs://', 'https://ipfs.io/ipfs/')}
                 alt={`${metadata.name} ${tokenId}` || `NFT #${tokenId}`}
@@ -200,9 +191,16 @@ export const TokenViewer: React.FC<{
                   maxWidth: '100%',
                   maxHeight: '100%',
                   objectFit: 'contain',
+                  cursor: 'pointer',
                 }}
                 onClick={handleClick}
               />
+              <div
+                className={`${styles.artwork_caption} ${collectionStyles.text_secondary}`}
+                onClick={handleClick}
+              >
+                <Trans>(click for next)</Trans>
+              </div>
             </div>
             <TokenMetadataPanel
               description={metadata.description}

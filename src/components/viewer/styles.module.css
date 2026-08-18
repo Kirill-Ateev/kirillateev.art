@@ -48,7 +48,7 @@
 
 .artwork_header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 4px;
@@ -74,12 +74,11 @@
 .artwork_stage {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex: 1 1 auto;
   min-width: 0;
   min-height: 0;
-  cursor: pointer;
 }
 
 .artwork_stage img,
@@ -91,7 +90,21 @@
   object-fit: contain;
 }
 
+.artwork_caption {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--extra-font-size);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
 @media (max-width: 767px) {
+  .viewer_container {
+    height: auto;
+  }
+
   .artwork_wrap {
     padding: var(--small-padding);
     gap: var(--small-padding);
@@ -108,5 +121,9 @@
     height: auto;
     max-height: none;
     padding: var(--small-padding);
+  }
+
+  .artwork_caption {
+    top: -1.25rem;
   }
 }

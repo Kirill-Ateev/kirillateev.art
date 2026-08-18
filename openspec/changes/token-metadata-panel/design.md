@@ -39,8 +39,9 @@ Design tokens in play: Nunito, `--primary-color #333` (weight 600),
 
 ### D1 — Presentational component, not inline markup
 
-A new `TokenMetadataPanel` component renders description, attributes, and
-marketplace links. `TokenViewer` composes it.
+A new `TokenMetadataPanel` component renders the description and attributes
+only. Marketplace links live in the header above the artwork, not the panel.
+`TokenViewer` composes the panel.
 
 **Alternatives:** inline the panel markup in `TokenViewer`. Rejected — the
 viewer already holds metadata state and click handling; splitting the
@@ -57,22 +58,24 @@ wide screens and full width on narrow ones.
 occludes part of the artwork and needs z-index/pointer-handling complexity for
 marginal visual gain. A flow layout is more robust and accessible.
 
-### D3 — Image sized to fit, not stretched
+### D3 — Image sized to fit, not stretched, with breathing-room padding
 
-The image uses `width: 100%` and `height: auto` (or `object-fit: contain` with
-an explicit aspect), capped by the viewer's `calc(100vh - 94px)` minus the
-panel's measured height. On narrow screens the panel sits below, so the image
-takes the full width and its natural height is preserved until it would
-overflow — then it shrinks to fit.
+The image uses `object-fit: contain` with `max-width`/`max-height: 100%`, and
+the stage carries padding on all sides so the artwork never touches the
+viewport corners. On wide screens the image fills the space beside the panel;
+on narrow screens the panel slides beneath and the image takes the full
+width. On narrow screens the viewer height is fluid (no `100vh` cap) so the
+page scrolls to reveal the panel instead of cropping the image.
 
 **Alternatives:** fixed 512×512 like the collection cards. Rejected — the
 viewer is meant to showcase the work at scale; a fixed box wastes space on
 large monitors and crops on small ones.
 
-### D4 — Attributes as a restrained list
+### D4 — Attributes as key + value
 
-`value` is the lead (primary, weight 600); `type` is a small muted label above
-it; `description` is a caption beneath. Grouped in a vertical list.
+Each attribute renders its `type` (key) and `value` together in a row, with
+`type` as a small muted label and `value` as the lead in primary weight; the
+`description` is a caption beneath. Grouped in a vertical list.
 
 **Alternatives:** a 2-column grid. Considered — saves vertical space when
 attributes run long, but the list reads more deliberately and matches the
@@ -82,7 +85,8 @@ exceed ~6 entries.
 ### D5 — No token name anywhere
 
 Per the scope decision, `metadata.name` is not rendered. The panel opens with
-the description.
+the description; the collection name + token id renders in the header above
+the image.
 
 ## Risks / Trade-offs
 
