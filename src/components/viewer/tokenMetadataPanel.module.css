@@ -54,7 +54,7 @@
 }
 
 .value {
-  font-size: var(--medium-font-size);
+  font-size: var(--small-font-size);
   color: var(--primary-color);
   font-weight: var(--title-font-weight);
 }

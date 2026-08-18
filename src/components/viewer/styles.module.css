@@ -76,7 +76,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  flex: 1 1 auto;
+  width: 50%;
   min-width: 0;
   min-height: 0;
 }
@@ -103,6 +103,7 @@
 @media (max-width: 767px) {
   .viewer_container {
     height: auto;
+    min-height: calc(100vh - 94px);
   }
 
   .artwork_wrap {
@@ -118,6 +119,7 @@
 
   .artwork_stage {
     flex: 0 0 auto;
+    width: 100%;
     height: auto;
     max-height: none;
     padding: var(--small-padding);
