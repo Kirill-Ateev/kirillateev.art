@@ -42,7 +42,7 @@ const nextConfig = {
           "style-src 'self' 'unsafe-inline'",
           "img-src 'self' data: blob: https://og.rarible.com https://ipfs.io",
           "font-src 'self' data:",
-          "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://vercel-rpc-view.vercel.app https://ipfs.io https://og.rarible.com" +
+          "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://vercel-rpc-view.vercel.app https://eth.llamarpc.com https://eth-mainnet.public.blastapi.io https://rpc.ankr.com/eth https://rpc.flashbots.net/ https://cloudflare-eth.com/ https://eth-mainnet.gateway.pokt.network https://ethereum.publicnode.com https://nodes.mewapi.io https://eth-mainnet.nodereal.io https://ipfs.io https://og.rarible.com" +
             (isDev ? ' ws: http:' : ''),
           "media-src 'self'",
           "manifest-src 'self'",
