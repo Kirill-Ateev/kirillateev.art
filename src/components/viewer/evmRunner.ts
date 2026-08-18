@@ -31,7 +31,6 @@ export async function runTokenURI(
   collectionMetadata: CollectionData,
   tokenId: number,
 ): Promise<RunTokenURIResult> {
-  // 1. Проверяем, что это байткод деплоя (обычно он длиннее и содержит инпут конструктора в конце)
   if (!creationBytecode || !creationBytecode.startsWith('0x')) {
     return { ok: false, reason: 'bytecode is empty or not 0x-prefixed' };
   }
@@ -46,19 +45,15 @@ export async function runTokenURI(
   // Адрес, который будет деплоить контракт и станет его Owner-ом
   const ownerAddress = createAddressFromString(DEFAULT_ADDRESS);
 
-  // 2. КОДИРУЕМ АРГУМЕНТЫ КОНСТРУКТОРА
-  // Они должны строго соответствовать контракту:
-  // constructor(string name_, string symbol_, string contractUri_, address initialOwner_, uint96 royaltyBasisPoints_)
+  // 1. КОДИРУЕМ АРГУМЕНТЫ КОНСТРУКТОРА
   const encodedArgs = encodeAbiParameters(
     parseAbiParameters(collectionMetadata.constructorParams.abi),
     collectionMetadata.constructorParams.arguments,
   );
 
-  // Склеиваем байткод деплоя и аргументы
   const deployData = (creationBytecode + encodedArgs.slice(2)) as Hex;
 
-  // 3. ДЕПЛОИМ КОНТРАКТ В ЛОКАЛЬНУЮ EVM
-  // В runCall, если не указать параметр `to`, EVM считает это созданием контракта
+  // 2. ДЕПЛОИМ КОНТРАКТ
   const deployResult = await evm.runCall({
     caller: ownerAddress,
     data: hexToBytes(deployData),
@@ -72,13 +67,15 @@ export async function runTokenURI(
     };
   }
 
-  // Получаем адрес задеплоенного контракта
+  // ИСПРАВЛЕНИЕ: Адрес контракта лежит внутри execResult
   const contractAddress = deployResult.createdAddress;
   if (!contractAddress) {
     return { ok: false, reason: 'Contract address was not created' };
   }
 
-  // 4. ВЫЗЫВАЕМ mintBatch (минтим 10000 штук)
+  console.log(deployResult);
+
+  // 3. ВЫЗЫВАЕМ mintBatch (минтим 10000 штук)
   const mintData = hexToBytes(
     encodeFunctionData({
       abi: ABI,
@@ -88,8 +85,8 @@ export async function runTokenURI(
   );
 
   const mintResult = await evm.runCall({
-    to: contractAddress,
-    caller: ownerAddress, // Вызываем от имени овнера, чтобы пройти проверку onlyOwner
+    to: contractAddress, // Теперь здесь правильный адрес
+    caller: ownerAddress,
     data: mintData,
     gasLimit: GAS_LIMIT,
   });
@@ -104,7 +101,7 @@ export async function runTokenURI(
     };
   }
 
-  // 5. ВЫЗЫВАЕМ tokenURI
+  // 4. ВЫЗЫВАЕМ tokenURI
   const tokenUriData = hexToBytes(
     encodeFunctionData({
       abi: ABI,
@@ -134,7 +131,7 @@ export async function runTokenURI(
     return { ok: false, reason: 'empty returnValue' };
   }
 
-  // 6. ДЕКОДИРУЕМ РЕЗУЛЬТАТ
+  // 5. ДЕКОДИРУЕМ РЕЗУЛЬТАТ
   try {
     const hex = bytesToHex(execResult.returnValue) as Hex;
     const tokenURI = decodeFunctionResult({
