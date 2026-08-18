@@ -81,9 +81,12 @@ export default function CollectionFrames() {
                 width={512}
                 height={512}
               />
-              <div className={`${styles.text_secondary} ${styles.item_title}`}>
+              <Link
+                className={`${styles.text_secondary} ${styles.item_title} ${styles.link}`}
+                href={`/${i18n.locale}/view/frames/${imageId}`}
+              >
                 #{imageId}
-              </div>
+              </Link>
             </div>
           ))}
 

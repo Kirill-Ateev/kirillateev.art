@@ -238,6 +238,7 @@
 }
 
 .item_title {
-  text-align: center;
   padding-top: 4px;
+  display: flex;
+  justify-content: center;
 }

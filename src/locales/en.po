@@ -13,7 +13,8 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/viewer/TokenViewer.tsx:174
+#: src/components/viewer/OnChainBytecodeViewer.tsx:167
+#: src/components/viewer/TokenViewer.tsx:202
 msgid "(click for next)"
 msgstr "(click for next)"
 
@@ -55,7 +56,7 @@ msgid "4 works"
 msgstr "4 works"
 
 #: src/components/collections/CollectionCity.tsx:37
-#: src/components/collections/CollectionFolds.tsx:37
+#: src/components/collections/CollectionFolds.tsx:49
 #: src/components/collections/CollectionFrames.tsx:37
 msgid "512 works"
 msgstr "512 works"
@@ -76,7 +77,7 @@ msgstr "A collection of 42 impressionist style photos."
 #: src/components/collections/CollectionCity.tsx:41
 #: src/components/collections/CollectionCocktailStraws.tsx:41
 #: src/components/collections/CollectionCrosswalk.tsx:40
-#: src/components/collections/CollectionFolds.tsx:41
+#: src/components/collections/CollectionFolds.tsx:53
 #: src/components/collections/CollectionFrames.tsx:41
 #: src/components/collections/CollectionLanes.tsx:40
 #: src/components/collections/CollectionWindow.tsx:41
@@ -111,7 +112,7 @@ msgstr "A word-generative collection, a unique pattern of character states from 
 #~ msgid "Ask me a question in the community"
 #~ msgstr "Ask me a question in the community"
 
-#: src/components/header/Header.tsx:23
+#: src/components/header/Header.tsx:32
 msgid "Community"
 msgstr "Community"
 
@@ -140,7 +141,7 @@ msgstr "Ethereum - August 2025"
 msgid "Ethereum - December 2025"
 msgstr "Ethereum - December 2025"
 
-#: src/components/collections/CollectionFolds.tsx:34
+#: src/components/collections/CollectionFolds.tsx:46
 msgid "Ethereum - January 2026"
 msgstr "Ethereum - January 2026"
 
@@ -179,7 +180,7 @@ msgstr "Hi, I'm Kirill Ateev, an artist working with code."
 #: src/components/collections/CollectionCity.tsx:47
 #: src/components/collections/CollectionCocktailStraws.tsx:47
 #: src/components/collections/CollectionCrosswalk.tsx:46
-#: src/components/collections/CollectionFolds.tsx:47
+#: src/components/collections/CollectionFolds.tsx:59
 #: src/components/collections/CollectionFrames.tsx:47
 #: src/components/collections/CollectionLanes.tsx:46
 #: src/components/collections/CollectionSelection.tsx:47
@@ -213,8 +214,13 @@ msgstr "Images and metadata stored on IPFS."
 #~ msgid "Kirill Ateev's artwork"
 #~ msgstr "Kirill Ateev's artwork"
 
+#: src/components/viewer/OnChainBytecodeViewer.tsx:140
+#: src/components/viewer/TokenViewer.tsx:152
+msgid "Loading"
+msgstr "Loading"
+
 #: src/app/[lang]/messages/page.tsx:59
-#: src/components/header/Header.tsx:17
+#: src/components/header/Header.tsx:26
 msgid "Messages"
 msgstr "Messages"
 
@@ -264,7 +270,7 @@ msgstr "Some messages for you"
 #: src/components/collections/CollectionCity.tsx:61
 #: src/components/collections/CollectionCocktailStraws.tsx:61
 #: src/components/collections/CollectionCrosswalk.tsx:60
-#: src/components/collections/CollectionFolds.tsx:61
+#: src/components/collections/CollectionFolds.tsx:73
 #: src/components/collections/CollectionFrames.tsx:61
 #: src/components/collections/CollectionLanes.tsx:60
 #: src/components/collections/CollectionSelection.tsx:61

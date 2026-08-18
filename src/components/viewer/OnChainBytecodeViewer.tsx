@@ -137,7 +137,7 @@ export const OnChainBytecodeViewer: React.FC<{
         cursor: isLoading ? 'wait' : 'pointer',
       }}
     >
-      {isLoading && <div>Loading{loadingDots}</div>}
+      {isLoading && <div><Trans>Loading</Trans>{loadingDots}</div>}
 
       {metadata && !isLoading && (
         <>

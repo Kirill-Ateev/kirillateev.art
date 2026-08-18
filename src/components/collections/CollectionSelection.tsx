@@ -76,6 +76,15 @@ export default function CollectionSelection() {
               ? `${styles.card_berry}`
               : `${styles.card_nights}`;
 
+            const tokenId =
+              imageId === 'Berry1'
+                ? 1
+                : imageId === 'Berry2'
+                  ? 2
+                  : imageId === 'Field'
+                    ? 3
+                    : 4;
+
             return (
               <div
                 key={imageId}
@@ -87,13 +96,14 @@ export default function CollectionSelection() {
                   width={isBerry ? 394 : 512}
                   height={512}
                 />
-                <div
-                  className={`${styles.text_secondary} ${styles.item_title}`}
+                <Link
+                  className={`${styles.text_secondary} ${styles.item_title} ${styles.link}`}
+                  href={`/${i18n.locale}/view/selection/${tokenId}`}
                 >
                   {isBerry
                     ? { Berry1: 'Berry #1', Berry2: 'Berry #2' }[imageId]
                     : imageId}
-                </div>
+                </Link>
               </div>
             );
           })}

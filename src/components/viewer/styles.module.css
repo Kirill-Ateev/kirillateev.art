@@ -135,7 +135,7 @@
   flex-direction: column;
   gap: var(--small-padding);
   width: 100%;
-  max-width: 420px;
+  max-width: 418px;
   overflow-y: auto;
 }
 

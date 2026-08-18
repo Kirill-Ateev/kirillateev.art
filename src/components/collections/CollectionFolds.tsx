@@ -99,9 +99,7 @@ export default function CollectionFolds({
               />
               <Link
                 className={`${styles.text_secondary} ${styles.item_title} ${styles.link}`}
-                target="_blank"
-                rel="noreferrer"
-                href={`${collectionsData['folds'].marketplaces.rarible.tokenLink}${imageId}`}
+                href={`/${i18n.locale}/view/folds/${imageId}`}
               >
                 #{imageId}
               </Link>

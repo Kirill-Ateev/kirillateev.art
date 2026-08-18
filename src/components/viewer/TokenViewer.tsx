@@ -95,9 +95,12 @@ export const TokenViewer: React.FC<{
           // Handle on-chain base64 JSON metadata
           if (tokenURI.startsWith('data:application/json;base64,')) {
             const base64 = tokenURI.split(',')[1];
-            const rawData = atob(base64);
+            const data = JSON.parse(atob(base64));
             if (!cancelled) {
-              setMetadata(JSON.parse(rawData));
+              setMetadata({
+                ...data,
+                description: data.description.replaceAll('â', '—'),
+              });
               setIsLoading(false);
             }
             return;
@@ -149,7 +152,12 @@ export const TokenViewer: React.FC<{
         cursor: isLoading ? 'wait' : 'auto',
       }}
     >
-      {isLoading && <div>Loading{loadingDots}</div>}
+      {isLoading && (
+        <div>
+          <Trans>Loading</Trans>
+          {loadingDots}
+        </div>
+      )}
 
       {metadata && !isLoading && (
         <div className={styles.artwork_wrap}>

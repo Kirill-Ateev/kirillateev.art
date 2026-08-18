@@ -118,5 +118,5 @@ the image.
 
 - Should attributes be grouped by `type` (collapsing repeated descriptions)
   now or later? Deferred — a visual enhancement, not a behavior change.
-- Exact panel width cap (e.g. 420px) is a styling detail to finalize during
+- Exact panel width cap (e.g. 418px) is a styling detail to finalize during
   implementation against the live layout.

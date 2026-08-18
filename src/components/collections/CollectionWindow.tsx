@@ -81,9 +81,12 @@ export default function CollectionWindow() {
                 width={512}
                 height={512}
               />
-              <div className={`${styles.text_secondary} ${styles.item_title}`}>
+              <Link
+                className={`${styles.text_secondary} ${styles.item_title} ${styles.link}`}
+                href={`/${i18n.locale}/view/window/${imageId}`}
+              >
                 #{imageId}
-              </div>
+              </Link>
             </div>
           ))}
 
