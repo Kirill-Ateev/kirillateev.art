@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/components/viewer/OnChainBytecodeViewer.tsx:167
-#: src/components/viewer/TokenViewer.tsx:202
+#: src/components/viewer/TokenViewer.tsx:209
 msgid "(click for next)"
 msgstr "(кликни для следующей)"
 
@@ -51,7 +51,7 @@ msgstr "20 работ"
 msgid "300 works"
 msgstr "300 работ"
 
-#: src/components/collections/CollectionSelection.tsx:37
+#: src/components/collections/CollectionSelection.tsx:42
 msgid "4 works"
 msgstr "4 работы"
 
@@ -88,7 +88,7 @@ msgstr "Коллекция анимированных векторных изо�
 msgid "A collection of collages of CC0 images in an abstractionist style."
 msgstr "Коллекция коллажей из CC0 изображений в стиле абстракционизма."
 
-#: src/components/collections/CollectionSelection.tsx:41
+#: src/components/collections/CollectionSelection.tsx:46
 msgid "A special selection. Individual works, triptychs, and small series curated just for you."
 msgstr "Специальная селекция. Индивидуальные работы, триптихи и малые серии специально для тебя."
 
@@ -104,7 +104,11 @@ msgstr "Коллекция словообразования, уникальны�
 #~ msgid "Ask me a question in the community"
 #~ msgstr "Задайте мне вопрос в сообществе"
 
-#: src/components/header/Header.tsx:32
+#: src/components/header/BurgerMenu.tsx:17
+msgid "Close menu"
+msgstr "Закрыть меню"
+
+#: src/components/header/Header.tsx:20
 msgid "Community"
 msgstr "Сообщество"
 
@@ -149,7 +153,7 @@ msgstr "Ethereum - Март 2025"
 #~ msgid "Ethereum - March 2026"
 #~ msgstr "Ethereum - Март 2026"
 
-#: src/components/collections/CollectionSelection.tsx:34
+#: src/components/collections/CollectionSelection.tsx:39
 msgid "Ethereum - March-June 2026"
 msgstr "Ethereum - Март-Июнь 2026"
 
@@ -175,7 +179,7 @@ msgstr "Привет, я Кирилл Атеев, создаю искусств�
 #: src/components/collections/CollectionFolds.tsx:59
 #: src/components/collections/CollectionFrames.tsx:47
 #: src/components/collections/CollectionLanes.tsx:46
-#: src/components/collections/CollectionSelection.tsx:47
+#: src/components/collections/CollectionSelection.tsx:52
 #: src/components/collections/CollectionWindow.tsx:47
 msgid "Images and metadata stored directly on blockchain (on-chain)."
 msgstr "Изображения и метаданные хранятся полностью в блокчейне (on-chain)."
@@ -211,14 +215,17 @@ msgstr "Изображения и метаданные хранятся в IPFS.
 #~ msgstr "работы Кирилла Атеева"
 
 #: src/components/viewer/OnChainBytecodeViewer.tsx:140
-#: src/components/viewer/TokenViewer.tsx:152
 msgid "Loading"
 msgstr "Загрузка"
 
 #: src/app/[lang]/messages/page.tsx:59
-#: src/components/header/Header.tsx:26
+#: src/components/header/Header.tsx:14
 msgid "Messages"
 msgstr "Сообщения"
+
+#: src/components/header/BurgerMenu.tsx:16
+msgid "Open menu"
+msgstr "Открыть меню"
 
 #: src/components/oldCollections/CollectionKindWords.tsx:32
 msgid "Polygon - Feb. 2023"
@@ -269,7 +276,7 @@ msgstr "Некоторые сообщения для тебя"
 #: src/components/collections/CollectionFolds.tsx:73
 #: src/components/collections/CollectionFrames.tsx:61
 #: src/components/collections/CollectionLanes.tsx:60
-#: src/components/collections/CollectionSelection.tsx:61
+#: src/components/collections/CollectionSelection.tsx:66
 #: src/components/collections/CollectionWindow.tsx:61
 #: src/components/oldCollections/CollectionKindWords.tsx:70
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:62

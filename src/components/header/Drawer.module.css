@@ -1,0 +1,105 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(23, 23, 23, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease,
+    visibility 0s linear 0.4s;
+}
+
+.overlayVisible {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.4s ease,
+    visibility 0s linear 0s;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1150;
+  height: 100vh;
+  height: 100dvh;
+  width: min(340px, 88vw);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--background);
+  border-left: 1px solid rgba(23, 23, 23, 0.08);
+  box-shadow: -24px 0 60px rgba(23, 23, 23, 0.18);
+  transform: translateX(100%);
+  visibility: hidden;
+  transition:
+    transform 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+    visibility 0s linear 0.45s;
+}
+
+.drawerOpen {
+  transform: translateX(0);
+  visibility: visible;
+  transition:
+    transform 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+    visibility 0s linear 0s;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--medium-padding);
+  flex: 1;
+  padding: var(--big-padding) var(--big-padding) var(--medium-padding);
+}
+
+.drawer .nav > * {
+  font-size: var(--medium-font-size);
+  font-weight: var(--text-font-weight);
+  color: var(--primary-color);
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.drawerOpen .nav > * {
+  animation: fadeSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.drawerOpen .nav > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.drawerOpen .nav > *:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.drawerOpen .nav > *:nth-child(3) {
+  animation-delay: 0.26s;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .drawer {
+    transition: none;
+  }
+
+  .drawer .nav > * {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -80,10 +80,7 @@
   }
 
   .menu_container {
-    display: flex;
-    gap: var(--small-padding);
-    color: var(--secondary-color);
-    flex-wrap: wrap;
+    display: none;
   }
 
   .message {

@@ -1,5 +1,6 @@
 .select {
   appearance: none;
+  width: fit-content;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
