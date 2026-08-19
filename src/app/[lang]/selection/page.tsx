@@ -11,6 +11,9 @@ import styles from './../page.module.css';
 const pageDescriptions: Record<string, string> = {
   en: 'A curated selection of individual works, triptychs, and small series by Kirill Ateev.',
   ru: 'Избранные индивидуальные работы, триптихи и малые серии Кирилла Атеева.',
+  zh: 'Kirill Ateev 的单件作品、三联画与小型系列精选。',
+  hi: 'Kirill Ateev की व्यक्तिगत कृतियों, ट्रिप्टिक और छोटी श्रृंखलाओं का एक चुनिंदा संग्रह।',
+  es: 'Una selección de obras individuales, trípticos y series pequeñas de Kirill Ateev.',
 };
 
 function pageTitle(lang: string) {
@@ -60,10 +63,30 @@ const selectionJsonLd = {
   '@type': 'ItemList',
   name: 'Selection',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Berry #1', url: `${SITE}/en/view/selection/1` },
-    { '@type': 'ListItem', position: 2, name: 'Berry #2', url: `${SITE}/en/view/selection/2` },
-    { '@type': 'ListItem', position: 3, name: 'Field', url: `${SITE}/en/view/selection/3` },
-    { '@type': 'ListItem', position: 4, name: 'Egg', url: `${SITE}/en/view/selection/4` },
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Berry #1',
+      url: `${SITE}/en/view/selection/1`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Berry #2',
+      url: `${SITE}/en/view/selection/2`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Field',
+      url: `${SITE}/en/view/selection/3`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: 'Egg',
+      url: `${SITE}/en/view/selection/4`,
+    },
   ],
 };
 

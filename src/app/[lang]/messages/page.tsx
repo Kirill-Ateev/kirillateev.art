@@ -11,6 +11,9 @@ import styles from '../page.module.css';
 const pageTitles: Record<string, string> = {
   en: 'Messages',
   ru: 'Сообщения',
+  zh: '讯息',
+  hi: 'संदेश',
+  es: 'Mensajes',
 };
 
 function pageTitle(lang: string) {

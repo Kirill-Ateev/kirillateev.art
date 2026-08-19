@@ -1,8 +1,8 @@
 # Kirill Ateev Art — kirillateev.art
 
-> Personal website of artist Kirill Ateev, who works in the style of kinetic minimalism (Kinimalism). All works are animated SVG images issued as NFTs on the Ethereum blockchain; images and metadata are stored on-chain. The site is static and has English (/en) and Russian (/ru) versions.
+> Personal website of artist Kirill Ateev, who works in the style of kinetic minimalism (Kinimalism). All works are animated SVG images issued as NFTs on the Ethereum blockchain; images and metadata are stored on-chain. The site is static and has English (/en), Russian (/ru), Chinese (/zh), Hindi (/hi) and Spanish (/es) versions.
 
-The website is completely static. English links are used below; replace `/en` with `/ru` for the Russian version. Each collection contains unique animated SVG images. Individual works can be viewed on collection pages using routes like `/en/view/blinds/321`.
+The website is completely static. English links are used below; replace `/en` with `/ru`, `/zh`, `/hi` or `/es` for the corresponding language version. Each collection contains unique animated SVG images. Individual works can be viewed on collection pages using routes like `/en/view/blinds/321`.
 
 Technical notes for LLMs:
 - All NFT images are SVG files. Each image is placed in an `<img>` tag with an `alt` attribute containing the work’s title and the artist’s name.

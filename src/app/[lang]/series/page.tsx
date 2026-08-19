@@ -19,11 +19,17 @@ import styles from './../page.module.css';
 const pageTitles: Record<string, string> = {
   en: 'Series',
   ru: 'Серии',
+  zh: '系列',
+  hi: 'श्रृंखलाएँ',
+  es: 'Series',
 };
 
 const pageDescriptions: Record<string, string> = {
   en: 'All series and collections of generative art by Kirill Ateev: Folds, Frames, City, Blinds, Window, Crosswalk, Lanes and more. Kinetic minimalism (kinimalism) on Ethereum.',
   ru: 'Все серии и коллекции генеративного искусства Кирилла Атеева: Folds, Frames, City, Blinds, Window, Crosswalk, Lanes и другие. Кинетический минимализм (кинимализм) на Ethereum.',
+  zh: '基里尔·阿特耶夫生成艺术的全部系列与收藏：Folds、Frames、City、Blinds、Window、Crosswalk、Lanes 等。以太坊上的动感极简主义（kinimalism）。',
+  hi: 'किरिल अतीव की जनरेटिव कला की सभी श्रृंखलाएँ और संग्रह: Folds, Frames, City, Blinds, Window, Crosswalk, Lanes और अन्य। Ethereum पर गतिज न्यूनतमवाद (किनिमलिज़्म)।',
+  es: 'Todas las series y colecciones de arte generativo de Kirill Ateev: Folds, Frames, City, Blinds, Window, Crosswalk, Lanes y más. Minimalismo cinético (kinimalismo) en Ethereum.',
 };
 
 function pageTitle(lang: string) {

@@ -10,6 +10,9 @@ import styles from '../page.module.css';
 const pageTitles: Record<string, string> = {
   en: 'Community',
   ru: 'Сообщество',
+  zh: '社区',
+  hi: 'समुदाय',
+  es: 'Comunidad',
 };
 
 function pageTitle(lang: string) {

@@ -20,8 +20,8 @@ msgstr "(кликни для следующей)"
 
 #. placeholder {0}: message?.[i18n.locale].text
 #. placeholder {0}: message?.[i18n.locale].title
-#: src/app/[lang]/messages/page.tsx:79
-#: src/app/[lang]/messages/page.tsx:85
+#: src/app/[lang]/messages/page.tsx:82
+#: src/app/[lang]/messages/page.tsx:88
 msgid "{0}"
 msgstr "{0}"
 
@@ -124,6 +124,10 @@ msgstr "Сжатые изображения и хранятся в блокче�
 msgid "English"
 msgstr "English"
 
+#: src/components/lingui/Switcher.tsx:16
+msgid "Español"
+msgstr "Español"
+
 #: src/components/collections/CollectionCrosswalk.tsx:33
 #: src/components/collections/CollectionLanes.tsx:33
 msgid "Ethereum - April 2025"
@@ -166,9 +170,9 @@ msgstr "Ethereum - Ноябрь 2025"
 msgid "Ethereum - September 2025"
 msgstr "Ethereum - Сентябрь 2025"
 
-#: src/app/[lang]/page.tsx:82
-#: src/app/[lang]/selection/page.tsx:87
-#: src/app/[lang]/series/page.tsx:106
+#: src/app/[lang]/page.tsx:83
+#: src/app/[lang]/selection/page.tsx:90
+#: src/app/[lang]/series/page.tsx:112
 msgid "Hi, I'm Kirill Ateev, an artist working with code."
 msgstr "Привет, я Кирилл Атеев, создаю искусство с помощью кода."
 
@@ -218,7 +222,7 @@ msgstr "Изображения и метаданные хранятся в IPFS.
 msgid "Loading"
 msgstr "Загрузка"
 
-#: src/app/[lang]/messages/page.tsx:59
+#: src/app/[lang]/messages/page.tsx:62
 #: src/components/header/Header.tsx:14
 msgid "Messages"
 msgstr "Сообщения"
@@ -231,29 +235,29 @@ msgstr "Открыть меню"
 msgid "Polygon - Feb. 2023"
 msgstr "Polygon - Фев. 2023"
 
-#: src/app/[lang]/community/page.tsx:57
+#: src/app/[lang]/community/page.tsx:60
 msgid "Recent Community Work"
 msgstr "Недавние работы в сообществе"
 
-#: src/app/[lang]/page.tsx:79
-#: src/app/[lang]/selection/page.tsx:84
-#: src/app/[lang]/series/page.tsx:103
+#: src/app/[lang]/page.tsx:80
+#: src/app/[lang]/selection/page.tsx:87
+#: src/app/[lang]/series/page.tsx:109
 msgid "Recent Work"
 msgstr "Недавние работы"
 
-#: src/app/[lang]/page.tsx:97
-#: src/app/[lang]/selection/page.tsx:102
-#: src/app/[lang]/series/page.tsx:121
+#: src/app/[lang]/page.tsx:98
+#: src/app/[lang]/selection/page.tsx:105
+#: src/app/[lang]/series/page.tsx:127
 msgid "Selection"
 msgstr "Селективные"
 
-#: src/app/[lang]/page.tsx:91
-#: src/app/[lang]/selection/page.tsx:96
-#: src/app/[lang]/series/page.tsx:115
+#: src/app/[lang]/page.tsx:92
+#: src/app/[lang]/selection/page.tsx:99
+#: src/app/[lang]/series/page.tsx:121
 msgid "Series"
 msgstr "Серии"
 
-#: src/app/[lang]/messages/page.tsx:62
+#: src/app/[lang]/messages/page.tsx:65
 msgid "Some messages for you"
 msgstr "Некоторые сообщения для тебя"
 
@@ -296,3 +300,11 @@ msgstr "Посмотреть коллекцию >"
 #: src/components/lingui/Switcher.tsx:13
 msgid "Русский"
 msgstr "Русский"
+
+#: src/components/lingui/Switcher.tsx:15
+msgid "हिन्दी"
+msgstr "हिन्दी"
+
+#: src/components/lingui/Switcher.tsx:14
+msgid "中文"
+msgstr "中文"

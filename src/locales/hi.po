@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2024-09-23 20:23+0300\n"
+"POT-Creation-Date: 2026-08-19 15:28+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: en\n"
+"Language: hi\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: \n"
@@ -16,7 +16,7 @@ msgstr ""
 #: src/components/viewer/OnChainBytecodeViewer.tsx:167
 #: src/components/viewer/TokenViewer.tsx:209
 msgid "(click for next)"
-msgstr "(click for next)"
+msgstr "(अगले के लिए क्लिक करें)"
 
 #. placeholder {0}: message?.[i18n.locale].text
 #. placeholder {0}: message?.[i18n.locale].title
@@ -29,49 +29,41 @@ msgstr "{0}"
 #: src/components/collections/CollectionLanes.tsx:36
 #: src/components/collections/CollectionWindow.tsx:37
 msgid "10 000 works"
-msgstr "10 000 works"
+msgstr "10 000 कृतियाँ"
 
 #: src/components/collections/CollectionAttentionless.tsx:36
 msgid "1024 works"
-msgstr "1024 works"
+msgstr "1024 कृतियाँ"
 
 #: src/components/collections/CollectionCocktailStraws.tsx:37
 msgid "111 works"
-msgstr "111 works"
-
-#: src/components/collections/CollectionSelection.tsx:37
-#~ msgid "2 works"
-#~ msgstr "2 works"
+msgstr "111 कृतियाँ"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:36
 msgid "20 works"
-msgstr "20 works"
+msgstr "20 कृतियाँ"
 
 #: src/components/oldCollections/CollectionKindWords.tsx:35
 msgid "300 works"
-msgstr "300 works"
+msgstr "300 कृतियाँ"
 
 #: src/components/collections/CollectionSelection.tsx:42
 msgid "4 works"
-msgstr "4 works"
+msgstr "4 कृतियाँ"
 
 #: src/components/collections/CollectionCity.tsx:37
 #: src/components/collections/CollectionFolds.tsx:49
 #: src/components/collections/CollectionFrames.tsx:37
 msgid "512 works"
-msgstr "512 works"
+msgstr "512 कृतियाँ"
 
 #: src/components/collections/CollectionBlinds.tsx:37
 msgid "555 works"
-msgstr "555 works"
-
-#: src/components/collections/CollectionNights.tsx:46
-#~ msgid "88 works"
-#~ msgstr "88 works"
+msgstr "555 कृतियाँ"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:40
 msgid "A collection of 42 impressionist style photos."
-msgstr "A collection of 42 impressionist style photos."
+msgstr "42 प्रभाववादी शैली की तस्वीरों का संग्रह।"
 
 #: src/components/collections/CollectionBlinds.tsx:41
 #: src/components/collections/CollectionCity.tsx:41
@@ -82,51 +74,31 @@ msgstr "A collection of 42 impressionist style photos."
 #: src/components/collections/CollectionLanes.tsx:40
 #: src/components/collections/CollectionWindow.tsx:41
 msgid "A collection of animated vector images in kinetic minimalism style (kinimalism)."
-msgstr "A collection of animated vector images in kinetic minimalism style (kinimalism)."
-
-#: src/components/collections/CollectionLanes.tsx:38
-#~ msgid "A collection of animated vector images in suprematism style."
-#~ msgstr "A collection of animated vector images in suprematism style."
+msgstr "गतिज न्यूनतमवाद शैली (किनिमलिज़्म) में एनिमेटेड वेक्टर छवियों का संग्रह।"
 
 #: src/components/collections/CollectionAttentionless.tsx:40
 msgid "A collection of collages of CC0 images in an abstractionist style."
-msgstr "A collection of collages of CC0 images in an abstractionist style."
+msgstr "अमूर्तवादी शैली में CC0 छवियों के कोलाज का संग्रह।"
 
 #: src/components/collections/CollectionSelection.tsx:46
 msgid "A special selection. Individual works, triptychs, and small series curated just for you."
-msgstr "A special selection. Individual works, triptychs, and small series curated just for you."
+msgstr "एक विशेष चयन। आपके लिए चुनी गई व्यक्तिगत कृतियाँ, त्रिपिटक और छोटी श्रृंखलाएँ।"
 
 #: src/components/oldCollections/CollectionKindWords.tsx:39
 msgid "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
-msgstr "A word-generative collection, a unique pattern of character states from <0>dobrofont</0>, a font drawn by special children."
-
-#: src/components/collections/CollectionKindWords.tsx:34
-#~ msgid "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
-#~ msgstr "A word-generative collection, a unique pattern of character states from dobrofont, a font drawn by special children."
-
-#: src/components/header/Header.tsx:19
-#~ msgid "About me"
-#~ msgstr "About me"
-
-#: src/app/[lang]/about/page.tsx:27
-#~ msgid "Ask me a question in the community"
-#~ msgstr "Ask me a question in the community"
+msgstr "शब्द-जनरेटिव संग्रह, <0>dobrofont</0> से वर्ण अवस्थाओं का अद्वितीय पैटर्न — विशेष बच्चों द्वारा बनाई गई एक फ़ॉन्ट।"
 
 #: src/components/header/BurgerMenu.tsx:17
 msgid "Close menu"
-msgstr "Close menu"
+msgstr "मेनू बंद करें"
 
 #: src/components/header/Header.tsx:20
 msgid "Community"
-msgstr "Community"
+msgstr "समुदाय"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:43
 msgid "Compressed images and metadata stored on-chain, additionally the original photos stored on IPFS."
-msgstr "Compressed images and metadata stored on-chain, additionally the original photos stored on IPFS."
-
-#: src/components/collections/CollectionNights.tsx:50
-#~ msgid "Compression-based generative multimedia collection. To play a melody - click over the piece."
-#~ msgstr "Compression-based generative multimedia collection. To play a melody - click over the piece."
+msgstr "संपीड़ित छवियाँ और मेटाडेटा ऑन-चेन संग्रहीत हैं; मूल तस्वीरें अतिरिक्त रूप से IPFS पर संग्रहीत हैं।"
 
 #: src/components/lingui/Switcher.tsx:12
 msgid "English"
@@ -139,50 +111,46 @@ msgstr "Español"
 #: src/components/collections/CollectionCrosswalk.tsx:33
 #: src/components/collections/CollectionLanes.tsx:33
 msgid "Ethereum - April 2025"
-msgstr "Ethereum - April 2025"
+msgstr "Ethereum - अप्रैल 2025"
 
 #: src/components/collections/CollectionWindow.tsx:34
 msgid "Ethereum - August 2025"
-msgstr "Ethereum - August 2025"
+msgstr "Ethereum - अगस्त 2025"
 
 #: src/components/collections/CollectionFrames.tsx:34
 msgid "Ethereum - December 2025"
-msgstr "Ethereum - December 2025"
+msgstr "Ethereum - दिसंबर 2025"
 
 #: src/components/collections/CollectionFolds.tsx:46
 msgid "Ethereum - January 2026"
-msgstr "Ethereum - January 2026"
+msgstr "Ethereum - जनवरी 2026"
 
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:33
 msgid "Ethereum - Jun. 2023"
-msgstr "Ethereum - Jun. 2023"
+msgstr "Ethereum - जून 2023"
 
 #: src/components/collections/CollectionAttentionless.tsx:33
 msgid "Ethereum - March 2025"
-msgstr "Ethereum - March 2025"
-
-#: src/components/collections/CollectionSelection.tsx:34
-#~ msgid "Ethereum - March 2026"
-#~ msgstr "Ethereum - March 2026"
+msgstr "Ethereum - मार्च 2025"
 
 #: src/components/collections/CollectionSelection.tsx:39
 msgid "Ethereum - March-June 2026"
-msgstr "Ethereum - March-June 2026"
+msgstr "Ethereum - मार्च-जून 2026"
 
 #: src/components/collections/CollectionCity.tsx:34
 msgid "Ethereum - November 2025"
-msgstr "Ethereum - November 2025"
+msgstr "Ethereum - नवंबर 2025"
 
 #: src/components/collections/CollectionBlinds.tsx:34
 #: src/components/collections/CollectionCocktailStraws.tsx:34
 msgid "Ethereum - September 2025"
-msgstr "Ethereum - September 2025"
+msgstr "Ethereum - सितंबर 2025"
 
 #: src/app/[lang]/page.tsx:83
 #: src/app/[lang]/selection/page.tsx:90
 #: src/app/[lang]/series/page.tsx:112
 msgid "Hi, I'm Kirill Ateev, an artist working with code."
-msgstr "Hi, I'm Kirill Ateev, an artist working with code."
+msgstr "नमस्ते, मैं Kirill Ateev, एक कलाकार जो कोड के साथ काम करता है।"
 
 #: src/components/collections/CollectionBlinds.tsx:47
 #: src/components/collections/CollectionCity.tsx:47
@@ -194,87 +162,55 @@ msgstr "Hi, I'm Kirill Ateev, an artist working with code."
 #: src/components/collections/CollectionSelection.tsx:52
 #: src/components/collections/CollectionWindow.tsx:47
 msgid "Images and metadata stored directly on blockchain (on-chain)."
-msgstr "Images and metadata stored directly on blockchain (on-chain)."
+msgstr "छवियाँ और मेटाडेटा सीधे ब्लॉकचेन पर (ऑन-चेन) संग्रहीत हैं।"
 
 #: src/components/collections/CollectionAttentionless.tsx:46
 #: src/components/oldCollections/CollectionKindWords.tsx:54
 msgid "Images and metadata stored on IPFS."
-msgstr "Images and metadata stored on IPFS."
-
-#: src/app/[lang]/layout.tsx:55
-#: src/app/[lang]/layout.tsx:77
-#~ msgid "Kirill Ateev"
-#~ msgstr "Kirill Ateev"
-
-#: src/app/[lang]/layout.tsx:41
-#: src/app/[lang]/layout.tsx:42
-#: src/app/[lang]/layout.tsx:62
-#: src/app/[lang]/layout.tsx:84
-#~ msgid "Kirill Ateev - Artist"
-#~ msgstr "Kirill Ateev - Artist"
-
-#: src/app/[lang]/layout.tsx:51
-#~ msgid "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
-#~ msgstr "Kirill Ateev, artist, contemporary art, generative, community, exhibitions, portfolio"
-
-#: src/app/[lang]/layout.tsx:75
-#: src/app/[lang]/layout.tsx:98
-#~ msgid "Kirill Ateev's artwork"
-#~ msgstr "Kirill Ateev's artwork"
+msgstr "छवियाँ और मेटाडेटा IPFS पर संग्रहीत हैं।"
 
 #: src/components/viewer/OnChainBytecodeViewer.tsx:140
 msgid "Loading"
-msgstr "Loading"
+msgstr "लोड हो रहा है"
 
 #: src/app/[lang]/messages/page.tsx:62
 #: src/components/header/Header.tsx:14
 msgid "Messages"
-msgstr "Messages"
+msgstr "संदेश"
 
 #: src/components/header/BurgerMenu.tsx:16
 msgid "Open menu"
-msgstr "Open menu"
+msgstr "मेनू खोलें"
 
 #: src/components/oldCollections/CollectionKindWords.tsx:32
 msgid "Polygon - Feb. 2023"
-msgstr "Polygon - Feb. 2023"
+msgstr "Polygon - फ़रवरी 2023"
 
 #: src/app/[lang]/community/page.tsx:60
 msgid "Recent Community Work"
-msgstr "Recent Community Work"
+msgstr "हाल का सामुदायिक कार्य"
 
 #: src/app/[lang]/page.tsx:80
 #: src/app/[lang]/selection/page.tsx:87
 #: src/app/[lang]/series/page.tsx:109
 msgid "Recent Work"
-msgstr "Recent Work"
+msgstr "हाल की कृतियाँ"
 
 #: src/app/[lang]/page.tsx:98
 #: src/app/[lang]/selection/page.tsx:105
 #: src/app/[lang]/series/page.tsx:127
 msgid "Selection"
-msgstr "Selection"
+msgstr "चयन"
 
 #: src/app/[lang]/page.tsx:92
 #: src/app/[lang]/selection/page.tsx:99
 #: src/app/[lang]/series/page.tsx:121
 msgid "Series"
-msgstr "Series"
+msgstr "श्रृंखलाएँ"
 
 #: src/app/[lang]/messages/page.tsx:65
 msgid "Some messages for you"
-msgstr "Some messages for you"
-
-#: src/components/collections/CollectionAttentionless.tsx:56
-#: src/components/collections/CollectionNights.tsx:64
-#: src/components/oldCollections/CollectionKindWords.tsx:62
-#: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:54
-#~ msgid "Source code >"
-#~ msgstr "Source code >"
-
-#: src/components/collections/CollectionNights.tsx:43
-#~ msgid "TON - Dec. 2023"
-#~ msgstr "TON - Dec. 2023"
+msgstr "आपके लिए कुछ संदेश"
 
 #: src/components/collections/CollectionAttentionless.tsx:66
 #: src/components/collections/CollectionBlinds.tsx:61
@@ -289,17 +225,7 @@ msgstr "Some messages for you"
 #: src/components/oldCollections/CollectionKindWords.tsx:70
 #: src/components/oldCollections/CollectionLifeIsAnIllusion.tsx:62
 msgid "View collection >"
-msgstr "View collection >"
-
-#: src/app/[lang]/layout.tsx:45
-#: src/app/[lang]/layout.tsx:65
-#: src/app/[lang]/layout.tsx:88
-#~ msgid "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
-#~ msgstr "Welcome to the official website of Kirill Ateev, a contemporary artist known for his unique generative artworks. Explore his portfolio, exhibitions, community, and more."
-
-#: src/components/collections/CollectionNights.tsx:103
-#~ msgid "Your browser does not support the video tag."
-#~ msgstr "Your browser does not support the video tag."
+msgstr "संग्रह देखें >"
 
 #: src/components/lingui/Switcher.tsx:13
 msgid "Русский"

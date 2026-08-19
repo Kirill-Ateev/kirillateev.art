@@ -5,34 +5,154 @@
     <loc>https://kirillateev.art/sitemap-pages.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-selection.xml</loc>
+    <loc>https://kirillateev.art/sitemap-selection-en.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-folds.xml</loc>
+    <loc>https://kirillateev.art/sitemap-selection-ru.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-frames.xml</loc>
+    <loc>https://kirillateev.art/sitemap-selection-zh.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-city.xml</loc>
+    <loc>https://kirillateev.art/sitemap-selection-hi.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-blinds.xml</loc>
+    <loc>https://kirillateev.art/sitemap-selection-es.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-cocktail-straws.xml</loc>
+    <loc>https://kirillateev.art/sitemap-folds-en.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-window.xml</loc>
+    <loc>https://kirillateev.art/sitemap-folds-ru.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-crosswalk.xml</loc>
+    <loc>https://kirillateev.art/sitemap-folds-zh.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-lanes.xml</loc>
+    <loc>https://kirillateev.art/sitemap-folds-hi.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://kirillateev.art/sitemap-attentionless.xml</loc>
+    <loc>https://kirillateev.art/sitemap-folds-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-frames-en.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-frames-ru.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-frames-zh.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-frames-hi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-frames-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-city-en.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-city-ru.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-city-zh.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-city-hi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-city-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-blinds-en.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-blinds-ru.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-blinds-zh.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-blinds-hi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-blinds-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-cocktail-straws-en.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-cocktail-straws-ru.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-cocktail-straws-zh.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-cocktail-straws-hi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-cocktail-straws-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-window-en.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-window-ru.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-window-zh.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-window-hi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-window-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-crosswalk-en.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-crosswalk-ru.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-crosswalk-zh.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-crosswalk-hi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-crosswalk-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-lanes-en.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-lanes-ru.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-lanes-zh.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-lanes-hi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-lanes-es.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-attentionless-en.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-attentionless-ru.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-attentionless-zh.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-attentionless-hi.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://kirillateev.art/sitemap-attentionless-es.xml</loc>
   </sitemap>
 
 </sitemapindex>

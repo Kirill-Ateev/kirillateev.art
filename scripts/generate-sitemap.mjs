@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC = resolve(__dirname, '..', 'public');
 
 const SITE = 'https://kirillateev.art';
-const LOCALES = ['en', 'ru'];
+const LOCALES = ['en', 'ru', 'zh', 'hi', 'es'];
 
 const COLLECTIONS = {
   selection: { name: 'Selection', minIndex: 1, maxIndex: 4 },
@@ -74,25 +74,25 @@ function generate() {
   const pagesCount = writeSitemap('sitemap-pages.xml', pagesUrls);
   console.log(`  sitemap-pages.xml: ${pagesCount} URLs`);
 
-  // ── Per-collection token sitemaps ────────────────────────────────────
+  // ── Per-collection token sitemaps (one file per locale) ───────────────
   const indexEntries = [sitemapTag('/sitemap-pages.xml')];
   let totalUrls = pagesCount;
 
   for (const [key, col] of Object.entries(COLLECTIONS)) {
-    const tokenUrls = [];
-
     for (const lang of LOCALES) {
+      const tokenUrls = [];
+
       for (let id = col.minIndex; id <= col.maxIndex; id++) {
         tokenUrls.push(urlTag(`/${lang}/view/${key}/${id}`, 'monthly', '0.4'));
       }
+
+      const filename = `sitemap-${key}-${lang}.xml`;
+      const count = writeSitemap(filename, tokenUrls);
+      indexEntries.push(sitemapTag(`/${filename}`));
+      totalUrls += count;
+
+      console.log(`  ${filename}: ${count} URLs`);
     }
-
-    const filename = `sitemap-${key}.xml`;
-    const count = writeSitemap(filename, tokenUrls);
-    indexEntries.push(sitemapTag(`/${filename}`));
-    totalUrls += count;
-
-    console.log(`  ${filename}: ${count} URLs`);
   }
 
   // ── Sitemap index ────────────────────────────────────────────────────

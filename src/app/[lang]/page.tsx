@@ -14,6 +14,7 @@ import { withLinguiPage } from '@/withLingui';
 import { Trans } from '@lingui/react/macro';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import linguiConfig from '../../../lingui.config';
 import styles from './page.module.css';
 
 export async function generateMetadata({
@@ -48,7 +49,7 @@ const siteJsonLd = {
       '@id': `${SITE}/#website`,
       url: `${SITE}/`,
       name: siteName('en'),
-      inLanguage: ['en', 'ru'],
+      inLanguage: linguiConfig.locales,
       publisher: { '@id': `${SITE}/#artist` },
     },
     {

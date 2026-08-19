@@ -11,6 +11,9 @@ type LOCALES = keyof typeof languages;
 const languages = {
   en: msg`English`,
   ru: msg`Русский`,
+  zh: msg`中文`,
+  hi: msg`हिन्दी`,
+  es: msg`Español`,
 } as const;
 
 export function Switcher() {
